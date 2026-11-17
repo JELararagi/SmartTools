@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartTools — Blender 用アドオン集</title>
+<meta name="description" content="Blender 5.1.0 以上で使えるアドオン 23 個の配布と解説書">
+<style>
+:root{--bg:#f7f6f2;--fg:#23262b;--muted:#5b616b;--card:#ffffff;--line:#d9d6cf;--accent:#2d5d8a;--accent2:#e8eff6;--red:#c62828;--warn:#fbeaea;--note:#fff6e0;--tip:#e9f4ec;--code:#eceae4}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1b1d21;--fg:#e6e6e3;--muted:#a5abb4;--card:#24272c;--line:#3a3e45;--accent:#8db8e0;--accent2:#22303d;--red:#ef7a7a;--warn:#3a2526;--note:#3a3222;--tip:#213328;--code:#2e3137}}
+:root[data-theme="dark"]{--bg:#1b1d21;--fg:#e6e6e3;--muted:#a5abb4;--card:#24272c;--line:#3a3e45;--accent:#8db8e0;--accent2:#22303d;--red:#ef7a7a;--warn:#3a2526;--note:#3a3222;--tip:#213328;--code:#2e3137}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"BIZ UDPGothic","Yu Gothic UI","Meiryo",sans-serif;font-size:17px;line-height:1.85}
+main{max-width:1080px;margin:0 auto;padding:24px 16px 80px}
+h1{font-size:2.1em;margin:.2em 0;line-height:1.3}
+h2{font-size:1.55em;margin:2.4em 0 .6em;padding:.35em .6em;border-left:8px solid var(--accent);background:var(--accent2);border-radius:4px}
+h3{font-size:1.25em;margin:1.8em 0 .5em;padding-bottom:.2em;border-bottom:2px solid var(--line)}
+h4{font-size:1.12em;margin:0 0 .3em;color:var(--accent)}
+a{color:var(--accent)}
+code{background:var(--code);padding:.05em .35em;border-radius:3px;font-size:.88em;word-break:break-all}
+kbd{border:1px solid var(--line);border-bottom-width:3px;border-radius:4px;padding:0 .4em;background:var(--card);font-size:.9em}
+.cover{padding:32px 24px;border-radius:10px;background:var(--card);border:1px solid var(--line)}
+.kicker{color:var(--accent);font-weight:bold;margin:0}.sub{color:var(--muted);margin:0}.lead{font-size:1.05em}
+.tocbox{margin-top:20px;padding:12px 24px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.tocbox h2{margin:.4em 0;background:none;border:none;padding:0}
+.toc{columns:2;column-gap:32px;padding-left:1.2em;margin:0;list-style:none}.toc li{break-inside:avoid}
+@media (max-width:700px){.toc{columns:1}}
+figure{margin:12px 0;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px}
+figure img{display:block;width:100%;height:auto;border-radius:4px;cursor:zoom-in}
+figure.narrow{max-width:300px}
+figcaption{font-size:.88em;color:var(--muted);margin-top:6px;line-height:1.5}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:start}
+@media (max-width:700px){.pair,.trio{grid-template-columns:1fr}}
+.side{display:grid;grid-template-columns:300px 1fr;gap:20px;align-items:start}
+@media (max-width:760px){.side{grid-template-columns:1fr}}
+.ba{margin:10px 0}
+.change{margin:4px 0 0;padding:.4em .8em;background:var(--accent2);border-radius:6px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.what{margin:.2em 0 .5em}
+.where{margin:.3em 0}.where span{display:inline-block;background:var(--accent);color:var(--bg);font-weight:bold;font-size:.82em;padding:0 .6em;border-radius:3px;margin-right:.6em}
+.steps{padding-left:1.6em}.steps li{margin:.25em 0}.steps.big li{margin:.6em 0}
+.box{display:flex;gap:12px;padding:10px 14px;border-radius:8px;margin:12px 0}
+.box>b{flex:0 0 auto;font-size:.85em;padding:.1em .6em;border-radius:3px;height:fit-content;color:#fff}
+.box.note{background:var(--note)}.box.note>b{background:#b7791f}
+.box.tip{background:var(--tip)}.box.tip>b{background:#2f7d4a}
+.box.warn{background:var(--warn)}.box.warn>b{background:#c62828}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:.92em}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:var(--accent2)}
+td.num{white-space:nowrap}
+.sha{font-size:.78em}
+table.mini{margin:8px 0}
+.tag{font-size:.8em;font-weight:bold;padding:.05em .5em;border-radius:3px;color:#fff;white-space:nowrap}
+.t必須{background:#c62828}.t推奨{background:#2d5d8a}.t任意{background:#6b7280}
+.c-r{color:#5d6fe0;font-weight:bold}.c-l{color:#e07a1f;font-weight:bold}.c-x{color:#1aa5a5;font-weight:bold}
+.chapterlead{font-size:1.05em;padding:.6em 1em;border-left:4px solid var(--line)}
+dl.faq dt,dl.gloss dt{font-weight:bold;margin-top:1em;color:var(--accent)}
+dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
+.can li{margin:.3em 0}
+.foot{color:var(--muted);text-align:center;margin-top:3em}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:99;cursor:zoom-out;padding:16px}
+#lb img{max-width:100%;max-height:100%;border-radius:4px}
+#lb.on{display:flex}
+.themebtn{position:fixed;right:14px;bottom:14px;z-index:50;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:20px;padding:6px 12px;font-size:.85em;cursor:pointer}
+@media print{body{font-size:12pt;background:#fff;color:#000}main{max-width:none;padding:0}
+ .themebtn,#lb{display:none!important}h2{break-before:page}.cover+.tocbox{break-after:page}
+ figure,.feat,.box,tr{break-inside:avoid}a{color:#000;text-decoration:none}
+ .side{grid-template-columns:230px 1fr}.pair{grid-template-columns:1fr 1fr}.trio{grid-template-columns:1fr 1fr 1fr}}
+</style>
+<style>.example{border:1px solid var(--line);border-left:4px solid #3b82c4;border-radius:8px;padding:10px 14px;margin:14px 0;background:var(--card)}.exhead{font-weight:700;margin:.2em 0 .5em}.extag{display:inline-block;background:#3b82c4;color:#fff;font-size:.8em;padding:.05em .6em;border-radius:3px;margin-right:.6em}.exscene{font-weight:400;font-size:.85em;opacity:.75;margin-left:.4em}.exintro{margin:.3em 0 .6em}.exrow{display:flex;align-items:center;gap:6px}.exrow figure.exshot{flex:1 1 0;min-width:0;margin:0;padding:4px}.exarrow{flex:0 0 auto;font-size:1.6em;font-weight:700;color:#3b82c4}.exshot figcaption{font-size:.85em;margin-top:4px}.exlab{display:inline-block;font-weight:700;background:var(--line);padding:0 .5em;border-radius:3px;margin-right:.4em}.exdo{margin:.6em 0 .2em}.exdo>b{font-size:.9em}.exdo ol{margin:.2em 0;padding-left:1.6em}.expoint{margin:.4em 0;background:var(--tip);padding:.4em .7em;border-radius:6px}.exgal{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}.exgal figure{margin:0}.exgal figcaption{font-size:.85em}.exrow.n3,.exrow.n4{display:grid;grid-template-columns:1fr 1fr;gap:8px}.exrow.n3 .exarrow,.exrow.n4 .exarrow{display:none}@media (max-width:700px){.exrow{flex-direction:column}.exarrow{transform:rotate(90deg)}.exrow figure.exshot{width:100%}}@media print{.exrow{flex-direction:row}.exrow.n3,.exrow.n4{display:grid}.example{break-inside:avoid}h2,h3,h4,.exlead{break-after:avoid}}</style>
+<style>html{scroll-padding-top:56px}.stnav{position:sticky;top:0;z-index:60;background:var(--card);border-bottom:1px solid var(--line)}.stnav-in{max-width:1080px;margin:0 auto;padding:8px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;font-size:14px;line-height:1.5}.stnav a{color:var(--accent);text-decoration:none;white-space:nowrap}.stnav a:hover{text-decoration:underline}.stnav a[aria-current="page"]{color:var(--fg);font-weight:700}.stnav-brand{font-weight:700}.stnav-sp{flex:1 1 auto}.stnav-off{color:var(--muted);white-space:nowrap}main{overflow-wrap:anywhere}@media (max-width:700px){.stnav{position:static}html{scroll-padding-top:0}main table{display:block;max-width:100%;overflow-x:auto}}@media print{.stnav{display:none}html{scroll-padding-top:0}}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:10px 0 22px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}.card>a img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-bottom:1px solid var(--line)}.card .cb{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}.card h4{margin:0;font-size:1.05em}.card h4 a{text-decoration:none}.card .cb>p{margin:0}.card .cb>p.yomi{color:var(--muted);font-size:.85em}.card .cb>p.acts{margin-top:auto;padding-top:6px}.acts{display:flex;flex-wrap:wrap;gap:8px}.btn{display:inline-block;padding:4px 12px;border:1px solid var(--line);border-radius:6px;text-decoration:none;font-size:.92em;line-height:1.6;white-space:nowrap}.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}.btn.off{color:var(--muted);border-style:dashed}.steps{list-style:none;padding:0;margin:10px 0 22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;counter-reset:st}.steps>li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;counter-increment:st;margin:0}.steps>li::before{content:counter(st);display:inline-block;min-width:24px;height:24px;line-height:24px;text-align:center;border-radius:12px;background:var(--accent);color:var(--bg);font-weight:700;margin-right:8px}code.sha{word-break:break-all}</style>
+</head>
+<body><nav class="stnav" aria-label="サイト内の移動"><div class="stnav-in"><a class="stnav-brand" href="./" aria-current="page">SmartTools</a><a href="manuals/overview/">全体仕様書</a><a href="#addons">アドオン一覧</a><a href="install.html">入れ方</a><span class="stnav-sp"></span><a href="#downloads">ダウンロード</a><a href="https://github.com/JELararagi/SmartTools">GitHub</a></div></nav><main>
+<header class="cover"><p class="kicker">SmartTools</p><h1>SmartTools — Blender 用アドオン集</h1>
+<p class="sub">版 1.0.0 ／ Blender 5.1.0 以上 ／ アドオン 23 個（公開中 22 個）</p>
+<p class="lead">モデリング・UV・材質・ペイント・リグ・アニメーション・撮影・画面の管理を手助けする、23 個の Blender アドオンの集まりです。ZIP をダウンロードして Blender に入れ、アドオンごとの解説書を見ながら使えます。</p>
+<p class="acts"><a class="btn primary" href="#downloads">ダウンロード</a><a class="btn" href="install.html">入れ方</a><a class="btn" href="manuals/overview/">全体仕様書を読む</a></p></header>
+<nav class="tocbox"><h2>目次</h2><ol class="toc"><li><a href="#start">はじめての方へ</a></li><li><a href="#addons">アドオン一覧</a></li><li><a href="#downloads">ダウンロード</a></li><li><a href="#help">困った時</a></li></ol></nav>
+<h2 id="start">はじめての方へ</h2>
+<ol class="steps">
+<li><b>Blender を用意する</b><br>Blender 5.1.0 以上が必要です（Blender 5.1.2 で動作を確かめています）。</li>
+<li><b>ZIP をダウンロードする</b><br>下の<a href="#downloads">ダウンロード一覧</a>から、使いたいアドオンの ZIP を選びます。ZIP は展開（解凍）しないでください。</li>
+<li><b>Blender に入れる</b><br>ZIP を Blender の画面にドラッグ＆ドロップするか、プリファレンスから入れます。手順は<a href="install.html">入れ方</a>にあります。</li>
+<li><b>解説書を読む</b><br>まず<a href="manuals/overview/">全体仕様書</a>で共通の使い方を読み、そのあと<a href="#addons">アドオン一覧</a>から各アドオンの解説書へ進みます。</li>
+</ol>
+<h2 id="addons">アドオン一覧</h2>
+<p>5 つの分野に分けています。画像か名前を押すと、そのアドオンの解説書が開きます。どの解説書にも、ページの上に前後の解説書・PDF・ZIP への入り口があります。</p>
+<h3>モデリング</h3>
+<div class="cards">
+<article class="card"><a href="manuals/SmartGeometry/"><img src="manuals/overview/images/ex_sg_heatmap_1.jpg" alt="地形の属性を色で見る（属性ヒートマップ）" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartGeometry/">Smart Geometry</a></h4><p class="yomi">スマートジオメトリー</p><p>地形・散布の点・がれき（デブリ）・破片・枝分かれした曲線・あとから数値で直せる基本形状などを、ボタンで作る形状生成ツールです。</p><p class="acts"><a class="btn" href="manuals/SmartGeometry/">解説書</a><a class="btn" href="manuals/SmartGeometry/SmartGeometry_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartGeometry_1.0.0_E387793A4FCB_INSTALLABLE.zip" download>ZIP（675 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartModeling/"><img src="manuals/overview/images/ex_sm_align_line_1.jpg" alt="波打った頂点の列をまっすぐな直線にそろえる" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartModeling/">Smart Modeling</a></h4><p class="yomi">スマートモデリング</p><p>頂点の編集・整列・削除・リトポ・ハードサーフェス・生成など、モデリングの補助ツールを 1 つのサイドバーにまとめたアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartModeling/">解説書</a><a class="btn" href="manuals/SmartModeling/SmartModeling_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartModeling_1.0.0_64D0C41414B1_INSTALLABLE.zip" download>ZIP（3,051 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartModifier/"><img src="manuals/overview/images/ex_smod_add_stack_2.jpg" alt="角ばった立方体に丸みとなめらかさを重ねる" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartModifier/">Smart Modifier</a></h4><p class="yomi">スマートモディファイア</p><p>3Dビューのサイドバーで、モディファイアの追加・並べ替え・表示切り替え・途中段階の編集をまとめて行う道具です。</p><p class="acts"><a class="btn" href="manuals/SmartModifier/">解説書</a><a class="btn" href="manuals/SmartModifier/SmartModifier_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartModifier_1.0.0_2DBF95E1FD83_INSTALLABLE.zip" download>ZIP（1,581 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartSculpt/"><img src="manuals/overview/images/ex_ss_smooth_filter_1.jpg" alt="ざらざらの表面を、編集モードのままなめらかにする" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartSculpt/">Smart Sculpt</a></h4><p class="yomi">スマートスカルプト</p><p>スカルプト（粘土をこねるように形を作る作業）に使う道具を、サイドバーの「Smart Sculpt」タブ 1 か所にまとめたアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartSculpt/">解説書</a><a class="btn" href="manuals/SmartSculpt/SmartSculpt_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartSculpt_1.0.0_7FA484C3B8E5_INSTALLABLE.zip" download>ZIP（10,772 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartTransform/"><img src="manuals/overview/images/ex_st_floor_1.jpg" alt="浮いている物を 1 回で床（Z=0）へ下ろす" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartTransform/">Smart Transform</a></h4><p class="yomi">スマートトランスフォーム</p><p>物の位置・回転・大きさを数字でぴったり決めたり、クリックやドラッグで動かす操作を使いやすくしたりする道具をまとめたアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartTransform/">解説書</a><a class="btn" href="manuals/SmartTransform/SmartTransform_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartTransform_1.0.0_7E999B13649F_INSTALLABLE.zip" download>ZIP（644 KB）</a></p></div></article>
+</div>
+<h3>UV・材質・ペイント</h3>
+<div class="cards">
+<article class="card"><a href="manuals/SmartNode/"><img src="manuals/overview/images/ex_nd_arrange_1.jpg" alt="ばらばらのノードを「全ツリーを整列」で並べる" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartNode/">Smart Node</a></h4><p class="yomi">スマートノード</p><p>ノードの結合・配線・ラベル付け・整列・選択・片づけを、ノードエディターのサイドバーのボタンでまとめて行うノード作業ツールです。</p><p class="acts"><a class="btn" href="manuals/SmartNode/">解説書</a><a class="btn" href="manuals/SmartNode/SmartNode_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartNode_1.0.0_DEDFEECD3A3C_INSTALLABLE.zip" download>ZIP（398 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartPaint/"><img src="manuals/overview/images/ex_pt_fill_1.jpg" alt="切り替えから塗りつぶしまで 3 手" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartPaint/">Smart Paint</a></h4><p class="yomi">スマートペイント</p><p>PSD などのレイヤー付き画像を、Blender の中でレイヤーごとに描いて保存できるペイント用アドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartPaint/">解説書</a><a class="btn" href="manuals/SmartPaint/SmartPaint_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartPaint_1.0.0_442AEE78C75D_INSTALLABLE.zip" download>ZIP（954 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartShader/"><img src="manuals/overview/images/ex_sh_rust_1.jpg" alt="1 回のボタンで「錆びた塗装」の材質を作る" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartShader/">Smart Shader</a></h4><p class="yomi">スマートシェーダー</p><p>マテリアル（物の見た目の設定）の作成、トゥーン化、テクスチャの取り込み、整理、点検を、サイドバーの 1 つのタブからまとめて行うアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartShader/">解説書</a><a class="btn" href="manuals/SmartShader/SmartShader_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartShader_1.0.0_47B6DBE66C5A_INSTALLABLE.zip" download>ZIP（11,425 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartUV/"><img src="manuals/overview/images/ex_uv_checker_1.jpg" alt="チェッカー模様を貼って UV の伸びを確かめる" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartUV/">Smart UV</a></h4><p class="yomi">スマートUV</p><p>UV展開・整列・パック・テクセル密度・UVマップ管理を、サイドバーの「Smart UV」タブ 1 つにまとめたアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartUV/">解説書</a><a class="btn" href="manuals/SmartUV/SmartUV_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartUV_1.0.0_FC4A728537D3_INSTALLABLE.zip" download>ZIP（4,155 KB）</a></p></div></article>
+</div>
+<h3>リグ・アニメーション</h3>
+<div class="cards">
+<article class="card"><a href="manuals/SmartAnimation/"><img src="manuals/overview/images/ex_sa_visualize_1.jpg" alt="跳ねる動きの軌跡と残像を出して、弧を確かめる" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartAnimation/">Smart Animation</a></h4><p class="yomi">スマートアニメーション</p><p>キーフレームの作業を楽にする道具を、サイドバーの 1 つのタブにまとめたアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartAnimation/">解説書</a><a class="btn" href="manuals/SmartAnimation/SmartAnimation_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartAnimation_1.0.0_289B00090162_INSTALLABLE.zip" download>ZIP（1,077 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartCloth/"><img src="manuals/overview/images/ex_sc_quick_rigid_2.jpg" alt="積み木に剛体を付けて、床へ落とす" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartCloth/">Smart Cloth</a></h4><p class="yomi">スマートクロス</p><p>服のクロス（布のシミュレーション）の準備・軽量化・点検・安全なベイクと、剛体（Quick Rigid）・骨の揺れ（Jiggle Physics）を、サイドバーの 1 つのタブでまとめて扱うアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartCloth/">解説書</a><a class="btn" href="manuals/SmartCloth/SmartCloth_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartCloth_1.0.0_08B5B5CD3B3B_INSTALLABLE.zip" download>ZIP（264 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartRig/"><img src="manuals/overview/images/ex_sr_chain_build_1.jpg" alt="しっぽに骨の鎖を作る" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartRig/">Smart Rig</a></h4><p class="yomi">スマートリグ</p><p>Auto-Rig Pro でキャラクターにリグを組む手順を、準備から揺れの焼き込み・動きの検査まで 1 つのパネルに順番に並べた連携アドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartRig/">解説書</a><a class="btn" href="manuals/SmartRig/SmartRig_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartRig_1.0.0_4C04AE8098FF_INSTALLABLE.zip" download>ZIP（707 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartSelector/"><img src="manuals/overview/images/ex_ss_set_recall_2.jpg" alt="選んだ物を名前で覚えて、ボタン 1 つで選び直す" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartSelector/">Smart Selector</a></h4><p class="yomi">スマートセレクター</p><p>選びたい物を名前付きで覚えておく「選択セット」と、ブラウザーで作るボタン画面「セレクター」で、Blender の選択や操作を素早く行うアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartSelector/">解説書</a><a class="btn" href="manuals/SmartSelector/SmartSelector_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartSelector_1.0.0_E0A818A509DA_INSTALLABLE.zip" download>ZIP（495 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartShapekey/"><img src="manuals/overview/images/ex_sk_map_switch_3.jpg" alt="形を「マップ」に保存して、一覧で切り替える" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartShapekey/">Smart Shapekey</a></h4><p class="yomi">スマートシェイプキー</p><p>シェイプキー（形の変化）を作る・整理する・動かす道具と、顔の収録を焼き込む道具を、サイドバーの 1 枚のパネルにまとめたアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartShapekey/">解説書</a><a class="btn" href="manuals/SmartShapekey/SmartShapekey_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartShapekey_1.0.0_5B1B79A30526_INSTALLABLE.zip" download>ZIP（4,143 KB）</a></p></div></article>
+</div>
+<h3>撮影・仕上げ</h3>
+<div class="cards">
+<article class="card"><a href="manuals/SmartCamLight/"><img src="manuals/overview/images/ex_scl_studio_1.jpg" alt="スリーポイント照明を 1 回で組む" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartCamLight/">Smart CamLight</a></h4><p class="yomi">スマート カムライト</p><p>カメラとライトの管理を、サイドバーの 1 つのパネルにまとめるアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartCamLight/">解説書</a><a class="btn" href="manuals/SmartCamLight/SmartCamLight_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartCamLight_1.0.0_23A7897E77E1_INSTALLABLE.zip" download>ZIP（116 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartComposite/"><img src="manuals/overview/images/ex_scomp_glow_1.jpg" alt="レンダー画像に光のにじみ（グロー）を足す" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartComposite/">Smart Composite</a></h4><p class="yomi">スマートコンポジット</p><p>ボタン1つで、コンポジター（レンダー後の画像を仕上げるノード画面）にグローやボケなどのノードのまとまりを追加するアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartComposite/">解説書</a><a class="btn" href="manuals/SmartComposite/SmartComposite_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartComposite_1.0.0_7909D8AFA6F7_INSTALLABLE.zip" download>ZIP（2,603 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartRender/"><img src="manuals/overview/images/ex_rd_tri_2.jpg" alt="選んだ物の周りに 3 つのライトを置く「三点照明」" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartRender/">Smart Render</a></h4><p class="yomi">スマートレンダー</p><p>レンダーの準備・出力先の確認・まとめての書き出しを、1 つのパネルで行うアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartRender/">解説書</a><a class="btn" href="manuals/SmartRender/SmartRender_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartRender_1.0.0_6C0000419BF0_INSTALLABLE.zip" download>ZIP（755 KB）</a></p></div></article>
+</div>
+<h3>画面・管理</h3>
+<div class="cards">
+<article class="card"><a href="manuals/KeymapManager/"><img src="manuals/overview/images/ex_km_select_key_1.jpg" alt="キーを押して、そのキーの割り当てを調べる" loading="lazy"></a><div class="cb"><h4><a href="manuals/KeymapManager/">キーマップマネージャー</a></h4><p class="yomi">キーマップマネージャー</p><p>キーボードの形の画面からショートカットを調べ、重なり（競合）を見つけて直せるアドオンです。</p><p class="acts"><a class="btn" href="manuals/KeymapManager/">解説書</a><a class="btn" href="manuals/KeymapManager/KeymapManager_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/KeymapManager_1.0.0_2E9248DD7504_INSTALLABLE.zip" download>ZIP（50 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartFile/"><img src="manuals/overview/images/ex_sf_make_local_1.jpg" alt="リンクしたオブジェクトを、このファイルのデータにする" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartFile/">Smart File</a></h4><p class="yomi">スマートファイル</p><p>ファイルの取り込み・リンクの点検・書き出し・確認・履歴と復元を、サイドバーの 1 つのパネルにまとめた道具です。</p><p class="acts"><a class="btn" href="manuals/SmartFile/">解説書</a><a class="btn" href="manuals/SmartFile/SmartFile_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartFile_1.0.0_EE5205A14133_INSTALLABLE.zip" download>ZIP（4,761 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartID/"><img src="manuals/overview/images/ex_sid_object_id_1.jpg" alt="3 つのスザンヌにオブジェクト ID を付けて色分けする" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartID/">Smart ID</a></h4><p class="yomi">スマートアイディー</p><p>制作で使う ID やチャンネル（UV マップ、属性、グループなど）を一覧で管理し、オブジェクトへまとめて付けたり調べたりできるアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartID/">解説書</a><a class="btn" href="manuals/SmartID/SmartID_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><span class="btn off">ZIP は公開準備中</span></p></div></article>
+<article class="card"><a href="manuals/SmartOverlay/"><img src="manuals/overview/images/ex_so_mesh_overlay_1.jpg" alt="編集中の頂点・辺・面を見やすく色付けする" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartOverlay/">Smart Overlay</a></h4><p class="yomi">スマートオーバーレイ</p><p>3D ビューに、頂点・辺・面の見やすい色付け、裏側の表示、トポロジーの検査、プロポーショナル編集の範囲、寸法などを重ねて表示するアドオンです。</p><p class="acts"><a class="btn" href="manuals/SmartOverlay/">解説書</a><a class="btn" href="manuals/SmartOverlay/SmartOverlay_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartOverlay_1.0.0_DD148B263335_INSTALLABLE.zip" download>ZIP（630 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartToolsManager/"><img src="manuals/overview/images/ex_stm_filter_1.jpg" alt="このワークスペースで使わないツールのタブを隠す" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartToolsManager/">Smart Tools Manager</a></h4><p class="yomi">スマートツールマネージャー</p><p>ワークスペースとエディターの組み合わせごとに、どのスマートツールのパネルを出すかを、一つの画面でまとめて決める道具です。</p><p class="acts"><a class="btn" href="manuals/SmartToolsManager/">解説書</a><a class="btn" href="manuals/SmartToolsManager/SmartToolsManager_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartToolsManager_1.0.0_7E167F69A38A_INSTALLABLE.zip" download>ZIP（83 KB）</a></p></div></article>
+<article class="card"><a href="manuals/SmartWorkspace/"><img src="manuals/overview/images/ex_sw_preset_perf_1.jpg" alt="3D ビューの表示をプリセットで軽くする" loading="lazy"></a><div class="cb"><h4><a href="manuals/SmartWorkspace/">Smart Workspace</a></h4><p class="yomi">スマートワークスペース</p><p>Nパネル（サイドバー）のタブ整理・クイックランチャー・画面配置の保存・表示の軽量化を、1つのタブにまとめた作業環境ツールです。</p><p class="acts"><a class="btn" href="manuals/SmartWorkspace/">解説書</a><a class="btn" href="manuals/SmartWorkspace/SmartWorkspace_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a class="btn primary" href="downloads/SmartWorkspace_1.0.0_652B68A6B820_INSTALLABLE.zip" download>ZIP（835 KB）</a></p></div></article>
+</div>
+<h2 id="downloads">ダウンロード</h2>
+<p>ZIP は展開せずに、そのまま Blender に入れます（<a href="install.html">入れ方</a>）。Smart ID は公開準備中です。</p>
+<div class="tablewrap"><table><thead><tr><th>アドオン</th><th>ファイル</th><th class="num">大きさ</th><th>SHA-256</th></tr></thead><tbody>
+<tr><td><b>Smart Geometry</b></td><td><a href="downloads/SmartGeometry_1.0.0_E387793A4FCB_INSTALLABLE.zip" download>SmartGeometry_1.0.0_E387793A4FCB_INSTALLABLE.zip</a></td><td class="num">675 KB</td><td><code class="sha">516121af86f009da4e76526e58184e56c0557b9fb32ed4e0d8cbe9b7b5d041fa</code></td></tr>
+<tr><td><b>Smart Modeling</b></td><td><a href="downloads/SmartModeling_1.0.0_64D0C41414B1_INSTALLABLE.zip" download>SmartModeling_1.0.0_64D0C41414B1_INSTALLABLE.zip</a></td><td class="num">3,051 KB</td><td><code class="sha">c7b3a8364e613059fdd67bbdc76408ee69962625d2a18665d59738cbea45fa81</code></td></tr>
+<tr><td><b>Smart Modifier</b></td><td><a href="downloads/SmartModifier_1.0.0_2DBF95E1FD83_INSTALLABLE.zip" download>SmartModifier_1.0.0_2DBF95E1FD83_INSTALLABLE.zip</a></td><td class="num">1,581 KB</td><td><code class="sha">7c071dd90cf35e58f47e3cb8ece94283e07a667d2b67c0f7029d332fe486c80f</code></td></tr>
+<tr><td><b>Smart Sculpt</b></td><td><a href="downloads/SmartSculpt_1.0.0_7FA484C3B8E5_INSTALLABLE.zip" download>SmartSculpt_1.0.0_7FA484C3B8E5_INSTALLABLE.zip</a></td><td class="num">10,772 KB</td><td><code class="sha">bfa642d6a3c5eb520553c91953192eee79fed7c18646e4ae23eb228798b25641</code></td></tr>
+<tr><td><b>Smart Transform</b></td><td><a href="downloads/SmartTransform_1.0.0_7E999B13649F_INSTALLABLE.zip" download>SmartTransform_1.0.0_7E999B13649F_INSTALLABLE.zip</a></td><td class="num">644 KB</td><td><code class="sha">b1aa1b41da1b85429040ec8c17009a91a5c74d528d3f5ea79c33cb90ff0b2d11</code></td></tr>
+<tr><td><b>Smart Node</b></td><td><a href="downloads/SmartNode_1.0.0_DEDFEECD3A3C_INSTALLABLE.zip" download>SmartNode_1.0.0_DEDFEECD3A3C_INSTALLABLE.zip</a></td><td class="num">398 KB</td><td><code class="sha">bac97b59ef84def291279b77891a857651aaf116e939e8ff22c19a983366b53b</code></td></tr>
+<tr><td><b>Smart Paint</b></td><td><a href="downloads/SmartPaint_1.0.0_442AEE78C75D_INSTALLABLE.zip" download>SmartPaint_1.0.0_442AEE78C75D_INSTALLABLE.zip</a></td><td class="num">954 KB</td><td><code class="sha">527b352bff80c7a4b822c8b7707d120dcc5ca838fd3f5b88e36d2f30927c197d</code></td></tr>
+<tr><td><b>Smart Shader</b></td><td><a href="downloads/SmartShader_1.0.0_47B6DBE66C5A_INSTALLABLE.zip" download>SmartShader_1.0.0_47B6DBE66C5A_INSTALLABLE.zip</a></td><td class="num">11,425 KB</td><td><code class="sha">4c55d96e94fce2778c91349744d92b03d749033335dc5abe980b4f88c9fef452</code></td></tr>
+<tr><td><b>Smart UV</b></td><td><a href="downloads/SmartUV_1.0.0_FC4A728537D3_INSTALLABLE.zip" download>SmartUV_1.0.0_FC4A728537D3_INSTALLABLE.zip</a></td><td class="num">4,155 KB</td><td><code class="sha">743938201dce5c9a4c2ff3155975ec0be4fc569309b075c42a1c3dbff983774a</code></td></tr>
+<tr><td><b>Smart Animation</b></td><td><a href="downloads/SmartAnimation_1.0.0_289B00090162_INSTALLABLE.zip" download>SmartAnimation_1.0.0_289B00090162_INSTALLABLE.zip</a></td><td class="num">1,077 KB</td><td><code class="sha">d4a8b08c57d2fa87e921fbb3535cffd3dbf4cd1da4b96b733175f238a90dee74</code></td></tr>
+<tr><td><b>Smart Cloth</b></td><td><a href="downloads/SmartCloth_1.0.0_08B5B5CD3B3B_INSTALLABLE.zip" download>SmartCloth_1.0.0_08B5B5CD3B3B_INSTALLABLE.zip</a></td><td class="num">264 KB</td><td><code class="sha">85c0171276bf735b35e26d5e0d513c9622bccb7597836fe7df5fee979cb8ca7a</code></td></tr>
+<tr><td><b>Smart Rig</b></td><td><a href="downloads/SmartRig_1.0.0_4C04AE8098FF_INSTALLABLE.zip" download>SmartRig_1.0.0_4C04AE8098FF_INSTALLABLE.zip</a></td><td class="num">707 KB</td><td><code class="sha">a08dc44fc9aaffcb74b0d8e000b01adbdd7a60377976a90fb6124b0f83fe1860</code></td></tr>
+<tr><td><b>Smart Selector</b></td><td><a href="downloads/SmartSelector_1.0.0_E0A818A509DA_INSTALLABLE.zip" download>SmartSelector_1.0.0_E0A818A509DA_INSTALLABLE.zip</a></td><td class="num">495 KB</td><td><code class="sha">0b1c046a14db7cd3509601813a30241da59f1be4ec94ad515d82125bfc6f7f59</code></td></tr>
+<tr><td><b>Smart Shapekey</b></td><td><a href="downloads/SmartShapekey_1.0.0_5B1B79A30526_INSTALLABLE.zip" download>SmartShapekey_1.0.0_5B1B79A30526_INSTALLABLE.zip</a></td><td class="num">4,143 KB</td><td><code class="sha">6b8945312d18d0dce677e73d9a81d328f3fe09887ef5f64ce67f2f1463af0253</code></td></tr>
+<tr><td><b>Smart CamLight</b></td><td><a href="downloads/SmartCamLight_1.0.0_23A7897E77E1_INSTALLABLE.zip" download>SmartCamLight_1.0.0_23A7897E77E1_INSTALLABLE.zip</a></td><td class="num">116 KB</td><td><code class="sha">9595da3529f246c79049b84ab6a2d6e690f0370b3462efa653eb607f5685f692</code></td></tr>
+<tr><td><b>Smart Composite</b></td><td><a href="downloads/SmartComposite_1.0.0_7909D8AFA6F7_INSTALLABLE.zip" download>SmartComposite_1.0.0_7909D8AFA6F7_INSTALLABLE.zip</a></td><td class="num">2,603 KB</td><td><code class="sha">11a5cf608b68530b1e70969b506961f5867e4be94b3d02810b1da25fea9c3fed</code></td></tr>
+<tr><td><b>Smart Render</b></td><td><a href="downloads/SmartRender_1.0.0_6C0000419BF0_INSTALLABLE.zip" download>SmartRender_1.0.0_6C0000419BF0_INSTALLABLE.zip</a></td><td class="num">755 KB</td><td><code class="sha">8bca887b15c4434a8467fde41d268f7b82b39d6f994c430fd5bca8e5abfa9c0d</code></td></tr>
+<tr><td><b>キーマップマネージャー</b></td><td><a href="downloads/KeymapManager_1.0.0_2E9248DD7504_INSTALLABLE.zip" download>KeymapManager_1.0.0_2E9248DD7504_INSTALLABLE.zip</a></td><td class="num">50 KB</td><td><code class="sha">2ed9d7811df9cea17300498f6d7e3d7580998bec2f640d1c897ef1e7c629d7c0</code></td></tr>
+<tr><td><b>Smart File</b></td><td><a href="downloads/SmartFile_1.0.0_EE5205A14133_INSTALLABLE.zip" download>SmartFile_1.0.0_EE5205A14133_INSTALLABLE.zip</a></td><td class="num">4,761 KB</td><td><code class="sha">514f6b6e194a2586ff504959f0fed6970640de52835cf01059fa01b3a8c515d3</code></td></tr>
+<tr><td><b>Smart ID</b></td><td>公開準備中</td><td class="num">—</td><td>—</td></tr>
+<tr><td><b>Smart Overlay</b></td><td><a href="downloads/SmartOverlay_1.0.0_DD148B263335_INSTALLABLE.zip" download>SmartOverlay_1.0.0_DD148B263335_INSTALLABLE.zip</a></td><td class="num">630 KB</td><td><code class="sha">14f52dde08ba7997c0050dedd2f14afe7cfdab6e5bbd1d137ce5aa7677142b94</code></td></tr>
+<tr><td><b>Smart Tools Manager</b></td><td><a href="downloads/SmartToolsManager_1.0.0_7E167F69A38A_INSTALLABLE.zip" download>SmartToolsManager_1.0.0_7E167F69A38A_INSTALLABLE.zip</a></td><td class="num">83 KB</td><td><code class="sha">744fbb33fb262554dada5a1d083142f83361af472506ebe3b6a8fdaa2c8acee8</code></td></tr>
+<tr><td><b>Smart Workspace</b></td><td><a href="downloads/SmartWorkspace_1.0.0_652B68A6B820_INSTALLABLE.zip" download>SmartWorkspace_1.0.0_652B68A6B820_INSTALLABLE.zip</a></td><td class="num">835 KB</td><td><code class="sha">9d211a663fe4da3b36b390120fba45a023a5cccf662cbf5e52be8be9cbef2275</code></td></tr>
+</tbody></table></div>
+<ul>
+<li>まとめて確かめる時の一覧：<a href="downloads/SHA256SUMS.txt">SHA256SUMS.txt</a>（確かめ方は<a href="install.html#check">入れ方</a>）</li>
+<li>GitHub の <a href="https://github.com/JELararagi/SmartTools/releases">Releases</a> からも同じ ZIP を入手できます。</li>
+<li>Blender に「リモートリポジトリ」として登録すると、Blender の中から入れたり、更新を受け取ったりできます：<code>https://jelararagi.github.io/SmartTools/downloads/index.json</code>（<a href="install.html#remote">手順</a>）</li>
+</ul>
+<h2 id="help">困った時</h2>
+<ul>
+<li><a href="manuals/overview/#s9">困った時</a>（全体仕様書 9 章）</li>
+<li><a href="manuals/overview/#s8">アドオンを止める・入れ直す</a>（全体仕様書 8 章）</li>
+<li><a href="manuals/overview/#s4">画面を日本語にする</a>（全体仕様書 4 章）</li>
+<li><a href="manuals/overview/#s7">第三者のアドオンについて</a>（全体仕様書 7 章）</li>
+</ul>
+<footer class="foot"><p>© 2026 JELararagi ・ <a href="https://github.com/JELararagi/SmartTools/blob/main/LICENSE.md">ライセンス</a> ・ <a href="https://github.com/JELararagi/SmartTools">GitHub のリポジトリ</a></p></footer>
+</main>
+<button class="themebtn" type="button">明るさの切替</button>
+<script>(function(){var b=document.querySelector('.themebtn'),r=document.documentElement;try{var t=localStorage.getItem('theme');if(t)r.setAttribute('data-theme',t);}catch(e){}b.addEventListener('click',function(){var d=r.getAttribute('data-theme');var dark=d?d==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});})();</script>
+</body>
+</html>
