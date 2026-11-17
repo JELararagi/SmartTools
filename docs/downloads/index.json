@@ -197,6 +197,32 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "smart_id_suite",
+      "name": "Smart ID",
+      "tagline": "List-managed IDs and channels for production assets",
+      "version": "1.0.0",
+      "type": "add-on",
+      "maintainer": "JELararagi",
+      "license": [
+        "SPDX:GPL-3.0-or-later"
+      ],
+      "blender_version_min": "5.1.0",
+      "copyright": [
+        "2026 JELararagi"
+      ],
+      "permissions": {
+        "files": "Import and export Smart ID registry presets"
+      },
+      "platforms": [
+        "windows-x64",
+        "linux-x64"
+      ],
+      "archive_url": "./SmartID_1.0.0_7283388EEA55_INSTALLABLE.zip",
+      "archive_size": 125402,
+      "archive_hash": "sha256:01710ab41b9fcba71a9be60a80a597f827758e4c63fe5ccba790460e28a5ba8a"
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "smart_modeling_suite",
       "name": "Smart Modeling",
       "tagline": "Unified Smart Modeling tools for the Blender N-panel",

@@ -1,7 +1,7 @@
 # SmartTools
 
-Blender 用のアドオン 23 個（公開中 22 個）と、その解説書です。
-A collection of Blender extensions (22 of 23 published) with manuals in Japanese.
+Blender 用のアドオン 23 個と、その解説書です。
+A collection of 23 Blender extensions with manuals in Japanese.
 
 - サイト / Website: https://jelararagi.github.io/SmartTools/
 - 入れ方 / Installation: https://jelararagi.github.io/SmartTools/install.html
@@ -38,7 +38,7 @@ SmartTools 全体を管理するためのツールです。ほかのアドオン
 | 撮影・仕上げ | Smart Composite | ボタン1つで、コンポジター（レンダー後の画像を仕上げるノード画面）にグローやボケなどのノードのまとまりを追加するアドオンです。 | [SmartComposite_1.0.0_7909D8AFA6F7_INSTALLABLE.zip](https://jelararagi.github.io/SmartTools/downloads/SmartComposite_1.0.0_7909D8AFA6F7_INSTALLABLE.zip) (2,603 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartComposite/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartComposite/SmartComposite_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
 | 撮影・仕上げ | Smart Render | レンダーの準備・出力先の確認・まとめての書き出しを、1 つのパネルで行うアドオンです。 | [SmartRender_1.0.0_6C0000419BF0_INSTALLABLE.zip](https://jelararagi.github.io/SmartTools/downloads/SmartRender_1.0.0_6C0000419BF0_INSTALLABLE.zip) (755 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartRender/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartRender/SmartRender_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
 | 画面・管理 | Smart File | ファイルの取り込み・リンクの点検・書き出し・確認・履歴と復元を、サイドバーの 1 つのパネルにまとめた道具です。 | [SmartFile_1.0.0_EE5205A14133_INSTALLABLE.zip](https://jelararagi.github.io/SmartTools/downloads/SmartFile_1.0.0_EE5205A14133_INSTALLABLE.zip) (4,761 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartFile/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartFile/SmartFile_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| 画面・管理 | Smart ID | 制作で使う ID やチャンネル（UV マップ、属性、グループなど）を一覧で管理し、オブジェクトへまとめて付けたり調べたりできるアドオンです。 | 公開準備中 / Coming soon | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartID/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartID/SmartID_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
+| 画面・管理 | Smart ID | 制作で使う ID やチャンネル（UV マップ、属性、グループなど）を一覧で管理し、オブジェクトへまとめて付けたり調べたりできるアドオンです。 | [SmartID_1.0.0_7283388EEA55_INSTALLABLE.zip](https://jelararagi.github.io/SmartTools/downloads/SmartID_1.0.0_7283388EEA55_INSTALLABLE.zip) (123 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartID/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartID/SmartID_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
 | 画面・管理 | Smart Overlay | 3D ビューに、頂点・辺・面の見やすい色付け、裏側の表示、トポロジーの検査、プロポーショナル編集の範囲、寸法などを重ねて表示するアドオンです。 | [SmartOverlay_1.0.0_DD148B263335_INSTALLABLE.zip](https://jelararagi.github.io/SmartTools/downloads/SmartOverlay_1.0.0_DD148B263335_INSTALLABLE.zip) (630 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartOverlay/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartOverlay/SmartOverlay_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
 | 画面・管理 | Smart Workspace | Nパネル（サイドバー）のタブ整理・クイックランチャー・画面配置の保存・表示の軽量化を、1つのタブにまとめた作業環境ツールです。 | [SmartWorkspace_1.0.0_652B68A6B820_INSTALLABLE.zip](https://jelararagi.github.io/SmartTools/downloads/SmartWorkspace_1.0.0_652B68A6B820_INSTALLABLE.zip) (835 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartWorkspace/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartWorkspace/SmartWorkspace_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
 

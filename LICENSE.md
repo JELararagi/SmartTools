@@ -2,7 +2,7 @@
 
 ## 日本語
 
-このリポジトリには、SmartTools（Blender 用アドオン 23 個のうち公開中の 22 個）の ZIP と、解説書（ウェブ版・PDF・画像）が入っています。ライセンスはアドオンごとに異なります。**正本は、各 ZIP の中のライセンス文書と `blender_manifest.toml` です。** 下の表は、その記載を ZIP から読み出して並べたものです。
+このリポジトリには、SmartTools（Blender 用アドオン 23 個）の ZIP と、解説書（ウェブ版・PDF・画像）が入っています。ライセンスはアドオンごとに異なります。**正本は、各 ZIP の中のライセンス文書と `blender_manifest.toml` です。** 下の表は、その記載を ZIP から読み出して並べたものです。
 
 ### アドオンごとのライセンス
 
@@ -27,6 +27,7 @@
 | Smart Render | `SPDX:LicenseRef-JELararagi-Proprietary` | license.txt | LicenseRef-JELararagi-Proprietary |
 | キーマップマネージャー | `SPDX:GPL-3.0-or-later` | LICENSE.txt | GPL-3.0-or-later |
 | Smart File | `SPDX:GPL-3.0-or-later` | license.txt | LicenseRef-JELararagi-Proprietary |
+| Smart ID | `SPDX:GPL-3.0-or-later` | LICENSE.txt | GPL-3.0-or-later |
 | Smart Overlay | `SPDX:LicenseRef-JELararagi-Proprietary` | license.txt | LicenseRef-JELararagi-Proprietary |
 | Smart Tools Manager | `SPDX:LicenseRef-JELararagi-Proprietary` | （なし） | — |
 | Smart Workspace | `SPDX:GPL-3.0-or-later` | license.txt | GPL-3.0-or-later |
@@ -46,7 +47,7 @@ This package is provided for JELararagi. Redistribution, relicensing, or removal
 
 ### GPL の付いたアドオン
 
-- GPL-3.0-or-later：Smart Geometry・Smart UV・Smart CamLight・キーマップマネージャー・Smart File・Smart Workspace（全文は [LICENSES/GPL-3.0-or-later.txt](LICENSES/GPL-3.0-or-later.txt)）
+- GPL-3.0-or-later：Smart Geometry・Smart UV・Smart CamLight・キーマップマネージャー・Smart File・Smart ID・Smart Workspace（全文は [LICENSES/GPL-3.0-or-later.txt](LICENSES/GPL-3.0-or-later.txt)）
 - GPL-2.0-or-later：Smart Node（全文は [LICENSES/GPL-2.0-or-later.txt](LICENSES/GPL-2.0-or-later.txt)）
 - Smart Sculpt：独自のライセンスと GPL-3.0 の部分があります（edit_mode_sculpt は Strict Edit Mode Sculpt v1.4.8 に由来します）。
 
@@ -66,16 +67,13 @@ GPL の付いたアドオンの ZIP には、ソースコード（.py）がそ�
 
 解説書（`docs/manuals/` のウェブ版・PDF・画像）と、このサイトのページは © 2026 JELararagi. All rights reserved.
 
-Smart ID は公開準備中のため、ZIP はこのリポジトリに入っていません。
-
 ## English
 
-This repository contains the ZIPs of SmartTools (22 of 23 Blender extensions published) and their manuals (web pages, PDFs and images). Licenses differ per add-on. **The authoritative texts are the license documents and `blender_manifest.toml` inside each ZIP.** The table above lists them as read from the ZIPs.
+This repository contains the ZIPs of SmartTools (23 Blender extensions) and their manuals (web pages, PDFs and images). Licenses differ per add-on. **The authoritative texts are the license documents and `blender_manifest.toml` inside each ZIP.** The table above lists them as read from the ZIPs.
 
 - These 12 add-ons share the same license text, quoted above from Smart Cloth: Smart Modeling, Smart Modifier, Smart Transform, Smart Shader, Smart Animation, Smart Cloth, Smart Selector, Smart Shapekey, Smart Composite, Smart Render, Smart File, Smart Overlay.
-- GPL-3.0-or-later: Smart Geometry, Smart UV, Smart CamLight, キーマップマネージャー, Smart File, Smart Workspace. GPL-2.0-or-later: Smart Node. Full texts: [LICENSES/](LICENSES/).
+- GPL-3.0-or-later: Smart Geometry, Smart UV, Smart CamLight, キーマップマネージャー, Smart File, Smart ID, Smart Workspace. GPL-2.0-or-later: Smart Node. Full texts: [LICENSES/](LICENSES/).
 - Smart Sculpt: its own license, with a GPL-3.0 part (edit_mode_sculpt, derived from Strict Edit Mode Sculpt v1.4.8).
 - Third-party components (Smart Animation: camera_shakify, sakura_poselib; Smart Geometry: debris*; Smart Modeling: edgeflow; Smart Node: node_arrange; Smart Workspace: screencast_keys). Their copyright notices and licenses are in the component folders inside the ZIPs.
 - The ZIPs of the GPL-licensed add-ons contain their Python source code (.py) as is.
 - Manuals (`docs/manuals/`, web pages, PDFs and images) and the pages of this site: © 2026 JELararagi. All rights reserved.
-- Smart ID is not published yet.
