@@ -55,7 +55,7 @@ jobs:
           gh api "repos/$GH_REPO/releases/tags/$TAG" --jq '.assets[].name' > "$RUNNER_TEMP/names.txt"
           while IFS= read -r n; do
             case "$n" in
-              *_INSTALLABLE.zip)
+              *.zip)
                 if [ ! -f "docs/downloads/$n" ]; then
                   echo "外す: $n"
                   gh release delete-asset "$TAG" "$n" --yes

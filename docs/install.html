@@ -100,36 +100,36 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <li>一覧に出たアドオンを、そこからインストールします。</li></ol>
 <h2 id="check">ファイルを確かめる（任意）</h2>
 <p>ダウンロードした ZIP が壊れていないかは、SHA-256 の値で確かめられます。出た値が <a href="downloads/SHA256SUMS.txt">SHA256SUMS.txt</a> の値と同じなら問題ありません（大文字・小文字の違いは気にしなくてかまいません）。</p>
-<ul><li>Windows（PowerShell）：<code>Get-FileHash .\SmartUV_1.0.0_FC4A728537D3_INSTALLABLE.zip -Algorithm SHA256</code></li>
-<li>macOS・Linux：<code>shasum -a 256 SmartUV_1.0.0_FC4A728537D3_INSTALLABLE.zip</code></li></ul>
+<ul><li>Windows（PowerShell）：<code>Get-FileHash .\SmartUVSuite_1.0.0.zip -Algorithm SHA256</code></li>
+<li>macOS・Linux：<code>shasum -a 256 SmartUVSuite_1.0.0.zip</code></li></ul>
 <h2 id="after">入れた後に</h2>
 <ul><li>画面を日本語にする：<a href="manuals/overview/#s4">全体仕様書 4 章</a></li>
 <li>N パネルと「？」ヘルプの使い方：<a href="manuals/overview/#s5">全体仕様書 5 章</a></li>
 <li>SmartTools 全体を管理する（Smart Tools Manager）：<a href="manuals/overview/#s6">全体仕様書 6 章</a>・<a href="manuals/SmartToolsManager/">Smart Tools Manager の解説書</a></li></ul>
-<p>Blender のエクステンションは、ファイル・ネットワーク・カメラなどを使う時、その「権限」を申告します。インストールの時に Blender が表示します。ネットワークとカメラを申告しているのは Smart Shapekey だけです（manifest の記載：ネットワーク：Download Face Tracker packages only when explicitly requested／カメラ：Read webcam video only while Face Tracker is explicitly running）。</p>
+<p>Blender のエクステンションは、ファイル・ネットワーク・カメラなどを使う時、その「権限」を申告します。インストールの時に Blender が表示します。ネットワークとカメラを申告しているのは SmartShapekey Suite だけです（manifest の記載：ネットワーク：Download Face Tracker packages only when explicitly requested／カメラ：Read webcam video only while Face Tracker is explicitly running）。</p>
 <div class="tablewrap"><table><thead><tr><th>アドオン</th><th>申告している権限</th></tr></thead><tbody>
 <tr><td><b>Smart Tools Manager</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Geometry</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Modeling</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Modifier</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Sculpt</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Transform</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Node</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Paint</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Shader</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart UV</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Animation</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Cloth</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Rig</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Selector</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Shapekey</b></td><td>ファイル・ネットワーク・カメラ</td></tr>
-<tr><td><b>Smart CamLight</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Composite</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Render</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart File</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart ID</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Overlay</b></td><td>ファイル</td></tr>
-<tr><td><b>Smart Workspace</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartGeometry Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartModeling Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartModifier Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartSculpt Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartTransform Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartNode Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartPaint Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartShader Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartUV Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartAnimation Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartCloth Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartRig Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartSelector Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartShapekey Suite</b></td><td>ファイル・ネットワーク・カメラ</td></tr>
+<tr><td><b>SmartCamLight Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartComposite Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartRender Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartFile Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartID Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartOverlay Suite</b></td><td>ファイル</td></tr>
+<tr><td><b>SmartWorkspace Suite</b></td><td>ファイル</td></tr>
 <tr><td><b>キーマップマネージャー</b></td><td>なし</td></tr>
 </tbody></table></div>
 <h2 id="trouble">困った時</h2>

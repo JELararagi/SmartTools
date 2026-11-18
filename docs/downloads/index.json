@@ -24,7 +24,7 @@
       "platforms": [
         "windows-x64"
       ],
-      "archive_url": "./KeymapManager_1.0.0_2E9248DD7504_INSTALLABLE.zip",
+      "archive_url": "./KeymapManager_1.0.0.zip",
       "archive_size": 50322,
       "archive_hash": "sha256:2ed9d7811df9cea17300498f6d7e3d7580998bec2f640d1c897ef1e7c629d7c0"
     },
@@ -49,9 +49,9 @@
       "tags": [
         "Animation"
       ],
-      "archive_url": "./SmartAnimation_1.0.0_289B00090162_INSTALLABLE.zip",
-      "archive_size": 1102810,
-      "archive_hash": "sha256:d4a8b08c57d2fa87e921fbb3535cffd3dbf4cd1da4b96b733175f238a90dee74"
+      "archive_url": "./SmartAnimationSuite_1.0.0.zip",
+      "archive_size": 1105631,
+      "archive_hash": "sha256:a7308b8803e0cb3d43e2966612887b4c03a2acfbd8ecee293e6ea5017a2ea3ee"
     },
     {
       "schema_version": "1.0.0",
@@ -78,7 +78,7 @@
         "Render",
         "Pipeline"
       ],
-      "archive_url": "./SmartCamLight_1.0.0_23A7897E77E1_INSTALLABLE.zip",
+      "archive_url": "./SmartCamLightSuite_1.0.0.zip",
       "archive_size": 118137,
       "archive_hash": "sha256:9595da3529f246c79049b84ab6a2d6e690f0370b3462efa653eb607f5685f692"
     },
@@ -106,7 +106,7 @@
         "Pipeline",
         "User Interface"
       ],
-      "archive_url": "./SmartCloth_1.0.0_08B5B5CD3B3B_INSTALLABLE.zip",
+      "archive_url": "./SmartClothSuite_1.0.0.zip",
       "archive_size": 269560,
       "archive_hash": "sha256:85c0171276bf735b35e26d5e0d513c9622bccb7597836fe7df5fee979cb8ca7a"
     },
@@ -133,7 +133,7 @@
         "Node",
         "Render"
       ],
-      "archive_url": "./SmartComposite_1.0.0_7909D8AFA6F7_INSTALLABLE.zip",
+      "archive_url": "./SmartCompositeSuite_1.0.0.zip",
       "archive_size": 2664835,
       "archive_hash": "sha256:11a5cf608b68530b1e70969b506961f5867e4be94b3d02810b1da25fea9c3fed"
     },
@@ -160,9 +160,9 @@
         "Import-Export",
         "3D View"
       ],
-      "archive_url": "./SmartFile_1.0.0_EE5205A14133_INSTALLABLE.zip",
-      "archive_size": 4875049,
-      "archive_hash": "sha256:514f6b6e194a2586ff504959f0fed6970640de52835cf01059fa01b3a8c515d3"
+      "archive_url": "./SmartFileSuite_1.0.0.zip",
+      "archive_size": 4879814,
+      "archive_hash": "sha256:ef9e999423bff644c528b3cc9b22c951e939b23df5ad4c9f07daa118a69bed78"
     },
     {
       "schema_version": "1.0.0",
@@ -191,7 +191,7 @@
         "Grease Pencil",
         "Add Mesh"
       ],
-      "archive_url": "./SmartGeometry_1.0.0_E387793A4FCB_INSTALLABLE.zip",
+      "archive_url": "./SmartGeometrySuite_1.0.0.zip",
       "archive_size": 690199,
       "archive_hash": "sha256:516121af86f009da4e76526e58184e56c0557b9fb32ed4e0d8cbe9b7b5d041fa"
     },
@@ -217,7 +217,7 @@
         "windows-x64",
         "linux-x64"
       ],
-      "archive_url": "./SmartID_1.0.0_7283388EEA55_INSTALLABLE.zip",
+      "archive_url": "./SmartIDSuite_1.0.0.zip",
       "archive_size": 125402,
       "archive_hash": "sha256:01710ab41b9fcba71a9be60a80a597f827758e4c63fe5ccba790460e28a5ba8a"
     },
@@ -243,9 +243,9 @@
         "Modeling",
         "3D View"
       ],
-      "archive_url": "./SmartModeling_1.0.0_64D0C41414B1_INSTALLABLE.zip",
-      "archive_size": 3123273,
-      "archive_hash": "sha256:c7b3a8364e613059fdd67bbdc76408ee69962625d2a18665d59738cbea45fa81"
+      "archive_url": "./SmartModelingSuite_1.0.0.zip",
+      "archive_size": 3122843,
+      "archive_hash": "sha256:487291b5ac7a167c635df81b7303f613f1e7d8666f57f29142d2928ed3478946"
     },
     {
       "schema_version": "1.0.0",
@@ -269,7 +269,7 @@
         "Modeling",
         "3D View"
       ],
-      "archive_url": "./SmartModifier_1.0.0_2DBF95E1FD83_INSTALLABLE.zip",
+      "archive_url": "./SmartModifierSuite_1.0.0.zip",
       "archive_size": 1617989,
       "archive_hash": "sha256:7c071dd90cf35e58f47e3cb8ece94283e07a667d2b67c0f7029d332fe486c80f"
     },
@@ -296,7 +296,7 @@
         "Node",
         "User Interface"
       ],
-      "archive_url": "./SmartNode_1.0.0_DEDFEECD3A3C_INSTALLABLE.zip",
+      "archive_url": "./SmartNodeSuite_1.0.0.zip",
       "archive_size": 407215,
       "archive_hash": "sha256:bac97b59ef84def291279b77891a857651aaf116e939e8ff22c19a983366b53b"
     },
@@ -322,9 +322,9 @@
         "3D View",
         "User Interface"
       ],
-      "archive_url": "./SmartOverlay_1.0.0_DD148B263335_INSTALLABLE.zip",
-      "archive_size": 645050,
-      "archive_hash": "sha256:14f52dde08ba7997c0050dedd2f14afe7cfdab6e5bbd1d137ce5aa7677142b94"
+      "archive_url": "./SmartOverlaySuite_1.0.0.zip",
+      "archive_size": 645166,
+      "archive_hash": "sha256:7d060f19f0fd3b306493d788c346446c8972e84f8ec4f3f1a04327979db6acc3"
     },
     {
       "schema_version": "1.0.0",
@@ -349,7 +349,7 @@
         "3D View",
         "Material"
       ],
-      "archive_url": "./SmartPaint_1.0.0_442AEE78C75D_INSTALLABLE.zip",
+      "archive_url": "./SmartPaintSuite_1.0.0.zip",
       "archive_size": 976750,
       "archive_hash": "sha256:527b352bff80c7a4b822c8b7707d120dcc5ca838fd3f5b88e36d2f30927c197d"
     },
@@ -376,9 +376,9 @@
         "Lighting",
         "3D View"
       ],
-      "archive_url": "./SmartRender_1.0.0_6C0000419BF0_INSTALLABLE.zip",
-      "archive_size": 772311,
-      "archive_hash": "sha256:8bca887b15c4434a8467fde41d268f7b82b39d6f994c430fd5bca8e5abfa9c0d"
+      "archive_url": "./SmartRenderSuite_1.0.0.zip",
+      "archive_size": 773932,
+      "archive_hash": "sha256:0d880e680668acf0c540773d9341e8f4db33c1cda7f01f1a743c9b3fa8888415"
     },
     {
       "schema_version": "1.0.0",
@@ -403,9 +403,9 @@
         "Animation",
         "3D View"
       ],
-      "archive_url": "./SmartRig_1.0.0_4C04AE8098FF_INSTALLABLE.zip",
-      "archive_size": 723511,
-      "archive_hash": "sha256:a08dc44fc9aaffcb74b0d8e000b01adbdd7a60377976a90fb6124b0f83fe1860"
+      "archive_url": "./SmartRigSuite_1.0.0.zip",
+      "archive_size": 726033,
+      "archive_hash": "sha256:21b4f5a10dd1409b5e19c441ff8f8a120c278fc2296919b243b1160a5d15c8c7"
     },
     {
       "schema_version": "1.0.0",
@@ -430,9 +430,9 @@
         "Sculpt",
         "3D View"
       ],
-      "archive_url": "./SmartSculpt_1.0.0_7FA484C3B8E5_INSTALLABLE.zip",
-      "archive_size": 11029590,
-      "archive_hash": "sha256:bfa642d6a3c5eb520553c91953192eee79fed7c18646e4ae23eb228798b25641"
+      "archive_url": "./SmartSculptSuite_1.0.0.zip",
+      "archive_size": 11029553,
+      "archive_hash": "sha256:dcb85a58ad6fec39a3467cab7932669814ef34cfe71551d6a51cb655894c54ed"
     },
     {
       "schema_version": "1.0.0",
@@ -456,7 +456,7 @@
         "3D View",
         "User Interface"
       ],
-      "archive_url": "./SmartSelector_1.0.0_E0A818A509DA_INSTALLABLE.zip",
+      "archive_url": "./SmartSelectorSuite_1.0.0.zip",
       "archive_size": 506729,
       "archive_hash": "sha256:0b1c046a14db7cd3509601813a30241da59f1be4ec94ad515d82125bfc6f7f59"
     },
@@ -482,9 +482,9 @@
         "Node",
         "Material"
       ],
-      "archive_url": "./SmartShader_1.0.0_47B6DBE66C5A_INSTALLABLE.zip",
-      "archive_size": 11698550,
-      "archive_hash": "sha256:4c55d96e94fce2778c91349744d92b03d749033335dc5abe980b4f88c9fef452"
+      "archive_url": "./SmartShaderSuite_1.0.0.zip",
+      "archive_size": 11698848,
+      "archive_hash": "sha256:475f00cce25ff46206f828a6c324bce3ac5cf821f2ea4506c5f05f056c485bfe"
     },
     {
       "schema_version": "1.0.0",
@@ -510,7 +510,7 @@
         "Animation",
         "3D View"
       ],
-      "archive_url": "./SmartShapekey_1.0.0_5B1B79A30526_INSTALLABLE.zip",
+      "archive_url": "./SmartShapekeySuite_1.0.0.zip",
       "archive_size": 4241901,
       "archive_hash": "sha256:6b8945312d18d0dce677e73d9a81d328f3fe09887ef5f64ce67f2f1463af0253"
     },
@@ -537,7 +537,7 @@
         "System",
         "3D View"
       ],
-      "archive_url": "./SmartToolsManager_1.0.0_7E167F69A38A_INSTALLABLE.zip",
+      "archive_url": "./SmartToolsManager_1.0.0.zip",
       "archive_size": 84053,
       "archive_hash": "sha256:744fbb33fb262554dada5a1d083142f83361af472506ebe3b6a8fdaa2c8acee8"
     },
@@ -563,7 +563,7 @@
         "3D View",
         "Modeling"
       ],
-      "archive_url": "./SmartTransform_1.0.0_7E999B13649F_INSTALLABLE.zip",
+      "archive_url": "./SmartTransformSuite_1.0.0.zip",
       "archive_size": 659085,
       "archive_hash": "sha256:b1aa1b41da1b85429040ec8c17009a91a5c74d528d3f5ea79c33cb90ff0b2d11"
     },
@@ -589,9 +589,9 @@
         "UV",
         "Modeling"
       ],
-      "archive_url": "./SmartUV_1.0.0_FC4A728537D3_INSTALLABLE.zip",
-      "archive_size": 4254544,
-      "archive_hash": "sha256:743938201dce5c9a4c2ff3155975ec0be4fc569309b075c42a1c3dbff983774a"
+      "archive_url": "./SmartUVSuite_1.0.0.zip",
+      "archive_size": 4261311,
+      "archive_hash": "sha256:999e4e178746cfb3db215a4d8ff1ae2987c9a7e5509253f9186f375d12972cfc"
     },
     {
       "schema_version": "1.0.0",
@@ -615,7 +615,7 @@
         "User Interface",
         "3D View"
       ],
-      "archive_url": "./SmartWorkspace_1.0.0_652B68A6B820_INSTALLABLE.zip",
+      "archive_url": "./SmartWorkspaceSuite_1.0.0.zip",
       "archive_size": 854431,
       "archive_hash": "sha256:9d211a663fe4da3b36b390120fba45a023a5cccf662cbf5e52be8be9cbef2275"
     }
