@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installation — SmartTools</title>
+<meta name="description" content="How to install the SmartTools ZIP files in Blender">
+<style>
+:root{--bg:#f7f6f2;--fg:#23262b;--muted:#5b616b;--card:#ffffff;--line:#d9d6cf;--accent:#2d5d8a;--accent2:#e8eff6;--red:#c62828;--warn:#fbeaea;--note:#fff6e0;--tip:#e9f4ec;--code:#eceae4}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1b1d21;--fg:#e6e6e3;--muted:#a5abb4;--card:#24272c;--line:#3a3e45;--accent:#8db8e0;--accent2:#22303d;--red:#ef7a7a;--warn:#3a2526;--note:#3a3222;--tip:#213328;--code:#2e3137}}
+:root[data-theme="dark"]{--bg:#1b1d21;--fg:#e6e6e3;--muted:#a5abb4;--card:#24272c;--line:#3a3e45;--accent:#8db8e0;--accent2:#22303d;--red:#ef7a7a;--warn:#3a2526;--note:#3a3222;--tip:#213328;--code:#2e3137}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.65}
+main{max-width:1080px;margin:0 auto;padding:24px 16px 80px}
+h1{font-size:2.1em;margin:.2em 0;line-height:1.3}
+h2{font-size:1.55em;margin:2.4em 0 .6em;padding:.35em .6em;border-left:8px solid var(--accent);background:var(--accent2);border-radius:4px}
+h3{font-size:1.25em;margin:1.8em 0 .5em;padding-bottom:.2em;border-bottom:2px solid var(--line)}
+h4{font-size:1.12em;margin:0 0 .3em;color:var(--accent)}
+a{color:var(--accent)}
+code{background:var(--code);padding:.05em .35em;border-radius:3px;font-size:.88em;word-break:break-all}
+kbd{border:1px solid var(--line);border-bottom-width:3px;border-radius:4px;padding:0 .4em;background:var(--card);font-size:.9em}
+.cover{padding:32px 24px;border-radius:10px;background:var(--card);border:1px solid var(--line)}
+.kicker{color:var(--accent);font-weight:bold;margin:0}.sub{color:var(--muted);margin:0}.lead{font-size:1.05em}
+.tocbox{margin-top:20px;padding:12px 24px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.tocbox h2{margin:.4em 0;background:none;border:none;padding:0}
+.toc{columns:2;column-gap:32px;padding-left:1.2em;margin:0;list-style:none}.toc li{break-inside:avoid}
+@media (max-width:700px){.toc{columns:1}}
+figure{margin:12px 0;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px}
+figure img{display:block;width:100%;height:auto;border-radius:4px;cursor:zoom-in}
+figure.narrow{max-width:300px}
+figcaption{font-size:.88em;color:var(--muted);margin-top:6px;line-height:1.5}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:start}
+@media (max-width:700px){.pair,.trio{grid-template-columns:1fr}}
+.side{display:grid;grid-template-columns:300px 1fr;gap:20px;align-items:start}
+@media (max-width:760px){.side{grid-template-columns:1fr}}
+.ba{margin:10px 0}
+.change{margin:4px 0 0;padding:.4em .8em;background:var(--accent2);border-radius:6px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.what{margin:.2em 0 .5em}
+.where{margin:.3em 0}.where span{display:inline-block;background:var(--accent);color:var(--bg);font-weight:bold;font-size:.82em;padding:0 .6em;border-radius:3px;margin-right:.6em}
+.steps{padding-left:1.6em}.steps li{margin:.25em 0}.steps.big li{margin:.6em 0}
+.box{display:flex;gap:12px;padding:10px 14px;border-radius:8px;margin:12px 0}
+.box>b{flex:0 0 auto;font-size:.85em;padding:.1em .6em;border-radius:3px;height:fit-content;color:#fff}
+.box.note{background:var(--note)}.box.note>b{background:#b7791f}
+.box.tip{background:var(--tip)}.box.tip>b{background:#2f7d4a}
+.box.warn{background:var(--warn)}.box.warn>b{background:#c62828}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:.92em}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:var(--accent2)}
+td.num{white-space:nowrap}
+.sha{font-size:.78em}
+table.mini{margin:8px 0}
+.tag{font-size:.8em;font-weight:bold;padding:.05em .5em;border-radius:3px;color:#fff;white-space:nowrap}
+
+.c-r{color:#5d6fe0;font-weight:bold}.c-l{color:#e07a1f;font-weight:bold}.c-x{color:#1aa5a5;font-weight:bold}
+.chapterlead{font-size:1.05em;padding:.6em 1em;border-left:4px solid var(--line)}
+dl.faq dt,dl.gloss dt{font-weight:bold;margin-top:1em;color:var(--accent)}
+dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
+.can li{margin:.3em 0}
+.foot{color:var(--muted);text-align:center;margin-top:3em}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:99;cursor:zoom-out;padding:16px}
+#lb img{max-width:100%;max-height:100%;border-radius:4px}
+#lb.on{display:flex}
+.themebtn{position:fixed;right:14px;bottom:14px;z-index:50;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:20px;padding:6px 12px;font-size:.85em;cursor:pointer}
+@media print{body{font-size:12pt;background:#fff;color:#000}main{max-width:none;padding:0}
+ .themebtn,#lb{display:none!important}h2{break-before:page}.cover+.tocbox{break-after:page}
+ figure,.feat,.box,tr{break-inside:avoid}a{color:#000;text-decoration:none}
+ .side{grid-template-columns:230px 1fr}.pair{grid-template-columns:1fr 1fr}.trio{grid-template-columns:1fr 1fr 1fr}}
+</style>
+<style>.example{border:1px solid var(--line);border-left:4px solid #3b82c4;border-radius:8px;padding:10px 14px;margin:14px 0;background:var(--card)}.exhead{font-weight:700;margin:.2em 0 .5em}.extag{display:inline-block;background:#3b82c4;color:#fff;font-size:.8em;padding:.05em .6em;border-radius:3px;margin-right:.6em}.exscene{font-weight:400;font-size:.85em;opacity:.75;margin-left:.4em}.exintro{margin:.3em 0 .6em}.exrow{display:flex;align-items:center;gap:6px}.exrow figure.exshot{flex:1 1 0;min-width:0;margin:0;padding:4px}.exarrow{flex:0 0 auto;font-size:1.6em;font-weight:700;color:#3b82c4}.exshot figcaption{font-size:.85em;margin-top:4px}.exlab{display:inline-block;font-weight:700;background:var(--line);padding:0 .5em;border-radius:3px;margin-right:.4em}.exdo{margin:.6em 0 .2em}.exdo>b{font-size:.9em}.exdo ol{margin:.2em 0;padding-left:1.6em}.expoint{margin:.4em 0;background:var(--tip);padding:.4em .7em;border-radius:6px}.exgal{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}.exgal figure{margin:0}.exgal figcaption{font-size:.85em}.exrow.n3,.exrow.n4{display:grid;grid-template-columns:1fr 1fr;gap:8px}.exrow.n3 .exarrow,.exrow.n4 .exarrow{display:none}@media (max-width:700px){.exrow{flex-direction:column}.exarrow{transform:rotate(90deg)}.exrow figure.exshot{width:100%}}@media print{.exrow{flex-direction:row}.exrow.n3,.exrow.n4{display:grid}.example{break-inside:avoid}h2,h3,h4,.exlead{break-after:avoid}}</style>
+<style>html{scroll-padding-top:56px}.stnav{position:sticky;top:0;z-index:60;background:var(--card);border-bottom:1px solid var(--line)}.stnav-in{max-width:1080px;margin:0 auto;padding:8px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;font-size:14px;line-height:1.5}.stnav a{color:var(--accent);text-decoration:none;white-space:nowrap}.stnav a:hover{text-decoration:underline}.stnav a[aria-current="page"]{color:var(--fg);font-weight:700}.stnav-brand{font-weight:700}.stnav-sp{flex:1 1 auto}.stnav-off{color:var(--muted);white-space:nowrap}main{overflow-wrap:anywhere}@media (max-width:700px){.stnav{position:static}html{scroll-padding-top:0}main table{display:block;max-width:100%;overflow-x:auto}}@media print{.stnav{display:none}html{scroll-padding-top:0}}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:10px 0 22px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}.card>a img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-bottom:1px solid var(--line)}.card .cb{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}.card h4{margin:0;font-size:1.05em}.card h4 a{text-decoration:none}.card .cb>p{margin:0}.card .cb>p.yomi{color:var(--muted);font-size:.85em}.card .cb>p.acts{margin-top:auto;padding-top:6px}.acts{display:flex;flex-wrap:wrap;gap:8px}.btn{display:inline-block;padding:4px 12px;border:1px solid var(--line);border-radius:6px;text-decoration:none;font-size:.92em;line-height:1.6;white-space:nowrap}.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}.btn.off{color:var(--muted);border-style:dashed}.steps{list-style:none;padding:0;margin:10px 0 22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;counter-reset:st}.steps>li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;counter-increment:st;margin:0}.steps>li::before{content:counter(st);display:inline-block;min-width:24px;height:24px;line-height:24px;text-align:center;border-radius:12px;background:var(--accent);color:var(--bg);font-weight:700;margin-right:8px}code.sha{word-break:break-all}.gintro{margin:-2px 0 10px}.cards.wide{grid-template-columns:minmax(0,1fr)}.card.wide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);border:2px solid var(--accent)}.card.wide>a img{height:100%;border-bottom:0;border-right:1px solid var(--line)}.card.wide .cb{padding:16px 20px;gap:8px}.card.wide h4{font-size:1.25em}.cards.mini{grid-template-columns:minmax(0,520px)}.card.mini{display:grid;grid-template-columns:150px minmax(0,1fr);border-style:dashed}.card.mini>a img{height:100%;border-bottom:0;border-right:1px dashed var(--line)}.card.mini .cb{padding:8px 12px 10px;gap:4px;font-size:.92em}.card.mini h4{font-size:1em}@media (max-width:700px){.card.wide{grid-template-columns:minmax(0,1fr)}.card.wide>a img{height:auto;border-right:0;border-bottom:1px solid var(--line)}.cards.mini{grid-template-columns:minmax(0,1fr)}.card.mini{grid-template-columns:110px minmax(0,1fr)}}</style>
+<link rel="alternate" hreflang="ja" href="https://jelararagi.github.io/SmartTools/install.html">
+<link rel="alternate" hreflang="en" href="https://jelararagi.github.io/SmartTools/en/install.html">
+<link rel="alternate" hreflang="x-default" href="https://jelararagi.github.io/SmartTools/en/install.html">
+</head>
+<body><nav class="stnav" aria-label="Site navigation"><div class="stnav-in"><a class="stnav-brand" href="./">SmartTools</a><a href="manuals/overview/">Overall Specification</a><a href="./#addons">Add-ons</a><a href="install.html" aria-current="page">Installation</a><span class="stnav-sp"></span><a href="./#downloads">Downloads</a><a href="https://github.com/JELararagi/SmartTools">GitHub</a><a href="../install.html" hreflang="ja" lang="ja">Japanese - 日本語</a></div></nav><main>
+<header class="cover"><p class="kicker">SmartTools</p><h1>Installing SmartTools</h1>
+<p class="sub">Blender 5.1.0 or later / Install the ZIP as it is</p>
+<p class="lead">Install the downloaded ZIP in Blender as it is, without extracting (unzipping) it. No internet connection is needed to install it.</p></header>
+<nav class="tocbox"><h2>Contents</h2><ol class="toc"><li><a href="#req">Requirements</a></li><li><a href="#download">Download the ZIP</a></li><li><a href="#install">Install in Blender</a></li><li><a href="#remote">Install from a Remote Repository (Receive Updates)</a></li><li><a href="#check">Verify the Files (Optional)</a></li><li><a href="#after">After Installing</a></li><li><a href="#trouble">Troubleshooting</a></li></ol></nav>
+<h2 id="req">Requirements</h2>
+<ul><li>Blender 5.1.0 or later (tested with Blender 5.1.2).</li><li>The ZIP of the add-on you want to install.</li></ul>
+<h2 id="download">Download the ZIP</h2>
+<p>Get it from the <a href="./#downloads">download list</a> on the home page, or from <a href="https://github.com/JELararagi/SmartTools/releases">Releases</a> on GitHub. Do not extract the ZIP. If your browser extracted it automatically, download it again as a ZIP.</p>
+<h2 id="install">Install in Blender</h2>
+<h3>A. Drag and Drop</h3>
+<ol><li>Start Blender.</li><li>Drag and drop the downloaded ZIP onto the Blender window.</li><li>When the confirmation dialog appears, make sure <b>Enable on Install</b> is checked, then continue.</li></ol>
+<h3>B. From the Menu</h3>
+<ol><li>Open <b>Edit → Preferences...</b> from the menu at the top.</li>
+<li>Select <b>Get Extensions</b> in the list on the left.</li>
+<li>Open the <b>∨ (down arrow)</b> menu at the top right and choose <b>Install from Disk...</b>.</li>
+<li>In the file browser, select one downloaded ZIP and click <b>Install from Disk</b>.</li>
+<li>Open <b>Add-ons</b> in the list on the left and make sure the add-on you installed is checked (enabled).</li></ol>
+<p>If another version of the same add-on is already installed, remove it before installing (<a href="manuals/overview/#s8">Overall Specification, Chapter 8</a>). If an old and a new version are installed at the same time, panels may appear twice or registration may fail.</p>
+<h2 id="remote">Install from a Remote Repository (Receive Updates)</h2>
+<p>If you add this site to Blender as a remote repository, all 23 add-ons appear in the Get Extensions list, and you can install and update them from within Blender.</p>
+<ol><li>Open <b>Edit → Preferences... → Get Extensions</b>.</li>
+<li>Open <b>Repositories</b> at the top right and choose <b>+</b> → <b>Add Remote Repository</b>.</li>
+<li>Enter <code>https://jelararagi.github.io/SmartTools/downloads/index.json</code> in <b>URL</b>. To check for updates automatically, check <b>Check for Updates on Startup</b>.</li>
+<li>If online access is turned off, check <b>Allow Online Access</b> in <b>System → Network</b>.</li>
+<li>Install the add-ons from the list.</li></ol>
+<h2 id="check">Verify the Files (Optional)</h2>
+<p>You can check that a downloaded ZIP is not corrupted with its SHA-256 value. If the value you get matches the one in <a href="../downloads/SHA256SUMS.txt">SHA256SUMS.txt</a>, the file is fine (upper and lower case do not matter).</p>
+<ul><li>Windows (PowerShell): <code>Get-FileHash .\SmartUVSuite_1.0.0.zip -Algorithm SHA256</code></li>
+<li>macOS / Linux: <code>shasum -a 256 SmartUVSuite_1.0.0.zip</code></li></ul>
+<h2 id="after">After Installing</h2>
+<ul><li>Interface Language: <a href="manuals/overview/#s4">Overall Specification, Chapter 4</a></li>
+<li>Using the N Panel and the “?” Help: <a href="manuals/overview/#s5">Overall Specification, Chapter 5</a></li>
+<li>Managing SmartTools as a Whole (Smart Tools Manager): <a href="manuals/overview/#s6">Overall Specification, Chapter 6</a> · <a href="manuals/SmartToolsManager/">Smart Tools Manager manual</a></li></ul>
+<p>Blender extensions declare "permissions" when they use files, the network, the camera and so on. Blender shows them when you install. Only SmartShapekey Suite declares network and camera access (as stated in its manifest: Network: Download Face Tracker packages only when explicitly requested / Camera: Read webcam video only while Face Tracker is explicitly running).</p>
+<div class="tablewrap"><table><thead><tr><th>Add-on</th><th>Declared permissions</th></tr></thead><tbody>
+<tr><td><b>Smart Tools Manager</b></td><td>Files</td></tr>
+<tr><td><b>SmartGeometry Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartModeling Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartModifier Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartSculpt Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartTransform Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartNode Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartPaint Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartShader Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartUV Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartAnimation Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartCloth Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartRig Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartSelector Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartShapekey Suite</b></td><td>Files, Network, Camera</td></tr>
+<tr><td><b>SmartCamLight Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartComposite Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartRender Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartFile Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartID Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartOverlay Suite</b></td><td>Files</td></tr>
+<tr><td><b>SmartWorkspace Suite</b></td><td>Files</td></tr>
+<tr><td><b>Keymap Manager</b></td><td>None</td></tr>
+</tbody></table></div>
+<h2 id="trouble">Troubleshooting</h2>
+<ul><li>See <a href="manuals/overview/#s9">Overall Specification, Chapter 9 “Troubleshooting”</a>.</li>
+<li>Disabling and reinstalling: <a href="manuals/overview/#s8">Overall Specification, Chapter 8</a></li>
+<li>Uninstalling: in the <b>Add-ons</b> list, open the <b>∨</b> on the right of the add-on's row and choose <b>Uninstall</b>.</li></ul>
+<footer class="foot"><p>© 2026 JELararagi · <a href="https://github.com/JELararagi/SmartTools/blob/main/LICENSE.md">License</a> · <a href="https://github.com/JELararagi/SmartTools">GitHub repository</a></p></footer>
+</main>
+<button class="themebtn" type="button">Light / Dark</button>
+<script>(function(){var b=document.querySelector('.themebtn'),r=document.documentElement;try{var t=localStorage.getItem('theme');if(t)r.setAttribute('data-theme',t);}catch(e){}b.addEventListener('click',function(){var d=r.getAttribute('data-theme');var dark=d?d==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});})();</script>
+</body>
+</html>

@@ -1,78 +1,72 @@
+[Japanese - 日本語](README.ja.md)
+
 # SmartTools
 
-Blender 用のアドオン 23 個と、その解説書です。
-A collection of 23 Blender extensions with manuals in Japanese.
+A collection of 23 Blender add-ons with their manuals.
 
-- サイト / Website: https://jelararagi.github.io/SmartTools/
-- 入れ方 / Installation: https://jelararagi.github.io/SmartTools/install.html
-- ダウンロード / Downloads: https://github.com/JELararagi/SmartTools/releases （または / or [docs/downloads](docs/downloads/)）
-- Blender のリモートリポジトリ / Remote repository URL: `https://jelararagi.github.io/SmartTools/downloads/index.json`
+- Website: https://jelararagi.github.io/SmartTools/en/
+- Installation: https://jelararagi.github.io/SmartTools/en/install.html
+- Downloads: https://github.com/JELararagi/SmartTools/releases (or [docs/downloads](docs/downloads/))
+- Remote repository URL for Blender: `https://jelararagi.github.io/SmartTools/downloads/index.json`
 
-## 全体の管理 / Manager
+## Overall Management
 
-SmartTools 全体を管理するためのツールです。ほかのアドオンのパネルをどの画面に出すかを、一つの画面でまとめて決めます（[全体仕様書 6 章](https://jelararagi.github.io/SmartTools/manuals/overview/#s6)）。
+A tool for managing SmartTools as a whole. It lets you decide, on a single screen, which editors show the other add-ons’ panels ([Overall Specification, Chapter 6](https://jelararagi.github.io/SmartTools/en/manuals/overview/#s6)).
 
-| アドオン / Add-on | 説明（日本語） | ZIP | 解説書 / Manual |
+| Add-on | Description | ZIP | Manual |
 |---|---|---|---|
-| Smart Tools Manager | SmartTools 全体を管理するためのツールです。ワークスペースとエディターの組み合わせごとに、どのスマートツールのパネルを出すかを、一つの画面でまとめて決めます。 | [SmartToolsManager_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartToolsManager_1.0.0.zip) (83 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartToolsManager/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartToolsManager/SmartToolsManager_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
+| Smart Tools Manager | A tool for managing all of SmartTools. In one screen, you decide which Smart Tools panels appear for each combination of Workspace and Editor. | [SmartToolsManager_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartToolsManager_1.0.0.zip) (83 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartToolsManager/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartToolsManager/SmartToolsManager_Manual_v1_0.pdf) |
 
-## アドオン / Add-ons
+## Add-ons
 
-| 分野 / Category | アドオン / Add-on | 説明（日本語） | ZIP | 解説書 / Manual |
+| Category | Add-on | Description | ZIP | Manual |
 |---|---|---|---|---|
-| モデリング | SmartGeometry Suite | 地形・散布の点・がれき（デブリ）・破片・枝分かれした曲線・あとから数値で直せる基本形状などを、ボタンで作る形状生成ツールです。 | [SmartGeometrySuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartGeometrySuite_1.0.0.zip) (675 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartGeometry/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartGeometry/SmartGeometry_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| モデリング | SmartModeling Suite | 頂点の編集・整列・削除・リトポ・ハードサーフェス・生成など、モデリングの補助ツールを 1 つのサイドバーにまとめたアドオンです。 | [SmartModelingSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartModelingSuite_1.0.0.zip) (3,050 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartModeling/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartModeling/SmartModeling_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| モデリング | SmartModifier Suite | 3Dビューのサイドバーで、モディファイアの追加・並べ替え・表示切り替え・途中段階の編集をまとめて行う道具です。 | [SmartModifierSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartModifierSuite_1.0.0.zip) (1,581 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartModifier/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartModifier/SmartModifier_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| モデリング | SmartSculpt Suite | スカルプト（粘土をこねるように形を作る作業）の道具をサイドバーの「Smart Sculpt」タブにまとめ、メッシュ編集モードのままでもブラシやフィルターで形を整えられるアドオンです。 | [SmartSculptSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartSculptSuite_1.0.0.zip) (10,772 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartSculpt/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartSculpt/SmartSculpt_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| モデリング | SmartTransform Suite | 物の位置・回転・大きさを数字でぴったり決めたり、クリックやドラッグで動かす操作を使いやすくしたりする道具をまとめたアドオンです。 | [SmartTransformSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartTransformSuite_1.0.0.zip) (644 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartTransform/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartTransform/SmartTransform_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| UV・材質・ペイント | SmartNode Suite | 散らかったノードをボタン 1 つで読みやすく並べ直し、選んだノードの結合・配線や、つながりをたどった選択・囲みもサイドバーのボタンで行うノード作業ツールです。 | [SmartNodeSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartNodeSuite_1.0.0.zip) (398 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartNode/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartNode/SmartNode_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| UV・材質・ペイント | SmartPaint Suite | PSD などのレイヤー付き画像を、Blender の中でレイヤーごとに描いて保存できるペイント用アドオンです。 | [SmartPaintSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartPaintSuite_1.0.0.zip) (954 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartPaint/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartPaint/SmartPaint_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| UV・材質・ペイント | SmartShader Suite | マテリアル（物の見た目の設定）の作成、トゥーン化、テクスチャの取り込み、整理、点検を、サイドバーの 1 つのタブからまとめて行うアドオンです。 | [SmartShaderSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartShaderSuite_1.0.0.zip) (11,425 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartShader/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartShader/SmartShader_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| UV・材質・ペイント | SmartUV Suite | シームの位置を自動で決める「自動シーム」から、展開・記号のボタンでの整列・18 種類のプリセットで並べる自動パッキング・ベイクまでを、サイドバーの「Smart UV」タブ 1 つにまとめたアドオンです。 | [SmartUVSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartUVSuite_1.0.0.zip) (4,162 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartUV/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartUV/SmartUV_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| リグ・アニメーション | SmartAnimation Suite | キーフレームの作業を楽にする道具を、サイドバーの 1 つのタブにまとめたアドオンです。 | [SmartAnimationSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartAnimationSuite_1.0.0.zip) (1,080 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartAnimation/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartAnimation/SmartAnimation_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| リグ・アニメーション | SmartCloth Suite | 服のクロス（布のシミュレーション）の準備・軽量化・点検・安全なベイクと、剛体（Quick Rigid）・骨の揺れ（Jiggle Physics）を、サイドバーの 1 つのタブでまとめて扱うアドオンです。 | [SmartClothSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartClothSuite_1.0.0.zip) (264 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartCloth/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartCloth/SmartCloth_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| リグ・アニメーション | SmartRig Suite | Auto-Rig Pro でキャラクターにリグを組む手順を、準備から揺れの焼き込み・動きの検査まで 1 つのパネルに順番に並べた連携アドオンです。 | [SmartRigSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartRigSuite_1.0.0.zip) (710 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartRig/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartRig/SmartRig_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| リグ・アニメーション | SmartSelector Suite | ブラウザーの窓に自分専用のボタン画面（セレクター）を作り、押すだけで Blender の骨を選んだりシェイプキーを動かしたりできるアドオンです。基層を壊さずに動きを重ねる「層」と、選んだ物を名前で覚える「選択セット」も入っています。 | [SmartSelectorSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartSelectorSuite_1.0.0.zip) (495 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartSelector/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartSelector/SmartSelector_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| リグ・アニメーション | SmartShapekey Suite | シェイプキー（形の変化）を作る・整理する・動かす道具と、顔の収録を焼き込む道具を、サイドバーの 1 枚のパネルにまとめたアドオンです。 | [SmartShapekeySuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartShapekeySuite_1.0.0.zip) (4,143 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartShapekey/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartShapekey/SmartShapekey_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| 撮影・仕上げ | SmartCamLight Suite | カメラとライトの管理を、サイドバーの 1 つのパネルにまとめるアドオンです。 | [SmartCamLightSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartCamLightSuite_1.0.0.zip) (116 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartCamLight/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartCamLight/SmartCamLight_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| 撮影・仕上げ | SmartComposite Suite | ボタン1つで、コンポジター（レンダー後の画像を仕上げるノード画面）にグローやボケなどのノードのまとまりを追加するアドオンです。 | [SmartCompositeSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartCompositeSuite_1.0.0.zip) (2,603 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartComposite/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartComposite/SmartComposite_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| 撮影・仕上げ | SmartRender Suite | レンダーの準備・出力先の確認・まとめての書き出しを、1 つのパネルで行うアドオンです。 | [SmartRenderSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartRenderSuite_1.0.0.zip) (756 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartRender/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartRender/SmartRender_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| 画面・管理 | SmartFile Suite | ファイルの取り込み・リンクの点検・書き出し・確認・履歴と復元を、サイドバーの 1 つのパネルにまとめた道具です。 | [SmartFileSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartFileSuite_1.0.0.zip) (4,766 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartFile/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartFile/SmartFile_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| 画面・管理 | SmartID Suite | 制作で使う ID やチャンネル（UV マップ、属性、グループなど）を一覧で管理し、オブジェクトへまとめて付けたり調べたりできるアドオンです。 | [SmartIDSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartIDSuite_1.0.0.zip) (123 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartID/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartID/SmartID_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| 画面・管理 | SmartOverlay Suite | 3D ビューに、頂点・辺・面の見やすい色付け、裏側の表示、トポロジーの検査、プロポーショナル編集の範囲、寸法などを重ねて表示するアドオンです。 | [SmartOverlaySuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartOverlaySuite_1.0.0.zip) (631 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartOverlay/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartOverlay/SmartOverlay_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
-| 画面・管理 | SmartWorkspace Suite | よく使うサイドバー（N パネル）のタブをポップアップのボタン 1 つで開く「クイックランチャー」を中心に、タブの名前と並びの整理・表示の軽量化・画面配置の保存を 1 つのタブにまとめた作業環境ツールです。 | [SmartWorkspaceSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartWorkspaceSuite_1.0.0.zip) (835 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/SmartWorkspace/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/SmartWorkspace/SmartWorkspace_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
+| Modeling | SmartGeometry Suite | A shape generation tool that creates terrain, scatter points, debris, fragments, branching curves, and basic shapes you can edit with numbers later, all with a click of a button. | [SmartGeometrySuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartGeometrySuite_1.0.0.zip) (675 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartGeometry/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartGeometry/SmartGeometry_Manual_v1_0.pdf) |
+| Modeling | SmartModeling Suite | An add-on that gathers modeling helper tools, including vertex editing, alignment, deletion, retopology, hard surface modeling, and generation, into a single Sidebar. | [SmartModelingSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartModelingSuite_1.0.0.zip) (3,050 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartModeling/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartModeling/SmartModeling_Manual_v1_0.pdf) |
+| Modeling | SmartModifier Suite | A tool for adding, reordering, toggling the display of, and editing intermediate stages of modifiers, all from the 3D Viewport Sidebar. | [SmartModifierSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartModifierSuite_1.0.0.zip) (1,581 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartModifier/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartModifier/SmartModifier_Manual_v1_0.pdf) |
+| Modeling | SmartSculpt Suite | An add-on that gathers sculpting tools (for shaping forms like kneading clay) in the "Smart Sculpt" tab of the Sidebar, so you can refine shapes with brushes and filters even while staying in Mesh Edit Mode. | [SmartSculptSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartSculptSuite_1.0.0.zip) (10,772 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartSculpt/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartSculpt/SmartSculpt_Manual_v1_0.pdf) |
+| Modeling | SmartTransform Suite | An add-on that bundles tools for setting an object's location, rotation, and size exactly with numbers, and for making click and drag operations easier to use. | [SmartTransformSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartTransformSuite_1.0.0.zip) (644 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartTransform/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartTransform/SmartTransform_Manual_v1_0.pdf) |
+| UVs, Materials & Painting | SmartNode Suite | A node tool that rearranges cluttered nodes into a readable layout with one button, and also merges and wires selected nodes, selects and frames nodes by following their connections, all from Sidebar buttons. | [SmartNodeSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartNodeSuite_1.0.0.zip) (398 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartNode/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartNode/SmartNode_Manual_v1_0.pdf) |
+| UVs, Materials & Painting | SmartPaint Suite | A paint add-on that lets you paint and save layered images, such as PSD files, layer by layer inside Blender. | [SmartPaintSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartPaintSuite_1.0.0.zip) (954 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartPaint/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartPaint/SmartPaint_Manual_v1_0.pdf) |
+| UVs, Materials & Painting | SmartShader Suite | An add-on that handles material creation, toon conversion, texture import, cleanup, and checking, all from a single tab in the Sidebar. A material is the set of settings that defines how an object looks. | [SmartShaderSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartShaderSuite_1.0.0.zip) (11,425 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartShader/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartShader/SmartShader_Manual_v1_0.pdf) |
+| UVs, Materials & Painting | SmartUV Suite | An add-on that puts everything into a single "Smart UV" tab in the Sidebar: "Auto Seam", which decides seam positions automatically, plus unwrapping, symbol-button alignment, auto packing with 18 presets, and baking. | [SmartUVSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartUVSuite_1.0.0.zip) (4,162 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartUV/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartUV/SmartUV_Manual_v1_0.pdf) |
+| Rigging & Animation | SmartAnimation Suite | An add-on that gathers tools for easier keyframe work into a single Sidebar tab. | [SmartAnimationSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartAnimationSuite_1.0.0.zip) (1,080 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartAnimation/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartAnimation/SmartAnimation_Manual_v1_0.pdf) |
+| Rigging & Animation | SmartCloth Suite | An add-on that handles cloth (fabric simulation) preparation, lightweight display, inspection, and safe baking for clothing, plus rigid bodies (Quick Rigid) and bone jiggle (Jiggle Physics), all in a single Sidebar tab. | [SmartClothSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartClothSuite_1.0.0.zip) (264 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartCloth/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartCloth/SmartCloth_Manual_v1_0.pdf) |
+| Rigging & Animation | SmartRig Suite | A companion add-on that lines up the whole Auto-Rig Pro rigging process in one panel, in order, from preparation to baking secondary motion and checking the motion. | [SmartRigSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartRigSuite_1.0.0.zip) (710 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartRig/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartRig/SmartRig_Manual_v1_0.pdf) |
+| Rigging & Animation | SmartSelector Suite | An add-on that builds your own button screens (selectors) in a browser window, so you can select Blender bones and move shape keys with a single click. It also includes layers that stack motion without breaking the base animation, and selection sets that remember selected objects by name. | [SmartSelectorSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartSelectorSuite_1.0.0.zip) (495 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartSelector/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartSelector/SmartSelector_Manual_v1_0.pdf) |
+| Rigging & Animation | SmartShapekey Suite | An add-on that puts tools for creating, organizing, and animating Shape Keys, plus tools for baking facial captures, into a single Sidebar panel. | [SmartShapekeySuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartShapekeySuite_1.0.0.zip) (4,143 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartShapekey/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartShapekey/SmartShapekey_Manual_v1_0.pdf) |
+| Cameras, Rendering & Compositing | SmartCamLight Suite | An add-on that brings camera and light management together in one Sidebar panel. | [SmartCamLightSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartCamLightSuite_1.0.0.zip) (116 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartCamLight/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartCamLight/SmartCamLight_Manual_v1_0.pdf) |
+| Cameras, Rendering & Compositing | SmartComposite Suite | An add-on that adds node groups such as Glow and Bokeh to the Compositor (the node screen where you finish rendered images) with a single button. | [SmartCompositeSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartCompositeSuite_1.0.0.zip) (2,603 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartComposite/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartComposite/SmartComposite_Manual_v1_0.pdf) |
+| Cameras, Rendering & Compositing | SmartRender Suite | An add-on that handles render preparation, output path checks, and batch rendering in a single panel. | [SmartRenderSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartRenderSuite_1.0.0.zip) (756 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartRender/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartRender/SmartRender_Manual_v1_0.pdf) |
+| Interface & Data | SmartFile Suite | A tool that brings importing files, checking links, exporting, review, and history and restore together in a single Sidebar panel. | [SmartFileSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartFileSuite_1.0.0.zip) (4,766 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartFile/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartFile/SmartFile_Manual_v1_0.pdf) |
+| Interface & Data | SmartID Suite | An add-on that manages the IDs and channels you use in production (UV maps, attributes, groups, and more) in one list, so you can assign them to objects in bulk and inspect them. | [SmartIDSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartIDSuite_1.0.0.zip) (123 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartID/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartID/SmartID_Manual_v1_0.pdf) |
+| Interface & Data | SmartOverlay Suite | An add-on that overlays easy-to-read colors for vertices, edges, and faces, display of hidden back sides, topology checks, the range of proportional editing, measurements, and more on the 3D Viewport. | [SmartOverlaySuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartOverlaySuite_1.0.0.zip) (631 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartOverlay/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartOverlay/SmartOverlay_Manual_v1_0.pdf) |
+| Interface & Data | SmartWorkspace Suite | A workspace tool that puts the Quick Launcher, which opens your frequently used Sidebar (N panel) tabs with a single popup button, together with tab renaming and reordering, lighter viewport display, and saved screen layouts in one tab. | [SmartWorkspaceSuite_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/SmartWorkspaceSuite_1.0.0.zip) (835 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/SmartWorkspace/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/SmartWorkspace/SmartWorkspace_Manual_v1_0.pdf) |
 
-## 付属ツール / Bundled tool
+## Bundled Tool
 
-SmartTools に付属するツールです。
+A tool bundled with SmartTools.
 
-| アドオン / Add-on | 説明（日本語） | ZIP | 解説書 / Manual |
+| Add-on | Description | ZIP | Manual |
 |---|---|---|---|
-| キーマップマネージャー | SmartTools に付属するツールです。キーボードの形の画面からショートカットを調べ、重なり（競合）を見つけて直せます。 | [KeymapManager_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/KeymapManager_1.0.0.zip) (50 KB) | [Web](https://jelararagi.github.io/SmartTools/manuals/KeymapManager/) · [PDF](https://jelararagi.github.io/SmartTools/manuals/KeymapManager/KeymapManager_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf) |
+| Keymap Manager | A tool included with SmartTools. Look up shortcuts from a keyboard-shaped screen, then find and fix overlaps (conflicts). | [KeymapManager_1.0.0.zip](https://jelararagi.github.io/SmartTools/downloads/KeymapManager_1.0.0.zip) (50 KB) | [Web](https://jelararagi.github.io/SmartTools/en/manuals/KeymapManager/) · [PDF](https://jelararagi.github.io/SmartTools/en/manuals/KeymapManager/KeymapManager_Manual_v1_0.pdf) |
 
-## 動作環境 / Requirements
+## Requirements
 
-Blender 5.1.0 以上（5.1.2 で確認）。 / Blender 5.1.0 or later (tested on 5.1.2).
+Blender 5.1.0 or later (tested with 5.1.2).
 
-## 入れ方（要約）
-
-1. ZIP をダウンロードします（展開しません）。
-2. Blender の「編集」→「プリファレンス...」→「エクステンションを入手」→ 右上の ∨ →「ディスクからインストール...」で ZIP を選びます。ZIP を Blender の画面にドラッグ＆ドロップしても入れられます。
-3. 「アドオン」で、入れたアドオンが有効になっていることを確かめます。
-
-詳しくは[入れ方](https://jelararagi.github.io/SmartTools/install.html)を見てください。
-
-## Installation (English)
+## Installation (Summary)
 
 1. Download a ZIP. Do not extract it.
 2. In Blender, open Edit → Preferences... → Get Extensions → ∨ (top right) → Install from Disk..., and choose the ZIP. You can also drag and drop the ZIP onto the Blender window.
 3. Make sure the add-on is enabled under Add-ons.
 
-## 確かめ方 / Checksums
+For details, see [Installation](https://jelararagi.github.io/SmartTools/en/install.html).
+
+## Checksums
 
 [docs/downloads/SHA256SUMS.txt](docs/downloads/SHA256SUMS.txt)
 
-## ライセンス / License
+## License
 
-アドオンごとに異なります。[LICENSE.md](LICENSE.md) を見てください。解説書は © 2026 JELararagi. All rights reserved.
 Licenses differ per add-on; see [LICENSE.md](LICENSE.md). Manuals: © 2026 JELararagi. All rights reserved.
