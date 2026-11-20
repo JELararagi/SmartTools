@@ -192,8 +192,8 @@
         "Add Mesh"
       ],
       "archive_url": "./SmartGeometrySuite_1.0.0.zip",
-      "archive_size": 692084,
-      "archive_hash": "sha256:1fd28625829dad7805545949b571b93c42fcc4a801ad81f0f2e085b67bfb5cd7"
+      "archive_size": 692085,
+      "archive_hash": "sha256:d65e65e58f71a94da5b9db80f00eda6d69b9142b97111273e1cc943dd8dec752"
     },
     {
       "schema_version": "1.0.0",
@@ -323,8 +323,8 @@
         "User Interface"
       ],
       "archive_url": "./SmartOverlaySuite_1.0.0.zip",
-      "archive_size": 645793,
-      "archive_hash": "sha256:11177f29f75fbff771f1fba3e16ec8a18dcc71820439b5454a8571bd5387ed0a"
+      "archive_size": 659985,
+      "archive_hash": "sha256:4e915f157b58909b622d08c854ac044cc788898069a8b9f8ef09717675ba1422"
     },
     {
       "schema_version": "1.0.0",
@@ -431,8 +431,8 @@
         "3D View"
       ],
       "archive_url": "./SmartSculptSuite_1.0.0.zip",
-      "archive_size": 11029926,
-      "archive_hash": "sha256:762b6233af53900d0274c018e95f40d3cb9528c12cf0599cd48fe91b158ce332"
+      "archive_size": 11029927,
+      "archive_hash": "sha256:55c29a894ef7c89c5f7c5c2d7ddd8bcf5c937aa1e16cd90309e29260ca2cb42c"
     },
     {
       "schema_version": "1.0.0",
@@ -511,8 +511,8 @@
         "3D View"
       ],
       "archive_url": "./SmartShapekeySuite_1.0.0.zip",
-      "archive_size": 4246630,
-      "archive_hash": "sha256:578bce6d067c7d19fa79fa74857becdde61adaa25aac98ff99b606c59232534a"
+      "archive_size": 4246621,
+      "archive_hash": "sha256:7d8e3a241b8fd5a21592a9dfe7fc229be2896ace2fde76f5bfb180e3f2f9eeae"
     },
     {
       "schema_version": "1.0.0",
