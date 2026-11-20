@@ -5,7 +5,7 @@
     {
       "schema_version": "1.0.0",
       "id": "keymap_manager",
-      "name": "\u30ad\u30fc\u30de\u30c3\u30d7\u30de\u30cd\u30fc\u30b8\u30e3\u30fc",
+      "name": "Keymap Manager",
       "tagline": "Keyboard layout keymap conflict editor",
       "version": "1.0.0",
       "type": "add-on",
@@ -25,8 +25,8 @@
         "windows-x64"
       ],
       "archive_url": "./KeymapManager_1.0.0.zip",
-      "archive_size": 50322,
-      "archive_hash": "sha256:2ed9d7811df9cea17300498f6d7e3d7580998bec2f640d1c897ef1e7c629d7c0"
+      "archive_size": 50567,
+      "archive_hash": "sha256:307c265d76a8da5034ec4d6c8c06b6833c6d2f10bb15e6f001db1e79c731cc98"
     },
     {
       "schema_version": "1.0.0",
@@ -50,8 +50,8 @@
         "Animation"
       ],
       "archive_url": "./SmartAnimationSuite_1.0.0.zip",
-      "archive_size": 1102727,
-      "archive_hash": "sha256:1434fcf9117fa1964fb0f6040e0dd928a206cea2f1527f629d1eb76e744a91bc"
+      "archive_size": 1105580,
+      "archive_hash": "sha256:61ef4ebf18be584d519717b8f43f2debc5d5b91e535598b6b7fa7efec139e6d6"
     },
     {
       "schema_version": "1.0.0",
@@ -79,8 +79,8 @@
         "Pipeline"
       ],
       "archive_url": "./SmartCamLightSuite_1.0.0.zip",
-      "archive_size": 118220,
-      "archive_hash": "sha256:e8bad9b496f8776546fa7e3bd86ebeca931273d62b6d913d2e5307828b305c92"
+      "archive_size": 118576,
+      "archive_hash": "sha256:b34e19d1bfedbadbf249fefbc355103e8570960d0ea3e9555cc000c1d4cbc33a"
     },
     {
       "schema_version": "1.0.0",
@@ -107,8 +107,8 @@
         "User Interface"
       ],
       "archive_url": "./SmartClothSuite_1.0.0.zip",
-      "archive_size": 269536,
-      "archive_hash": "sha256:fae78235d76823f5c7a228ab4c571468e745f6b37ef26a7e7cedc2b29bbc9b32"
+      "archive_size": 270524,
+      "archive_hash": "sha256:da7ceb56fa8e0afec8f038c9cd612246007ab7d0f22c034e618266d8ce555162"
     },
     {
       "schema_version": "1.0.0",
@@ -134,8 +134,8 @@
         "Render"
       ],
       "archive_url": "./SmartCompositeSuite_1.0.0.zip",
-      "archive_size": 2664995,
-      "archive_hash": "sha256:57955895854da95d050af65922b4b27ba0e9d266db7b87cccea96888b883b301"
+      "archive_size": 2669262,
+      "archive_hash": "sha256:30eb694462b766d89c145ae11f39197aeb16fab851a2d41023d5bb1dbe49a69e"
     },
     {
       "schema_version": "1.0.0",
@@ -161,8 +161,8 @@
         "3D View"
       ],
       "archive_url": "./SmartFileSuite_1.0.0.zip",
-      "archive_size": 4874903,
-      "archive_hash": "sha256:16faa9e161134ea90b4af95d3db69df963df408fcf95a47c2366d34ea7fc9751"
+      "archive_size": 4879395,
+      "archive_hash": "sha256:d356bb7905967257fb19cbb192e2b2681dd4d5e8521b445e16c50fe7596503c4"
     },
     {
       "schema_version": "1.0.0",
@@ -192,8 +192,8 @@
         "Add Mesh"
       ],
       "archive_url": "./SmartGeometrySuite_1.0.0.zip",
-      "archive_size": 690249,
-      "archive_hash": "sha256:60c39161ab3289e7fad0ad1caa8ad5701be99ee7af555f3fdf1aaed4b9e8da37"
+      "archive_size": 692084,
+      "archive_hash": "sha256:1fd28625829dad7805545949b571b93c42fcc4a801ad81f0f2e085b67bfb5cd7"
     },
     {
       "schema_version": "1.0.0",
@@ -218,8 +218,8 @@
         "linux-x64"
       ],
       "archive_url": "./SmartIDSuite_1.0.0.zip",
-      "archive_size": 125532,
-      "archive_hash": "sha256:a96f1ea871f8f3278cc5b2444137ba3d0dabcc8e6e1c0f47a7d55055f3567a71"
+      "archive_size": 125775,
+      "archive_hash": "sha256:6257b102205a1b8b44c2e70ea61a37e116d16edea75aef1ed1d11cd98fe4f0ff"
     },
     {
       "schema_version": "1.0.0",
@@ -244,8 +244,8 @@
         "3D View"
       ],
       "archive_url": "./SmartModelingSuite_1.0.0.zip",
-      "archive_size": 3122247,
-      "archive_hash": "sha256:81eb4f38e349e4fd21fba6a9ab8e328fc5d9a417ce2cdf364729009e6b5c5a5d"
+      "archive_size": 3121786,
+      "archive_hash": "sha256:b1b13e7d4089ae012885fa6d6feda9a3ef3ea998daefcdd56707567e9112d95a"
     },
     {
       "schema_version": "1.0.0",
@@ -270,8 +270,8 @@
         "3D View"
       ],
       "archive_url": "./SmartModifierSuite_1.0.0.zip",
-      "archive_size": 1618112,
-      "archive_hash": "sha256:3f8e20074ec4c0a33863d529cb5173bb9ce49c6d4886ed8725311c79f8af7ece"
+      "archive_size": 1606224,
+      "archive_hash": "sha256:c03e751eb491a0a9a40a38b47248503a9de127067ef3a497b99a9bdf92d899fb"
     },
     {
       "schema_version": "1.0.0",
@@ -297,8 +297,8 @@
         "User Interface"
       ],
       "archive_url": "./SmartNodeSuite_1.0.0.zip",
-      "archive_size": 405981,
-      "archive_hash": "sha256:aa39560f853ad14778b580a1203a0acde1df30daca4c48366bfb01bcfe21a50e"
+      "archive_size": 407131,
+      "archive_hash": "sha256:dd34123238a11e11d7d42ca63b49f002bbd57da36b955db6e6d4048649bb83a2"
     },
     {
       "schema_version": "1.0.0",
@@ -323,8 +323,8 @@
         "User Interface"
       ],
       "archive_url": "./SmartOverlaySuite_1.0.0.zip",
-      "archive_size": 645034,
-      "archive_hash": "sha256:ec4cf8b57a2e98c3d1f75ede6dcb68b61255ca61ece88291de4568a5fd4030a8"
+      "archive_size": 645793,
+      "archive_hash": "sha256:11177f29f75fbff771f1fba3e16ec8a18dcc71820439b5454a8571bd5387ed0a"
     },
     {
       "schema_version": "1.0.0",
@@ -350,8 +350,8 @@
         "Material"
       ],
       "archive_url": "./SmartPaintSuite_1.0.0.zip",
-      "archive_size": 977067,
-      "archive_hash": "sha256:b5c476e021c77d40a963373c23a8403f945c948909b077b25b3975d55d0e0d89"
+      "archive_size": 975981,
+      "archive_hash": "sha256:5342afbe0507da3c4fbd9771eb8cbfe7e060edf4e739df5508a30d54f654de4e"
     },
     {
       "schema_version": "1.0.0",
@@ -377,8 +377,8 @@
         "3D View"
       ],
       "archive_url": "./SmartRenderSuite_1.0.0.zip",
-      "archive_size": 772796,
-      "archive_hash": "sha256:b5b603d587bb45933e8a9795a58cbd6d3135b121aee89415053f84c569b7036a"
+      "archive_size": 774282,
+      "archive_hash": "sha256:f73a74d5fb2224a2e6e401cdca050561b120272f09f8a96408b6e471667e3d67"
     },
     {
       "schema_version": "1.0.0",
@@ -404,8 +404,8 @@
         "3D View"
       ],
       "archive_url": "./SmartRigSuite_1.0.0.zip",
-      "archive_size": 723893,
-      "archive_hash": "sha256:1282a5a9a442d8cff993bb7fbcc850bf5b59d6947eced5b91d7fc6fce3c68910"
+      "archive_size": 726421,
+      "archive_hash": "sha256:c0dfbf66ee5ea5c24cc1d0353fe05cbca92a7c42ce9eb35595b11f851e2b60bb"
     },
     {
       "schema_version": "1.0.0",
@@ -431,8 +431,8 @@
         "3D View"
       ],
       "archive_url": "./SmartSculptSuite_1.0.0.zip",
-      "archive_size": 11029927,
-      "archive_hash": "sha256:434e91f4c7f451c0122dbb8207fcb42185f4f080df6134410099986253bf9d11"
+      "archive_size": 11029926,
+      "archive_hash": "sha256:762b6233af53900d0274c018e95f40d3cb9528c12cf0599cd48fe91b158ce332"
     },
     {
       "schema_version": "1.0.0",
@@ -457,8 +457,8 @@
         "User Interface"
       ],
       "archive_url": "./SmartSelectorSuite_1.0.0.zip",
-      "archive_size": 507171,
-      "archive_hash": "sha256:25f8dcd3c99040ef0f2fda8164a962cba36401aa725d58f2bca041fc9fd5e805"
+      "archive_size": 508857,
+      "archive_hash": "sha256:4fd5da58dd243783ccdb6a5a2dad2c89688840609e871d507fe448610ec1fe32"
     },
     {
       "schema_version": "1.0.0",
@@ -483,8 +483,8 @@
         "Material"
       ],
       "archive_url": "./SmartShaderSuite_1.0.0.zip",
-      "archive_size": 11690913,
-      "archive_hash": "sha256:7ffaccee892adeb7dd367ad83c6f002368c60a239ae5ce942014ca95eeb098ca"
+      "archive_size": 11698863,
+      "archive_hash": "sha256:b1ffa15b540a4a20380da291fbf09135291e2db297f9048fd6309de3b7ceb1e8"
     },
     {
       "schema_version": "1.0.0",
@@ -511,8 +511,8 @@
         "3D View"
       ],
       "archive_url": "./SmartShapekeySuite_1.0.0.zip",
-      "archive_size": 4246293,
-      "archive_hash": "sha256:35457e1460f2b2c4da38199558c3f557c6ccd95df8d16f9769a4d0fee15bf2d5"
+      "archive_size": 4246630,
+      "archive_hash": "sha256:578bce6d067c7d19fa79fa74857becdde61adaa25aac98ff99b606c59232534a"
     },
     {
       "schema_version": "1.0.0",
@@ -538,8 +538,8 @@
         "3D View"
       ],
       "archive_url": "./SmartToolsManager_1.0.0.zip",
-      "archive_size": 83344,
-      "archive_hash": "sha256:12e5861042e7290fcd9daf02ae804ceef22dd528750efccb6e5b06dad582e48e"
+      "archive_size": 83644,
+      "archive_hash": "sha256:faf26738bdb1ceb19126c3eb6349cdfb5de3021a0036311543a6d5e0df9288a4"
     },
     {
       "schema_version": "1.0.0",
@@ -565,7 +565,7 @@
       ],
       "archive_url": "./SmartTransformSuite_1.0.0.zip",
       "archive_size": 664386,
-      "archive_hash": "sha256:a8bbd9238ee66a8158c3bc8d716ceed07309ac64031e77cca140a9970f41a8e4"
+      "archive_hash": "sha256:76be267171c71132c84fef2cb879cd1190b70a5e5c853e5222d91e16c9815f38"
     },
     {
       "schema_version": "1.0.0",
@@ -590,8 +590,8 @@
         "Modeling"
       ],
       "archive_url": "./SmartUVSuite_1.0.0.zip",
-      "archive_size": 4261439,
-      "archive_hash": "sha256:a7987b8b853676763422609928b0ebe093d95b4b48a3b9db2aba54a92d920b5e"
+      "archive_size": 4261445,
+      "archive_hash": "sha256:74396b75ce8b952160701a1ae70fa530faf026decb7eb53c2f75b480837f3d56"
     },
     {
       "schema_version": "1.0.0",
@@ -616,8 +616,8 @@
         "3D View"
       ],
       "archive_url": "./SmartWorkspaceSuite_1.0.0.zip",
-      "archive_size": 852278,
-      "archive_hash": "sha256:c04e2a4176f47df9f597589e6cf59e95905df3f81a3d3ef31a487fd994f5dc08"
+      "archive_size": 853531,
+      "archive_hash": "sha256:f4579695e1c477d94416417bd2fae7110da47163e088b282a067f62fab038179"
     }
   ]
 }
