@@ -89,6 +89,38 @@ def related_sources(item, label):
     return f'<details><summary>{escape(label)}</summary><ul>{links}</ul></details>'
 
 
+def location_map(route, lang):
+    japanese = lang == 'ja'
+    section = escape(route['section'])
+
+    def mark(number):
+        return f'<span class="sg-map-mark">{number}</span>'
+
+    if 'category' in route:
+        category = escape(route['category'])
+        menu, prefs = ('編集', 'プリファレンス') if japanese else ('Edit', 'Preferences')
+        title = 'プリファレンスの位置（模式図）' if japanese else 'Preferences map (diagram)'
+        scroll = ''
+        if route['category'] in ('キーマップ', 'Keymap'):
+            scroll = '<small>' + ('一番下まで移動' if japanese else 'Scroll to the bottom') + '</small>'
+        diagram = (f'<div class="sg-map-bar">{mark(1)}{menu} → {mark(2)}{prefs}</div>'
+                   f'<div class="sg-map-prefs"><div class="sg-map-choice"><strong>{mark(3)}{category}</strong></div>'
+                   f'<div class="sg-map-dest">{scroll}<strong>{mark(4)}{section}</strong></div></div>')
+        alt = f'{menu} → {prefs} → {category} → {section}'
+    else:
+        editor, tab = escape(route['editor']), escape(route['tab'])
+        title = 'サイドバーの位置（模式図）' if japanese else 'Sidebar map (diagram)'
+        sidebar, open_label = ('サイドバー', 'で開く') if japanese else ('Sidebar', 'to open')
+        diagram = (f'<div class="sg-map-work"><div class="sg-map-field"><strong>{mark(1)}{editor}</strong>'
+                   f'<span class="sg-map-shortcut">{mark(2)}<kbd>N</kbd> {open_label}</span></div>'
+                   f'<div class="sg-map-pane"><small>{sidebar}</small><strong>{mark(4)}{section}</strong></div>'
+                   f'<div class="sg-map-tab">{mark(3)}{tab}</div></div>')
+        alt = (f'{editor}にポインターを置く → Nキー → サイドバー右端の「{tab}」タブ → 「{section}」'
+               if japanese else f'Place the pointer over the {editor} → N → {tab} on the right edge of the Sidebar → {section}')
+    return (f'<div class="sg-map"><div class="sg-map-title">{title}</div>'
+            f'<div class="sg-map-frame" role="img" aria-label="{alt}">{diagram}</div></div>')
+
+
 def intro(item, lang, cases, features):
     text = item['locales'][lang]
     p = text['panel']
@@ -97,12 +129,13 @@ def intro(item, lang, cases, features):
     cap = escape(p['caption'], quote=True)
     lead_figures = photos_for_example(item, lang)
     primary = escape(item['example'])
-    png = ('../../diagrams/ja/' if lang == 'ja' else '../../../diagrams/en/') + item['product'] + '.png'
+    diagrams = '../../diagrams/' if lang == 'ja' else '../../../diagrams/'
+    png = f'{diagrams}{lang}/{item["product"]}.png'
     html = [
-        START, f'<style>{STYLE}</style>', '<section class="sg-intro">',
+        START, f'<link rel="stylesheet" href="{diagrams}panel-location.css">', f'<style>{STYLE}</style>', '<section class="sg-intro">',
         f'<h2 id="compare-tools">{start}</h2>', '<div class="sg-start">',
         f'<figure><a class="sg-photo" href="{src}"><img fetchpriority="high" src="{src}" alt="{cap}"></a><figcaption><a href="{src}">{zoom}</a></figcaption></figure>',
-        f'<div class="sg-copy"><h3>{opening}</h3><p>{escape(p["where"])}</p><h3>{look}</h3><p>{escape(p["look"])}</p></div></div>',
+        f'<div class="sg-copy"><h3>{opening}</h3>{location_map(p["route"], lang)}<p>{escape(p["where"])}</p><h3>{look}</h3><p>{escape(p["look"])}</p></div></div>',
         f'<h2 id="smarttools-example-preview">{escape(text["headline"])}</h2><p>{escape(text["description"])}</p>',
         '<ol class="sg-steps">' + ''.join(f'<li>{escape(step)}</li>' for step in text['workflow']) + '</ol>',
         pair([(s, c) for s, c, _ in lead_figures]),

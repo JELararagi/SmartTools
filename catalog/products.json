@@ -35,7 +35,12 @@
             "look": "入口全体の図では「編集と転送」の左にある三角を探してください。",
             "heading": "4. 画面の場所",
             "caption": "「Smart Modeling」タブ全体（見出しはすべて閉じた状態）。いちばん上の「常時機能切り替え」と、作業の種類ごとの 8 つの見出し。右の数字はツールの数です。",
-            "git_blob": "97bcb7b6f66864851d79d9ca0e98e1e4f4397b32"
+            "git_blob": "97bcb7b6f66864851d79d9ca0e98e1e4f4397b32",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Modeling",
+              "section": "編集と転送"
+            }
           },
           "case_images": {
             "images/ex_sm_sketch_curve_0.jpg": "70fc911e3a9587f4bdcfd4d16de2c2d0546b7e05",
@@ -72,7 +77,12 @@
             "look": "The panel overview shows the triangle beside Edit and Transfer.",
             "heading": "4. Where to Find It",
             "caption": "The whole \"Smart Modeling\" tab (all section headers closed). \"Always-on Toggles\" at the very top, and eight section headers, one for each type of work. The number on the right is the number of tools.",
-            "git_blob": "12bde44e74f9bd3b8befe21baf60beb555ed0275"
+            "git_blob": "12bde44e74f9bd3b8befe21baf60beb555ed0275",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Modeling",
+              "section": "Edit and Transfer"
+            }
           },
           "case_images": {
             "images/ex_sm_sketch_curve_0.jpg": "c44aea9e847aa6b96163f1e37d8407940c788a27",
@@ -130,7 +140,12 @@
             "look": "入口全体の図では、開いた「常時機能切り替え」の下に機能別の見出しが並びます。",
             "heading": "4. 画面の場所",
             "caption": "「Smart UV」タブの全体。いちばん上の「常時機能切り替え」を開き、その下の見出しは閉じた状態",
-            "git_blob": "b02e4e381c985fa1d9991f185f9d804eb9970fda"
+            "git_blob": "b02e4e381c985fa1d9991f185f9d804eb9970fda",
+            "route": {
+              "editor": "UVエディター",
+              "tab": "Smart UV",
+              "section": "シーム/ピン"
+            }
           },
           "case_images": {
             "images/ex_uv_stack_turned_0.jpg": "0ea49bc4f99d58fc92cf1767c66c922a5eeaf0e5",
@@ -167,7 +182,12 @@
             "look": "The overview shows the tool sections below the expanded Always-on Toggles.",
             "heading": "4. Where to Find It",
             "caption": "The whole \"Smart UV\" tab. \"Always-on Toggles\" at the very top is open, and the sections below it are closed",
-            "git_blob": "1014cf8c7c0939745a94922ce5d63e9bc11f681b"
+            "git_blob": "1014cf8c7c0939745a94922ce5d63e9bc11f681b",
+            "route": {
+              "editor": "UV Editor",
+              "tab": "Smart UV",
+              "section": "Seam/Pin"
+            }
           },
           "case_images": {
             "images/ex_uv_stack_turned_0.jpg": "ae5693f80159e821dbcd4798e5641fd429bafd46",
@@ -225,7 +245,12 @@
             "look": "入口全体の図では、上から2番目に「地形 / 環境生成」があります。",
             "heading": "4. 画面の場所",
             "caption": "サイドバーの「Smart Geometry」タブを開いたところ。9 つの見出しはすべて閉じていて、上から「常時機能切り替え」「地形 / 環境生成」「分布 / 散布生成」「構造 / 表面生成」「有機 / ストローク生成」「デブリ / 破砕生成」「プリミティブ生成」「属性 / 可視化生成」「設定」が並びます。見出しの右端には「？」があります。",
-            "git_blob": "5d292b8d2945da1772f0c9ebf0504e634b36df19"
+            "git_blob": "5d292b8d2945da1772f0c9ebf0504e634b36df19",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Geometry",
+              "section": "地形 / 環境生成"
+            }
           },
           "case_images": {
             "images/ex_sg_building_floors_0.jpg": "384b9e21326394a91b8761d894475ef5811feb56",
@@ -262,7 +287,12 @@
             "look": "The full panel shows Terrain / Environment Generators as the second heading.",
             "heading": "4. Where to Find It",
             "caption": "The \"Smart Geometry\" tab of the Sidebar opened. All 9 section headers are closed, and from the top they are Always-on Toggles, Terrain / Environment Generators, Distribution / Scatter Generators, Structure / Surface Generators, Organic / Stroke Generators, Debris / Fragment Generators, Primitive Generators, Attribute / Visualization Generators, and Settings. There is a \"?\" at the right end of each section header.",
-            "git_blob": "b57e17d60cc8b4046cce96ce71130489aad4d3bd"
+            "git_blob": "b57e17d60cc8b4046cce96ce71130489aad4d3bd",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Geometry",
+              "section": "Terrain / Environment Generators"
+            }
           },
           "case_images": {
             "images/ex_sg_building_floors_0.jpg": "755d3a7930af61abffabaf434094e7db7c17a114",
@@ -320,7 +350,12 @@
             "look": "3Dビュー全体の写真では、右側のパネルに開いているスタックを見てください。",
             "heading": "4. 画面の場所",
             "caption": "Smart Modifier タブを開いたところ（3D ビュー全体）。右のサイドバーに「スマートモディファイア」パネルが出て、閉じた「常時機能切り替え」の下で「モディファイアスタック」が開いています。この図では最後の「サブディビジョンサーフェス」の行を選んでいるので、ベベルとサブディビジョンサーフェスの両方がかかった形が見えています。",
-            "git_blob": "9aa95c6c1f59c548a3b3dcd25f2f8b5cf769585b"
+            "git_blob": "9aa95c6c1f59c548a3b3dcd25f2f8b5cf769585b",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Modifier",
+              "section": "モディファイアスタック"
+            }
           },
           "case_images": {
             "images/ex_smod_instance_value_link_0.jpg": "675d68fd852ddc979f6233c8e5ff65840ebb7868",
@@ -357,7 +392,12 @@
             "look": "Look at the open stack on the right side of the full viewport screenshot.",
             "heading": "4. Where to Find It",
             "caption": "The Smart Modifier tab opened (whole 3D Viewport). The \"Smart Modifier\" panel appears in the Sidebar on the right, with \"Modifier Stack\" open below the closed \"Always-on Toggles\". In this figure the last \"Subdivision Surface\" row is selected, so you see the shape with both Bevel and Subdivision Surface applied.",
-            "git_blob": "e26708cc4adf2e9c8a7e86a949ea228edd5f594f"
+            "git_blob": "e26708cc4adf2e9c8a7e86a949ea228edd5f594f",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Modifier",
+              "section": "Modifier Stack"
+            }
           },
           "case_images": {
             "images/ex_smod_instance_value_link_0.jpg": "25d5d853dab4110eb23dbdc20bb2ddb9f163f15a",
@@ -419,7 +459,12 @@
             "look": "入口全体の図では、通常は開いている「編集モード専用スカルプト」を折りたたんでいます。",
             "heading": "4. 画面の場所",
             "caption": "サイドバーの「Smart Sculpt」タブで「スマートスカルプト」パネルを開いたところ。中の見出し（「常時機能切り替え」から「保存/入出力」まで）が並びます。「編集モード専用スカルプト」は最初は開いていますが、この図では閉じて撮っています。見出しの左の三角を押すと、その中身が開きます。",
-            "git_blob": "2ece01e0a27c671094806d98e71b621f4462fd86"
+            "git_blob": "2ece01e0a27c671094806d98e71b621f4462fd86",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Sculpt",
+              "section": "スマートスカルプト"
+            }
           },
           "case_images": {
             "images/ex_ss_faceset_extract_0.jpg": "45a880d68efcc8fc947c1d0617f0374c2e2f8c50",
@@ -456,7 +501,12 @@
             "look": "The overview shows Edit Mode Sculpt Only folded up, although that section normally opens expanded.",
             "heading": "4. Where to Find It",
             "caption": "The \"Smart Sculpt\" panel opened in the \"Smart Sculpt\" tab of the Sidebar. The section headers inside (from \"Always-on Toggle\" to \"Save / I/O\") are lined up. \"Edit Mode Sculpt Only\" is open at first, but it was closed for this figure. Click the triangle to the left of a section header to open its contents.",
-            "git_blob": "67ecb78f57033ca74526c951d62c937d760d1a6d"
+            "git_blob": "67ecb78f57033ca74526c951d62c937d760d1a6d",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Sculpt",
+              "section": "Smart Sculpt"
+            }
           },
           "case_images": {
             "images/ex_ss_faceset_extract_0.jpg": "0c78de39afe408b4542d4592c75bceaa73b9f20f",
@@ -518,7 +568,12 @@
             "look": "入口全体の図では、「常時機能切り替え」の下に番号付きの手順が並びます。",
             "heading": "4. 画面の場所",
             "caption": "Smart Rig パネル全体。「常時機能切り替え」、番号付きの 6 つの手順、番号の無い道具の見出しが並ぶ",
-            "git_blob": "49f8d9555c9a7610633af2c16b9f5d66b4158a18"
+            "git_blob": "49f8d9555c9a7610633af2c16b9f5d66b4158a18",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Rig",
+              "section": "1. 準備とパーツ"
+            }
           },
           "case_images": {
             "images/ex_sr_keep_outside_0.jpg": "41407c97bd7037e670a0d323881992ea57cdc656",
@@ -555,7 +610,12 @@
             "look": "The panel overview lists the numbered stages under Always-on Toggles.",
             "heading": "4. Where to Find It",
             "caption": "The whole Smart Rig panel. \"Always-on Toggles\", the six numbered steps, and the unnumbered tool headers are lined up",
-            "git_blob": "5b01a8fb76750c316317b482a7064b61515ebb76"
+            "git_blob": "5b01a8fb76750c316317b482a7064b61515ebb76",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Rig",
+              "section": "1. Setup and Parts"
+            }
           },
           "case_images": {
             "images/ex_sr_keep_outside_0.jpg": "4713724f6bea7de756b00d1e8248315fea877e53",
@@ -617,7 +677,12 @@
             "look": "入口全体の図は「タスク」を「全機能」にした状態なので、表示する作業を絞っているときより見出しが多くなります。",
             "heading": "4. 画面の場所",
             "caption": "「タスク」を「全機能」にした時の見出しの並び（見出しはどれも閉じた状態です。いちばん下が「移植済み同梱ツール」）",
-            "git_blob": "e14a8d9e7981557e33883905e44d6f5dcc4f0d5c"
+            "git_blob": "e14a8d9e7981557e33883905e44d6f5dcc4f0d5c",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Animation",
+              "section": "概要タスク"
+            }
           },
           "case_images": {
             "images/ex_sa_retarget_0.jpg": "3652582b7555f2040638aa682b2cf7411703b187",
@@ -654,7 +719,12 @@
             "look": "The overview shows Task set to All Functions, so it includes headings that a task filter may hide.",
             "heading": "4. Where to Find It",
             "caption": "The order of section headers when \"Task\" is set to \"All Functions\" (all section headers are closed; the bottom one is \"Migrated Bundled Tools\")",
-            "git_blob": "f4b3f48c3bc7b6bcb7219b363e2da94d0a4b7c05"
+            "git_blob": "f4b3f48c3bc7b6bcb7219b363e2da94d0a4b7c05",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Animation",
+              "section": "Overview Task"
+            }
           },
           "case_images": {
             "images/ex_sa_retarget_0.jpg": "d4d6c6845f9ddf2df674892aeec9b77856ee4bd1",
@@ -716,7 +786,12 @@
             "look": "入口全体の図では、「常時機能切り替え」のすぐ下に「Basis と新規マップ」があります。",
             "heading": "4. 画面の場所",
             "caption": "「Smart Shapekey」パネルの全体です。見出しは全部閉じていて、上から「常時機能切り替え」「Basis と新規マップ」「マップ」「ミラーと反転ツール」「書き出し」「保存と読み込み」「ミラー設定」「モディファイア」「ドライバー」「制御・トラッキング」が並びます。各見出しの右の「？」で、その欄の説明が開きます。",
-            "git_blob": "f8fd36ef0a2e4dbe12e9d537d177ffd906850af7"
+            "git_blob": "f8fd36ef0a2e4dbe12e9d537d177ffd906850af7",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Shapekey",
+              "section": "Basis と新規マップ"
+            }
           },
           "case_images": {
             "images/ex_sk_load_uv_differs_0.jpg": "118f5b72a9bfb307ff6c2628e840eaaea3eeffa4",
@@ -753,7 +828,12 @@
             "look": "In the overview, Basis and New Map sits directly under Always-on Toggle.",
             "heading": "4. Where to Find It",
             "caption": "The whole \"Smart Shapekey\" panel. All section headers are closed, and from the top they are Always-on Toggle, Basis and New Map, Maps, Mirror Tools, Export, Save/Load, Mirror Settings, Modifiers, Drivers, and Control / Tracking. The \"?\" at the right of each header opens the explanation for that section.",
-            "git_blob": "73b3738ddca0a1081ca37e38eda7e2624a155502"
+            "git_blob": "73b3738ddca0a1081ca37e38eda7e2624a155502",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Shapekey",
+              "section": "Basis and New Map"
+            }
           },
           "case_images": {
             "images/ex_sk_load_uv_differs_0.jpg": "118f5b72a9bfb307ff6c2628e840eaaea3eeffa4",
@@ -811,7 +891,12 @@
             "look": "この入口全体の図はBlenderのサイドバーで、各グループは左の三角から開きます。",
             "heading": "4. 画面の場所",
             "caption": "パネル「スマートセレクター」の全体。グループはすべて閉じた状態です。",
-            "git_blob": "f5d5145a99f822a1aacb7e0cb79edbb61e1e4b3b"
+            "git_blob": "f5d5145a99f822a1aacb7e0cb79edbb61e1e4b3b",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "スマートセレクター",
+              "section": "選択セット"
+            }
           },
           "case_images": {
             "images/ex_ss_bridge_custom_prop_0.jpg": "a8af861ea5a95295d9072f41603f37bda308f1c1",
@@ -848,7 +933,12 @@
             "look": "The overview shows the Blender sidebar, where the triangle beside each group opens its controls.",
             "heading": "4. Where to Find It",
             "caption": "The whole \"Smart Selector\" panel, with all groups closed.",
-            "git_blob": "ef566c6cff83490d092acc018e964bf4c5a1de36"
+            "git_blob": "ef566c6cff83490d092acc018e964bf4c5a1de36",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Selector",
+              "section": "Selection Set"
+            }
           },
           "case_images": {
             "images/ex_ss_bridge_custom_prop_0.jpg": "43fa998f8767c45a611496f24d1006b6a716e6fd",
@@ -910,7 +1000,12 @@
             "look": "入口全体の図では機能別の見出しが閉じており、各見出しの左の三角で中を確認できます。",
             "heading": "4. 画面の場所",
             "caption": "Smart Cloth タブのパネル全体。見出しがすべて閉じた、最初の状態",
-            "git_blob": "0e8960b435af239f60ab6acf226200b4158bfa18"
+            "git_blob": "0e8960b435af239f60ab6acf226200b4158bfa18",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Cloth",
+              "section": "再利用可能なスカート設定"
+            }
           },
           "case_images": {
             "images/ex_sc_safe_bake_0.jpg": "32a41f2ce755adba4419a241aca6439fbccaacd2",
@@ -947,7 +1042,12 @@
             "look": "The overview shows the sections collapsed, with a triangle on the left to open each one.",
             "heading": "4. Where to Find It",
             "caption": "The whole Smart Cloth tab panel, in its initial state with all section headers closed",
-            "git_blob": "359f9b17e136741e855cce685392fb560565582c"
+            "git_blob": "359f9b17e136741e855cce685392fb560565582c",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Cloth",
+              "section": "Reusable Skirt Setup"
+            }
           },
           "case_images": {
             "images/ex_sc_safe_bake_0.jpg": "25b1249171746c0d7f59fc6251ebed4aa81cd50e",
@@ -1009,7 +1109,12 @@
             "look": "入口全体の図では「ドキュメント」と「レイヤー」が開いており、画像をまだ選んでいないため「画像を開く」と表示されています。",
             "heading": "4. 画面の場所",
             "caption": "3D ビューの Smart Paint タブ。最初から開いている「ドキュメント」と「レイヤー」、その下に閉じた見出しが並びます。まだ画像を開いていないので、「画像を開く」と表示されています。",
-            "git_blob": "f2195cc074bc0001d6f60d6cbe48954e936b0d6a"
+            "git_blob": "f2195cc074bc0001d6f60d6cbe48954e936b0d6a",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Paint",
+              "section": "ドキュメント"
+            }
           },
           "case_images": {
             "images/ex_pt_adjust_psd_0.jpg": "6c5467715fef5d7b32d5abfe9d2fceee6fb61763",
@@ -1046,7 +1151,12 @@
             "look": "The overview shows Document and Layers open, with Open Image visible because no image has been opened.",
             "heading": "4. Where to Find It",
             "caption": "The Smart Paint tab in the 3D Viewport. \"Document\" and \"Layers\" are open from the start, with closed section headers below them. No image has been opened yet, so \"Open Image\" is shown.",
-            "git_blob": "8848d2d187b51a23ab047f7f5748b659a0bd29ca"
+            "git_blob": "8848d2d187b51a23ab047f7f5748b659a0bd29ca",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Paint",
+              "section": "Document"
+            }
           },
           "case_images": {
             "images/ex_pt_adjust_psd_0.jpg": "941bdbe0ebffa1eac9ab95d01412987443e30239",
@@ -1108,7 +1218,12 @@
             "look": "入口全体の図では、上部の「スマートシェーダー」の下に9つの見出しが折りたたまれています。",
             "heading": "4. 画面の場所",
             "caption": "「Smart Shader」タブを開いた所。いちばん上に「スマートシェーダー」のパネルがあり、9 つの見出しがすべて閉じています。",
-            "git_blob": "a12661d62478c30f19952f45ad18fef5ae07da16"
+            "git_blob": "a12661d62478c30f19952f45ad18fef5ae07da16",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Shader",
+              "section": "マテリアルエディター"
+            }
           },
           "case_images": {
             "images/ex_sh_layer_two_objects_0.jpg": "78f54985d44405bf77ff2f6bc9876102f24b3897",
@@ -1145,7 +1260,12 @@
             "look": "The overview shows nine collapsed sections underneath Shader Studio.",
             "heading": "4. Where to Find It",
             "caption": "The \"Smart Shader\" tab opened. The \"Shader Studio\" panel is at the very top, and all 9 section headers are closed.",
-            "git_blob": "aff860e68eb804749c2e0cd11958b8d29de0a5b5"
+            "git_blob": "aff860e68eb804749c2e0cd11958b8d29de0a5b5",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Shader",
+              "section": "Material Editor"
+            }
           },
           "case_images": {
             "images/ex_sh_layer_two_objects_0.jpg": "b9815c0c3f98e13730a171788581ddb7951deffd",
@@ -1207,7 +1327,12 @@
             "look": "入口の写真では「常時機能切り替え」と「概要」が開いており、各見出しの右端にヘルプの「？」があります。",
             "heading": "4. 画面の場所",
             "caption": "サイドバーの「Smart Node」タブ。「常時機能切り替え」と「概要」を開いたところ。見出しの右端に「？」があります。",
-            "git_blob": "9a7c5a03c32836bb3a598cab50c878125be78cab"
+            "git_blob": "9a7c5a03c32836bb3a598cab50c878125be78cab",
+            "route": {
+              "editor": "シェーダーエディター",
+              "tab": "Smart Node",
+              "section": "概要"
+            }
           },
           "case_images": {
             "images/ex_nd_link_out_0.jpg": "3a4156b817adb14eea774ec31a2e39a4d01acc11",
@@ -1244,7 +1369,12 @@
             "look": "The panel screenshot shows Always-on Toggles and Overview expanded, with a help button at the right of each heading.",
             "heading": "4. Where to Find It",
             "caption": "The \"Smart Node\" tab in the Sidebar, with \"Always-on Toggles\" and \"Overview\" open. There is a \"?\" at the right end of each section header.",
-            "git_blob": "3795c647c8a6155d671bf837a6948dd1b87cc395"
+            "git_blob": "3795c647c8a6155d671bf837a6948dd1b87cc395",
+            "route": {
+              "editor": "Shader Editor",
+              "tab": "Smart Node",
+              "section": "Overview"
+            }
           },
           "case_images": {
             "images/ex_nd_link_out_0.jpg": "10607091926b98bd4aef7b5a736b6aac02f85f95",
@@ -1302,7 +1432,12 @@
             "look": "入口全体の図では、「カメラ」と「ライト」が別々の見出しとして並びます。",
             "heading": "4. 画面の場所",
             "caption": "Smart CamLight タブ。「常時機能切り替え」「カメラ」「ライト」の 3 つの見出しを閉じた状態",
-            "git_blob": "a7689141f5fa2bf44a0d83caea0207121acd5c59"
+            "git_blob": "a7689141f5fa2bf44a0d83caea0207121acd5c59",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart CamLight",
+              "section": "ライト"
+            }
           },
           "case_images": {
             "images/ex_scl_studio_0.jpg": "9a6c6e1f0f893f57e41d71d6dd526edb21aa4d80",
@@ -1339,7 +1474,12 @@
             "look": "The full tab shows Camera and Light as separate headings.",
             "heading": "4. Where to Find It",
             "caption": "The Smart CamLight tab with the three section headers (Always-on Toggles, Camera, and Light) closed",
-            "git_blob": "c3121a6a26194cd055f858b4dc566067c1e65989"
+            "git_blob": "c3121a6a26194cd055f858b4dc566067c1e65989",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart CamLight",
+              "section": "Light"
+            }
           },
           "case_images": {
             "images/ex_scl_studio_0.jpg": "9a6c6e1f0f893f57e41d71d6dd526edb21aa4d80",
@@ -1401,7 +1541,12 @@
             "look": "この写真は「スマートレンダー」を開いた操作画面で、状態欄と3つの主なボタンを確認できます。",
             "heading": "5-2. スマートレンダー",
             "caption": "「スマートレンダー」を開いたところ（状態の欄と、3 つの主なボタン）",
-            "git_blob": "51824e82bd74350d659007cbc639659ed86ef4f1"
+            "git_blob": "51824e82bd74350d659007cbc639659ed86ef4f1",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Render",
+              "section": "スマートレンダー"
+            }
           },
           "case_images": {
             "images/ex_rd_queue_run_0.jpg": "72296309a0e28d2345b2f8ccd6ecd1a0f1d6351e",
@@ -1438,7 +1583,12 @@
             "look": "This is the expanded Smart Render section, showing the status area and three main buttons.",
             "heading": "5-2. Smart Render",
             "caption": "\"Smart Render\" opened (the status area and the three main buttons)",
-            "git_blob": "91b7fba6e3bbecb6583a641ba25abff8b6713d3f"
+            "git_blob": "91b7fba6e3bbecb6583a641ba25abff8b6713d3f",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Render",
+              "section": "Smart Render"
+            }
           },
           "case_images": {
             "images/ex_rd_queue_run_0.jpg": "c0223829620f70aa44a6a336e62501714fdbf709",
@@ -1496,7 +1646,12 @@
             "look": "入口全体の図では、「常時機能切り替え」の下に「エフェクト／プリセット」があります。",
             "heading": "4. 画面の場所",
             "caption": "サイドバーの「Smart Composite」タブ。「常時機能切り替え」と「エフェクト／プリセット」の2つの見出しが閉じた状態です。",
-            "git_blob": "db8d86468c843ce2eefc802868a41b633a5fcd8a"
+            "git_blob": "db8d86468c843ce2eefc802868a41b633a5fcd8a",
+            "route": {
+              "editor": "コンポジター",
+              "tab": "Smart Composite",
+              "section": "エフェクト／プリセット"
+            }
           },
           "case_images": {
             "images/ex_scomp_zblur_repress_0.jpg": "013500734d2a850832dbf3359bc7bf5d629c241f",
@@ -1533,7 +1688,12 @@
             "look": "The tab overview shows Effects / Presets below Always-on Toggles.",
             "heading": "4. Where to Find It",
             "caption": "The \"Smart Composite\" tab in the Sidebar. The two section headers, \"Always-on Toggles\" and \"Effects / Presets\", are closed.",
-            "git_blob": "6ab61bbf954f191a1f164013616f8151bb5ab06f"
+            "git_blob": "6ab61bbf954f191a1f164013616f8151bb5ab06f",
+            "route": {
+              "editor": "Compositor",
+              "tab": "Smart Composite",
+              "section": "Effects / Presets"
+            }
           },
           "case_images": {
             "images/ex_scomp_zblur_repress_0.jpg": "6775999780694ffde09d1280f60ff2a62605463f",
@@ -1595,7 +1755,12 @@
             "look": "入口全体の図は「現在のソース」だけが開いた状態で、下に「クイックソース」と各カテゴリが続きます。",
             "heading": "4. 画面の場所",
             "caption": "SmartFile Suite のパネルを開いたところ。「現在のソース」だけが開き、その下に「クイックソース」と 7 つのカテゴリの見出しが閉じたまま並びます。",
-            "git_blob": "79836e5c9f1251dbbf8a037089f28fb3af72ac64"
+            "git_blob": "79836e5c9f1251dbbf8a037089f28fb3af72ac64",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart File",
+              "section": "現在のソース"
+            }
           },
           "case_images": {
             "images/ex_sf_resolve_missing_0.jpg": "b531adf9fa0f834eb1bc7432265229ab39c72ac5",
@@ -1632,7 +1797,12 @@
             "look": "The overview shows only Current Source expanded, with Quick Sources and the category headings below it.",
             "heading": "4. Where to Find It",
             "caption": "The SmartFile Suite panel opened. Only \"Current Source\" is open, and below it \"Quick Sources\" and the seven category section headers are lined up, still closed.",
-            "git_blob": "e086394f4d446e514547b1e86f3642f6aab7388b"
+            "git_blob": "e086394f4d446e514547b1e86f3642f6aab7388b",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart File",
+              "section": "Current Source"
+            }
           },
           "case_images": {
             "images/ex_sf_resolve_missing_0.jpg": "04fe5a9dc08ee01ae4ba66fc295a392179142f16",
@@ -1694,7 +1864,12 @@
             "look": "入口全体の図には、左の三角から開ける5つの見出しが並びます。",
             "heading": "4. 画面の場所",
             "caption": "サイドバーの「Smart Workspace」タブ。5 つの見出しが閉じた状態",
-            "git_blob": "5f88a5e8cfdc6a81bd16ae9453cec80e9eae7c0f"
+            "git_blob": "5f88a5e8cfdc6a81bd16ae9453cec80e9eae7c0f",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Workspace",
+              "section": "ワークスペース管理"
+            }
           },
           "case_images": {
             "images/ex_sw_workspace_save_0.jpg": "229bf00f7875c0f11ee9aecd4b5442c746f98bf8",
@@ -1731,7 +1906,12 @@
             "look": "The tab overview shows five collapsed sections that open from their left-hand triangles.",
             "heading": "4. Where to Find It",
             "caption": "The Smart Workspace tab in the Sidebar, with the 5 section headers closed",
-            "git_blob": "5f4ea9e226daa225d38818b5e78a74b293816f03"
+            "git_blob": "5f4ea9e226daa225d38818b5e78a74b293816f03",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Workspace",
+              "section": "Workspace Manager"
+            }
           },
           "case_images": {
             "images/ex_sw_workspace_save_0.jpg": "aea3be4bb302ed3444179e0fb3f634b2c0553698",
@@ -1789,7 +1969,12 @@
             "look": "この写真は「常時機能切り替え」の個別設定で、各行の右側のボタンが有効・無効を示します。",
             "heading": "4. 画面の場所",
             "caption": "「常時機能切り替え」を開いたところ。各行の右のボタンで有効と無効を切り替えます（図では「Nパネル状態保存」だけが有効）。",
-            "git_blob": "01fc2dda8bc9f1f255328a0550d0ba11184f5ac0"
+            "git_blob": "01fc2dda8bc9f1f255328a0550d0ba11184f5ac0",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart Transform",
+              "section": "常時機能切り替え"
+            }
           },
           "case_images": {
             "images/ex_st_floor_0.jpg": "c560a2b43f5c0614ff0b58121dd45bf7adc81281",
@@ -1826,7 +2011,12 @@
             "look": "This detail shows Always-on Toggle, with an on/off button on the right of each row.",
             "heading": "4. Where to Find It",
             "caption": "\"Always-on Toggle\" opened. The button at the right of each row switches between On and Off (in the figure, only \"N-panel State Save\" is enabled).",
-            "git_blob": "a58adf220596fd05a7b06966271b30ebad6fd47c"
+            "git_blob": "a58adf220596fd05a7b06966271b30ebad6fd47c",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Transform",
+              "section": "Always-on Toggle"
+            }
           },
           "case_images": {
             "images/ex_st_floor_0.jpg": "0ff5b393dd303bfdd744b0e15618201844d4a5ef",
@@ -1888,7 +2078,12 @@
             "look": "入口全体の図では、各見出しの左の三角が開閉、右の「？」が説明に対応します。",
             "heading": "4. 画面の場所",
             "caption": "「スマートオーバーレイ」パネルの 7 つの見出しを全部閉じたところ。見出しの左の三角で開閉し、右の「？」で説明を出します。",
-            "git_blob": "452e57fcdb1a74a36bf0bfd1c1caa995097e54e7"
+            "git_blob": "452e57fcdb1a74a36bf0bfd1c1caa995097e54e7",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "スマートオーバーレイ",
+              "section": "メッシュ・カーブ表示"
+            }
           },
           "case_images": {
             "images/ex_so_topology_0.jpg": "22d0df3bf826a8c082de6703192068b107a97172",
@@ -1925,7 +2120,12 @@
             "look": "The overview shows a triangle to expand each section and a question mark to open its help.",
             "heading": "4. Where to Find It",
             "caption": "The 7 section headers of the \"Smart Overlay\" panel, all closed. Open or close them with the triangle on the left of each section header, and show the explanation with the \"?\" on the right.",
-            "git_blob": "cb66b1ed7d163585bf1d53f3f42838c958257fb1"
+            "git_blob": "cb66b1ed7d163585bf1d53f3f42838c958257fb1",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart Overlay",
+              "section": "Mesh and Curve Display"
+            }
           },
           "case_images": {
             "images/ex_so_topology_0.jpg": "3871db40fc5590570c4fe8a3dcc0829b6847d9ac",
@@ -1983,7 +2183,12 @@
             "look": "入口全体の図では、「常時機能切り替え」が開き、その下の各見出しは閉じています。",
             "heading": "4. 画面の場所",
             "caption": "Smart ID のタブ（常時機能切り替えを開き、ほかの見出しを閉じた所）",
-            "git_blob": "2e14fe961d7908f4553e2f474fec016705ee781f"
+            "git_blob": "2e14fe961d7908f4553e2f474fec016705ee781f",
+            "route": {
+              "editor": "3Dビューポート",
+              "tab": "Smart ID",
+              "section": "ID / チャンネルライブラリ"
+            }
           },
           "case_images": {
             "images/ex_sid_material_faces_0.jpg": "aee17f1c62cfd54d085e401b81c9bfb13af848ba",
@@ -2020,7 +2225,12 @@
             "look": "The tab overview shows Always-on Toggles expanded and the remaining sections collapsed.",
             "heading": "4. Where to Find It",
             "caption": "The Smart ID tab (with Always-on Toggles open and the other section headers closed)",
-            "git_blob": "fb2ad0a6ac574314983fd5a0d58e072dabc83475"
+            "git_blob": "fb2ad0a6ac574314983fd5a0d58e072dabc83475",
+            "route": {
+              "editor": "3D Viewport",
+              "tab": "Smart ID",
+              "section": "ID / Channel Library"
+            }
           },
           "case_images": {
             "images/ex_sid_material_faces_0.jpg": "fb828f24a315f7c28342dd63c523bb46cb95d867",
@@ -2078,7 +2288,11 @@
             "look": "これはプリファレンスの入口画面で、「スマートツールマネージャーを開く」ボタンと「常時機能切り替え」が写っています。",
             "heading": "4. 画面の場所",
             "caption": "プリファレンスのアドオンの欄。「スマートツールマネージャーを開く」「リリース整理」と、開いた「常時機能切り替え」",
-            "git_blob": "9128bda7fb6aee569b2d9e75fc24dcd13a9b7a3f"
+            "git_blob": "9128bda7fb6aee569b2d9e75fc24dcd13a9b7a3f",
+            "route": {
+              "category": "アドオン",
+              "section": "Smart Tools Manager"
+            }
           },
           "case_images": {
             "images/ex_stm_cleanup_rig_0.jpg": "fe655112571ad873497973c01c1fe8b8e470d718",
@@ -2115,7 +2329,11 @@
             "look": "This Preferences entry shows the Open Smart Tools Manager button and the expanded Always-on Toggles section.",
             "heading": "4. Where to Find It",
             "caption": "The add-on section of Preferences. \"Open Smart Tools Manager\", \"Release Cleanup\", and the opened \"Always-on Toggles\"",
-            "git_blob": "138a291ff7ca97f04628751e8b2473ea13c8229f"
+            "git_blob": "138a291ff7ca97f04628751e8b2473ea13c8229f",
+            "route": {
+              "category": "Add-ons",
+              "section": "Smart Tools Manager"
+            }
           },
           "case_images": {
             "images/ex_stm_cleanup_rig_0.jpg": "eae768b56cc17e46dfe1a3aa2943832d4d59bc35",
@@ -2173,7 +2391,11 @@
             "look": "これは登録内容を調べる操作画面で、キーボード図のCtrlとSを選んだときの一致数と各行の状態が見えます。",
             "heading": "4. 画面の場所",
             "caption": "キーボードの絵で Ctrl と S を選んだところ。「キー: Ctrl + S + 押下」の部分と、見出しに「一致数: 4」と出た「登録済みキーマップ項目」が見えます。各行の右が状況です",
-            "git_blob": "d736b2cf1b78decfa29f9488de93dd28cc68717b"
+            "git_blob": "d736b2cf1b78decfa29f9488de93dd28cc68717b",
+            "route": {
+              "category": "キーマップ",
+              "section": "キーマップマネージャー"
+            }
           },
           "case_images": {
             "images/ex_km_consolidate_0.jpg": "a1253f4760195a6869af17dff0ee35bd8abbdd8d",
@@ -2210,7 +2432,11 @@
             "look": "This lookup view shows Ctrl and S selected on the keyboard, the number of matches and the status of each binding.",
             "heading": "4. Where to Find It",
             "caption": "Ctrl and S selected on the keyboard picture. You can see the \"Key: Ctrl + S + Press\" part and \"Registered Keymap Items\" with \"Match Count: 4\" in the header. The right side of each row is the status",
-            "git_blob": "bde001c6a2468ced6846551e52bcecf53bde8adb"
+            "git_blob": "bde001c6a2468ced6846551e52bcecf53bde8adb",
+            "route": {
+              "category": "Keymap",
+              "section": "Keymap Manager"
+            }
           },
           "case_images": {
             "images/ex_km_consolidate_0.jpg": "86a13f6546eb53a52651be2122995d3221c00923",

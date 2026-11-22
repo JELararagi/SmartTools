@@ -1,0 +1,19 @@
+.sg-map{margin:.2rem 0 .7rem;color:var(--fg);font-size:.88rem;line-height:1.35}
+.sg-map-title{margin-bottom:.3rem;font-weight:600;color:var(--muted)}
+.sg-map-frame{overflow:hidden;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+.sg-map-work{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr) 1.9rem .85rem;min-height:8.8rem}
+.sg-map-work::after{content:"";background:linear-gradient(to bottom,transparent 37%,var(--line) 37% 39%,transparent 39%),var(--bg);border-left:2px solid var(--line)}
+.sg-map-field,.sg-map-pane,.sg-map-choice,.sg-map-dest{min-width:0;padding:.6rem;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:.5rem}
+.sg-map-field{background-color:var(--accent2);background-image:linear-gradient(to right,var(--line) 1px,transparent 1px),linear-gradient(to bottom,var(--line) 1px,transparent 1px);background-size:1.25rem 1.25rem}
+.sg-map-field strong,.sg-map-shortcut{padding:.2rem;background:var(--accent2);border-radius:3px}
+.sg-map-work strong,.sg-map-prefs strong{overflow-wrap:anywhere}
+.sg-map-pane{border-left:2px solid var(--line)}
+.sg-map-mark{display:inline-grid;place-items:center;min-width:1.35em;height:1.35em;margin-inline-end:.3em;vertical-align:baseline;border-radius:50%;background:var(--accent);color:var(--card);font:bold .85em/1 sans-serif}
+.sg-map-shortcut{display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;font-size:.82rem}
+.sg-map-shortcut kbd{background:var(--card);color:var(--fg);border:1px solid var(--muted);border-bottom-width:2px;padding:.05rem .35rem;font-size:1em}
+.sg-map-tab{display:flex;align-items:center;justify-content:center;gap:.28rem;padding:.4rem .16rem;writing-mode:vertical-rl;white-space:nowrap;background:var(--accent);color:var(--card);font-weight:bold}
+.sg-map-tab .sg-map-mark{margin:0;writing-mode:horizontal-tb;background:var(--card);color:var(--accent)}
+.sg-map-bar{padding:.45rem .65rem;border-bottom:1px solid var(--line);background:var(--accent2)}
+.sg-map-prefs{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);min-height:5rem}
+.sg-map-choice{background:var(--bg);border-right:2px solid var(--line)}
+.sg-map-dest small,.sg-map-pane small{color:var(--muted);font-size:.83rem}
