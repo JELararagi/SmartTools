@@ -101,6 +101,32 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/root_overview.png"><img fetchpriority="high" src="images/root_overview.png" alt="Smart CamLight タブ。「常時機能切り替え」「カメラ」「ライト」の 3 つの見出しを閉じた状態"></a><figcaption><a href="images/root_overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart CamLight」タブ → 「ライト」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>ライト</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart CamLight</div></div></div></div><p>オブジェクトモードの3DビューポートでNキーを押し、「Smart CamLight」タブを選びます。照明の操作を始めるには「ライト」を開きます。</p><h3>画面の目印</h3><p>入口全体の図では、「カメラ」と「ライト」が別々の見出しとして並びます。</p></div></div>
+<!-- smartcamlight-shots-example:start -->
+<section class="sg-first" id="shot-workflow"><h2>同じ模型を横長と縦長で書き出す</h2><p>画面に「カメラと照明のショット」がある版で試せます。Windows版Blender 5.1.2で確認しました。</p><div class="sg-shot-demo"><p>1つのシーンから、商品一覧用の横長画像と、詳細ページ用の縦長画像を作ります。SmartCamLightはカメラ、照明、解像度をショット名で記憶します。この2枚は、同じカメラ模型を「一括レンダー」で書き出した実際の画像です。</p>
+<p><img loading="lazy" src="images/shots-wide.png" alt="Wide：明るい暖色の照明で右側面まで見せた横長画像。640×384ピクセル。"></p>
+<p><img loading="lazy" src="images/shots-detail.png" alt="Detail：別のカメラと少し青みのある照明で、レンズに寄った縦長画像。384×512ピクセル。"></p>
+<h3>最初のショットを保存する</h3>
+<ol>
+<li>Windows版Blender 5.1.2で、カメラと被写体のある練習用シーンを開き、作業用のコピーを保存します。初期シーンのカメラと立方体でも試せます。</li>
+<li>3Dビューポートにマウスを置き、Nキーでサイドバーを開きます。「Smart CamLight」タブの「カメラと照明のショット」を展開します。</li>
+<li>「カメラ」で使うカメラを選び、出力サイズを横640、縦384、倍率100%にします。「名前」に Wide と入力し、「新規ショットを保存」を押します。一覧に Wide が1行増えます。</li>
+</ol>
+<p><img loading="lazy" src="images/shots-headers-ja.png" alt="日本語版の実画面。右側にカメラ、解像度、名前、保存ボタンが並んでいます。"></p>
+<h3>もう1つの構図を作り、2枚を出力する</h3>
+<ol>
+<li>「カメラを追加」で縦長用の別カメラを作ります。被写体が収まるようにカメラを配置し、出力サイズを横384、縦512にします。必要ならライトの色も変えます。</li>
+<li>名前を Detail に変え、「新規ショットを保存」を押します。一覧の Wide を選んで「ショットを復元」すると、先ほどのカメラと横640、縦384に戻ります。Detail を選んで復元すると縦位置に戻ります。</li>
+<li>一括出力の対象として両方のショットにチェックを入れ、書き込みできる出力フォルダーを選び、「一括レンダー」を押します。作例では選んだフォルダーの 001-Wide と 002-Detail にそれぞれ1枚のPNGができました。処理が終わると、実行直前に選んでいたカメラと出力サイズに戻ります。</li>
+</ol>
+<h3>迷ったとき</h3>
+<p>見出し右端の「?」を押すと、その欄の手順が表示されます。ヘルプ本文のボタンから関連する図解も開けます。</p>
+<p><img loading="lazy" src="images/shots-help-ja.png" alt="「カメラと照明のショット」の「?」から開いた手順。パネルを離れずに保存と復元の流れを読めます。"></p>
+<ul>
+<li><strong>保存ボタンを押しても増えない</strong>　既にある名前を避けて、新しい名前を入力してください。</li>
+<li><strong>一括レンダーの出力先が見つからない</strong>　「//」で始まる場所は、保存済みの.blendと同じフォルダーが基準です。最初に.blendを保存するか、書き込み可能な絶対パスを選びます。</li>
+<li><strong>旧版から移行する</strong>　旧版でオーバースキャンを適用中のシーンは、旧版で解除して保存したコピーを使ってください。Windows版Blender 5.1.2で動作を確認しました。</li>
+</ul></div></section>
+<!-- smartcamlight-shots-example:end -->
 <section class="sg-first" id="first-task"><h2>最初に試す · カメラごとに解像度を変えてレンダーする</h2><div class="sg-first-body"><div><h3>準備</h3><p>横長と縦長の2台を作り、名前を押してカメラを切り替えてから比率を指定します。仕上がりは出力した画像の幅と高さで確認できます。</p><details><summary>操作を順に見る (5)</summary><ol class="sg-steps"><li>「カメラ」の「シーン内カメラ」の ＋ を 2 回押して、カメラを 2 台作ります。＋で作ったカメラは、最初からカメラ別設定のチェックボックスが入っています。</li><li>1 台目の名前を押して選び、「解像度」の縦横比プリセットで「16:9」を押します。</li><li>2 台目の名前を押して選び、「9:16」を押します。</li><li>「ファイル出力」で保存先を決めます。</li><li>レンダーしたいカメラを選び、「選択中カメラ」の「レンダー」を押します。</li></ol></details><h3>成功の確認</h3><p>2台それぞれの保存画像で、横長・縦長と解像度を確認します。終了後はシーンの設定が元に戻ります。</p></div><figure><a href="images/ex_scl_aspect_1.jpg"><img loading="lazy" src="images/ex_scl_aspect_1.jpg" alt="カメラ枠の内側に被写体を置いた縦横比の作例。"></a><figcaption>カメラ枠の内側に被写体を置いた縦横比の作例。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">顔を照らしたまま、床だけを照明から外す</h2><p>同じライト・同じカメラで、一覧のFloorだけを除外。顔は照らしたまま床が暗くなり、チェックを戻せば両方が再び照らされます。</p>
 <ol class="sg-steps"><li>同じ顔と床</li><li>ライトの一覧で床を除外</li><li>顔を照らしたまま床が暗くなる</li></ol>
