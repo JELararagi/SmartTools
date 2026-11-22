@@ -119,6 +119,24 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <details><summary>関連ツールの公式資料</summary><ul><li><a href="https://github.com/MomoPTFL/mp_comp">mp_comp</a></li><li><a href="https://superhivemarket.com/products/compositorfx/docs">compositorFX</a></li><li><a href="https://superhivemarket.com/products/camera-post-fx-for-blender">Camera Post FX for Blender</a></li></ul></details>
 </section>
 <!-- smarttools-catalog:end -->
+<!-- platform-sign:begin -->
+<section id="platform-sign"><h2>SmartComposite — 夜の駅名看板に光のにじみを加える</h2>
+<p>「07」の橙色の文字と、緑の案内灯のまわりを見比べてください。光の輪郭を周囲に広げて、夜の発光表示に仕上げます。作例の看板、文字、照明はファイルに入っています。</p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartComposite/before.webp" alt="合成前。黒い板の上に橙色の文字と緑の案内灯がくっきり見えます。"></p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartComposite/after.webp" alt="グローを加えた後。文字と案内灯の周囲へ色の付いた光が広がります。"></p>
+<h3>まず同じ結果を作る</h3>
+<ol>
+<li>ダウンロードを展開し、開始ファイル (Platform_Sign_Start.blend)を開きます。F12で最初の画像をレンダーします。</li>
+<li>メインウィンドウのエリアを画像エディターに切り替え、「Render Result」を選びます。画像の上にマウスを置いてNキーを押し、「Smart Composite」タブで「エフェクト／プリセット」を開きます。</li>
+<li>「グロー」を1回押して、もう一度F12を押します。「07」の外側に橙色がにじみ、土台の暗さが残っていれば成功です。</li>
+</ol>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartComposite/panel_ja.webp" alt="画像エディター内に看板を表示した実際の画面。右側にエフェクト欄が開いています。"></p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartComposite/controls_ja.webp" alt="ボタン部分の拡大。エフェクト／プリセットの左上が「グロー」です。"></p>
+<h3>にじみを自分の作品に合わせる</h3>
+<p>完成ファイル (Platform_Sign_Finished.blend)を開くと、合成に使ったノードと接続を調べられます。グローの枠内で光を混ぜる量を下げ、もう一度レンダーすると、文字の外側のにじみが弱くなります。ほかの効果と比べるときは開始ファイルを開き直し、同じ看板に1種類ずつ加えてください。</p>
+<h3>使える環境と旧作の扱い</h3>
+<p>WindowsのBlender 5.1.2で、両方の作例を確認しました。すでに調整した作品は複製を作り、同じフレームで結果を比べてください。独自に作り直したプリセットには、旧版と仕上がりが異なるものがあります。</p></section>
+<!-- platform-sign:end -->
 <section id="read-compositing-passes"><h2>画像を合成する前に、どのパスを見る？</h2><p>球のハイライトを残したい、奥だけを霞ませたい、切り抜きの縁を確かめたい。三つの目的を、同じ球の図で見比べられます。図を押すと文字と輪郭を拡大できます。</p>
 <h3>光沢を取り戻す</h3><figure><a href="../../diagrams/showcase/SmartComposite/reference_aov_integrity.webp"><img loading="lazy" width="1600" height="900" style="max-width:100%;height:auto" src="../../diagrams/showcase/SmartComposite/reference_aov_integrity.webp" alt="左の拡散成分だけでは、球に映った光の点が見えません。中央の反射成分を足した右の図で、その点が戻ることを確かめてください。"></a><figcaption>左の拡散成分だけでは、球に映った光の点が見えません。中央の反射成分を足した右の図で、その点が戻ることを確かめてください。</figcaption></figure>
 <h3>手前を保ち、奥だけを霞ませる</h3><figure><a href="../../diagrams/showcase/SmartComposite/reference_geometry_bridge.webp"><img loading="lazy" width="1600" height="900" style="max-width:100%;height:auto" src="../../diagrams/showcase/SmartComposite/reference_geometry_bridge.webp" alt="左は面の向きを色にした法線です。距離を使うときは中央の深度を見ます。右の例では奥の球ほど背景に溶け込み、手前の輪郭は残ります。"></a><figcaption>左は面の向きを色にした法線です。距離を使うときは中央の深度を見ます。右の例では奥の球ほど背景に溶け込み、手前の輪郭は残ります。</figcaption></figure>

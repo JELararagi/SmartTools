@@ -119,6 +119,24 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <details><summary>Official documentation for related tools</summary><ul><li><a href="https://github.com/MomoPTFL/mp_comp">mp_comp</a></li><li><a href="https://superhivemarket.com/products/compositorfx/docs">compositorFX</a></li><li><a href="https://superhivemarket.com/products/camera-post-fx-for-blender">Camera Post FX for Blender</a></li></ul></details>
 </section>
 <!-- smarttools-catalog:end -->
+<!-- platform-sign:begin -->
+<section id="platform-sign"><h2>SmartComposite — Give a night-platform sign a soft glow</h2>
+<p>Look at the amber “07” and the green service lights. This exercise spreads their light over the dark sign without changing its lettering. The sign, lights and lettering are included in the scene.</p>
+<p><img loading="lazy" src="../../../diagrams/showcase/SmartComposite/before.webp" alt="Before compositing. The amber number and green service lights have crisp edges against the dark plate."></p>
+<p><img loading="lazy" src="../../../diagrams/showcase/SmartComposite/after.webp" alt="After adding glow. Both colours spread beyond the edges of the lights."></p>
+<h3>Recreate the finished image</h3>
+<ol>
+<li>Extract the download, open the start scene (Platform_Sign_Start.blend) and press F12 to render the first image.</li>
+<li>In the main Blender window, change an area to the Image Editor and select <strong>Render Result</strong>. Place the pointer over the image, press N and open <strong>Effects and presets</strong> in the <strong>Smart Composite</strong> tab.</li>
+<li>Press <strong>Glow</strong> once, then press F12 again. Look beside “07”: amber light extends beyond the lettering, while the plate remains dark.</li>
+</ol>
+<p><img loading="lazy" src="../../../diagrams/showcase/SmartComposite/panel_en.webp" alt="The rendered sign in the Image Editor, with the effects panel open on its right."></p>
+<p><img loading="lazy" src="../../../diagrams/showcase/SmartComposite/controls_en.webp" alt="Detail of the effects grid. Glow is the first button in the top row."></p>
+<h3>Adjust the effect for your shot</h3>
+<p>Open the finished scene (Platform_Sign_Finished.blend) to inspect how the nodes are connected. Reduce the halo mix in the glow frame and render again. The halo around the letters should become fainter. To compare other effects, reopen the start scene and add one effect at a time.</p>
+<h3>Compatibility with existing scenes</h3>
+<p>Both examples were checked in Blender 5.1.2 on Windows. For an existing shot, open a copy and compare the same frame. Some independently rebuilt presets yield different images from older versions.</p></section>
+<!-- platform-sign:end -->
 <section id="read-compositing-passes"><h2>Which pass should I look at?</h2><p>Keep a highlight, add haze behind a subject, or check a cutout. These three diagrams use the same spheres. Open an image at full size to inspect the edges.</p>
 <h3>Restore a highlight</h3><figure><a href="../../../diagrams/showcase/SmartComposite/reference_aov_integrity.webp"><img loading="lazy" width="1600" height="900" style="max-width:100%;height:auto" src="../../../diagrams/showcase/SmartComposite/reference_aov_integrity.webp" alt="The diffuse pass on the left is missing the small reflection of the light. Find it in the middle specular pass, then in the combined result on the right."></a><figcaption>The diffuse pass on the left is missing the small reflection of the light. Find it in the middle specular pass, then in the combined result on the right.</figcaption></figure>
 <h3>Add haze to the background</h3><figure><a href="../../../diagrams/showcase/SmartComposite/reference_geometry_bridge.webp"><img loading="lazy" width="1600" height="900" style="max-width:100%;height:auto" src="../../../diagrams/showcase/SmartComposite/reference_geometry_bridge.webp" alt="The colors on the left encode surface orientation. For distance, look at the depth pass in the middle. In the example on the right the distant sphere blends into the background while the nearer silhouette stays clear."></a><figcaption>The colors on the left encode surface orientation. For distance, look at the depth pass in the middle. In the example on the right the distant sphere blends into the background while the nearer silhouette stays clear.</figcaption></figure>
