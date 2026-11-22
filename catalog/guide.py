@@ -26,7 +26,8 @@ def card(item, lang):
         caption = esc(figure['caption'])
         figures.append(f'<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="{esc(src)}" alt="{caption}"><figcaption>{caption}</figcaption></figure>')
     tip = '試す前に' if lang == 'ja' else 'Before you try it'
-    return '\n'.join([START, '<section aria-labelledby="smarttools-example-preview">', f'<h2 id="smarttools-example-preview">{esc(text["headline"])}</h2>', f'<p>{esc(text["description"])}</p>', '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">', *figures, '</div>', f'<p><strong>{tip}</strong>　{esc(text["try_first"])}</p>', '</section>', END])
+    help_text = '導入・トラブルのヘルプ' if lang == 'ja' else 'Installation and troubleshooting help'
+    return '\n'.join([START, '<section aria-labelledby="smarttools-example-preview">', f'<h2 id="smarttools-example-preview">{esc(text["headline"])}</h2>', f'<p>{esc(text["description"])}</p>', '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">', *figures, '</div>', f'<p><strong>{tip}</strong>　{esc(text["try_first"])}</p>', f'<p><a href="../../help/">{help_text}</a></p>', '</section>', END])
 
 
 def update_manual(item, lang, check):
@@ -65,6 +66,9 @@ def export_product(item, lang, dest, release):
         lines += ['![](' + 'images/' + src.name + ')', '', fig['caption'], '']
     tips, guide, free = ('試す前に','図付きの解説書','無料公開の1.0.0') if lang == 'ja' else ('Before you try it','Full illustrated manual','Free 1.0.0 release')
     lines += ['## ' + tips, '', text['try_first'], '', f'[{guide}]({manual_url(text["manual"])}) · [{free}]({release})']
+    help_path = 'docs/help/' if lang == 'ja' else 'docs/en/help/'
+    help_label = 'SmartToolsヘルプ' if lang == 'ja' else 'SmartTools Help'
+    lines += ['', f'[{help_label}]({manual_url(help_path)})']
     (product_dir / 'index.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 

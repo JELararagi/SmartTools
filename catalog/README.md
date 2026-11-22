@@ -4,6 +4,8 @@
 
 [日本語の解説書](../docs/manuals/) · [English manuals](../docs/en/manuals/) · [製品別の原稿と作例 / Product catalog](products.json) · [無料公開版 / Free release](https://github.com/JELararagi/SmartTools/releases/tag/v1.0.0)
 
+販売先の商品欄や領収書からは、[日本語ヘルプ](https://jelararagi.github.io/SmartTools/help/) または [English Help](https://jelararagi.github.io/SmartTools/en/help/) を案内できます。導入・製品の操作はこのURLを継続して利用でき、各ストアの取引窓口は購入先で案内します。
+
 ## 原稿の更新
 
 `products.json` に、商品名、版、実例ID、日英の見出しと説明、試す時の条件、画像のパス・説明・Gitハッシュを収録しています。変更後に `python catalog/guide.py --update-manuals` を実行すると、解説書の先頭にある紹介欄を更新できます。`--check` は原稿と46ページの一致を照合します。
