@@ -105,6 +105,8 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <section class="sg-first" id="shot-workflow"><h2>Render one product in landscape and portrait</h2><p>Use a build that shows CamLight Shots in the sidebar. Verified in Blender 5.1.2 for Windows.</p><div class="sg-shot-demo"><p>Keep a landscape image for a product listing and a portrait image for its detail page in one scene. SmartCamLight stores the camera, lighting and output dimensions under a shot name. These two images came from one Render Batch of the same camera model.</p>
 <p><img loading="lazy" src="../../../manuals/SmartCamLight/images/shots-wide.png" alt="Wide: a warm landscape view showing the right side of the camera, rendered at 640 × 384 pixels."></p>
 <p><img loading="lazy" src="../../../manuals/SmartCamLight/images/shots-detail.png" alt="Detail: a closer portrait view from a second camera, with cooler light, rendered at 384 × 512 pixels."></p>
+<h3>Open the studio</h3>
+<p>Open the starting scene (Studio_Camera_Start.blend). The model, two cameras and three lights are in position. Wide camera is active and the shot list is empty. Try the steps below, then open the completed scene (Studio_Camera_Finished.blend) to compare the saved Wide and Detail shots.</p>
 <h3>Save your first shot</h3>
 <ol>
 <li>In Blender 5.1.2 for Windows, open a practice scene containing a camera and a subject. Save a working copy. The default camera and cube are enough to try the controls.</li>
@@ -114,7 +116,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <p><img loading="lazy" src="../../../manuals/SmartCamLight/images/shots-headers-en.png" alt="The actual English interface. The camera, output dimensions, shot name and Save New Shot button are in the right sidebar."></p>
 <h3>Set up a second composition and export both shots</h3>
 <ol>
-<li>Use Add Camera to create a second camera. Frame the subject, then set the dimensions to 384 pixels wide and 512 high. Change the light color if you want a different look.</li>
+<li>In the supplied scene, select Detail camera. In your own scene, use Add Camera if you need a second camera. Frame the subject, then set the dimensions to 384 pixels wide and 512 high. Change the light color if you want a different look.</li>
 <li>Enter Detail and choose Save New Shot. Select Wide and choose Restore Shot to get the first camera and 640 × 384 dimensions back. Restore Detail to switch back to portrait.</li>
 <li>Include both entries in the batch, select a writable batch folder and choose Render Batch. In this example the 001-Wide and 002-Detail folders each received one PNG. When rendering finished, the scene returned to the camera and output size selected just before the batch.</li>
 </ol>
