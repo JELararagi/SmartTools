@@ -119,6 +119,26 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <details><summary>関連ツールの公式資料</summary><ul><li><a href="https://blender-archipack.gitlab.io/user/add%20archipack.html">Archipack · Add Archipack</a></li><li><a href="https://www.geoscatter.com/docs-scattering.html">Geo-Scatter · Biomes</a></li></ul></details>
 </section>
 <!-- smarttools-catalog:end -->
+<!-- terrain-survey:begin -->
+<section id="terrain-survey"><h2>地形の上に94本の測量マーカーを立てる</h2>
+<p>丘のどこに測量地点を置くか、3Dで見比べてみましょう。最初の画像は地形だけ、次は各地点にオレンジの四角すいを立てた同じ模型です。地形、地点、表示用のマーカーはそれぞれ別のオブジェクトです。</p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartGeometry/before.webp" alt="散布前。緑の稜線と目盛りのある地形模型"></p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartGeometry/after.webp" alt="散布後。同じ稜線の表面にオレンジのマーカー94個が並ぶ"></p>
+<h3>開始ファイルから試す</h3>
+<ol>
+<li>ダウンロードを展開し、Blenderの「編集 → プリファレンス」で右上メニューの「ディスクからインストール」から内側のSmartGeometryのZIPを選び、有効にします。</li>
+<li>開始ファイル (Terrain_Survey_Start.blend)を開きます。アウトライナーで「Survey terrain」を選択。3Dビューにマウスを置き、Nキーでサイドバーを開いて「Smart Geometry」を選びます。</li>
+<li>「地形 / 環境生成」のシードを <strong>85</strong> にします。「表面に点を散布」で点の数を <strong>94</strong>、最小間隔を <strong>0.24</strong>、四角すいの半径を <strong>0.13</strong> にして、「表面に点を散布」を押します。点だけのメッシュが選択されます。</li>
+<li>その選択のまま「確認用の四角すいを作成」を押します。新しくできたマーカーは独立して選べます。完成見本 (Terrain_Survey_Finished.blend)ではこのオブジェクトをオレンジに着色しています。</li>
+</ol>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartGeometry/distribution_ja.webp" alt="日本語の散布画面。点の数、最小間隔、マーカーの大きさを設定する欄"></p>
+<h3>結果を確かめる</h3>
+<p>完成見本で「Sampling locations」を選び、エディターを「スプレッドシート」にすると94個の頂点を数えられます。「Survey markers」は470頂点・470面です。作業画面で点が見つからない場合は、点メッシュを選んで四角すいを作ってください。必要な数を置けない狭い面では、最小間隔を小さくします。</p>
+<h3>別の地形で試す</h3>
+<p>「地形 / 環境生成」で格子解像度 <strong>48</strong>、地形の幅 <strong>10</strong>、高さ <strong>1.55</strong>、シード <strong>315</strong>、水滴数 <strong>512</strong>、流水の反復回数 <strong>6</strong> を指定し、「高精度地形を作成」を押します。作例では2,304頂点・2,209面になりました。散布のシード85と地形を作るシード315は別の操作で使う値です。</p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartGeometry/terrain_ja.webp" alt="日本語の地形生成画面。格子の解像度と高さを指定する"></p>
+<p>Windows版Blender 5.1.2で確認。旧版で作ったブロブ、樹木、階段などを再生成すると、輪郭・寸法・頂点や面の構成が変わる場合があります。旧作品は複製を開いて試し、リグのウェイトや頂点番号で他のデータと対応づけたメッシュは元の形を保存してください。</p></section>
+<!-- terrain-survey:end -->
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">地形・散布の点・がれき（デブリ）・破片・枝分かれした曲線・あとから数値で直せる基本形状などを、ボタンで作る形状生成ツールです。</p><ul><li>山・谷・水の流れの跡がある地形メッシュを作る（「高精度地形を作成」）</li><li>地形の高い所から低い所へ流れる線（排水カーブ）を作る</li><li>メッシュの表面に点をばらまき、間隔をそろえ、確認用の小さな四角すいを置く</li><li>表面の凹凸用ブロックや、段のある建物のような形を作る</li><li>蔦・根・ケーブルのような枝分かれした曲線を作る</li><li>グリースペンシルの線から、厚みのある形・左右対称の形・線に沿った形・壁・回転体のメッシュを作る</li><li>レンガ片・砂利・川石・結晶・落ち葉・丸太・雪結晶など 19 種類のデブリを作る</li><li>メッシュを面のまとまりごとに割った破片を作る</li><li>ボックス・球・円柱・壁などを、ビューポートのドラッグで作り、あとから数値で直す</li><li>メッシュに高さ・傾き・密度などの属性（頂点ごとのデータ）を書き込み、色（ヒートマップ）で確かめる</li><li>文字の式で頂点を選び、属性と頂点グループに書き込む</li><li>CSV ファイルの x・y・z 列を点の集まりとして読み込む</li><li>診断結果や機能の一覧を JSON ファイルに書き出す</li></ul>
 <div class="box tip"><b>こんな時に</b><div><ul><li>背景の地面を手早く作り、草や石を置く位置の点をばらまく</li><li>がれき・小石・落ち葉などの小物をまとめて作る</li><li>壊れる演出の下準備として、メッシュを破片に分ける</li><li>部屋の壁や柱の仮置きを、ドラッグで作ってから寸法を数値で合わせる</li><li>手描きの線から壁や柵のような形を起こす</li></ul></div></div>
