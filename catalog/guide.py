@@ -17,6 +17,22 @@ def manual_url(path):
     return 'https://jelararagi.github.io/SmartTools/' + quote(path.removeprefix('docs/'))
 
 
+def workflow_html(text):
+    steps = []
+    for index, step in enumerate(text['workflow']):
+        arrow = '<span aria-hidden="true"> → </span>' if index else ''
+        steps.append(f'<li style="display:inline">{arrow}{html.escape(step)}</li>')
+    return '<ol style="padding:0;line-height:1.8;font-weight:600">' + ''.join(steps) + '</ol>'
+
+
+def comparison_html(text, lang):
+    item = text.get('comparison')
+    if not item:
+        return ''
+    label = '比較対象の資料' if lang == 'ja' else 'Comparison reference'
+    return f'<p>{html.escape(item["note"])} {label} · <a href="{html.escape(item["url"])}">{html.escape(item["name"])}</a></p>'
+
+
 def card(item, lang):
     esc = html.escape
     text = item['locales'][lang]
@@ -27,7 +43,7 @@ def card(item, lang):
         figures.append(f'<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="{esc(src)}" alt="{caption}"><figcaption>{caption}</figcaption></figure>')
     tip = '試す前に' if lang == 'ja' else 'Before you try it'
     help_text = '導入・トラブルのヘルプ' if lang == 'ja' else 'Installation and troubleshooting help'
-    return '\n'.join([START, '<section aria-labelledby="smarttools-example-preview">', f'<h2 id="smarttools-example-preview">{esc(text["headline"])}</h2>', f'<p>{esc(text["description"])}</p>', '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">', *figures, '</div>', f'<p><strong>{tip}</strong>　{esc(text["try_first"])}</p>', f'<p><a href="../../help/">{help_text}</a></p>', '</section>', END])
+    return '\n'.join([START, '<section aria-labelledby="smarttools-example-preview">', f'<h2 id="smarttools-example-preview">{esc(text["headline"])}</h2>', f'<p>{esc(text["description"])}</p>', workflow_html(text), '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">', *figures, '</div>', comparison_html(text, lang), f'<p><strong>{tip}</strong>　{esc(text["try_first"])}</p>', f'<p><a href="../../#help">{help_text}</a></p>', '</section>', END])
 
 
 def update_manual(item, lang, check):
@@ -56,6 +72,10 @@ def export_product(item, lang, dest, release):
     media = product_dir / 'images'
     media.mkdir(parents=True, exist_ok=True)
     lines = [f'# {item["product"]} — {text["headline"]}', '', text['description'], '']
+    lines += [' → '.join(text['workflow']), '']
+    if text.get('comparison'):
+        item = text['comparison']
+        lines += [f'{item["note"]} [{item["name"]}]({item["url"]})', '']
     for fig in text['figures']:
         src = ROOT / fig['path']
         data = src.read_bytes()
@@ -66,9 +86,9 @@ def export_product(item, lang, dest, release):
         lines += ['![](' + 'images/' + src.name + ')', '', fig['caption'], '']
     tips, guide, free = ('試す前に','図付きの解説書','無料公開の1.0.0') if lang == 'ja' else ('Before you try it','Full illustrated manual','Free 1.0.0 release')
     lines += ['## ' + tips, '', text['try_first'], '', f'[{guide}]({manual_url(text["manual"])}) · [{free}]({release})']
-    help_path = 'docs/help/' if lang == 'ja' else 'docs/en/help/'
+    help_path = 'docs/' if lang == 'ja' else 'docs/en/'
     help_label = 'SmartToolsヘルプ' if lang == 'ja' else 'SmartTools Help'
-    lines += ['', f'[{help_label}]({manual_url(help_path)})']
+    lines += ['', f'[{help_label}]({manual_url(help_path)}#help)']
     (product_dir / 'index.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 

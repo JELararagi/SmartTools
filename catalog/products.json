@@ -23,7 +23,17 @@
               "git_blob": "2ab05dbc972703b7987458e209c38a409bc8bf2f",
               "caption": "後：左で「コピー元」、右で「貼り付け」を押した後。右の耳も左と同じ形になりました。"
             }
-          ]
+          ],
+          "workflow": [
+            "左の耳を修正",
+            "対応頂点を転送",
+            "右の耳も一致"
+          ],
+          "comparison": {
+            "name": "Mesh Data Transfer",
+            "url": "https://extensions.blender.org/add-ons/mesh-data-transfer/",
+            "note": "メッシュ間の転送を選ぶなら、対象の頂点対応を確認してください。ここでは左右に置いた2体で、片方の耳だけを直して同じ編集をもう一方に反映します。"
+          }
         },
         "en": {
           "headline": "Copy the edited ears to a matching mesh",
@@ -41,7 +51,17 @@
               "git_blob": "f047729f6db9a358dea2f399024dd8a35c28eb23",
               "caption": "After: After clicking \"Copy Source\" on the left and \"Paste\" on the right. The ears on the right now have the same shape as those on the left."
             }
-          ]
+          ],
+          "workflow": [
+            "Edit left ear",
+            "Transfer matching vertices",
+            "Check right ear"
+          ],
+          "comparison": {
+            "name": "Mesh Data Transfer",
+            "url": "https://extensions.blender.org/add-ons/mesh-data-transfer/",
+            "note": "When choosing a mesh transfer tool, check how it matches the meshes. Here you edit one ear on one model and see the same edit on its partner."
+          }
         }
       }
     },
@@ -66,7 +86,17 @@
               "git_blob": "0e96ea694029ed3581a5ee0fcab8fa8b9308069f",
               "caption": "戻した後：「シーン読込」で元の線が戻った。"
             }
-          ]
+          ],
+          "workflow": [
+            "シームを保存",
+            "全消去",
+            "同じ辺に復元"
+          ],
+          "comparison": {
+            "name": "Zen UV",
+            "url": "https://zenmastersteam.github.io/Zen-UV/latest/",
+            "note": "Zen UVにもシームを組にして扱う機能があります。切り直しをよく試す人は、全消去の後に同じ辺へ戻るところを見てください。"
+          }
         },
         "en": {
           "headline": "Keep a restorable seam layout",
@@ -84,7 +114,17 @@
               "git_blob": "63ff486c8dd13baca25f65183c5ad4c287a77315",
               "caption": "After restoring: The original lines came back with \"Load Scene Seam Set\"."
             }
-          ]
+          ],
+          "workflow": [
+            "Store seams",
+            "Clear seams",
+            "Restore the same edges"
+          ],
+          "comparison": {
+            "name": "Zen UV",
+            "url": "https://zenmastersteam.github.io/Zen-UV/latest/",
+            "note": "Zen UV also supports seam groups. If you try several cuts, look for the original edges returning after a complete clear."
+          }
         }
       }
     },
@@ -109,7 +149,17 @@
               "git_blob": "54e659ff60c7d9d47c79470fd24b125a52995b41",
               "caption": "後：「壁メッシュ」で、線に沿って壁が立ちました。線の始まりと終わりの間も壁でつながります。"
             }
-          ]
+          ],
+          "workflow": [
+            "間取りを描く",
+            "壁に変換",
+            "始点と終点の間を確認"
+          ],
+          "comparison": {
+            "name": "Archipack",
+            "url": "https://blender-archipack.gitlab.io/user/add%20archipack.html",
+            "note": "曲線から壁を作る道具を比較する際は、普段使う下描きに注目してください。この例の入力はGrease Pencilの間取り線です。"
+          }
         },
         "en": {
           "headline": "Turn a Grease Pencil floor plan into walls",
@@ -127,7 +177,17 @@
               "git_blob": "6e8bf18df5bf76f08d6c7b901916f75da81865c0",
               "caption": "After: \"Wall Mesh\" has raised walls along the lines. A wall also connects the start and end of the line."
             }
-          ]
+          ],
+          "workflow": [
+            "Draw floor plan",
+            "Generate walls",
+            "Inspect the closing span"
+          ],
+          "comparison": {
+            "name": "Archipack",
+            "url": "https://blender-archipack.gitlab.io/user/add%20archipack.html",
+            "note": "Wall tools differ in the drawing you start from. Here the floor plan is a Grease Pencil drawing; check where the last wall closes the outline."
+          }
         }
       }
     },
@@ -152,7 +212,17 @@
               "git_blob": "86338b63090579b3757462bb2692f832f6786580",
               "caption": "自動無効をオフ：「モディファイア自動無効」をオフにすると、ワイヤーフレームが戻ります。"
             }
-          ]
+          ],
+          "workflow": [
+            "細分化の行を選択",
+            "後段を一時停止",
+            "格子を戻す"
+          ],
+          "comparison": {
+            "name": "Modifiers Link",
+            "url": "https://superhivemarket.com/products/modifiers-link/docs",
+            "note": "モディファイアを同期したい場合と、どの段で形が変わったか調べたい場合で見るべき機能が変わります。後者なら、格子が消える段と再表示される段を見比べてください。"
+          }
         },
         "en": {
           "headline": "Inspect an intermediate modifier stage",
@@ -170,7 +240,17 @@
               "git_blob": "89c2011f4d4e965cb8fb0bcec5c30d74da88596c",
               "caption": "Auto Disable Off: Turning \"Modifier Auto Disable\" off brings the Wireframe back."
             }
-          ]
+          ],
+          "workflow": [
+            "Select subdivision",
+            "Pause later modifiers",
+            "Restore wireframe"
+          ],
+          "comparison": {
+            "name": "Modifiers Link",
+            "url": "https://superhivemarket.com/products/modifiers-link/docs",
+            "note": "For stack diagnosis, watch the stage where the wireframe disappears and the stage where it returns. This answers a different editing question from synchronizing modifiers."
+          }
         }
       }
     },
@@ -195,7 +275,17 @@
               "git_blob": "970cd9a8db45d1f549d96f4a951e99b7828e8c27",
               "caption": "復元：「スナップショット復元」で、保存した時の網目に戻りました。"
             }
-          ]
+          ],
+          "workflow": [
+            "網目を保存",
+            "リメッシュ",
+            "元の網目を復元"
+          ],
+          "comparison": {
+            "name": "SpeedSculpt",
+            "url": "https://superhivemarket.com/products/speedsculpt",
+            "note": "リメッシュ後の修正が多い人には、保存した接続を復元できるかが選ぶ基準です。輪郭に加えてワイヤーの並びを見てください。"
+          }
         },
         "en": {
           "headline": "Recover the saved mesh after a remesh",
@@ -213,7 +303,17 @@
               "git_blob": "c6594a0bddd006e599c3e74721bd3d78ccd6f2fd",
               "caption": "Restore: \"Restore Snapshot\" returned the mesh pattern to what it was when saved."
             }
-          ]
+          ],
+          "workflow": [
+            "Save topology",
+            "Remesh",
+            "Restore original wireframe"
+          ],
+          "comparison": {
+            "name": "SpeedSculpt",
+            "url": "https://superhivemarket.com/products/speedsculpt",
+            "note": "If you revisit remeshed work, compare the wire pattern as well as the silhouette. The saved topology is what the example restores."
+          }
         }
       }
     },
@@ -238,7 +338,17 @@
               "git_blob": "12754fee0255d3f34062db6d8191d0ee8fd3409f",
               "caption": "押した後：画面の右（左袖口）は「端の割合」1.0、画面の左（右袖口）は 0.4。1.0 の袖口の方が大きくついて来ます。"
             }
-          ]
+          ],
+          "workflow": [
+            "同じ手首ポーズ",
+            "袖口の割合を1.0と0.4に",
+            "追従を比較"
+          ],
+          "comparison": {
+            "name": "Auto-Rig Pro",
+            "url": "https://www.lucky3d.fr/auto-rig-pro/doc/auto_rig.html",
+            "note": "スキニングの仕上げで袖に悩む場合は、同一ポーズで端の割合だけを変えた結果を比較できます。Auto-Rig Pro連携を使う機能には別途導入が必要です。"
+          }
         },
         "en": {
           "headline": "Tune how strongly each cuff follows the wrist",
@@ -256,7 +366,17 @@
               "git_blob": "3b35fa7003165c95fa4c68f1b7dbb290288a6237",
               "caption": "After Clicking: The right of the screen (left cuff) has \"Share at the Edge\" 1.0, and the left of the screen (right cuff) has 0.4. The 1.0 cuff follows more."
             }
-          ]
+          ],
+          "workflow": [
+            "Same wrist pose",
+            "Set cuff ratios to 1.0 and 0.4",
+            "Compare motion"
+          ],
+          "comparison": {
+            "name": "Auto-Rig Pro",
+            "url": "https://www.lucky3d.fr/auto-rig-pro/doc/auto_rig.html",
+            "note": "For cuff weighting, compare the same pose with only the edge ratio changed. Features that integrate with Auto-Rig Pro require a separate installation."
+          }
         }
       }
     },
@@ -281,7 +401,17 @@
               "git_blob": "92daa114c1c3251c27511cb68e94cdb3da90ec03",
               "caption": "適用：「適用」の後。控えたポーズそのものになります。"
             }
-          ]
+          ],
+          "workflow": [
+            "おじぎを保存",
+            "0.5で混合",
+            "全適用と比較"
+          ],
+          "comparison": {
+            "name": "Animation Layers",
+            "url": "https://superhivemarket.com/products/animation-layers/docs",
+            "note": "動きのレイヤーが必要か、手元の保存ポーズを半分だけ足したいかで選び方が変わります。この例では同じおじぎの適用量を見比べられます。"
+          }
         },
         "en": {
           "headline": "Blend halfway into a saved bow",
@@ -299,7 +429,17 @@
               "git_blob": "09cebae8c61fab140b2142878dfed522bd59f43a",
               "caption": "Apply: After \"Apply\". It becomes the stored pose itself."
             }
-          ]
+          ],
+          "workflow": [
+            "Save bow pose",
+            "Blend at 0.5",
+            "Compare with full pose"
+          ],
+          "comparison": {
+            "name": "Animation Layers",
+            "url": "https://superhivemarket.com/products/animation-layers/docs",
+            "note": "If your task is reusing a pose at partial strength, compare the half bow with the full bow on the same rig."
+          }
         }
       }
     },
@@ -324,7 +464,17 @@
               "git_blob": "d50f862ed1e134f4ff77e59516d54ee2d0a96eac",
               "caption": "笑顔を押す：右のスザンヌの一覧で「笑顔」を押した後。頂点の並びが違っても、左と同じ口の形になりました。"
             }
-          ]
+          ],
+          "workflow": [
+            "笑顔を保存",
+            "細分化した顔へ読込",
+            "Basisと笑顔を確認"
+          ],
+          "comparison": {
+            "name": "Shape Key & Vertex Groups Utilities Enhanced",
+            "url": "https://extensions.blender.org/add-ons/shape-key-utilities-enhanced/versions/",
+            "note": "比較対象には頂点一致や最近接面による転送もあります。細分化で頂点数が変わる用途では、対応するUVで表情が戻る例と、UVを半分にした時に停止する例の両方を確認できます。"
+          }
         },
         "en": {
           "headline": "Bring a saved smile onto a subdivided face",
@@ -342,7 +492,17 @@
               "git_blob": "d50f862ed1e134f4ff77e59516d54ee2d0a96eac",
               "caption": "Click Smile: After clicking \"Smile\" in the right Suzanne's list. Even with a different vertex order, the mouth now has the same shape as on the left."
             }
-          ]
+          ],
+          "workflow": [
+            "Save expression",
+            "Load onto subdivided face",
+            "Inspect Basis and smile"
+          ],
+          "comparison": {
+            "name": "Shape Key & Vertex Groups Utilities Enhanced",
+            "url": "https://extensions.blender.org/add-ons/shape-key-utilities-enhanced/versions/",
+            "note": "Other transfer tools offer vertex matching or nearest-surface mapping. For subdivision, check both examples here: a smile restored with matching UVs, and a stopped import after scaling the UVs by half."
+          }
         }
       }
     },
@@ -367,7 +527,17 @@
               "git_blob": "184c73007353a3251751aeec6ee5c1ffae4ff80c",
               "caption": "後：「シェイプキーを設定」の後。smile が 1 になり、両耳が持ち上がりました。"
             }
-          ]
+          ],
+          "workflow": [
+            "ブラウザー操作盤",
+            "smileを0から1に",
+            "モデルの両耳が上がる"
+          ],
+          "comparison": {
+            "name": "X-Pose Picker",
+            "url": "https://k44dev.com/docs/x-pose-picker/user-interface/picker/",
+            "note": "ポーズ選択の道具を比較するとき、選択後に表情値まで操作したい人向けです。操作盤の数値とBlender画面の変化を一緒に確認できます。"
+          }
         },
         "en": {
           "headline": "Drive a shape key from a browser control panel",
@@ -385,7 +555,17 @@
               "git_blob": "d6fb47dfcba6be1814a01b849b5a151d8ae5b178",
               "caption": "After: After \"Set Shape Key\". smile became 1, and both ears lifted."
             }
-          ]
+          ],
+          "workflow": [
+            "Browser controls",
+            "Set smile from 0 to 1",
+            "See both ears lift"
+          ],
+          "comparison": {
+            "name": "X-Pose Picker",
+            "url": "https://k44dev.com/docs/x-pose-picker/user-interface/picker/",
+            "note": "When comparing rig pickers, look beyond selecting bones if you need expression controls. Match the browser value to the visible Blender result."
+          }
         }
       }
     },
@@ -410,7 +590,17 @@
               "git_blob": "4a6ff17e2cc8858f7343bb5df7200ca01c9b8e65",
               "caption": "クロス：「クロス」のフレーム 16。腰の所だけが付いて行き、裾は左に遅れています。"
             }
-          ]
+          ],
+          "workflow": [
+            "同じ衣装",
+            "16フレーム目で停止",
+            "ボーンと布の裾を比較"
+          ],
+          "comparison": {
+            "name": "Simply Cloth Pro",
+            "url": "https://simplydocs.org/simply-cloth-pro/",
+            "note": "衣装を用意した後にボーン追従と布の揺れのどちらを使うか、同じ衣装の同じフレームで選べます。"
+          }
         },
         "en": {
           "headline": "Compare bone and cloth motion at frame 16",
@@ -428,7 +618,17 @@
               "git_blob": "a85d0d42219a0bacbd39eb0e96b5d90d7c473d8a",
               "caption": "Cloth: Frame 16 with \"Cloth\". Only the waist follows along, and the hem lags to the left."
             }
-          ]
+          ],
+          "workflow": [
+            "Same garment",
+            "Stop at frame 16",
+            "Compare bone and cloth hems"
+          ],
+          "comparison": {
+            "name": "Simply Cloth Pro",
+            "url": "https://simplydocs.org/simply-cloth-pro/",
+            "note": "Once a garment is set up, compare bone-following and simulated motion at precisely the same frame."
+          }
         }
       }
     },
@@ -453,7 +653,17 @@
               "git_blob": "7f7a821cd1a7675c78c2bda1fced5c6deb41fe2f",
               "caption": "後：「UV島へ拡張」の後。同じ UV 島の面まで選ばれました（濃い色）。"
             }
-          ]
+          ],
+          "workflow": [
+            "面を1枚選択",
+            "同じUV島へ拡張",
+            "塗る範囲を確認"
+          ],
+          "comparison": {
+            "name": "Layerify",
+            "url": "https://superhivemarket.com/products/layerify",
+            "note": "レイヤー数よりも塗る範囲で困る場合は、最初の1面からどの島まで選ばれたかを見てください。"
+          }
         },
         "en": {
           "headline": "Start with one face and target its UV island",
@@ -471,7 +681,17 @@
               "git_blob": "bea311d94a3fc5c619bd4570cee662c1a583c72c",
               "caption": "After: After \"Expand to UV Island\". The faces in the same UV island are selected (dark)."
             }
-          ]
+          ],
+          "workflow": [
+            "Select one face",
+            "Expand to its UV island",
+            "Inspect the paint area"
+          ],
+          "comparison": {
+            "name": "Layerify",
+            "url": "https://superhivemarket.com/products/layerify",
+            "note": "If isolating part of a garment is your obstacle, inspect which island becomes selected from one face before painting."
+          }
         }
       }
     },
@@ -496,7 +716,17 @@
               "git_blob": "ed1483cf3faac810ac5be1f4b6e3f6c0e5c68b30",
               "caption": "後：矢印の Empty を左へ動かして「選択から方向を同期」を押した後。光が左から当たり、陰の側が変わった。"
             }
-          ]
+          ],
+          "workflow": [
+            "矢印を左へ",
+            "方向を同期",
+            "同じ材質の陰側が変化"
+          ],
+          "comparison": {
+            "name": "Cycles Tooner",
+            "url": "https://extensions.blender.org/add-ons/cycles-tooner/",
+            "note": "トゥーンの材質を作った後の影の演出に向きます。照明の見え方を選ぶとき、矢印の向きと陰側を同時に確認できます。"
+          }
         },
         "en": {
           "headline": "Art-direct a toon shadow with an arrow",
@@ -514,7 +744,17 @@
               "git_blob": "3d129dc25dcdb7b39b1b198bf456cf6eb4fa4619",
               "caption": "After: After moving the arrow Empty to the left and clicking \"Sync Direction From Selection\". The light comes from the left, and the shaded side has changed."
             }
-          ]
+          ],
+          "workflow": [
+            "Move arrow left",
+            "Sync direction",
+            "Inspect shadow on the same material"
+          ],
+          "comparison": {
+            "name": "Cycles Tooner",
+            "url": "https://extensions.blender.org/add-ons/cycles-tooner/",
+            "note": "For art direction after setting up a toon material, watch the direction control and the shaded side together."
+          }
         }
       }
     },
@@ -539,7 +779,17 @@
               "git_blob": "1a9634d61caf9ea67953dca723baddd494feaa58",
               "caption": "後：OK を 2 回押した後。選んだ 2 つの見出しが「Mask_01」「Mask_02」に変わった。"
             }
-          ]
+          ],
+          "workflow": [
+            "2ノードを選択",
+            "共通名と連番を指定",
+            "Mask_01・Mask_02"
+          ],
+          "comparison": {
+            "name": "Node Arrange 0.2.2",
+            "url": "https://github.com/blender/blender-addons/blob/e8da6131fddab2ac16b8c7e5f26b4462be323911/node_arrange.py",
+            "note": "比較したNode Arrange 0.2.2の公開操作5件には、選択したノードの表示名に連番を付ける操作はありません。この作例では2つのノードをまとめて命名します。"
+          }
         },
         "en": {
           "headline": "Give selected nodes a numbered naming scheme",
@@ -557,7 +807,17 @@
               "git_blob": "8339c92c13d22c81828809cb02391bf0cd8e6289",
               "caption": "After: After clicking OK twice. The headers of the 2 selected nodes have changed to \"Mask_01\" and \"Mask_02\"."
             }
-          ]
+          ],
+          "workflow": [
+            "Select two nodes",
+            "Set prefix and numbering",
+            "Mask_01 and Mask_02"
+          ],
+          "comparison": {
+            "name": "Node Arrange 0.2.2",
+            "url": "https://github.com/blender/blender-addons/blob/e8da6131fddab2ac16b8c7e5f26b4462be323911/node_arrange.py",
+            "note": "The five operators in Node Arrange 0.2.2 do not include sequential display labels for selected nodes. This example labels two nodes together."
+          }
         }
       }
     },
@@ -582,7 +842,17 @@
               "git_blob": "9081f8ed9bbaae41ca05331fd710f1f87da712c0",
               "caption": "除外：「Floor」の行の空のチェックの印を押した後。床が暗くなり、スザンヌだけが照らされています。"
             }
-          ]
+          ],
+          "workflow": [
+            "同じ顔と床",
+            "ライトの一覧で床を除外",
+            "顔を照らしたまま床が暗くなる"
+          ],
+          "comparison": {
+            "name": "Photographer 5",
+            "url": "https://chafouin.gumroad.com/l/photographer5",
+            "note": "カメラやライトの管理に加え、誰に光を当てるかが決め手になるカット向けです。顔が明るいまま床だけが暗くなるかを、同じ構図で見比べられます。"
+          }
         },
         "en": {
           "headline": "Light the subject and leave the floor dark",
@@ -600,7 +870,17 @@
               "git_blob": "9081f8ed9bbaae41ca05331fd710f1f87da712c0",
               "caption": "Exclude: After clicking the empty checkbox icon on the \"Floor\" row. The floor has gone dark, and only Suzanne is lit."
             }
-          ]
+          ],
+          "workflow": [
+            "Same face and floor",
+            "Exclude Floor from the light",
+            "Face stays lit"
+          ],
+          "comparison": {
+            "name": "Photographer 5",
+            "url": "https://chafouin.gumroad.com/l/photographer5",
+            "note": "For shots where the light receiver matters, keep the camera fixed and compare the floor while checking that the face stays lit."
+          }
         }
       }
     },
@@ -625,7 +905,17 @@
               "git_blob": "e80291a28e49ea47a6d8c1f9281eef9b1de80bcd",
               "caption": "読み込んだ後：クイックセットの「ビューティーのみ」を読み込むと、ビューティーとアルファの 2 個になり、チェック・「選択エレメント数」・「想定エレメント」が一緒に減った。"
             }
-          ]
+          ],
+          "workflow": [
+            "6項目が有効",
+            "ビューティーのみを読込",
+            "ビューティーとアルファの2項目"
+          ],
+          "comparison": {
+            "name": "Loom",
+            "url": "https://github.com/p2or/blender-loom",
+            "note": "レンダー連番の処理と、合成に渡すパスの準備は別の工程です。後者で渡し間違いを避けたい人は、一覧と選択数が一緒に変わるところを確認できます。"
+          }
         },
         "en": {
           "headline": "Switch the delivery pass list from six to two",
@@ -643,7 +933,17 @@
               "git_blob": "1bf6528e808a93c65fad7803006602b7002d8dc1",
               "caption": "After Loading: Loading the \"Beauty Only\" Quick Set reduced them to 2, Beauty and Alpha, and the checks, \"Selected elements\", and \"Planned elements\" decreased together."
             }
-          ]
+          ],
+          "workflow": [
+            "Start with six passes",
+            "Load Beauty Only",
+            "Inspect beauty and alpha"
+          ],
+          "comparison": {
+            "name": "Loom",
+            "url": "https://github.com/p2or/blender-loom",
+            "note": "For compositing handoff, check both the pass list and its count when switching presets. That is a separate need from managing render sequences."
+          }
         }
       }
     },
@@ -668,7 +968,17 @@
               "git_blob": "a5991bbf81c2014c076569a41e2e574725758d08",
               "caption": "後：「レンダーパス自動維持」を「有効」にした後。合成用のパスにチェックが入りました。"
             }
-          ]
+          ],
+          "workflow": [
+            "合成を準備",
+            "レンダーパスを自動維持",
+            "ビューレイヤーの設定を確認"
+          ],
+          "comparison": {
+            "name": "compositorFX（kunemann）",
+            "url": "https://superhivemarket.com/products/compositorfx/docs",
+            "note": "合成の見た目を選ぶだけでなく、入力パスを用意する担当向けです。ノード側の操作後にビューレイヤー側のチェックも確認できます。"
+          }
         },
         "en": {
           "headline": "Prepare view-layer passes for compositing",
@@ -686,7 +996,17 @@
               "git_blob": "74e0df2edb9ca3adb958bb14511608fac23f7579",
               "caption": "After: After setting \"Render Pass Guard\" to \"On\". The passes for compositing are now checked."
             }
-          ]
+          ],
+          "workflow": [
+            "Prepare compositing",
+            "Maintain render passes",
+            "Inspect View Layer settings"
+          ],
+          "comparison": {
+            "name": "compositorFX（kunemann）",
+            "url": "https://superhivemarket.com/products/compositorfx/docs",
+            "note": "If you prepare the inputs as well as the look, inspect the View Layer pass switches after setting up the compositing nodes."
+          }
         }
       }
     },
@@ -711,7 +1031,17 @@
               "git_blob": "ae02f600b56e308e270eeb7357e50fa88b78bac4",
               "caption": "戻した後：「復元 選択済み」で戻した後。復元ポイントを作った時の形に戻りました。"
             }
-          ]
+          ],
+          "workflow": [
+            "作業前の形を保存",
+            "上半分を削除",
+            "復元ポイントから戻す"
+          ],
+          "comparison": {
+            "name": "MACHIN3tools Save Pie",
+            "url": "https://machin3.io/MACHIN3tools/docs/pie_save/",
+            "note": "増分保存を比較するなら、復元後に必要な形が戻るかまで見ると判断できます。同じ視点で削除した上半分と復元後を見比べます。"
+          }
         },
         "en": {
           "headline": "Recover the mesh from a restore point",
@@ -729,7 +1059,17 @@
               "git_blob": "f6563f195816b79b8a1e2ef610106e57e239b31e",
               "caption": "After Restore: After restoring with \"Restore Selected\". It returned to the shape from when the restore point was created."
             }
-          ]
+          ],
+          "workflow": [
+            "Save checkpoint",
+            "Delete upper half",
+            "Restore the mesh"
+          ],
+          "comparison": {
+            "name": "MACHIN3tools Save Pie",
+            "url": "https://machin3.io/MACHIN3tools/docs/pie_save/",
+            "note": "For recovery workflows, compare the actual shape before and after restoration. The example keeps the view fixed while the deleted upper half returns."
+          }
         }
       }
     },
@@ -754,7 +1094,17 @@
               "git_blob": "98f8b1cb8875485f385a21e7904562eb490f0671",
               "caption": "有効で切替：同期を「有効」にして「Scripting」へ切り替えた後。左上の 3D ビューも横向きになりました。"
             }
-          ]
+          ],
+          "workflow": [
+            "横から表示",
+            "ワークスペースを切替",
+            "同じ角度を引き継ぐ"
+          ],
+          "comparison": {
+            "name": "Simple Tabs",
+            "url": "https://chippwalters.gumroad.com/l/simpletabs",
+            "note": "タブの整理と、移動後に同じ物を同じ方向から見たい作業を区別できます。LayoutからScriptingへ移っても横顔が保たれる例です。"
+          }
         },
         "en": {
           "headline": "Keep the same view when switching workspaces",
@@ -772,7 +1122,17 @@
               "git_blob": "a08bb9ab3df494912082a7ec115f8a478839d1f9",
               "caption": "Switch While Enabled: After setting sync to \"Enabled\" and switching to \"Scripting\". The 3D Viewport in the upper left now shows the side view too."
             }
-          ]
+          ],
+          "workflow": [
+            "Frame a side view",
+            "Switch workspace",
+            "Keep the viewing angle"
+          ],
+          "comparison": {
+            "name": "Simple Tabs",
+            "url": "https://chippwalters.gumroad.com/l/simpletabs",
+            "note": "If switching workspaces costs you your camera angle, watch the side view survive the move from Layout to Scripting."
+          }
         }
       }
     },
@@ -797,7 +1157,17 @@
               "git_blob": "5b9f9df5f21d4f28f998e51713aa4ade94069e35",
               "caption": "後：「コレクション加算」を押した後。右には網目が出ましたが、メッシュを共有する左には出ません。"
             }
-          ]
+          ],
+          "workflow": [
+            "編集対象を選ぶ",
+            "コレクション加算",
+            "共有メッシュの複製を除外"
+          ],
+          "comparison": {
+            "name": "MultiEdit",
+            "url": "https://github.com/antoni4040/MultiEdit-Addon/blob/master/MultiEdit_1_1.py",
+            "note": "複数編集にリンク複製が混ざる場合に注目してください。追加で編集対象になった物と、同じメッシュを共有して外れた物を区別できます。"
+          }
         },
         "en": {
           "headline": "Add edit targets while skipping shared mesh data",
@@ -815,7 +1185,17 @@
               "git_blob": "de8ee71601376e44f9936209c8e5d8a4abb71474",
               "caption": "After: After clicking \"Add Collection\". The right one now shows its wireframe, but the left one, which shares the mesh, does not."
             }
-          ]
+          ],
+          "workflow": [
+            "Select edit target",
+            "Add collection",
+            "Exclude linked duplicates"
+          ],
+          "comparison": {
+            "name": "MultiEdit",
+            "url": "https://github.com/antoni4040/MultiEdit-Addon/blob/master/MultiEdit_1_1.py",
+            "note": "For multi-object editing with linked duplicates, check which objects join the edit and which shared meshes stay outside it."
+          }
         }
       }
     },
@@ -840,7 +1220,17 @@
               "git_blob": "5ebbe1910ae917583f51a7dd2d425cf25dc9e49d",
               "caption": "「破線」：裏の辺が、切れ切れの線で描かれます。手前の辺はふつうの線のままです。"
             }
-          ]
+          ],
+          "workflow": [
+            "手前に実線",
+            "隠れた辺を重ねる",
+            "奥行きを破線で読む"
+          ],
+          "comparison": {
+            "name": "Mesh Analysis Overlay",
+            "url": "https://extensions.blender.org/add-ons/mesh-analysis-overlay/",
+            "note": "数値による診断の前に裏側の線を読みたい場合、手前と奥の線種の違いを拡大して確認できます。"
+          }
         },
         "en": {
           "headline": "Show occluded edges as dashes",
@@ -858,7 +1248,17 @@
               "git_blob": "65b16dfc2d9129535e223d8b217e5f42cac9c4d4",
               "caption": "\"Dashed\": The back edges are drawn as broken lines. The front edges stay as ordinary lines."
             }
-          ]
+          ],
+          "workflow": [
+            "Keep front edges solid",
+            "Overlay hidden edges",
+            "Read depth from dashes"
+          ],
+          "comparison": {
+            "name": "Mesh Analysis Overlay",
+            "url": "https://extensions.blender.org/add-ons/mesh-analysis-overlay/",
+            "note": "To read the back of a mesh, zoom in on the solid front edges and dashed hidden edges."
+          }
         }
       }
     },
@@ -883,7 +1283,17 @@
               "git_blob": "709f89da7cd266d57cef2828f885b967ab4f7bb0",
               "caption": "件数更新：「選択変更：件数更新」を押した後。真ん中のスザンヌが持つ ID やチャンネルの行が足されました。左のスザンヌの項目は、選んでいる行なので青いまま残り、数は 0/1 です。このまま「選択へ適用」を押すと、この項目が真ん中のスザンヌに付きます。"
             }
-          ]
+          ],
+          "workflow": [
+            "選択時は1/1",
+            "選択を変更",
+            "0/1で全体の使用数を確認"
+          ],
+          "comparison": {
+            "name": "TexTools",
+            "url": "https://github.com/franMarz/TexTools-Blender",
+            "note": "IDを割り振った後に、選択範囲から外れただけか、ファイル全体で使われていないかを2つの件数で判別できます。"
+          }
         },
         "en": {
           "headline": "Check ID usage in the selection and across the file",
@@ -901,7 +1311,17 @@
               "git_blob": "c2259416c78e042deacecc939b1a66877773d984",
               "caption": "Refresh Counts: After clicking \"Selection Changed: Refresh\". Rows for the IDs and channels that the middle Suzanne has were added. The left Suzanne's entry stays blue because it is the selected row, and its count is 0/1. If you click \"Apply to Selection\" now, this entry is assigned to the middle Suzanne."
             }
-          ]
+          ],
+          "workflow": [
+            "Read 1/1 on selection",
+            "Change selection",
+            "Read 0/1 across the file"
+          ],
+          "comparison": {
+            "name": "TexTools",
+            "url": "https://github.com/franMarz/TexTools-Blender",
+            "note": "After assigning IDs, use the two counts to tell whether an ID is absent from the selection or unused across the file."
+          }
         }
       }
     },
@@ -926,7 +1346,17 @@
               "git_blob": "fe181c46ab8c3df315001115d37fbd7e50b6900a",
               "caption": "後：「リリース整理」を開いたところ。いちばん下に「阻害 1」と、原因のテキストの名前が出ます。"
             }
-          ]
+          ],
+          "workflow": [
+            "引き渡し前に点検",
+            "阻害が1件",
+            "該当するテキスト名を確認"
+          ],
+          "comparison": {
+            "name": "Addon Hub",
+            "url": "https://blenderprocedural.github.io/addon-hub/docs.html",
+            "note": "画面の整理に加え、引き渡し用コピーの整理が進まない理由を探せます。「阻害1」の件数から原因のテキスト名までたどれます。"
+          }
         },
         "en": {
           "headline": "Find the data blocking a release cleanup",
@@ -944,7 +1374,17 @@
               "git_blob": "46ae6ff0b6552532c09a0a65f4c1a9d06bf9836f",
               "caption": "After: \"Release Cleanup\" opened. At the very bottom, \"Blockers 1\" and the name of the text that caused it appear."
             }
-          ]
+          ],
+          "workflow": [
+            "Inspect handoff copy",
+            "Find one blocker",
+            "Identify the text by name"
+          ],
+          "comparison": {
+            "name": "Addon Hub",
+            "url": "https://blenderprocedural.github.io/addon-hub/docs.html",
+            "note": "Beyond arranging panels, this example locates the text data that blocks cleanup of a handoff copy."
+          }
         }
       }
     },
@@ -969,7 +1409,17 @@
               "git_blob": "bbef52226bf889214aef61b349b6b1f4e419dea6",
               "caption": "後：ボタンを押した後。開いた項目は「有効」になり、上位優先元の 2 つは「無効」になりました。"
             }
-          ]
+          ],
+          "workflow": [
+            "効かないF2を選ぶ",
+            "優先元を2件確認",
+            "有効状態の変化を確認"
+          ],
+          "comparison": {
+            "name": "Keymap Visualizer",
+            "url": "https://extensions.blender.org/add-ons/keymap-visualizer/",
+            "note": "キー配置を見るだけでは原因が分からない場合に、対象より優先される2件と、変更後どれが無効になったかを追えます。"
+          }
         },
         "en": {
           "headline": "See which two bindings take priority over F2",
@@ -987,7 +1437,17 @@
               "git_blob": "7780bb8e0ea73895f0338bd856987b6958d0b983",
               "caption": "After: After clicking the button. The opened item became \"Effective\", and the two higher-priority sources became \"Disabled\"."
             }
-          ]
+          ],
+          "workflow": [
+            "Select inactive F2",
+            "Inspect two overriding entries",
+            "Check enabled states"
+          ],
+          "comparison": {
+            "name": "Keymap Visualizer",
+            "url": "https://extensions.blender.org/add-ons/keymap-visualizer/",
+            "note": "When a keyboard map alone cannot explain F2, inspect the two higher-priority entries and their enabled states after the change."
+          }
         }
       }
     }

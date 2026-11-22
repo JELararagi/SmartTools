@@ -4,7 +4,7 @@
 
 [日本語の解説書](../docs/manuals/) · [English manuals](../docs/en/manuals/) · [製品別の原稿と作例 / Product catalog](products.json) · [無料公開版 / Free release](https://github.com/JELararagi/SmartTools/releases/tag/v1.0.0)
 
-販売先の商品欄や領収書からは、[日本語ヘルプ](https://jelararagi.github.io/SmartTools/help/) または [English Help](https://jelararagi.github.io/SmartTools/en/help/) を案内できます。導入・製品の操作はこのURLを継続して利用でき、各ストアの取引窓口は購入先で案内します。
+販売先の商品欄や領収書からは、[日本語ヘルプ](https://jelararagi.github.io/SmartTools/#help) または [English Help](https://jelararagi.github.io/SmartTools/en/#help) を案内できます。導入・製品の操作はこのURLを継続して利用でき、各ストアの取引窓口は購入先で案内します。
 
 ## 原稿の更新
 
