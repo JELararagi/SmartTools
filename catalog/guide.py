@@ -40,7 +40,8 @@ def card(item, lang):
     for figure in text['figures']:
         src = Path(figure['path']).relative_to(Path(text['manual']).parent).as_posix()
         caption = esc(figure['caption'])
-        figures.append(f'<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="{esc(src)}" alt="{caption}"><figcaption>{caption}</figcaption></figure>')
+        zoom = '原寸で見る' if lang == 'ja' else 'View full size'
+        figures.append(f'<figure style="margin:0"><a href="{esc(src)}" title="{zoom}"><img loading="lazy" style="width:100%;height:auto" src="{esc(src)}" alt="{caption}"></a><figcaption>{caption}</figcaption></figure>')
     tip = '試す前に' if lang == 'ja' else 'Before you try it'
     help_text = '導入・トラブルのヘルプ' if lang == 'ja' else 'Installation and troubleshooting help'
     return '\n'.join([START, '<section aria-labelledby="smarttools-example-preview">', f'<h2 id="smarttools-example-preview">{esc(text["headline"])}</h2>', f'<p>{esc(text["description"])}</p>', workflow_html(text), '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">', *figures, '</div>', comparison_html(text, lang), f'<p><strong>{tip}</strong>　{esc(text["try_first"])}</p>', f'<p><a href="../../#help">{help_text}</a></p>', '</section>', END])
