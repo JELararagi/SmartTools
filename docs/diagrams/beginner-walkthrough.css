@@ -1,0 +1,41 @@
+/* Copyright 2026 JELararagi. Styles are scoped to these walkthroughs. */
+.bhr-document{margin:0;background:#f5f4ef;color:#1d3039;font-family:system-ui,-apple-system,"Segoe UI","Yu Gothic",sans-serif;font-size:16px;line-height:1.75}
+.bhr-document *,.bhr-example *{box-sizing:border-box}
+.bhr-document main,.bhr-page-nav,.bhr-page-footer{max-width:1120px;margin:auto;padding:24px}
+.bhr-page-nav{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;border-bottom:1px solid #d8dfdf}
+.bhr-page-nav .bhr-brand{font-weight:750;margin-right:auto;letter-spacing:.04em}
+.bhr-page-nav a,.bhr-page-footer a{color:#115a70;text-underline-offset:4px}
+.bhr-page-footer{color:#51656d;font-size:13px;border-top:1px solid #d8dfdf}
+.bhr-example{font-family:system-ui,-apple-system,"Segoe UI","Yu Gothic",sans-serif;color:#1d3039;line-height:1.75;background:#fff;border:1px solid #d9e1e2;border-radius:14px;padding:clamp(18px,3vw,36px);margin:20px 0}
+.bhr-example .bhr-kicker{color:#226274;font-size:13px;font-weight:750;letter-spacing:.08em;margin:0 0 10px}
+.bhr-example h1,.bhr-example h2{font-size:clamp(24px,3.2vw,36px);line-height:1.38;margin:0 0 16px;letter-spacing:-.015em}
+.bhr-example .bhr-intro{font-size:17px;max-width:53em;margin:0 0 24px;color:#3a525c}
+.bhr-example .bhr-steps{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:18px}
+.bhr-example .bhr-step{border-top:1px solid #dae2e4;padding:24px 0 6px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.bhr-example .bhr-step.bhr-wide{grid-template-columns:1fr}
+.bhr-example .bhr-step-title{font-size:21px;line-height:1.5;margin:0 0 14px;display:flex;align-items:baseline;gap:12px}
+.bhr-example .bhr-number{font-size:15px;min-width:30px;color:#196079;border-bottom:3px solid #277c91;padding-bottom:3px}
+.bhr-example p{margin:0 0 13px}
+.bhr-example ol,.bhr-example ul{padding-left:1.4em}
+.bhr-example li{margin-bottom:7px}
+.bhr-example strong{font-weight:750}
+.bhr-example .bhr-note{border-left:3px solid #78999e;background:#f1f6f6;padding:11px 14px;font-size:14px;color:#304b55;margin-top:15px}
+.bhr-example figure{margin:0;min-width:0}
+.bhr-example .bhr-image-link{display:flex;justify-content:center;align-items:center;background:#eef1f1;border:1px solid #d3dddf;border-radius:8px;overflow:hidden;padding:10px;min-height:110px}
+.bhr-example .bhr-image-link.bhr-screen{padding:0;min-height:0}
+.bhr-example img{display:block;width:100%;height:auto;max-width:100%}
+.bhr-example .bhr-small img{width:auto;max-width:100%;image-rendering:auto}
+.bhr-example .bhr-rows img{width:336px}
+.bhr-example .bhr-controls img{width:465px}
+.bhr-example figcaption{color:#435c67;font-size:13px;line-height:1.65;margin-top:9px}
+.bhr-example .bhr-open{display:block;color:#126078;text-decoration:underline;text-underline-offset:3px;margin-top:3px}
+.bhr-example .bhr-focus{width:258px;height:182px;overflow:hidden;position:relative;flex-shrink:0}
+.bhr-example .bhr-focus img{position:absolute;max-width:none;width:1792px;height:auto;left:-1493.8px;top:-427px}
+.bhr-example .bhr-table-wrap{overflow-x:auto;margin:14px 0}
+.bhr-example table{width:100%;border-collapse:collapse;font-size:14px}
+.bhr-example th,.bhr-example td{text-align:left;border-bottom:1px solid #dbe3e5;padding:9px 8px;vertical-align:top}
+.bhr-example th{background:#f0f5f5;font-weight:700}
+.bhr-example .bhr-push{font-weight:750;color:#115c73}
+.bhr-example a:focus-visible,.bhr-page-nav a:focus-visible{outline:3px solid #cf720f;outline-offset:4px}
+@media(max-width:760px){.bhr-document main{padding:12px}.bhr-page-nav{padding:14px 20px}.bhr-example{margin:8px 0;padding:20px 16px}.bhr-example .bhr-step{grid-template-columns:1fr;gap:13px}.bhr-example .bhr-step-title{font-size:19px}.bhr-example .bhr-intro{font-size:16px}.bhr-example .bhr-image-link{padding:8px}.bhr-example .bhr-image-link.bhr-screen{padding:0}}
+@media print{.bhr-document{background:#fff}.bhr-page-nav{display:none}.bhr-example{border:0;padding:0}.bhr-example .bhr-step{break-inside:avoid}.bhr-example .bhr-open{display:none}}
