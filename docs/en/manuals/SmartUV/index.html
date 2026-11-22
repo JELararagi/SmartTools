@@ -107,6 +107,13 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <div class="sg-pair"><figure><a href="images/ex_uv_seam_snapshot_1.jpg"><img loading="lazy" src="images/ex_uv_seam_snapshot_1.jpg" alt="After clearing: All the seams were cleared with &quot;Clear Seam&quot;."></a><figcaption>After clearing: All the seams were cleared with &quot;Clear Seam&quot;.</figcaption></figure><figure><a href="images/ex_uv_seam_snapshot_2.jpg"><img loading="lazy" src="images/ex_uv_seam_snapshot_2.jpg" alt="After restoring: The original lines came back with &quot;Load Scene Seam Set&quot;."></a><figcaption>After restoring: The original lines came back with &quot;Load Scene Seam Set&quot;.</figcaption></figure></div>
 <p><strong>Before you try it</strong>　Compare the same mesh before changing its topology.</p>
 <p class="sg-links"><a href="#case-uv_seam_snapshot">Follow the worked example</a><a href="../../../diagrams/en/SmartUV.png" download>Download the illustrated example (PNG)</a><a href="../../#help">Setup and troubleshooting help</a></p>
+<!-- worked-scene:begin -->
+<section id="worked-scene"><h2>Try a seam layout you can restore</h2>
+<figure><a href="../../../diagrams/worked/SmartUV/starting-scene.webp"><img loading="lazy" width="640" height="440" style="max-width:100%;height:auto" src="../../../diagrams/worked/SmartUV/starting-scene.webp" alt="Try a seam layout you can restore"></a><figcaption>Blender render of the example scene before the exercise</figcaption></figure>
+<p>Mark four case edges as seams and save the seam snapshot to the scene. Clear the seams, then load the snapshot.</p>
+<p><strong>4 seam edges → 0 → the same 4</strong><br>The restored edge indices match the original set, so you can check exactly what came back.</p>
+</section>
+<!-- worked-scene:end -->
 <h2 id="more-workflows">Try another example</h2>
 <article><h3>Stack Identical Shapes in Different Orientations with &quot;Smart Stack&quot;</h3><p>Even rotated islands are stacked, with their orientation aligned, as long as they have the same shape. Islands with different shapes are not stacked together.</p>
 <div class="sg-pair"><figure><a href="images/ex_uv_stack_turned_0.jpg"><img loading="lazy" src="images/ex_uv_stack_turned_0.jpg" alt="Before: 3 strips and 2 squares, each rotated to a different orientation."></a><figcaption>Before: 3 strips and 2 squares, each rotated to a different orientation.</figcaption></figure><figure><a href="images/ex_uv_stack_turned_1.jpg"><img loading="lazy" src="images/ex_uv_stack_turned_1.jpg" alt="After: After &quot;Smart Stack&quot;. Strips are stacked with strips, and squares with squares."></a><figcaption>After: After &quot;Smart Stack&quot;. Strips are stacked with strips, and squares with squares.</figcaption></figure></div>

@@ -107,6 +107,13 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <div class="sg-pair"><figure><a href="images/ex_sr_cuff_share_0.jpg"><img loading="lazy" src="images/ex_sr_cuff_share_0.jpg" alt="押す前：手首を曲げても、袖口はまっすぐのままです。"></a><figcaption>押す前：手首を曲げても、袖口はまっすぐのままです。</figcaption></figure><figure><a href="images/ex_sr_cuff_share_1.jpg"><img loading="lazy" src="images/ex_sr_cuff_share_1.jpg" alt="押した後：画面の右（左袖口）は「端の割合」1.0、画面の左（右袖口）は 0.4。1.0 の袖口の方が大きくついて来ます。"></a><figcaption>押した後：画面の右（左袖口）は「端の割合」1.0、画面の左（右袖口）は 0.4。1.0 の袖口の方が大きくついて来ます。</figcaption></figure></div>
 <p><strong>試す前に</strong>　衣装と骨の条件を本文で確認。Auto-Rig Pro連携を使う場合は別途導入する。</p>
 <p class="sg-links"><a href="#case-sr_cuff_share">この作例の手順を見る</a><a href="../../diagrams/ja/SmartRig.png" download>作例を画像で保存 (PNG)</a><a href="../../#help">導入・トラブルのヘルプ</a></p>
+<!-- worked-scene:begin -->
+<section id="worked-scene"><h2>手首の重みを選んだ頂点だけに入れる</h2>
+<figure><a href="../../diagrams/worked/SmartRig/starting-scene.webp"><img loading="lazy" width="640" height="440" style="max-width:100%;height:auto" src="../../diagrams/worked/SmartRig/starting-scene.webp" alt="手首の重みを選んだ頂点だけに入れる"></a><figcaption>開始時の作例をBlenderでレンダーした画像</figcaption></figure>
+<p>袖メッシュの「Wrist」グループを選び、手首の5頂点を指定します。「選択頂点のみ」を有効にし、ウェイトの「1」を適用します。</p>
+<p><strong>5頂点の重み 約0.328 → 1.000</strong><br>ほかの211頂点の重みを操作前と照合し、一致しました。この練習には外部のリグ生成機能を使いません。</p>
+</section>
+<!-- worked-scene:end -->
 <h2 id="more-workflows">別の作例を試す</h2>
 <article><h3>上の服を、下の服の外に保つ</h3><p>「外に保つ」を押すと、上の服は、押した時に下の服より外にあった部分を保ったまま、下の服が動いても外側に保たれます。</p>
 <div class="sg-pair"><figure><a href="images/ex_sr_keep_outside_0.jpg"><img loading="lazy" src="images/ex_sr_keep_outside_0.jpg" alt="前：下の服を前へ出すと、赤い膨らみが青い上の服を突き抜けます。"></a><figcaption>前：下の服を前へ出すと、赤い膨らみが青い上の服を突き抜けます。</figcaption></figure><figure><a href="images/ex_sr_keep_outside_1.jpg"><img loading="lazy" src="images/ex_sr_keep_outside_1.jpg" alt="後：「外に保つ」の後に同じだけ前へ出した様子。青い上の服が外へ押され、赤がほとんど隠れました。"></a><figcaption>後：「外に保つ」の後に同じだけ前へ出した様子。青い上の服が外へ押され、赤がほとんど隠れました。</figcaption></figure></div>

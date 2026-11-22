@@ -107,6 +107,13 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <div class="sg-pair"><figure><a href="images/ex_sw_sync_1.jpg"><img loading="lazy" src="images/ex_sw_sync_1.jpg" alt="無効で切替：同期が「無効」のまま「Scripting」へ切り替えた後。左上の 3D ビューの向きは別のままです。"></a><figcaption>無効で切替：同期が「無効」のまま「Scripting」へ切り替えた後。左上の 3D ビューの向きは別のままです。</figcaption></figure><figure><a href="images/ex_sw_sync_3.jpg"><img loading="lazy" src="images/ex_sw_sync_3.jpg" alt="有効で切替：同期を「有効」にして「Scripting」へ切り替えた後。左上の 3D ビューも横向きになりました。"></a><figcaption>有効で切替：同期を「有効」にして「Scripting」へ切り替えた後。左上の 3D ビューも横向きになりました。</figcaption></figure></div>
 <p><strong>試す前に</strong>　両方のワークスペースに3Dビューを用意する。</p>
 <p class="sg-links"><a href="#case-sw_sync">この作例の手順を見る</a><a href="../../diagrams/ja/SmartWorkspace.png" download>作例を画像で保存 (PNG)</a><a href="../../#help">導入・トラブルのヘルプ</a></p>
+<!-- worked-scene:begin -->
+<section id="worked-scene"><h2>形を保ったまま配線の見え方を切り替える</h2>
+<figure><a href="../../diagrams/worked/SmartWorkspace/starting-scene.webp"><img loading="lazy" width="640" height="440" style="max-width:100%;height:auto" src="../../diagrams/worked/SmartWorkspace/starting-scene.webp" alt="形を保ったまま配線の見え方を切り替える"></a><figcaption>開始時の作例をBlenderでレンダーした画像</figcaption></figure>
+<p>「ビューポート最適化」の「標準」で、シェーディングの描画方式を「ワイヤーフレーム」に替え、次に「ソリッド」に戻します。</p>
+<p><strong>ソリッド → ワイヤーフレーム → ソリッド</strong><br>同じ3Dビューの表示方式が順に切り替わります。立体の外形と内部の辺を見比べられます。</p>
+</section>
+<!-- worked-scene:end -->
 <h2 id="more-workflows">別の作例を試す</h2>
 <article><h3>画面の配置を保存して読み込みで戻す</h3><p>今の画面の分け方を「セーブステート」として保存しておくと、配置を変えた後でも読み込みで戻せます。</p>
 <div class="sg-pair"><figure><a href="images/ex_sw_workspace_save_0.jpg"><img loading="lazy" src="images/ex_sw_workspace_save_0.jpg" alt="前：保存する前。一覧は空です。"></a><figcaption>前：保存する前。一覧は空です。</figcaption></figure><figure><a href="images/ex_sw_workspace_save_3.jpg"><img loading="lazy" src="images/ex_sw_workspace_save_3.jpg" alt="読み込み：「現在のワークスペースに読み込み」の後。区切りとエディターの種類が戻りました。3D ビューの向きは戻りません。"></a><figcaption>読み込み：「現在のワークスペースに読み込み」の後。区切りとエディターの種類が戻りました。3D ビューの向きは戻りません。</figcaption></figure></div>

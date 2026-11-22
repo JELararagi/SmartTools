@@ -107,6 +107,17 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <div class="sg-pair"><figure><a href="images/ex_rd_elements_checks_0.jpg"><img loading="lazy" src="images/ex_rd_elements_checks_0.jpg" alt="開いたところ：ビューティー・アルファ・Z深度・法線・ベロシティなど 6 個にチェックが入っている。"></a><figcaption>開いたところ：ビューティー・アルファ・Z深度・法線・ベロシティなど 6 個にチェックが入っている。</figcaption></figure><figure><a href="images/ex_rd_elements_checks_1.jpg"><img loading="lazy" src="images/ex_rd_elements_checks_1.jpg" alt="読み込んだ後：クイックセットの「ビューティーのみ」を読み込むと、ビューティーとアルファの 2 個になり、チェック・「選択エレメント数」・「想定エレメント」が一緒に減った。"></a><figcaption>読み込んだ後：クイックセットの「ビューティーのみ」を読み込むと、ビューティーとアルファの 2 個になり、チェック・「選択エレメント数」・「想定エレメント」が一緒に減った。</figcaption></figure></div>
 <p><strong>試す前に</strong>　この図は出力前の設定。実際の書き出しは後続の手順で確認する。</p>
 <p class="sg-links"><a href="#case-rd_elements_checks">この作例の手順を見る</a><a href="../../diagrams/ja/SmartRender.png" download>作例を画像で保存 (PNG)</a><a href="../../#help">導入・トラブルのヘルプ</a></p>
+<!-- worked-scene:begin -->
+<section id="worked-scene"><h2>合成用の出力を2種類に絞る</h2>
+<figure><a href="../../diagrams/worked/SmartRender/starting-scene.webp"><img loading="lazy" width="640" height="440" style="max-width:100%;height:auto" src="../../diagrams/worked/SmartRender/starting-scene.webp" alt="合成用の出力を2種類に絞る"></a><figcaption>開始時の作例をBlenderでレンダーした画像</figcaption></figure>
+<p>「レンダーエレメント」で初期チェックを確認し、クイックセットで「ビューティーのみ」を選んで読み込みます。</p>
+<p><strong>6項目 → ビューティーとアルファの2項目</strong><br>この初期設定では、日英両方の画面で同じ2項目が残ります。保存済みの設定では開始時の数が異なる場合があります。</p>
+<div style="display:flex;flex-wrap:wrap;gap:1rem">
+<figure style="margin:0"><a href="../../diagrams/worked/SmartRender/ja_JP-before.webp"><img src="../../diagrams/worked/SmartRender/ja_JP-before.webp" width="253" height="713" loading="lazy" alt="初期設定・6項目"></a><figcaption>初期設定・6項目</figcaption></figure>
+<figure style="margin:0"><a href="../../diagrams/worked/SmartRender/ja_JP-after.webp"><img src="../../diagrams/worked/SmartRender/ja_JP-after.webp" width="253" height="713" loading="lazy" alt="読み込み後・2項目"></a><figcaption>読み込み後・2項目</figcaption></figure>
+</div>
+</section>
+<!-- worked-scene:end -->
 <h2 id="more-workflows">別の作例を試す</h2>
 <article><h3>キューを実行して「最終実行」で結果を見る</h3><p>「レンダーキューを実行」は、予定表の有効な行を上から順に書き出します。終わると「ダッシュボード」の「最終実行」に、結果と件数が出ます。各行では、対象ビューレイヤー用にこのツールが作った出力ノードだけが有効になります。ほかのレイヤー用の出力は一時的に止まり、処理後は元の有効・無効に戻ります。</p>
 <div class="sg-pair"><figure><a href="images/ex_rd_queue_run_0.jpg"><img loading="lazy" src="images/ex_rd_queue_run_0.jpg" alt="実行前：実行する前。「最終実行」は「—」。"></a><figcaption>実行前：実行する前。「最終実行」は「—」。</figcaption></figure><figure><a href="images/ex_rd_queue_run_1.jpg"><img loading="lazy" src="images/ex_rd_queue_run_1.jpg" alt="実行後：「レンダーキューを実行」の後。「最終実行」に「完了」と件数が出た。"></a><figcaption>実行後：「レンダーキューを実行」の後。「最終実行」に「完了」と件数が出た。</figcaption></figure></div>
