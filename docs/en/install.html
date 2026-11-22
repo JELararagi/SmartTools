@@ -77,13 +77,23 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 </head>
 <body><nav class="stnav" aria-label="Site navigation"><div class="stnav-in"><a class="stnav-brand" href="./">SmartTools</a><a href="manuals/overview/">Overall Specification</a><a href="./#addons">Add-ons</a><a href="install.html" aria-current="page">Installation</a><a href="./#help">Help</a><span class="stnav-sp"></span><a href="./#downloads">Downloads</a><a href="https://github.com/JELararagi/SmartTools">GitHub</a><a href="../install.html" hreflang="ja" lang="ja">Japanese - 日本語</a></div></nav><main>
 <header class="cover"><p class="kicker">SmartTools</p><h1>Installing SmartTools</h1>
-<p class="sub">Blender 5.1.0 or later / Install the ZIP as it is</p>
-<p class="lead">Install the downloaded ZIP in Blender as it is, without extracting (unzipping) it. No internet connection is needed to install it.</p></header>
+<p class="sub">Blender 5.1.0 or later / Installing an individual add-on</p>
+<p class="lead">Check the filename first. Install an individual add-on ZIP directly. Extract a download bundle once to get the add-on and its help files. Installation works offline.</p></header>
 <nav class="tocbox"><h2>Contents</h2><ol class="toc"><li><a href="#req">Requirements</a></li><li><a href="#download">Download the ZIP</a></li><li><a href="#install">Install in Blender</a></li><li><a href="#remote">Install from a Remote Repository (Receive Updates)</a></li><li><a href="#check">Verify the Files (Optional)</a></li><li><a href="#after">After Installing</a></li><li><a href="#trouble">Troubleshooting</a></li></ol></nav>
 <h2 id="req">Requirements</h2>
 <ul><li>Blender 5.1.0 or later (tested with Blender 5.1.2).</li><li>The ZIP of the add-on you want to install.</li></ul>
 <h2 id="download">Download the ZIP</h2>
-<p>Get it from the <a href="./#downloads">download list</a> on the home page, or from <a href="https://github.com/JELararagi/SmartTools/releases">Releases</a> on GitHub. Do not extract the ZIP. If your browser extracted it automatically, download it again as a ZIP.</p>
+<p>Choose a product from the <a href="./#downloads">download list</a> on the home page or from <a href="https://github.com/JELararagi/SmartTools/releases">Releases</a> on GitHub.</p>
+<h3 id="download-bundle">Which ZIP should I select?</h3>
+<dl><dt><strong>The filename ends in <code>-download.zip</code></strong></dt><dd>Extract the outer bundle once. In Blender, choose Install from Disk and select the ZIP inside that carries the product name and version.</dd>
+<dt><strong>You already have the individual product ZIP</strong></dt><dd>Select this ZIP directly in Blender, keeping it zipped. This applies when you download the individual add-on from the GitHub download list.</dd></dl>
+<details><summary>See which file to open in a SmartComposite 1.0.0 bundle</summary>
+<pre style="overflow-x:auto"><code>SmartComposite_1.0.0-download.zip  ← extract once
+├─ SmartComposite_1.0.0.zip        ← select in Blender
+├─ help/en/index.html              ← read in your browser
+└─ examples/Platform_Sign_Start.blend  ← open for the exercise</code></pre>
+<p>The included guide works offline. Example filenames and availability vary by product.</p></details>
+<p>If Blender reports a missing manifest, look inside the ZIP you selected. An installable extension has <code>blender_manifest.toml</code> at the top level. If you see another product ZIP inside, extract the bundle and choose the inner ZIP.</p>
 <h2 id="install">Install in Blender</h2>
 <h3>A. Drag and Drop</h3>
 <ol><li>Start Blender.</li><li>Drag and drop the downloaded ZIP onto the Blender window.</li><li>When the confirmation dialog appears, make sure <b>Enable on Install</b> is checked, then continue.</li></ol>
