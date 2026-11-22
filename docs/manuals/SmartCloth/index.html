@@ -119,6 +119,35 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <details><summary>関連ツールの公式資料</summary><ul><li><a href="https://simplydocs.org/simply-cloth-pro/">Simply Cloth Pro</a></li><li><a href="https://www.marvelousdesigner.com/en-ca/manuals/articles/47358199517209">Marvelous Designer · Segment Sewing</a></li><li><a href="https://joseconseco.github.io/GarmentToolDocs/quick_guide/">Garment Tool</a></li></ul></details>
 </section>
 <!-- smarttools-catalog:end -->
+<!-- tideglass:begin -->
+<section id="tideglass"><h2>SmartCloth · Tideglass</h2>
+<p>SmartCloth 1.0.0 の衣装作例です。プリーツスカートの腰を固定し、横風が裾を押す様子を観察します。青の切り替えと金色の縁で、ねじれと垂れ下がりを見分けられます。</p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartCloth/Tideglass_Replay.gif" alt="実際に計算した7時点の衣装形状を順再生し、逆順で戻しています。"></p>
+<h3>開始シーンで衣装を準備する</h3>
+<ol>
+<li>Blender 5.1で「プリファレンス」→「エクステンションを入手」→右上のメニュー→「ディスクからインストール」を開き、SmartClothのZIPを選びます。</li>
+<li>Tideglass_Start.blend (Tideglass_Start.blend) を開きます。3Dビューで <strong>N</strong> を押し、<strong>Smart Cloth → スカートと衝突する体</strong> を開きます。衣装、リグ、体は設定済みです。</li>
+<li><strong>確認 → スカートを設定 → クロス</strong> の順に押します。1フレームからスペースキーで24フレームまで再生します。腰は固定され、裾が落ちながら動きます。</li>
+<li>再生を止め、1フレームに戻し、<strong>ボーン</strong> を押します。キャッシュをベイクした場合は、再計算前に <strong>出力と検査 → ベイクを解除</strong> を実行します。</li>
+</ol>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartCloth/Tideglass_UI_JA.png" alt="Blender 5.1.2 の実画面です。衣装の設定欄のすぐ下に、ボーンとクロスの切り替えがあります。"></p>
+<h3>完成形と比べる</h3>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartCloth/Tideglass_Start.png" alt="1フレーム。編集できる衣装と台座。"></p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartCloth/Tideglass_Finish.png" alt="24フレーム。裾が落ち、輪郭が細くなっています。"></p>
+<p>Tideglass_Finish.blend (Tideglass_Finish.blend) を開いて1〜24フレームを移動してください。<strong>Silk replay | baked surface</strong> に7時点の形状が入っています。編集用の元衣装もシーンに残しています。再生に外部キャッシュは不要です。</p>
+<h3>自分の衣装で使う</h3>
+<ol>
+<li>シーンのコピーで衣装メッシュ、アーマチュア、衝突対象の体を指定します。衣装と脚のボーン名をカンマ区切りで入れ、設定を確認します。</li>
+<li>スカート全体には標準方式を使います。外側補正はボーンモードで衣装を体の表面から離します。書き出す前に、深く曲げた姿勢でも表面を確認します。</li>
+<li>部分布と飾りを分けるには、別途導入した Simply Cloth Studio を有効にします。「部分布と飾り」で素材枠か頂点グループ、支持ボーン、布全体の質量を指定し、確認、作成、切り替えを行います。「元の衣装に戻す」で作成した補助物を片付けます。</li>
+<li>動きをボーンへ移すには、先にクロスをベイクします。ポーズモードでウェイトを持つ親子を選び、キャッシュ内の開始・終了フレームを指定します。確認してベイクし、従来の動きとベイク結果を切り替えます。制約の停止や影響度不足は状態欄で確認できます。</li>
+</ol>
+<h3>揺れボーンとリジッドボディ</h3>
+<p>リボンには「常時起動切り替え」で揺れ計算を有効にし、シーン、リグ、対象ポーズボーンでも有効にします。Hair や Tail のプリセットを選べます。スクラブを有効にするとタイムラインのドラッグでも確認できます。「揺れをベイク」はキーを作り、「元の動きへ戻す」で以前のアクションへ戻します。「選択ボーンの設定キーを消去」は選んだボーンの揺れパラメーターのキーを消します。</p>
+<p>小物を落とすには床を選んで「固定する物体」、小物を選んで「動く物体」を押し、質量、摩擦、反発を指定します。プリセットに保存すれば、物体とシミュレーションの設定を繰り返し使えます。1フレームから再生してください。</p>
+<h3>動作範囲</h3>
+<p>同梱作例は Blender の標準機能で動作します。一括設定、部分布の作成、外部製品での確定には別途導入した Simply Cloth Studio が必要です。2.1.0 で確認しました。再計算した布と揺れは以前の計算結果と差が出るため、既存ショットの動きを固定したい場合はそのベイクを保管してください。</p></section>
+<!-- tideglass:end -->
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">服のクロス（布のシミュレーション）の準備・軽量化・点検・安全なベイクと、剛体（Quick Rigid）・骨の揺れ（Jiggle Physics）を、サイドバーの 1 つのタブでまとめて扱うアドオンです。</p><ul><li>選んだ服に、Simply Cloth Studio のクロス作成と、品質の設定・衝突距離の調整・上端のピン（固定）作成・コライダーの設定を、1 回の操作（1 回の Undo で戻せる）でまとめて行う（「スマートセットアップ」）。</li><li>「プレビュー」「バランス」「プロダクション」「ヒーロー」の 4 段階の品質プロファイルを、複数のクロスへ一度に当てる。</li><li>作業中だけクロスの品質を下げ、重いモディファイアを隠して軽くし、あとで元の状態に戻す（「一括プレビュー適用」「プレビュー状態を復元」）。</li><li>メッシュの細かさから衝突距離を自動で決める。先のフレームの動きを見て衝突の余裕を足す。重ね着の服どうしに間隔を付ける。</li><li>曲がりのきつい所・ピンの候補・体との近さを頂点グループとして作り、クロスの設定の問題を点検してレポートに書き出す（「プリフライト実行」）。</li><li>点検してから、クロスのベイク（「安全ベイク」）や、Simply Cloth Studio の仕上げ（「安全仕上げ」）を行う。</li><li>スカートなどの服を、ボーンで動かす状態とクロスで動かす状態に切り替える。割当ては服に保存して使い回せる。</li><li>焼いたクロスの動きを衣装のボーンに写し取る（「クロスから衣装ボーンへ」）。</li><li>メッシュに剛体（物理で落ちる・ぶつかる固い物）を付け、プリセットとベイクを扱う（Quick Rigid）。</li><li>髪や尻尾などの骨に揺れを付け、ベイクする（Jiggle Physics）。</li></ul>
 <div class="box tip"><b>こんな時に</b><div><ul><li>キャラクターの服にまとめてクロスを付け、ベイク前に設定の問題がないか確かめたい。</li><li>クロスの入った重いシーンで、ポーズ付けの間だけ画面を軽くしたい。</li><li>スカートを、普段はボーンで動かし、仕上げの時だけクロスで動かしたい。</li><li>焼いたクロスの動きをボーンのアニメーションにして、手で直せる形にしたい。</li><li>小物を落とす・転がす剛体の動きを手早く作りたい。</li><li>髪の房や尻尾を、二次的な揺れで動かしたい。</li></ul></div></div>
