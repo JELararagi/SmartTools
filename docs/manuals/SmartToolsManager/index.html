@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/prefs_resident.png"><img fetchpriority="high" src="images/prefs_resident.png" alt="プリファレンスのアドオンの欄。「スマートツールマネージャーを開く」「リリース整理」と、開いた「常時機能切り替え」"></a><figcaption><a href="images/prefs_resident.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">プリファレンスの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="編集 → プリファレンス → アドオン → Smart Tools Manager"><div class="sg-map-bar"><span class="sg-map-mark">1</span>編集 → <span class="sg-map-mark">2</span>プリファレンス</div><div class="sg-map-prefs"><div class="sg-map-choice"><strong><span class="sg-map-mark">3</span>アドオン</strong></div><div class="sg-map-dest"><strong><span class="sg-map-mark">4</span>Smart Tools Manager</strong></div></div></div></div><p>「編集」→「プリファレンス」→「アドオン」で「Smart Tools Manager」の行を開きます。「常時機能切り替え」で「トップバーボタン」を有効にすると、画面上部の「スマートツール」から開けます。</p><h3>画面の目印</h3><p>これはプリファレンスの入口画面で、「スマートツールマネージャーを開く」ボタンと「常時機能切り替え」が写っています。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · モデリングのワークスペースの 3D ビューポートに Smart Modeling だけを出す</h2><div class="sg-first-body"><div><h3>準備</h3><p>ワークスペースとエディターを先に選んでからタブを切り替えます。結果は同じワークスペースの3Dビューポートでサイドバーを開いて確認します。</p><details><summary>操作を順に見る (6)</summary><ol class="sg-steps"><li>トップバーの「スマートツール」を押します。</li><li>「ワークスペース」の列で「モデリング」を押します。</li><li>「Nパネル対応エディター」の列で「3Dビューポート」を押します。</li><li>「スマートツール」の見出しの右の「全部無効」を押します。</li><li>Smart Modeling の「無効」を押して「有効」にします。</li><li>「OK」を押して閉じます。</li></ol></details><h3>成功の確認</h3><p>モデリングの3Dビューポートを開き、SmartTools製タブのうちSmart Modelingだけが表示されるか確認します。</p></div><figure><a href="images/ex_stm_only_modeling_2.jpg"><img loading="lazy" src="images/ex_stm_only_modeling_2.jpg" alt="モデリング用のサイドバーに表示するタブを絞った例。"></a><figcaption>モデリング用のサイドバーに表示するタブを絞った例。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">引き渡し前に、整理を止めるデータを名前で見つける</h2><p>スクリプトのテキストが残った例では「阻害1」と原因の名前が出ます。コピーを整理する前に、確認するデータを特定できます。</p>
 <ol class="sg-steps"><li>引き渡し前に点検</li><li>阻害が1件</li><li>該当するテキスト名を確認</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_stm_cleanup_block_0.jpg"><img loading="lazy" src="images/ex_stm_cleanup_block_0.jpg" alt="前：ファイルに入っているスクリプトのテキスト。"></a><figcaption>前：ファイルに入っているスクリプトのテキスト。</figcaption></figure><figure><a href="images/ex_stm_cleanup_block_1.jpg"><img loading="lazy" src="images/ex_stm_cleanup_block_1.jpg" alt="後：「リリース整理」を開いたところ。いちばん下に「阻害 1」と、原因のテキストの名前が出ます。"></a><figcaption>後：「リリース整理」を開いたところ。いちばん下に「阻害 1」と、原因のテキストの名前が出ます。</figcaption></figure></div>

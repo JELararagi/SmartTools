@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/sm_overview.png"><img fetchpriority="high" src="images/sm_overview.png" alt="「Smart Modeling」タブ全体（見出しはすべて閉じた状態）。いちばん上の「常時機能切り替え」と、作業の種類ごとの 8 つの見出し。右の数字はツールの数です。"></a><figcaption><a href="images/sm_overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Modeling」タブ → 「編集と転送」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>編集と転送</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Modeling</div></div></div></div><p>3Dビューポートでメッシュを選び、Tabキーで編集モードにします。ポインターをその画面に置いてNキーを押し、サイドバーの「Smart Modeling」で「編集と転送」を開きます。</p><h3>画面の目印</h3><p>入口全体の図では「編集と転送」の左にある三角を探してください。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · 頂点の位置を、同じ形の別メッシュへ写す</h2><div class="sg-first-body"><div><h3>準備</h3><p>元メッシュを複製し、頂点を増減せずに試します。コピー元と貼り付け先を切り替えるときは、それぞれ編集モードで対象の頂点を選びます。</p><details><summary>操作を順に見る (6)</summary><ol class="sg-steps"><li>「Smart Modeling」タブを開き、「編集と転送」の「頂点コピー」を開きます。</li><li>コピー元のメッシュを編集モードにして、写したい頂点を選びます。</li><li>「コピー元」を押して、位置を覚えさせます（読み込んだ後は「コピー」ボタンです）。</li><li>貼り付け先のメッシュを編集モードにして、変えたい頂点を選びます。</li><li>「同じ頂点番号で貼り付け」を押します（読み込んだ後は「貼り付け」です）。</li><li>うまく合わない時は、「同じ頂点番号を確認」で一致する頂点の数を見ます（読み込んだ後は「確認」です）。</li></ol></details><h3>成功の確認</h3><p>貼り付け先で選んだ頂点がコピー元の位置に移ったか見比べます。</p></div><figure><a href="images/ex_sm_vcopy_1.jpg"><img loading="lazy" src="images/ex_sm_vcopy_1.jpg" alt="2個のSuzanneを並べた頂点コピーの作例。右側が選択中です。"></a><figcaption>2個のSuzanneを並べた頂点コピーの作例。右側が選択中です。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">片方で直した耳を、もう片方のモデルにも</h2><p>同じ形のモデルを2体直すとき、左で直した頂点の位置を右へ貼り付けます。作例では右の耳が左と同じ形になります。</p>
 <ol class="sg-steps"><li>左の耳を修正</li><li>対応頂点を転送</li><li>右の耳も一致</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_sm_vcopy_0.jpg"><img loading="lazy" src="images/ex_sm_vcopy_0.jpg" alt="前：左は耳を大きくしたスザンヌ、右は元の形のスザンヌです。"></a><figcaption>前：左は耳を大きくしたスザンヌ、右は元の形のスザンヌです。</figcaption></figure><figure><a href="images/ex_sm_vcopy_1.jpg"><img loading="lazy" src="images/ex_sm_vcopy_1.jpg" alt="後：左で「コピー元」、右で「貼り付け」を押した後。右の耳も左と同じ形になりました。"></a><figcaption>後：左で「コピー元」、右で「貼り付け」を押した後。右の耳も左と同じ形になりました。</figcaption></figure></div>

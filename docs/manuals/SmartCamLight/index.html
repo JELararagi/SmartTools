@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/root_overview.png"><img fetchpriority="high" src="images/root_overview.png" alt="Smart CamLight タブ。「常時機能切り替え」「カメラ」「ライト」の 3 つの見出しを閉じた状態"></a><figcaption><a href="images/root_overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart CamLight」タブ → 「ライト」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>ライト</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart CamLight</div></div></div></div><p>オブジェクトモードの3DビューポートでNキーを押し、「Smart CamLight」タブを選びます。照明の操作を始めるには「ライト」を開きます。</p><h3>画面の目印</h3><p>入口全体の図では、「カメラ」と「ライト」が別々の見出しとして並びます。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · カメラごとに解像度を変えてレンダーする</h2><div class="sg-first-body"><div><h3>準備</h3><p>横長と縦長の2台を作り、名前を押してカメラを切り替えてから比率を指定します。仕上がりは出力した画像の幅と高さで確認できます。</p><details><summary>操作を順に見る (5)</summary><ol class="sg-steps"><li>「カメラ」の「シーン内カメラ」の ＋ を 2 回押して、カメラを 2 台作ります。＋で作ったカメラは、最初からカメラ別設定のチェックボックスが入っています。</li><li>1 台目の名前を押して選び、「解像度」の縦横比プリセットで「16:9」を押します。</li><li>2 台目の名前を押して選び、「9:16」を押します。</li><li>「ファイル出力」で保存先を決めます。</li><li>レンダーしたいカメラを選び、「選択中カメラ」の「レンダー」を押します。</li></ol></details><h3>成功の確認</h3><p>2台それぞれの保存画像で、横長・縦長と解像度を確認します。終了後はシーンの設定が元に戻ります。</p></div><figure><a href="images/ex_scl_aspect_1.jpg"><img loading="lazy" src="images/ex_scl_aspect_1.jpg" alt="カメラ枠の内側に被写体を置いた縦横比の作例。"></a><figcaption>カメラ枠の内側に被写体を置いた縦横比の作例。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">顔を照らしたまま、床だけを照明から外す</h2><p>同じライト・同じカメラで、一覧のFloorだけを除外。顔は照らしたまま床が暗くなり、チェックを戻せば両方が再び照らされます。</p>
 <ol class="sg-steps"><li>同じ顔と床</li><li>ライトの一覧で床を除外</li><li>顔を照らしたまま床が暗くなる</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_scl_link_state_0.jpg"><img loading="lazy" src="images/ex_scl_link_state_0.jpg" alt="含める：スザンヌと床を両方とも「含める」にした状態。両方が照らされています。"></a><figcaption>含める：スザンヌと床を両方とも「含める」にした状態。両方が照らされています。</figcaption></figure><figure><a href="images/ex_scl_link_state_1.jpg"><img loading="lazy" src="images/ex_scl_link_state_1.jpg" alt="除外：「Floor」の行の空のチェックの印を押した後。床が暗くなり、スザンヌだけが照らされています。"></a><figcaption>除外：「Floor」の行の空のチェックの印を押した後。床が暗くなり、スザンヌだけが照らされています。</figcaption></figure></div>

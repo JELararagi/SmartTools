@@ -105,7 +105,22 @@
           "name": "Mesh Data Transfer",
           "url": "https://github.com/maumemoli/blender/blob/master/packages/MeshDataTransfer/documentation/README.md"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "sm_vcopy",
+        "ja": {
+          "note": "元メッシュを複製し、頂点を増減せずに試します。コピー元と貼り付け先を切り替えるときは、それぞれ編集モードで対象の頂点を選びます。",
+          "image_blob": "2ab05dbc972703b7987458e209c38a409bc8bf2f",
+          "caption": "2個のSuzanneを並べた頂点コピーの作例。右側が選択中です。",
+          "check": "貼り付け先で選んだ頂点がコピー元の位置に移ったか見比べます。"
+        },
+        "en": {
+          "note": "Start with a duplicate of the source mesh and keep the vertex count and order. Select the vertices in Edit Mode on each mesh in turn.",
+          "image_blob": "f047729f6db9a358dea2f399024dd8a35c28eb23",
+          "caption": "Two Suzanne meshes in the vertex-copy example; the one on the right is selected.",
+          "check": "Compare the selected vertices on the target with their positions on the source."
+        }
+      }
     },
     {
       "product": "SmartUV",
@@ -210,7 +225,22 @@
           "name": "UVPackmaster 3 · Texel Density",
           "url": "https://uvpackmaster.com/doc3/blender/latest/20-packing-functionalities/58-texel-density/"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "uv_unwrap",
+        "ja": {
+          "note": "立方体で切り開きたい辺にシームを付けます。展開の前に、3Dビューの面とUVエディターのUVの両方を選択します。",
+          "image_blob": "d40a4dd66b9f4e4c3c097fecfb25cb5892d1c4ce",
+          "caption": "色付きグリッドにUVの辺を重ねたUVエディター。",
+          "check": "UVエディターで島が画像の範囲内に並び、島の間にすき間があるかを見ます。"
+        },
+        "en": {
+          "note": "Mark the cut edges on a cube. Before unwrapping, select the mesh in the 3D Viewport and the UVs in the UV Editor.",
+          "image_blob": "41e620d436772ba8e839dc236abc2ad201a742a7",
+          "caption": "The UV Editor shows the UV edges over a colored grid.",
+          "check": "In the UV Editor, look for islands inside the image bounds with a gap between them."
+        }
+      }
     },
     {
       "product": "SmartGeometry",
@@ -315,7 +345,22 @@
           "name": "Geo-Scatter · Biomes",
           "url": "https://www.geoscatter.com/docs-scattering.html"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "sg_scatter",
+        "ja": {
+          "note": "オブジェクトモードで地形を作り、その地形を選択したまま散布へ進みます。点を見つけにくい場合はプロキシを表示すると、草や石を置く位置を確認できます。",
+          "image_blob": "78a8897ec13ac6973d7713695e6ff6c99da69a2d",
+          "caption": "Suzanneの表面に散布位置を表示した作例。地形でも同じように表面を見ます。",
+          "check": "作成した地形の上に点が並んでいるか、斜めから見て確認します。"
+        },
+        "en": {
+          "note": "Create the terrain in Object Mode and keep it selected for scattering. Display the proxies if the points are hard to see. They mark where the grass or rocks could go.",
+          "image_blob": "8d411968cd90ac44d9aade8c4d29c0042b68dcf0",
+          "caption": "Scatter locations displayed on Suzanne. On a terrain mesh, inspect the ground surface in the same way.",
+          "check": "Look across the terrain at an angle and check that the points sit on its surface."
+        }
+      }
     },
     {
       "product": "SmartModifier",
@@ -424,7 +469,22 @@
           "name": "Modifier List",
           "url": "https://github.com/Symstract/modifier_list/blob/master/docs/README.md"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "smod_base_level",
+        "ja": {
+          "note": "立方体にモディファイアを一つ追加し、スタックに行が増えたことを確認します。ベースの行を一度押すと元の形に切り替わり、もう一度押すと編集できます。",
+          "image_blob": "db11edfc8553f24dea22fdf83b07150b62512bcf",
+          "caption": "元のメッシュの辺を表示した、ベース段の作例。",
+          "check": "元の形を編集した後も、追加したモディファイアの行がスタックに残っているか確認します。"
+        },
+        "en": {
+          "note": "Add one modifier to a cube and look for its row in the stack. Click the base row once to switch to the original shape, then again to edit it.",
+          "image_blob": "d8747b01921fa1e15a7282ec3055dba8151f05fd",
+          "caption": "Edges of the original mesh are visible in this base-level example.",
+          "check": "After editing the base shape, check that the modifier row is still in the stack."
+        }
+      }
     },
     {
       "product": "SmartSculpt",
@@ -533,7 +593,22 @@
           "name": "Exoside Quad Remesher for Blender",
           "url": "https://www.exoside.com/quadremesherdata/QuadRemesher_1.2_UserDoc.pdf"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "ss_snapshot",
+        "ja": {
+          "note": "形を変える前にスナップショットを保存します。戻すときはオブジェクトモードにし、復元するスナップショットを一覧で選びます。",
+          "image_blob": "970cd9a8db45d1f549d96f4a951e99b7828e8c27",
+          "caption": "スナップショットの作例で使う彫刻用メッシュ。",
+          "check": "試しに小さな変更を加えて復元し、変更前の輪郭に戻るか見比べます。"
+        },
+        "en": {
+          "note": "Save a snapshot before changing the shape. To restore it, switch to Object Mode and select that snapshot in the list.",
+          "image_blob": "c6594a0bddd006e599c3e74721bd3d78ccd6f2fd",
+          "caption": "The sculpt mesh used in the snapshot example.",
+          "check": "Make a small test edit, restore the snapshot, and compare the outline with the saved shape."
+        }
+      }
     },
     {
       "product": "SmartRig",
@@ -642,7 +717,24 @@
           "name": "Wiggle 2",
           "url": "https://github.com/shteeve3d/blender-wiggle-2"
         }
-      ]
+      ],
+      "first_task": {
+        "example": null,
+        "ja": {
+          "note": "この体リグの手順には、別途入手したAuto-Rig Proが必要です。準備欄で連携を確認してから素体を選びます。最初の事前検証では、対象リグの欄は空で構いません。",
+          "panel_image": "images/setup.png",
+          "image_blob": "b00e52a3aa921852aec875b229f7230fe81a452b",
+          "caption": "体のリグを組む前に開く準備パネル。文字は画像を押すと原寸で読めます。",
+          "check": "バインドしたリグをポーズモードで少し曲げ、対応する腕や脚のメッシュが骨について動くか確認します。"
+        },
+        "en": {
+          "note": "This body-rig workflow requires a separately obtained copy of Auto-Rig Pro. Check its status in the preparation panel, then select the body mesh. The target rig can be empty for the first preflight.",
+          "panel_image": "images/setup.png",
+          "image_blob": "827727c256cd5f6d6d1f0e05559dde6c7fc89a41",
+          "caption": "The setup panel used before building the body rig. Open the image at full size to read the controls.",
+          "check": "In Pose Mode, bend a limb slightly and check that the bound arm or leg mesh follows its bones."
+        }
+      }
     },
     {
       "product": "SmartAnimation",
@@ -751,7 +843,22 @@
           "name": "AnimAide · CurveTools",
           "url": "https://aresdevo.github.io/animaide/"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "sa_tween",
+        "ja": {
+          "note": "異なるポーズを記録した2つのキーを用意し、その間のフレームに再生ヘッドを置きます。トゥイーン値を0.5にすると、どの位置に中間のキーが入ったか確かめやすくなります。",
+          "image_blob": "6f23a0db52c24005306444cb4403cff0597e2778",
+          "caption": "立方体を使った中割りの作例。キーが入ったフレームはBlender側で確認します。",
+          "check": "現在のフレームにキーが一つ入り、値0.5で前後のポーズの中間になったかを見ます。"
+        },
+        "en": {
+          "note": "Start with two keys that hold different poses and place the playhead between them. Set the tween value to 0.5, then look for a new key at the playhead.",
+          "image_blob": "d568d0f02b24e86999a8a3390f0ea3c8c2fa5478",
+          "caption": "The tween example uses a cube. Inspect the key at the playhead in Blender.",
+          "check": "At the current frame, look for a new key and, with tween set to 0.5, a pose halfway between the surrounding poses."
+        }
+      }
     },
     {
       "product": "SmartShapekey",
@@ -856,7 +963,24 @@
           "name": "Faceit · Control Rig",
           "url": "https://faceit-doc.readthedocs.io/en/latest/control_rig/"
         }
-      ]
+      ],
+      "first_task": {
+        "example": null,
+        "ja": {
+          "note": "無表情のメッシュでオートキーを切り、ベースを設定します。表情を編集してBasisを選ぶと元の顔に戻るので、書き出した後にオブジェクトデータのシェイプキー一覧で表情名を確認します。",
+          "panel_image": "images/sk_export.png",
+          "image_blob": "55edd85511f6d2e5ebfe46f16a1895f2ba6b881e",
+          "caption": "表情マップの書き出し先を指定するパネル。",
+          "check": "オブジェクトデータのシェイプキー一覧に、書き出した表情名があるか確認します。"
+        },
+        "en": {
+          "note": "Start with a neutral face and turn off Auto Keying before setting the base. Selecting Basis after editing restores the neutral face. After export, look for the expression name in the object's Shape Keys list.",
+          "panel_image": "images/sk_export.png",
+          "image_blob": "5c15f79a3ca8583759f7b091fdd94ba10e8f832d",
+          "caption": "The panel for choosing how to export expression maps.",
+          "check": "Open Shape Keys in Object Data and look for the name of the expression you exported."
+        }
+      }
     },
     {
       "product": "SmartSelector",
@@ -965,7 +1089,22 @@
           "name": "FreePicker",
           "url": "https://extensions.blender.org/add-ons/freepicker/"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "ss_set_recall",
+        "ja": {
+          "note": "オブジェクトモードで、あとで一緒に選びたい物だけを選んでセットを作ります。いったん別の物を選んでからセットを呼び出すと、選択が戻る様子を確認できます。",
+          "image_blob": "a262bad4d06a6292f13f0b94de1b2d1b00964a2c",
+          "caption": "複数の形を並べ、登録した組の選択を呼び戻す作例。",
+          "check": "セットに登録した物だけが3Dビューとアウトライナーで選択されたか確認します。"
+        },
+        "en": {
+          "note": "In Object Mode, select the objects you want to recall together and create the set. Select something else, then recall the set and watch which objects become selected.",
+          "image_blob": "c1a95d5989cbc3bf2830129ed912b465f157ed17",
+          "caption": "The recall example uses several different shapes so you can tell the objects apart.",
+          "check": "In the 3D Viewport and Outliner, check that only the members of your set are selected."
+        }
+      }
     },
     {
       "product": "SmartCloth",
@@ -1074,7 +1213,22 @@
           "name": "Garment Tool",
           "url": "https://joseconseco.github.io/GarmentToolDocs/quick_guide/"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "sc_safe_bake",
+        "ja": {
+          "note": "この衣服の作例には別途Simply Cloth Studioが必要です。連携欄で使用可能かを確認し、体をコライダーに指定して服を選びます。ベイク前に事前点検の結果を確認します。",
+          "image_blob": "dda3631dcf25b33daecec369e73c49ed1723e170",
+          "caption": "球にピンクの布をかぶせた安全ベイクの作例。",
+          "check": "事前点検のレポートを開き、エラーがない場合にベイクが完了したか確認します。"
+        },
+        "en": {
+          "note": "This garment workflow requires Simply Cloth Studio separately. Check that the integration is available, assign the body as the collider, and select the garment. Read the preflight report before baking.",
+          "image_blob": "d1460129fe2c986da0ea00216ae76593122c1543",
+          "caption": "The safe-bake example shows a pink cloth draped over a sphere.",
+          "check": "Open the preflight report. With the reported errors cleared, check that the bake completes."
+        }
+      }
     },
     {
       "product": "SmartPaint",
@@ -1183,7 +1337,22 @@
           "name": "HAS Paint Layers",
           "url": "https://hirourk.github.io/HASPaintLayersWiki/02_0Layers.html"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "pt_psd_saveas",
+        "ja": {
+          "note": "UVのあるメッシュを選び、ペイント用マテリアルへ切り替えます。最初にPSD名を指定するのは「別名保存」、同じPSDへ続きを書くのは「保存」です。",
+          "image_blob": "586dd2b3135a8937997383a2e8d5184617a00a1c",
+          "caption": "赤く塗ったテストメッシュとペイント画面。保存したPSDは別途ファイル名で確認します。",
+          "check": "指定先に.psdが作成されたことを確認し、次の描画は同じファイルに保存します。"
+        },
+        "en": {
+          "note": "Select a mesh with UVs and switch to the paint material. Use Save As to name the first PSD, then Save to write later strokes to that file.",
+          "image_blob": "ab0a70a28ed6005bf98b3becabf5866741bcf3c1",
+          "caption": "A painted test mesh in the paint workspace. Use the saved filename to check the PSD itself.",
+          "check": "Look for the .psd at the destination you chose. Save the next edit to that same file."
+        }
+      }
     },
     {
       "product": "SmartShader",
@@ -1292,7 +1461,24 @@
           "name": "Toonkit for Cycles · EasyToon",
           "url": "https://cogumelosoftworks.com/docs/toonkit/nodes/easytoon.html"
         }
-      ]
+      ],
+      "first_task": {
+        "example": null,
+        "ja": {
+          "note": "まず材質を付けたいオブジェクトを選びます。見本を選んだあと一覧が閉じたら、選んだ物のマテリアルスロットに新しい材質が入ったか確認します。",
+          "panel_image": "images/pbr_generation.png",
+          "image_blob": "fcb96962ae7638eee02174e0ef6958caaee70fee",
+          "caption": "PBR材質を選ぶパネルとプレビュー。",
+          "check": "見本を選んだ後、選択中のオブジェクトのスロットに新しい材質名があるか確認します。"
+        },
+        "en": {
+          "note": "Select the objects that should receive the material. When the preview list closes, check their material slots for the newly assigned material.",
+          "panel_image": "images/pbr_generation.png",
+          "image_blob": "99236511f92104033d53fa243d3f11121a21d5ec",
+          "caption": "The PBR material panel and its preview.",
+          "check": "After choosing a preview, look for the new material in the selected object's slots."
+        }
+      }
     },
     {
       "product": "SmartNode",
@@ -1397,7 +1583,22 @@
           "name": "Node Arrange 0.2.2",
           "url": "https://github.com/blender/blender-addons/blob/e8da6131fddab2ac16b8c7e5f26b4462be323911/node_arrange.py"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "nd_arrange",
+        "ja": {
+          "note": "マテリアルのノードをシェーダーエディターに表示します。配置後はノードの左右の位置と、ソケット同士の接続を見比べてください。",
+          "image_blob": "ad8d7313424073c7ec97eed18fbb90ab2c8c4a27",
+          "caption": "ノードを段ごとに整列したシェーダーエディター。線をたどると接続順が分かります。",
+          "check": "つながっているノードが接続順に並び、元のソケット間のリンクを追えるかを確認します。"
+        },
+        "en": {
+          "note": "Display the material's nodes in the Shader Editor. After arranging them, compare their left-to-right positions and trace the socket connections.",
+          "image_blob": "4b93450531c0c14d93f93720719b9e8098162ee0",
+          "caption": "The arranged shader graph. Follow the wires to read the connection order.",
+          "check": "Check that connected nodes are arranged by level and that you can still trace the links between their sockets."
+        }
+      }
     },
     {
       "product": "SmartCamLight",
@@ -1506,7 +1707,22 @@
           "name": "Gaffer",
           "url": "https://github.com/gregzaal/Gaffer"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "scl_aspect",
+        "ja": {
+          "note": "横長と縦長の2台を作り、名前を押してカメラを切り替えてから比率を指定します。仕上がりは出力した画像の幅と高さで確認できます。",
+          "image_blob": "836b2dc9bed4855e6c861122a68441cd79f297fd",
+          "caption": "カメラ枠の内側に被写体を置いた縦横比の作例。",
+          "check": "2台それぞれの保存画像で、横長・縦長と解像度を確認します。終了後はシーンの設定が元に戻ります。"
+        },
+        "en": {
+          "note": "Create a landscape camera and a portrait camera. Click each name before setting its aspect ratio. Check the width and height of each saved image.",
+          "image_blob": "4002313332bafccd67244a02f35c1b55eec43127",
+          "caption": "The camera frame around the subject in the aspect-ratio example.",
+          "check": "Check the orientation and pixel dimensions of each saved render. After rendering, the scene settings return to their earlier values."
+        }
+      }
     },
     {
       "product": "SmartRender",
@@ -1611,7 +1827,22 @@
           "name": "Render Manager",
           "url": "https://github.com/riouxr/Render-Manager"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "rd_queue_run",
+        "ja": {
+          "note": "まず現在フレームだけを対象にします。出力確認の後、キューの選択行に表示されたパスを控えておくと、終了後に画像を見つけられます。",
+          "image_blob": "72296309a0e28d2345b2f8ccd6ecd1a0f1d6351e",
+          "caption": "レンダーキューの作例で使うテストシーン。出力先はキューの選択行で確認します。",
+          "check": "選択行に表示されたパスを開き、対象のカメラ・フレームの画像が保存されたか確認します。"
+        },
+        "en": {
+          "note": "Start with just the current frame. After checking the output, note the path shown for the selected queue row so you can find the image when rendering finishes.",
+          "image_blob": "f66c3947059c6338ea8013872b5658ebae317296",
+          "caption": "The queue example's test scene. Read the output destination in the selected queue row.",
+          "check": "Open the path shown for the selected row and look for the rendered image for that camera and frame."
+        }
+      }
     },
     {
       "product": "SmartComposite",
@@ -1720,7 +1951,22 @@
           "name": "Camera Post FX for Blender",
           "url": "https://superhivemarket.com/products/camera-post-fx-for-blender"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "scomp_glow",
+        "ja": {
+          "note": "明るい部分がある絵をレンダーし、コンポジターでグローを追加します。ノードの接続と、レンダーし直した絵の明るい部分の縁を順に確認します。",
+          "image_blob": "f11f1b73b4e91ff220565690007e5f383f9b8684",
+          "caption": "グローを加えたレンダー。明るい輪郭の外側に光がにじんでいます。",
+          "check": "追加されたグローのノードから出力への接続をたどり、再レンダー後の明るい輪郭を比べます。"
+        },
+        "en": {
+          "note": "Render a scene with a bright area, then add Glow in the Compositor. Check the node connections first, then render again and inspect the edge of that bright area.",
+          "image_blob": "f38e35227b1b9cb8c1dead8bb7acf846b918bc34",
+          "caption": "The rendered glow spills just beyond the bright silhouette.",
+          "check": "Trace the added glow nodes to the output, then compare the bright edges after rendering again."
+        }
+      }
     },
     {
       "product": "SmartFile",
@@ -1829,7 +2075,24 @@
           "name": "PowerSave",
           "url": "https://superhivemarket.com/products/powersave/docs/new"
         }
-      ]
+      ],
+      "first_task": {
+        "example": null,
+        "ja": {
+          "note": "取り込み元の.blendと、取り込み先のシーンを用意します。取り込みたいデータを選ぶのは、元の.blendをファイル選択画面で開いた後です。",
+          "panel_image": "images/sf_append.png",
+          "image_blob": "843a573ed228a77b815b0dc0dc2f7f8e1bf7e81a",
+          "caption": "外部の.blendからデータを選ぶアペンドのパネル。",
+          "check": "取り込んだデータが現在のファイルにあるか確認します。オブジェクトを選んだ場合はアウトライナーで名前を探せます。"
+        },
+        "en": {
+          "note": "Prepare a source .blend and a destination scene. In the file browser, open the source .blend first, then choose the data to append.",
+          "panel_image": "images/sf_append.png",
+          "image_blob": "6d5b730fd52473e59571b8830ec954d3b1c56384",
+          "caption": "The Append panel used to choose data from an external .blend.",
+          "check": "Check that the chosen data is in the current file. If you appended an object, look for its name in the Outliner."
+        }
+      }
     },
     {
       "product": "SmartWorkspace",
@@ -1934,7 +2197,22 @@
           "name": "Simple N-Panel",
           "url": "https://www.chippwalters.com/Simple-N-Panel/simple_n_panel.html"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "sw_launcher_tab",
+        "ja": {
+          "note": "ランチャーを開く前に、パネル一覧を更新し、よく使うタブをカテゴリーに追加します。ポップアップ内のボタンを押したら、サイドバーに開いたタブ名を確認します。",
+          "image_blob": "3e629cbc66e51e9445128c4a9d97376b4e2bdb99",
+          "caption": "ランチャーからタブを開く作例。右端にサイドバーが表示されています。",
+          "check": "ポップアップに作ったカテゴリーとボタンが現れ、押したタブがサイドバーに開くか確認します。"
+        },
+        "en": {
+          "note": "Refresh the panel list and add a frequently used tab to a category before opening the launcher. Click its button in the popup and check the tab name in the Sidebar.",
+          "image_blob": "0420229b03e0b8442fafbb09ebbdf55b1b2bd6c7",
+          "caption": "The launcher example with the Sidebar visible on the right.",
+          "check": "Find the category and its buttons in the popup. Click one and check which tab opens in the Sidebar."
+        }
+      }
     },
     {
       "product": "SmartTransform",
@@ -2043,7 +2321,22 @@
           "name": "Multi Adjust",
           "url": "https://extensions.blender.org/add-ons/multi-adjust/"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "st_dim_input",
+        "ja": {
+          "note": "オブジェクトモードで箱を選び、絶対値でZ寸法を2 mにします。入力後は寸法のZを確認します。位置のZは高さの確認には使いません。",
+          "image_blob": "6f43c061240bd8cf457717c5f84d2e0e08674034",
+          "caption": "寸法を数値入力する作例の正面図。右側に寸法の欄があります。",
+          "check": "オブジェクトの寸法欄でZが2 mになったか確認します。"
+        },
+        "en": {
+          "note": "Select a box in Object Mode and set its absolute Z dimension to 2 m. Read Dimensions Z to check its height. Location Z gives the position of the object.",
+          "image_blob": "ee4863aa0cfd942b14267fce9a5c54328764ac3e",
+          "caption": "Front view of the dimension-entry example with the controls on the right.",
+          "check": "Read the object's Z dimension and check that it is 2 m."
+        }
+      }
     },
     {
       "product": "SmartOverlay",
@@ -2148,7 +2441,22 @@
           "name": "MeasureIt",
           "url": "https://extensions.blender.org/add-ons/measureit/"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "so_mesh_overlay",
+        "ja": {
+          "note": "メッシュを編集モードにして頂点を選びます。頂点と辺の編集用表示を有効にし、色や太さの変化は選択中の部分で確かめます。",
+          "image_blob": "2d879908e6f29e7aecd120a96d2fe8a465266731",
+          "caption": "編集メッシュの線と選択部分を着色した表示例。",
+          "check": "選んだ頂点と辺の表示色・太さが指定どおりに変わるかを確認します。"
+        },
+        "en": {
+          "note": "Enter Edit Mode on a mesh and select some vertices. Enable the editing overlays for vertices and edges; look at the selection to see the change in color and size.",
+          "image_blob": "af1ed5d0ebe58678b1baa33a329a0aa0290dfbf7",
+          "caption": "The edit mesh with colored edges and highlighted selection.",
+          "check": "Look at the selected vertices and edges and check their display color and size."
+        }
+      }
     },
     {
       "product": "SmartID",
@@ -2253,7 +2561,22 @@
           "name": "Amaranth · Object/Material Indices",
           "url": "https://docs.blender.org/manual/en/3.3/addons/interface/amaranth.html"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "sid_object_id",
+        "ja": {
+          "note": "項目タイプにオブジェクトIDを選び、番号を設定します。適用前に対象のオブジェクトを選択し、パス番号への書き込みがオンであることを確認します。",
+          "image_blob": "ea55b0070f4a2c0d13e0517dfaf33580fc8e7ab3",
+          "caption": "オブジェクトIDに対応する表示色を3個のメッシュで比較した作例。",
+          "check": "対象のパス番号を読み、登録したID番号と比較します。表示色も対象で確認できます。"
+        },
+        "en": {
+          "note": "Create an Object ID entry and give it a number. Select the intended objects and enable writing to the Blender pass index before applying the entry.",
+          "image_blob": "8643fc02d91672796e68c27b44fa2c1975a20aa0",
+          "caption": "Three example meshes with different ID display colors.",
+          "check": "Read the target object's pass index and compare it with the ID you entered. You can also inspect the display color."
+        }
+      }
     },
     {
       "product": "SmartToolsManager",
@@ -2356,7 +2679,22 @@
           "name": "Add-on Manager Pro",
           "url": "https://superhivemarket.com/products/addon-manager-pro/docs/new"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "stm_only_modeling",
+        "ja": {
+          "note": "ワークスペースとエディターを先に選んでからタブを切り替えます。結果は同じワークスペースの3Dビューポートでサイドバーを開いて確認します。",
+          "image_blob": "1df78a9e3b71f4aa1ae464268f19ce030ebdac53",
+          "caption": "モデリング用のサイドバーに表示するタブを絞った例。",
+          "check": "モデリングの3Dビューポートを開き、SmartTools製タブのうちSmart Modelingだけが表示されるか確認します。"
+        },
+        "en": {
+          "note": "Choose the workspace and editor before toggling the tabs. Check the result in the 3D Viewport Sidebar of that same workspace.",
+          "image_blob": "dd668880debde24e8327dd2bdbf0dc8a7f0d2aa9",
+          "caption": "The Sidebar after limiting the tabs in the modeling workspace.",
+          "check": "In the Modeling workspace's 3D Viewport, check that Smart Modeling is the only SmartTools tab shown."
+        }
+      }
     },
     {
       "product": "KeymapManager",
@@ -2459,7 +2797,22 @@
           "name": "Is Key Free",
           "url": "https://extensions.blender.org/add-ons/is-key-free/"
         }
-      ]
+      ],
+      "first_task": {
+        "example": "km_select_key",
+        "ja": {
+          "note": "画面のキーボードでCtrlをオンにし、Sを選びます。複数の割り当てがあったら、各行の状態と、それが働くエディターを確認します。",
+          "image_blob": "48b2952567f53944dc3c5a6b07fede5cf7de83b4",
+          "caption": "画面キーボードと、選んだキーに対応する割り当て一覧。",
+          "check": "Ctrl+Sの場合、登録済み項目の件数と各行の有効状態を確認します。"
+        },
+        "en": {
+          "note": "Turn on Ctrl on the on-screen keyboard, then select S. If you find multiple bindings, check each row's status and the editor where it applies.",
+          "image_blob": "3345d52505ac995f603bdcf276002793e7f1a172",
+          "caption": "The on-screen keyboard and the bindings for the selected key.",
+          "check": "For Ctrl+S, read the number of bindings and the active status in each row."
+        }
+      }
     }
   ]
 }

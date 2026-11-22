@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/sw_overview.png"><img fetchpriority="high" src="images/sw_overview.png" alt="サイドバーの「Smart Workspace」タブ。5 つの見出しが閉じた状態"></a><figcaption><a href="images/sw_overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Workspace」タブ → 「ワークスペース管理」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>ワークスペース管理</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Workspace</div></div></div></div><p>3DビューポートでNキーを押し、「Smart Workspace」タブを選びます。「ワークスペース管理」を開く操作はオブジェクトモードから始められます。</p><h3>画面の目印</h3><p>入口全体の図には、左の三角から開ける5つの見出しが並びます。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · よく使うタブをクイックランチャーにまとめる</h2><div class="sg-first-body"><div><h3>準備</h3><p>ランチャーを開く前に、パネル一覧を更新し、よく使うタブをカテゴリーに追加します。ポップアップ内のボタンを押したら、サイドバーに開いたタブ名を確認します。</p><details><summary>操作を順に見る (5)</summary><ol class="sg-steps"><li>「Smart Workspace」タブの「Nパネル管理」を開きます。</li><li>「パネル一覧」を開き、「全タブ」を選んで、更新の印を押します。</li><li>「カテゴリー」を開き、＋を押してカテゴリーを作ります。一覧の名前をダブルクリックして、分かりやすい名前に変えます。</li><li>「パネル一覧」で入れたいタブを選び、「カテゴリー」の「選択したタブを上に追加」を押します。入れたいタブの数だけ繰り返します。</li><li>「ワークスペースとランチャー」の「クイックランチャーを開く」を押します。</li></ol></details><h3>成功の確認</h3><p>ポップアップに作ったカテゴリーとボタンが現れ、押したタブがサイドバーに開くか確認します。</p></div><figure><a href="images/ex_sw_launcher_tab_2.jpg"><img loading="lazy" src="images/ex_sw_launcher_tab_2.jpg" alt="ランチャーからタブを開く作例。右端にサイドバーが表示されています。"></a><figcaption>ランチャーからタブを開く作例。右端にサイドバーが表示されています。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">別のワークスペースでも、同じ横顔を見続ける</h2><p>LayoutからScriptingへ切り替えた画面を同期の有無で比較。同期を有効にすると、切り替え先の3Dビューにも元の横向きが反映されます。</p>
 <ol class="sg-steps"><li>横から表示</li><li>ワークスペースを切替</li><li>同じ角度を引き継ぐ</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_sw_sync_1.jpg"><img loading="lazy" src="images/ex_sw_sync_1.jpg" alt="無効で切替：同期が「無効」のまま「Scripting」へ切り替えた後。左上の 3D ビューの向きは別のままです。"></a><figcaption>無効で切替：同期が「無効」のまま「Scripting」へ切り替えた後。左上の 3D ビューの向きは別のままです。</figcaption></figure><figure><a href="images/ex_sw_sync_3.jpg"><img loading="lazy" src="images/ex_sw_sync_3.jpg" alt="有効で切替：同期を「有効」にして「Scripting」へ切り替えた後。左上の 3D ビューも横向きになりました。"></a><figcaption>有効で切替：同期を「有効」にして「Scripting」へ切り替えた後。左上の 3D ビューも横向きになりました。</figcaption></figure></div>

@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/sf_home.png"><img fetchpriority="high" src="images/sf_home.png" alt="SmartFile Suite のパネルを開いたところ。「現在のソース」だけが開き、その下に「クイックソース」と 7 つのカテゴリの見出しが閉じたまま並びます。"></a><figcaption><a href="images/sf_home.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart File」タブ → 「現在のソース」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>現在のソース</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart File</div></div></div></div><p>3DビューポートでNキーを押し、「Smart File」タブを選びます。どのモードでも「現在のソース」を開いて作業対象を確認できます。</p><h3>画面の目印</h3><p>入口全体の図は「現在のソース」だけが開いた状態で、下に「クイックソース」と各カテゴリが続きます。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · 別の .blend からデータを取り込む</h2><div class="sg-first-body"><div><h3>準備</h3><p>取り込み元の.blendと、取り込み先のシーンを用意します。取り込みたいデータを選ぶのは、元の.blendをファイル選択画面で開いた後です。</p><details><summary>操作を順に見る (5)</summary><ol class="sg-steps"><li>サイドバーの「Smart File」タブを開きます。</li><li>「アペンド」の見出しを開き、「Smart File...」を押します。</li><li>ファイルを選ぶ画面で、取り込み元の .blend を選びます。</li><li>開いた一覧で、取り込みたいデータを選んで取り込みます。</li><li>よく使うファイルなら、「クイックソース」の「お気に入りを追加」でお気に入りに入れておきます。</li></ol></details><h3>成功の確認</h3><p>取り込んだデータが現在のファイルにあるか確認します。オブジェクトを選んだ場合はアウトライナーで名前を探せます。</p></div><figure><a href="images/sf_append.png"><img loading="lazy" src="images/sf_append.png" alt="外部の.blendからデータを選ぶアペンドのパネル。"></a><figcaption>外部の.blendからデータを選ぶアペンドのパネル。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">大きく削った形を、作業前の復元ポイントから戻す</h2><p>作業前に復元ポイントを作り、上半分を消したモデルを保存時の形に戻します。削除後と復元後を同じ視点で比較できます。</p>
 <ol class="sg-steps"><li>作業前の形を保存</li><li>上半分を削除</li><li>復元ポイントから戻す</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_sf_restore_point_1.jpg"><img loading="lazy" src="images/ex_sf_restore_point_1.jpg" alt="変更後：上半分を消した形。この変更を取り消したいとします。"></a><figcaption>変更後：上半分を消した形。この変更を取り消したいとします。</figcaption></figure><figure><a href="images/ex_sf_restore_point_2.jpg"><img loading="lazy" src="images/ex_sf_restore_point_2.jpg" alt="戻した後：「復元 選択済み」で戻した後。復元ポイントを作った時の形に戻りました。"></a><figcaption>戻した後：「復元 選択済み」で戻した後。復元ポイントを作った時の形に戻りました。</figcaption></figure></div>

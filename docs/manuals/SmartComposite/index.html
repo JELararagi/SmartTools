@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/scomp_panel_closed.png"><img fetchpriority="high" src="images/scomp_panel_closed.png" alt="サイドバーの「Smart Composite」タブ。「常時機能切り替え」と「エフェクト／プリセット」の2つの見出しが閉じた状態です。"></a><figcaption><a href="images/scomp_panel_closed.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="コンポジターにポインターを置く → Nキー → サイドバー右端の「Smart Composite」タブ → 「エフェクト／プリセット」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>コンポジター</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>エフェクト／プリセット</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Composite</div></div></div></div><p>オブジェクトモードでノードエディターの種類を「コンポジター」にし、ノード画面にポインターを置いてNキーを押します。「Smart Composite」タブで「エフェクト／プリセット」を開きます。</p><h3>画面の目印</h3><p>入口全体の図では、「常時機能切り替え」の下に「エフェクト／プリセット」があります。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · レンダー画像にグローを足す</h2><div class="sg-first-body"><div><h3>準備</h3><p>明るい部分がある絵をレンダーし、コンポジターでグローを追加します。ノードの接続と、レンダーし直した絵の明るい部分の縁を順に確認します。</p><details><summary>操作を順に見る (6)</summary><ol class="sg-steps"><li>画像をレンダーし、コンポジターを開きます。</li><li>サイドバーの「Smart Composite」タブを選びます。</li><li>「エフェクト／プリセット」を開きます。</li><li>「グロー」を押します。</li><li>既存のノードの右にできた「SCS 高品質グロー」のフレームの中のノードで、強さなどを調整します。</li><li>もう一度レンダー（F12）して、仕上がりを確かめます。</li></ol></details><h3>成功の確認</h3><p>追加されたグローのノードから出力への接続をたどり、再レンダー後の明るい輪郭を比べます。</p></div><figure><a href="images/ex_scomp_glow_1.jpg"><img loading="lazy" src="images/ex_scomp_glow_1.jpg" alt="グローを加えたレンダー。明るい輪郭の外側に光がにじんでいます。"></a><figcaption>グローを加えたレンダー。明るい輪郭の外側に光がにじんでいます。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">合成に必要なパスを、ビューレイヤー側でも準備する</h2><p>合成ノードを足すだけで終わらず、「レンダーパス自動維持」でビューレイヤーのチェックが入るところまで確認できます。</p>
 <ol class="sg-steps"><li>合成を準備</li><li>レンダーパスを自動維持</li><li>ビューレイヤーの設定を確認</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_scomp_pass_guard_0.jpg"><img loading="lazy" src="images/ex_scomp_pass_guard_0.jpg" alt="前：有効にする前のビューレイヤーのパス。"></a><figcaption>前：有効にする前のビューレイヤーのパス。</figcaption></figure><figure><a href="images/ex_scomp_pass_guard_1.jpg"><img loading="lazy" src="images/ex_scomp_pass_guard_1.jpg" alt="後：「レンダーパス自動維持」を「有効」にした後。合成用のパスにチェックが入りました。"></a><figcaption>後：「レンダーパス自動維持」を「有効」にした後。合成用のパスにチェックが入りました。</figcaption></figure></div>

@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/sk_root_overview.png"><img fetchpriority="high" src="images/sk_root_overview.png" alt="「Smart Shapekey」パネルの全体です。見出しは全部閉じていて、上から「常時機能切り替え」「Basis と新規マップ」「マップ」「ミラーと反転ツール」「書き出し」「保存と読み込み」「ミラー設定」「モディファイア」「ドライバー」「制御・トラッキング」が並びます。各見出しの右の「？」で、その欄の説明が開きます。"></a><figcaption><a href="images/sk_root_overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Shapekey」タブ → 「Basis と新規マップ」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>Basis と新規マップ</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Shapekey</div></div></div></div><p>3Dビューポートでメッシュを1つ選び、オブジェクトモードまたは編集モードでNキーを押します。「Smart Shapekey」タブにある「Basis と新規マップ」を開きます。</p><h3>画面の目印</h3><p>入口全体の図では、「常時機能切り替え」のすぐ下に「Basis と新規マップ」があります。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · 表情の形を作ってシェイプキーにする</h2><div class="sg-first-body"><div><h3>準備</h3><p>無表情のメッシュでオートキーを切り、ベースを設定します。表情を編集してBasisを選ぶと元の顔に戻るので、書き出した後にオブジェクトデータのシェイプキー一覧で表情名を確認します。</p><details><summary>操作を順に見る (7)</summary><ol class="sg-steps"><li>メッシュを選び、無表情の形にします。オートキーは切っておきます。</li><li>「Basis と新規マップ」を開き、「ベースを設定」を押して確定します。</li><li>「新規」を押し、名前（例：smile）を入れて確定します。</li><li>編集モードで笑顔の形に直します。スカルプトモードで直した時は、オブジェクトモードに戻します。</li><li>「マップ」の一覧で Basis を押します。今の編集が smile に保存され、形が Basis に戻ります。</li><li>3〜5 を繰り返して表情を増やします。</li><li>「書き出し」を開いて「書き出し」を押し、「出力先」を「シェイプキー」にして OK を押します。</li></ol></details><h3>成功の確認</h3><p>オブジェクトデータのシェイプキー一覧に、書き出した表情名があるか確認します。</p></div><figure><a href="images/sk_export.png"><img loading="lazy" src="images/sk_export.png" alt="表情マップの書き出し先を指定するパネル。"></a><figcaption>表情マップの書き出し先を指定するパネル。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">細分化した顔に、作り直さず「笑顔」を戻す</h2><p>頂点が増えた顔に表情マップを読み込み、Basisを保ったまま笑顔を呼び出す実例です。本文にはUVを半分に縮めた別例で読み込みが止まる様子もあります。</p>
 <ol class="sg-steps"><li>笑顔を保存</li><li>細分化した顔へ読込</li><li>Basisと笑顔を確認</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_sk_load_subdiv_0.jpg"><img loading="lazy" src="images/ex_sk_load_subdiv_0.jpg" alt="前：左は「笑顔」のマップを保存したスザンヌ。右は細分化して頂点を増やしたスザンヌで、まだ口の形はそのままです。"></a><figcaption>前：左は「笑顔」のマップを保存したスザンヌ。右は細分化して頂点を増やしたスザンヌで、まだ口の形はそのままです。</figcaption></figure><figure><a href="images/ex_sk_load_subdiv_2.jpg"><img loading="lazy" src="images/ex_sk_load_subdiv_2.jpg" alt="笑顔を押す：右のスザンヌの一覧で「笑顔」を押した後。頂点の並びが違っても、左と同じ口の形になりました。"></a><figcaption>笑顔を押す：右のスザンヌの一覧で「笑顔」を押した後。頂点の並びが違っても、左と同じ口の形になりました。</figcaption></figure></div>

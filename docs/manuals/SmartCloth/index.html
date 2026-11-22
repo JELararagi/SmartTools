@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/overview.png"><img fetchpriority="high" src="images/overview.png" alt="Smart Cloth タブのパネル全体。見出しがすべて閉じた、最初の状態"></a><figcaption><a href="images/overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Cloth」タブ → 「再利用可能なスカート設定」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>再利用可能なスカート設定</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Cloth</div></div></div></div><p>オブジェクトモードの3DビューポートでNキーを押し、「Smart Cloth」タブを開きます。スカートの割り当てを設定するときは「再利用可能なスカート設定」を開きます。</p><h3>画面の目印</h3><p>入口全体の図では機能別の見出しが閉じており、各見出しの左の三角で中を確認できます。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · 服にまとめてクロスを付けて、点検してからベイクする</h2><div class="sg-first-body"><div><h3>準備</h3><p>この衣服の作例には別途Simply Cloth Studioが必要です。連携欄で使用可能かを確認し、体をコライダーに指定して服を選びます。ベイク前に事前点検の結果を確認します。</p><details><summary>操作を順に見る (7)</summary><ol class="sg-steps"><li>「外部ツール連携」で「Simply Cloth Studio」の下に「使用可能」と出ているか確かめます。</li><li>「連携対象」を開き、「ボディコライダー」に体のメッシュを入れます。</li><li>服のメッシュを選びます。</li><li>「スマートワークフロー」の「スマートセットアップ設定」で「対象範囲」と「品質プロファイル」を選びます。</li><li>「スマートセットアップ」を押します。</li><li>「解析 / 診断」で「プリフライト実行」を押し、レポートを確かめます。</li><li>「ベイク / 出力」で「プリフライトエラー時に停止」がオンか確かめ、「安全ベイク」を押します。</li></ol></details><h3>成功の確認</h3><p>事前点検のレポートを開き、エラーがない場合にベイクが完了したか確認します。</p></div><figure><a href="images/ex_sc_safe_bake_3.jpg"><img loading="lazy" src="images/ex_sc_safe_bake_3.jpg" alt="球にピンクの布をかぶせた安全ベイクの作例。"></a><figcaption>球にピンクの布をかぶせた安全ベイクの作例。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">同じ16フレーム目で、ボーンと布の裾を比べる</h2><p>ボーンではスカート全体が体についていき、クロスでは腰に続いて裾が遅れます。同じ衣装・同じ時刻で演出を選べます。</p>
 <ol class="sg-steps"><li>同じ衣装</li><li>16フレーム目で停止</li><li>ボーンと布の裾を比較</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_sc_skirt_switch_0.jpg"><img loading="lazy" src="images/ex_sc_skirt_switch_0.jpg" alt="ボーン：「ボーン」のフレーム 16。スカートは形を保ったまま、体と一緒に動きます。"></a><figcaption>ボーン：「ボーン」のフレーム 16。スカートは形を保ったまま、体と一緒に動きます。</figcaption></figure><figure><a href="images/ex_sc_skirt_switch_1.jpg"><img loading="lazy" src="images/ex_sc_skirt_switch_1.jpg" alt="クロス：「クロス」のフレーム 16。腰の所だけが付いて行き、裾は左に遅れています。"></a><figcaption>クロス：「クロス」のフレーム 16。腰の所だけが付いて行き、裾は左に遅れています。</figcaption></figure></div>

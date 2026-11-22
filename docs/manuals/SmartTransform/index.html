@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/st_always_on.png"><img fetchpriority="high" src="images/st_always_on.png" alt="「常時機能切り替え」を開いたところ。各行の右のボタンで有効と無効を切り替えます（図では「Nパネル状態保存」だけが有効）。"></a><figcaption><a href="images/st_always_on.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Transform」タブ → 「常時機能切り替え」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>常時機能切り替え</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Transform</div></div></div></div><p>オブジェクトモードの3DビューポートでNキーを押し、「Smart Transform」タブを選びます。写真と同じ設定を見るには「常時機能切り替え」を開きます。</p><h3>画面の目印</h3><p>この写真は「常時機能切り替え」の個別設定で、各行の右側のボタンが有効・無効を示します。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · 物の大きさを実際の長さで合わせる</h2><div class="sg-first-body"><div><h3>準備</h3><p>オブジェクトモードで箱を選び、絶対値でZ寸法を2 mにします。入力後は寸法のZを確認します。位置のZは高さの確認には使いません。</p><details><summary>操作を順に見る (4)</summary><ol class="sg-steps"><li>オブジェクトモードで箱を選びます。</li><li>サイドバーの「Smart Transform」タブを開き、「トランスフォーム」の見出しを開きます。</li><li>3 つ目の選び欄が「絶対値」になっていることを確かめます。</li><li>「寸法 X」の下の「Z」の欄に 2 と入れて Enter を押します。</li></ol></details><h3>成功の確認</h3><p>オブジェクトの寸法欄でZが2 mになったか確認します。</p></div><figure><a href="images/ex_st_dim_input_1.jpg"><img loading="lazy" src="images/ex_st_dim_input_1.jpg" alt="寸法を数値入力する作例の正面図。右側に寸法の欄があります。"></a><figcaption>寸法を数値入力する作例の正面図。右側に寸法の欄があります。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">編集対象を追加し、同じメッシュの複製は外す</h2><p>コレクション加算で別メッシュの物は編集対象になり、元とメッシュを共有する複製は加わりません。どの物が編集対象か、網目で確かめられます。</p>
 <ol class="sg-steps"><li>編集対象を選ぶ</li><li>コレクション加算</li><li>共有メッシュの複製を除外</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_st_multi_edit_linked_0.jpg"><img loading="lazy" src="images/ex_st_multi_edit_linked_0.jpg" alt="前：真ん中のスザンヌだけを編集モードにしたところ。左は同じメッシュを共有しています。"></a><figcaption>前：真ん中のスザンヌだけを編集モードにしたところ。左は同じメッシュを共有しています。</figcaption></figure><figure><a href="images/ex_st_multi_edit_linked_1.jpg"><img loading="lazy" src="images/ex_st_multi_edit_linked_1.jpg" alt="後：「コレクション加算」を押した後。右には網目が出ましたが、メッシュを共有する左には出ません。"></a><figcaption>後：「コレクション加算」を押した後。右には網目が出ましたが、メッシュを共有する左には出ません。</figcaption></figure></div>

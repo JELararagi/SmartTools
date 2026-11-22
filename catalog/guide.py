@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 from urllib.parse import quote
 
-from field_guide import anchor_examples, parse_manual
+from field_guide import anchor_examples, first_recipe, parse_manual
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -16,6 +16,7 @@ END = '<!-- smarttools-catalog:end -->'
 STYLE = """.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -35,7 +36,7 @@ STYLE = """.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}"""
 LABELS = {
     'ja': ('最初に開く画面', '開き方', '画面の目印', 'この作例の手順を見る', '試す前に',
@@ -121,7 +122,34 @@ def location_map(route, lang):
             f'<div class="sg-map-frame" role="img" aria-label="{alt}">{diagram}</div></div>')
 
 
-def intro(item, lang, cases, features):
+TASK_LABELS = {
+    'ja': ('最初に試す', '準備', '操作を順に見る', '成功の確認'),
+    'en': ('First hands-on task', 'Set up', 'Show the steps', 'Check the result'),
+}
+
+
+def task_photo(item, lang, cases):
+    task = item['first_task']
+    info = task[lang]
+    return info.get('panel_image') or cases[task['example']][2][-1][0]
+
+
+def starter(item, lang, cases, recipe):
+    label, prepare, show, result = TASK_LABELS[lang]
+    info = item['first_task'][lang]
+    title, sequence = recipe
+    steps = ''.join(f'<li>{escape(step)}</li>' for step in sequence)
+    src = escape(task_photo(item, lang, cases), quote=True)
+    caption = escape(info['caption'])
+    return (f'<section class="sg-first" id="first-task"><h2>{label} · {escape(title)}</h2><div class="sg-first-body">'
+            f'<div><h3>{prepare}</h3><p>{escape(info["note"])}</p>'
+            f'<details><summary>{show} ({len(sequence)})</summary><ol class="sg-steps">{steps}</ol></details>'
+            f'<h3>{result}</h3><p>{escape(info["check"])}</p></div>'
+            f'<figure><a href="{src}"><img loading="lazy" src="{src}" alt="{caption}"></a>'
+            f'<figcaption>{caption}</figcaption></figure></div></section>')
+
+
+def intro(item, lang, cases, features, recipe):
     text = item['locales'][lang]
     p = text['panel']
     start, opening, look, follow, tip, more, feature, all_cases, refs, save, _, help_label, _, _, zoom = LABELS[lang]
@@ -136,6 +164,7 @@ def intro(item, lang, cases, features):
         f'<h2 id="compare-tools">{start}</h2>', '<div class="sg-start">',
         f'<figure><a class="sg-photo" href="{src}"><img fetchpriority="high" src="{src}" alt="{cap}"></a><figcaption><a href="{src}">{zoom}</a></figcaption></figure>',
         f'<div class="sg-copy"><h3>{opening}</h3>{location_map(p["route"], lang)}<p>{escape(p["where"])}</p><h3>{look}</h3><p>{escape(p["look"])}</p></div></div>',
+        starter(item, lang, cases, recipe),
         f'<h2 id="smarttools-example-preview">{escape(text["headline"])}</h2><p>{escape(text["description"])}</p>',
         '<ol class="sg-steps">' + ''.join(f'<li>{escape(step)}</li>' for step in text['workflow']) + '</ol>',
         pair([(s, c) for s, c, _ in lead_figures]),
@@ -169,7 +198,7 @@ def update(item, lang, check):
         cover, count = re.subn(r'(<p class="lead">.*?</p>)', lambda match: details + match[1] + '</details>', cover, count=1, flags=re.S)
         if count != 1:
             raise ValueError(f'Missing product description: {file}')
-    result = base[:header.start()] + cover + '\n' + intro(item, lang, cases, features) + base[header.end():]
+    result = base[:header.start()] + cover + '\n' + intro(item, lang, cases, features, first_recipe(base)) + base[header.end():]
     if result != original:
         if check:
             raise ValueError(f'Outdated introduction: {file}')
@@ -202,7 +231,17 @@ def export_product(item, lang, dest, release):
     lines = [f'# {item["product"]} — {text["headline"]}', '', '## ' + start, '']
     verified_copy(manual.parent / panel['image'], target / panel['image'], panel['git_blob'])
     md_image(lines, panel['image'], panel['caption'])
-    lines += [f'**{opening}**　{panel["where"]}', '', f'**{look}**　{panel["look"]}', '', '## ' + text['headline'], '', text['description'], '']
+    lines += [f'**{opening}**　{panel["where"]}', '', f'**{look}**　{panel["look"]}', '']
+    label, prepare, show, result = TASK_LABELS[lang]
+    info = item['first_task'][lang]
+    title, sequence = first_recipe(original_manual(manual.read_text(encoding='utf-8')))
+    lines += ['## ' + label + ' · ' + title, '', f'**{prepare}**　{info["note"]}', '']
+    lines.extend(f'{i}. {step}' for i, step in enumerate(sequence, 1))
+    lines += ['', f'**{result}**　{info["check"]}', '']
+    path = task_photo(item, lang, cases)
+    verified_copy(manual.parent / path, target / path, info['image_blob'])
+    md_image(lines, path, info['caption'])
+    lines += ['## ' + text['headline'], '', text['description'], '']
     lines.extend(f'{i}. {step}' for i, step in enumerate(text['workflow'], 1))
     lines.append('')
     for src, caption, digest in photos_for_example(item, lang):

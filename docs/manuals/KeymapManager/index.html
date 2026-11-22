@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/kmm_overview.png"><img fetchpriority="high" src="images/kmm_overview.png" alt="キーボードの絵で Ctrl と S を選んだところ。「キー: Ctrl + S + 押下」の部分と、見出しに「一致数: 4」と出た「登録済みキーマップ項目」が見えます。各行の右が状況です"></a><figcaption><a href="images/kmm_overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">プリファレンスの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="編集 → プリファレンス → キーマップ → キーマップマネージャー"><div class="sg-map-bar"><span class="sg-map-mark">1</span>編集 → <span class="sg-map-mark">2</span>プリファレンス</div><div class="sg-map-prefs"><div class="sg-map-choice"><strong><span class="sg-map-mark">3</span>キーマップ</strong></div><div class="sg-map-dest"><small>一番下まで移動</small><strong><span class="sg-map-mark">4</span>キーマップマネージャー</strong></div></div></div></div><p>「編集」→「プリファレンス」→「キーマップ」を選び、画面の一番下まで移動します。最初は閉じている「キーマップマネージャー」を開いてください。</p><h3>画面の目印</h3><p>これは登録内容を調べる操作画面で、キーボード図のCtrlとSを選んだときの一致数と各行の状態が見えます。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · あるキーが何に使われているか調べる</h2><div class="sg-first-body"><div><h3>準備</h3><p>画面のキーボードでCtrlをオンにし、Sを選びます。複数の割り当てがあったら、各行の状態と、それが働くエディターを確認します。</p><details><summary>操作を順に見る (5)</summary><ol class="sg-steps"><li>プリファレンスの「キーマップ」で「キーマップマネージャー」を開きます。</li><li>「キーボード配列」で Ctrl を押して入にします。</li><li>S のキーを押します。</li><li>下の「登録済みキーマップ項目」に、Ctrl+S の割り当てが並びます。見出しの「一致数」が件数です。</li><li>状況が「有効」の物が、そのキーで受け取られる割り当てです。「有効」が複数ある時は、それぞれの画面や場面で働きます。ふつうの操作で動く物は、登録場所がウィンドウや 3D ビューなどの行です。</li></ol></details><h3>成功の確認</h3><p>Ctrl+Sの場合、登録済み項目の件数と各行の有効状態を確認します。</p></div><figure><a href="images/ex_km_select_key_1.jpg"><img loading="lazy" src="images/ex_km_select_key_1.jpg" alt="画面キーボードと、選んだキーに対応する割り当て一覧。"></a><figcaption>画面キーボードと、選んだキーに対応する割り当て一覧。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">押しても効かないF2、優先されている2件までたどる</h2><p>優先元の2行を確認して対象を有効にすると、作例では優先元の2件が無効になります。変更される割り当てが見える状態で判断できます。</p>
 <ol class="sg-steps"><li>効かないF2を選ぶ</li><li>優先元を2件確認</li><li>有効状態の変化を確認</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_km_shadow_f2_0.jpg"><img loading="lazy" src="images/ex_km_shadow_f2_0.jpg" alt="前：状況が「一部で上位優先」の項目を開いた状態。「上位優先元」が 2 行とボタンが出ています。"></a><figcaption>前：状況が「一部で上位優先」の項目を開いた状態。「上位優先元」が 2 行とボタンが出ています。</figcaption></figure><figure><a href="images/ex_km_shadow_f2_1.jpg"><img loading="lazy" src="images/ex_km_shadow_f2_1.jpg" alt="後：ボタンを押した後。開いた項目は「有効」になり、上位優先元の 2 つは「無効」になりました。"></a><figcaption>後：ボタンを押した後。開いた項目は「有効」になり、上位優先元の 2 つは「無効」になりました。</figcaption></figure></div>

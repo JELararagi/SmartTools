@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/root.png"><img fetchpriority="high" src="images/root.png" alt="「Smart Shader」タブを開いた所。いちばん上に「スマートシェーダー」のパネルがあり、9 つの見出しがすべて閉じています。"></a><figcaption><a href="images/root.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Shader」タブ → 「マテリアルエディター」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>マテリアルエディター</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Shader</div></div></div></div><p>オブジェクトモードの3DビューポートでNキーを押し、「Smart Shader」タブを開きます。「スマートシェーダー」の中で「マテリアルエディター」を開きます。</p><h3>画面の目印</h3><p>入口全体の図では、上部の「スマートシェーダー」の下に9つの見出しが折りたたまれています。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · プリセットでマテリアルを付ける</h2><div class="sg-first-body"><div><h3>準備</h3><p>まず材質を付けたいオブジェクトを選びます。見本を選んだあと一覧が閉じたら、選んだ物のマテリアルスロットに新しい材質が入ったか確認します。</p><details><summary>操作を順に見る (4)</summary><ol class="sg-steps"><li>3D ビューで物を選びます。</li><li>「PBRマテリアル生成」を開きます。</li><li>「プレビュー画像から選択」を押します。</li><li>一覧で見本の画像を押します。</li></ol></details><h3>成功の確認</h3><p>見本を選んだ後、選択中のオブジェクトのスロットに新しい材質名があるか確認します。</p></div><figure><a href="images/pbr_generation.png"><img loading="lazy" src="images/pbr_generation.png" alt="PBR材質を選ぶパネルとプレビュー。"></a><figcaption>PBR材質を選ぶパネルとプレビュー。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">照明を足さずに、矢印でトゥーンの陰を動かす</h2><p>矢印のEmptyを左へ動かして方向を同期すると、同じ材質の陰側が変わります。モデルのどちら側に影を置くかを目で決められます。</p>
 <ol class="sg-steps"><li>矢印を左へ</li><li>方向を同期</li><li>同じ材質の陰側が変化</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_sh_toon_direction_0.jpg"><img loading="lazy" src="images/ex_sh_toon_direction_0.jpg" alt="前：作った直後。光は既定の向き（上の方）から当たっている。"></a><figcaption>前：作った直後。光は既定の向き（上の方）から当たっている。</figcaption></figure><figure><a href="images/ex_sh_toon_direction_1.jpg"><img loading="lazy" src="images/ex_sh_toon_direction_1.jpg" alt="後：矢印の Empty を左へ動かして「選択から方向を同期」を押した後。光が左から当たり、陰の側が変わった。"></a><figcaption>後：矢印の Empty を左へ動かして「選択から方向を同期」を押した後。光が左から当たり、陰の側が変わった。</figcaption></figure></div>

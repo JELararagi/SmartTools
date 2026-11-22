@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/sas_panel_top.png"><img fetchpriority="high" src="images/sas_panel_top.png" alt="「タスク」を「全機能」にした時の見出しの並び（見出しはどれも閉じた状態です。いちばん下が「移植済み同梱ツール」）"></a><figcaption><a href="images/sas_panel_top.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Animation」タブ → 「概要タスク」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>概要タスク</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Animation</div></div></div></div><p>オブジェクトモードの3DビューポートでNキーを押し、「Smart Animation」の「概要タスク」を開きます。ポーズを扱う場合は対象リグをポーズモードにします。</p><h3>画面の目印</h3><p>入口全体の図は「タスク」を「全機能」にした状態なので、表示する作業を絞っているときより見出しが多くなります。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · キーの間に中割りを作る</h2><div class="sg-first-body"><div><h3>準備</h3><p>異なるポーズを記録した2つのキーを用意し、その間のフレームに再生ヘッドを置きます。トゥイーン値を0.5にすると、どの位置に中間のキーが入ったか確かめやすくなります。</p><details><summary>操作を順に見る (5)</summary><ol class="sg-steps"><li>動きを付けた物（またはアーマチュアのポーズモード）を選びます。</li><li>キーとキーの間のフレームに、再生ヘッドを置きます。</li><li>「アニメーション レシピ」→「モーションディレクター」を開きます。</li><li>「モード」を「トゥイーンのみ」にし、「トゥイーン」の値を決めます（0.5 でちょうど中間です）。</li><li>「モーション調整実行」を押します。</li></ol></details><h3>成功の確認</h3><p>現在のフレームにキーが一つ入り、値0.5で前後のポーズの中間になったかを見ます。</p></div><figure><a href="images/ex_sa_tween_1.jpg"><img loading="lazy" src="images/ex_sa_tween_1.jpg" alt="立方体を使った中割りの作例。キーが入ったフレームはBlender側で確認します。"></a><figcaption>立方体を使った中割りの作例。キーが入ったフレームはBlender側で確認します。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">おじぎを半分だけ混ぜて、元のポーズと比べる</h2><p>保存したおじぎを0.5だけ混ぜ、完全に適用した姿勢と見比べます。別の強さを試しながら同じポーズを再利用できます。</p>
 <ol class="sg-steps"><li>おじぎを保存</li><li>0.5で混合</li><li>全適用と比較</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_sa_pose_snapshot_1.jpg"><img loading="lazy" src="images/ex_sa_pose_snapshot_1.jpg" alt="ブレンド 0.5：「スナップショットブレンド」（ブレンド 0.5）。控えたポーズの半分だけ曲がります。"></a><figcaption>ブレンド 0.5：「スナップショットブレンド」（ブレンド 0.5）。控えたポーズの半分だけ曲がります。</figcaption></figure><figure><a href="images/ex_sa_pose_snapshot_2.jpg"><img loading="lazy" src="images/ex_sa_pose_snapshot_2.jpg" alt="適用：「適用」の後。控えたポーズそのものになります。"></a><figcaption>適用：「適用」の後。控えたポーズそのものになります。</figcaption></figure></div>

@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/shot_top.png"><img fetchpriority="high" src="images/shot_top.png" alt="「Smart UV」タブの全体。いちばん上の「常時機能切り替え」を開き、その下の見出しは閉じた状態"></a><figcaption><a href="images/shot_top.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="UVエディターにポインターを置く → Nキー → サイドバー右端の「Smart UV」タブ → 「シーム/ピン」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>UVエディター</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>シーム/ピン</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart UV</div></div></div></div><p>メッシュを編集モードにし、UVが見えているUVエディターにポインターを置いてNキーを押します。「Smart UV」タブで「シーム/ピン」を開きます。</p><h3>画面の目印</h3><p>入口全体の図では、開いた「常時機能切り替え」の下に機能別の見出しが並びます。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · 立方体の UV を展開して並べる</h2><div class="sg-first-body"><div><h3>準備</h3><p>立方体で切り開きたい辺にシームを付けます。展開の前に、3Dビューの面とUVエディターのUVの両方を選択します。</p><details><summary>操作を順に見る (6)</summary><ol class="sg-steps"><li>立方体を選び、Tab キーで編集モードに入ります。</li><li>辺選択（2 キー）にして、切り開きたい辺を選びます。</li><li>「UV展開」＞「シーム/ピン」の「シームをマーク」を押します。</li><li>A キーで全部を選び、UV エディターでも UV を全部選びます。</li><li>「スマートUV展開」の「方式」で「アングルベースで展開」を選び、「展開実行」を押します。</li><li>「パッキング」＞「自動パッキング」の「プリセット」で「パック」を選び、「自動パック実行」を押します。</li></ol></details><h3>成功の確認</h3><p>UVエディターで島が画像の範囲内に並び、島の間にすき間があるかを見ます。</p></div><figure><a href="images/ex_uv_unwrap_2.jpg"><img loading="lazy" src="images/ex_uv_unwrap_2.jpg" alt="色付きグリッドにUVの辺を重ねたUVエディター。"></a><figcaption>色付きグリッドにUVの辺を重ねたUVエディター。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">シームを切り直す前に、戻せる控えを取る</h2><p>元の縫い目をシーンに保存し、いったん全消去してから同じ辺に戻します。別の切り方を試したいときの戻り道が見えます。</p>
 <ol class="sg-steps"><li>シームを保存</li><li>全消去</li><li>同じ辺に復元</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_uv_seam_snapshot_1.jpg"><img loading="lazy" src="images/ex_uv_seam_snapshot_1.jpg" alt="消した後：「シームをクリア」で全部消した。"></a><figcaption>消した後：「シームをクリア」で全部消した。</figcaption></figure><figure><a href="images/ex_uv_seam_snapshot_2.jpg"><img loading="lazy" src="images/ex_uv_seam_snapshot_2.jpg" alt="戻した後：「シーン読込」で元の線が戻った。"></a><figcaption>戻した後：「シーン読込」で元の線が戻った。</figcaption></figure></div>

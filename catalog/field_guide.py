@@ -42,3 +42,18 @@ def anchor_examples(doc, keys):
     for key, (start, end) in sorted(offsets.items(), key=lambda pair: pair[1], reverse=True):
         doc = doc[:start] + f'<div class="example" id="case-{key}">' + doc[end:]
     return doc
+
+def first_recipe(doc):
+    """Read the first worked procedure in chapter six, using that edition's button labels."""
+    chapter = re.search(r'<h2\b[^>]*>\s*6[.．].*?</h2>(.*?)(?:<h2\b|$)', doc, re.S)
+    if not chapter:
+        raise ValueError('Missing common tasks chapter')
+    for block in re.findall(r'<section\b[^>]*class=["\']feat["\'][^>]*>(.*?)</section>', chapter[1], re.S):
+        steps = re.search(r'<ol\b[^>]*class=["\']steps["\'][^>]*>(.*?)</ol>', block, re.S)
+        if steps:
+            title = re.search(r'<h4>(.*?)</h4>', block, re.S)
+            sequence = [plain(step) for step in re.findall(r'<li>(.*?)</li>', steps[1], re.S)]
+            if not title or not sequence:
+                raise ValueError('Incomplete first recipe')
+            return plain(title[1]), sequence
+    raise ValueError('No procedure found in common tasks')

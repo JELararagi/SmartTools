@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/overview.png"><img fetchpriority="high" src="images/overview.png" alt="Smart Rig パネル全体。「常時機能切り替え」、番号付きの 6 つの手順、番号の無い道具の見出しが並ぶ"></a><figcaption><a href="images/overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Rig」タブ → 「1. 準備とパーツ」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>1. 準備とパーツ</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Rig</div></div></div></div><p>オブジェクトモードの3DビューポートでNキーを押し、「Smart Rig」タブを選びます。「1. 準備とパーツ」を開いて作業を始めます。</p><h3>画面の目印</h3><p>入口全体の図では、「常時機能切り替え」の下に番号付きの手順が並びます。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · 新しいキャラクターに体のリグを組む</h2><div class="sg-first-body"><div><h3>準備</h3><p>この体リグの手順には、別途入手したAuto-Rig Proが必要です。準備欄で連携を確認してから素体を選びます。最初の事前検証では、対象リグの欄は空で構いません。</p><details><summary>操作を順に見る (7)</summary><ol class="sg-steps"><li>「1. 準備とパーツ」で状態の行に Auto-Rig Pro のチェックが付くかを確かめます。</li><li>素体メッシュを選び、「ワークフロー対象」の「現在の選択を使用」を押します（リグはまだ無いので、「対象リグアーマチュア」は空のままで構いません）。続けて「事前検証を実行」を押します。</li><li>「参照リグとマーカー」でプリセットを選び「参照リグを追加」を押します。</li><li>マーカーを置き、「必須マーカー準備済み」と出たら「検出を実行」、続けて「参照ボーンをリグへ適合」を押します。</li><li>本番のリグができたら、リグとメッシュを選んでもう一度「現在の選択を使用」を押します。</li><li>「バインド」でメッシュを選んで「バインド」を押します。</li><li>「補助ボーンの一括設定」で「一括設定」を押します。</li></ol></details><h3>成功の確認</h3><p>バインドしたリグをポーズモードで少し曲げ、対応する腕や脚のメッシュが骨について動くか確認します。</p></div><figure><a href="images/setup.png"><img loading="lazy" src="images/setup.png" alt="体のリグを組む前に開く準備パネル。文字は画像を押すと原寸で読めます。"></a><figcaption>体のリグを組む前に開く準備パネル。文字は画像を押すと原寸で読めます。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">同じ手首の曲げ方で、袖口の追従量を見比べる</h2><p>端の割合を片側1.0、もう片側0.4にして同じポーズを比較。手首が曲がったとき、左右の袖口がどれだけ追従するかを確認できます。</p>
 <ol class="sg-steps"><li>同じ手首ポーズ</li><li>袖口の割合を1.0と0.4に</li><li>追従を比較</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_sr_cuff_share_0.jpg"><img loading="lazy" src="images/ex_sr_cuff_share_0.jpg" alt="押す前：手首を曲げても、袖口はまっすぐのままです。"></a><figcaption>押す前：手首を曲げても、袖口はまっすぐのままです。</figcaption></figure><figure><a href="images/ex_sr_cuff_share_1.jpg"><img loading="lazy" src="images/ex_sr_cuff_share_1.jpg" alt="押した後：画面の右（左袖口）は「端の割合」1.0、画面の左（右袖口）は 0.4。1.0 の袖口の方が大きくついて来ます。"></a><figcaption>押した後：画面の右（左袖口）は「端の割合」1.0、画面の左（右袖口）は 0.4。1.0 の袖口の方が大きくついて来ます。</figcaption></figure></div>

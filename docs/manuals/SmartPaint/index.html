@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/sp_overview.png"><img fetchpriority="high" src="images/sp_overview.png" alt="3D ビューの Smart Paint タブ。最初から開いている「ドキュメント」と「レイヤー」、その下に閉じた見出しが並びます。まだ画像を開いていないので、「画像を開く」と表示されています。"></a><figcaption><a href="images/sp_overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Paint」タブ → 「ドキュメント」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>ドキュメント</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Paint</div></div></div></div><p>オブジェクトモードでメッシュを選び、3DビューポートでNキーを押して「Smart Paint」を開きます。描き始めるときは「ペイント用マテリアルへ切替」でテクスチャペイントモードに入ります。</p><h3>画面の目印</h3><p>入口全体の図では「ドキュメント」と「レイヤー」が開いており、画像をまだ選んでいないため「画像を開く」と表示されています。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · 切り替えてすぐ描き、PSD に保存する</h2><div class="sg-first-body"><div><h3>準備</h3><p>UVのあるメッシュを選び、ペイント用マテリアルへ切り替えます。最初にPSD名を指定するのは「別名保存」、同じPSDへ続きを書くのは「保存」です。</p><details><summary>操作を順に見る (5)</summary><ol class="sg-steps"><li>3D ビューで、UV マップのあるメッシュを選びます。</li><li>「ドキュメント」の「ペイント用マテリアルへ切替」を押します。無地のレイヤーが用意され、テクスチャペイントモードに入ります。</li><li>ブラシで描くか、「描画」の「塗りつぶし」で塗ります。</li><li>重なった四角のアイコン（「画像を別名保存」）を押し、名前の最後を .psd にして保存します。</li><li>続きを描いたら、フロッピーディスクのアイコン（「画像を保存」）で上書き保存します。</li></ol></details><h3>成功の確認</h3><p>指定先に.psdが作成されたことを確認し、次の描画は同じファイルに保存します。</p></div><figure><a href="images/ex_pt_psd_saveas_2.jpg"><img loading="lazy" src="images/ex_pt_psd_saveas_2.jpg" alt="赤く塗ったテストメッシュとペイント画面。保存したPSDは別途ファイル名で確認します。"></a><figcaption>赤く塗ったテストメッシュとペイント画面。保存したPSDは別途ファイル名で確認します。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">1枚の面から、塗りたいUV島だけを選ぶ</h2><p>服の一部を塗る前に、選んだ1面から同じUV島の面へ選択を広げます。本文のレイヤー表示とPSD保存を続けて参照できます。</p>
 <ol class="sg-steps"><li>面を1枚選択</li><li>同じUV島へ拡張</li><li>塗る範囲を確認</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_pt_uvisland_0.jpg"><img loading="lazy" src="images/ex_pt_uvisland_0.jpg" alt="前：面を 1 つだけ選んでいます（濃い色の所）。"></a><figcaption>前：面を 1 つだけ選んでいます（濃い色の所）。</figcaption></figure><figure><a href="images/ex_pt_uvisland_1.jpg"><img loading="lazy" src="images/ex_pt_uvisland_1.jpg" alt="後：「UV島へ拡張」の後。同じ UV 島の面まで選ばれました（濃い色）。"></a><figcaption>後：「UV島へ拡張」の後。同じ UV 島の面まで選ばれました（濃い色）。</figcaption></figure></div>

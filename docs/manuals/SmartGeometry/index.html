@@ -74,6 +74,7 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <style>.sg-intro{margin:1.3rem 0 2rem}
 .sg-intro h2,.sg-intro h3{scroll-margin-top:4rem}
 .sg-start{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:start}
+.sg-first{margin:1.4rem 0 2rem}.sg-first-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:1rem 2rem;align-items:start}.sg-first-body h3{font-size:1.08rem;margin:.25rem 0}.sg-first-body summary{font-weight:600}.sg-first-body img{display:block;width:100%;height:clamp(140px,26vw,300px);object-fit:contain;background:var(--card)}.sg-first-body figcaption{font-size:.9rem}
 .sg-intro figure{margin:0;min-width:0}
 .sg-start figure{padding:0;overflow:hidden}
 .sg-photo{display:block;text-align:center;background:#26282a}
@@ -93,13 +94,14 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 .sg-intro summary,.sg-product-overview summary{cursor:pointer}
 .sg-intro details{margin:.8rem 0}
 .sg-intro [id]{scroll-margin-top:4rem}
-@media(max-width:700px){.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
+@media(max-width:700px){.sg-first-body,.sg-start,.sg-intro .sg-pair{grid-template-columns:1fr}.sg-start .sg-photo{max-height:48vh}}
 @media print{.sg-start .sg-photo{overflow:visible;max-height:none}.sg-start .sg-photo img{max-height:10cm;object-fit:contain}}</style>
 <section class="sg-intro">
 <h2 id="compare-tools">最初に開く画面</h2>
 <div class="sg-start">
 <figure><a class="sg-photo" href="images/overview.png"><img fetchpriority="high" src="images/overview.png" alt="サイドバーの「Smart Geometry」タブを開いたところ。9 つの見出しはすべて閉じていて、上から「常時機能切り替え」「地形 / 環境生成」「分布 / 散布生成」「構造 / 表面生成」「有機 / ストローク生成」「デブリ / 破砕生成」「プリミティブ生成」「属性 / 可視化生成」「設定」が並びます。見出しの右端には「？」があります。"></a><figcaption><a href="images/overview.png">原寸で見る</a></figcaption></figure>
 <div class="sg-copy"><h3>開き方</h3><div class="sg-map"><div class="sg-map-title">サイドバーの位置（模式図）</div><div class="sg-map-frame" role="img" aria-label="3Dビューポートにポインターを置く → Nキー → サイドバー右端の「Smart Geometry」タブ → 「地形 / 環境生成」"><div class="sg-map-work"><div class="sg-map-field"><strong><span class="sg-map-mark">1</span>3Dビューポート</strong><span class="sg-map-shortcut"><span class="sg-map-mark">2</span><kbd>N</kbd> で開く</span></div><div class="sg-map-pane"><small>サイドバー</small><strong><span class="sg-map-mark">4</span>地形 / 環境生成</strong></div><div class="sg-map-tab"><span class="sg-map-mark">3</span>Smart Geometry</div></div></div></div><p>オブジェクトモードの3DビューポートでNキーを押し、「Smart Geometry」タブを開きます。地形を作るには「地形 / 環境生成」の三角を押します。</p><h3>画面の目印</h3><p>入口全体の図では、上から2番目に「地形 / 環境生成」があります。</p></div></div>
+<section class="sg-first" id="first-task"><h2>最初に試す · 地形を作って、表面に点をばらまく</h2><div class="sg-first-body"><div><h3>準備</h3><p>オブジェクトモードで地形を作り、その地形を選択したまま散布へ進みます。点を見つけにくい場合はプロキシを表示すると、草や石を置く位置を確認できます。</p><details><summary>操作を順に見る (6)</summary><ol class="sg-steps"><li>オブジェクトモードで「地形 / 環境生成」を開きます。</li><li>「地形サイズ」と「地形高さ」を決め、「高精度地形を作成」を押します。</li><li>できた地形を選んだまま「分布 / 散布生成」を開きます。</li><li>「数量」を決めて「高精度分布ポイントを作成」を押します。</li><li>できた点の集まりを選び、「分布ポイントを緩和」で間隔をそろえます。</li><li>並び方を見たい時は「分布プロキシインスタンスを作成」を押します。</li></ol></details><h3>成功の確認</h3><p>作成した地形の上に点が並んでいるか、斜めから見て確認します。</p></div><figure><a href="images/ex_sg_scatter_2.jpg"><img loading="lazy" src="images/ex_sg_scatter_2.jpg" alt="Suzanneの表面に散布位置を表示した作例。地形でも同じように表面を見ます。"></a><figcaption>Suzanneの表面に散布位置を表示した作例。地形でも同じように表面を見ます。</figcaption></figure></div></section>
 <h2 id="smarttools-example-preview">描いた間取り線を、そのまま立体の壁へ</h2><p>Grease Pencilで描いた間取りを壁メッシュに変換。作例では線の始点と終点の間にも壁が立つので、変換前に閉じ方を確認できます。</p>
 <ol class="sg-steps"><li>間取りを描く</li><li>壁に変換</li><li>始点と終点の間を確認</li></ol>
 <div class="sg-pair"><figure><a href="images/ex_sg_gp_wall_0.jpg"><img loading="lazy" src="images/ex_sg_gp_wall_0.jpg" alt="前：グリースペンシルで描いた、間取りのような線です。"></a><figcaption>前：グリースペンシルで描いた、間取りのような線です。</figcaption></figure><figure><a href="images/ex_sg_gp_wall_1.jpg"><img loading="lazy" src="images/ex_sg_gp_wall_1.jpg" alt="後：「壁メッシュ」で、線に沿って壁が立ちました。線の始まりと終わりの間も壁でつながります。"></a><figcaption>後：「壁メッシュ」で、線に沿って壁が立ちました。線の始まりと終わりの間も壁でつながります。</figcaption></figure></div>
