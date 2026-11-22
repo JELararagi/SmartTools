@@ -69,6 +69,17 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <link rel="alternate" hreflang="x-default" href="https://jelararagi.github.io/SmartTools/en/manuals/SmartGeometry/">
 </head><body><nav class="stnav" aria-label="サイト内の移動"><div class="stnav-in"><a class="stnav-brand" href="../../">SmartTools</a><a href="../overview/">全体仕様書</a><a href="../../#addons">アドオン一覧</a><a href="../../install.html">入れ方</a><span class="stnav-sp"></span><a href="../SmartToolsManager/" rel="prev" title="前の解説書">← Smart Tools Manager</a><a href="../SmartModeling/" rel="next" title="次の解説書">SmartModeling Suite →</a><a href="SmartGeometry_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a href="../../downloads/SmartGeometrySuite_1.0.0.zip" download>ZIP（676 KB）</a><a href="../../en/manuals/SmartGeometry/" hreflang="en" lang="en">English</a></div></nav><main>
 <header class="cover"><p class="kicker">SmartTools アドオン解説書</p><h1>SmartGeometry Suite（スマートジオメトリー スイート） 解説書</h1><p class="sub">版 1.0.0 ／ 2026年11月18日 ／ Blender 5.1.2 用</p><p class="lead">SmartGeometry Suite は、形を自動で作る「生成ツール」をまとめたアドオンです。山や谷のある地形、表面にばらまく点、石やレンガ片などのデブリ（がれき）、メッシュを割った破片、蔦のような曲線を作れます。3ds Max のように、3D ビューポートのドラッグで作る基本形状（ボックス・球・円柱・壁など）も入っています。この基本形状は、あとからモディファイア（形を変える後付けの処理）の数値で大きさを直せます。グリースペンシル（手描きの線）から壁や板のメッシュを作る機能もあります。ボタンは 3D ビューポートのサイドバー「Smart Geometry」タブに、目的ごとの見出しに分けて並んでいます。</p></header>
+<!-- smarttools-catalog:start -->
+<section aria-labelledby="smarttools-example-preview">
+<h2 id="smarttools-example-preview">描いた間取り線を、そのまま立体の壁へ</h2>
+<p>Grease Pencilで描いた間取りを壁メッシュに変換。作例では線の始点と終点の間にも壁が立つので、変換前に閉じ方を確認できます。</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_sg_gp_wall_0.jpg" alt="前：グリースペンシルで描いた、間取りのような線です。"><figcaption>前：グリースペンシルで描いた、間取りのような線です。</figcaption></figure>
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_sg_gp_wall_1.jpg" alt="後：「壁メッシュ」で、線に沿って壁が立ちました。線の始まりと終わりの間も壁でつながります。"><figcaption>後：「壁メッシュ」で、線に沿って壁が立ちました。線の始まりと終わりの間も壁でつながります。</figcaption></figure>
+</div>
+<p><strong>試す前に</strong>　開口を残したい箇所はコピーで閉じ方を確認する。</p>
+</section>
+<!-- smarttools-catalog:end -->
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">地形・散布の点・がれき（デブリ）・破片・枝分かれした曲線・あとから数値で直せる基本形状などを、ボタンで作る形状生成ツールです。</p><ul><li>山・谷・水の流れの跡がある地形メッシュを作る（「高精度地形を作成」）</li><li>地形の高い所から低い所へ流れる線（排水カーブ）を作る</li><li>メッシュの表面に点をばらまき、間隔をそろえ、確認用の小さな四角すいを置く</li><li>表面の凹凸用ブロックや、段のある建物のような形を作る</li><li>蔦・根・ケーブルのような枝分かれした曲線を作る</li><li>グリースペンシルの線から、厚みのある形・左右対称の形・線に沿った形・壁・回転体のメッシュを作る</li><li>レンガ片・砂利・川石・結晶・落ち葉・丸太・雪結晶など 19 種類のデブリを作る</li><li>メッシュを面のまとまりごとに割った破片を作る</li><li>ボックス・球・円柱・壁などを、ビューポートのドラッグで作り、あとから数値で直す</li><li>メッシュに高さ・傾き・密度などの属性（頂点ごとのデータ）を書き込み、色（ヒートマップ）で確かめる</li><li>文字の式で頂点を選び、属性と頂点グループに書き込む</li><li>CSV ファイルの x・y・z 列を点の集まりとして読み込む</li><li>診断結果や機能の一覧を JSON ファイルに書き出す</li></ul>
 <div class="box tip"><b>こんな時に</b><div><ul><li>背景の地面を手早く作り、草や石を置く位置の点をばらまく</li><li>がれき・小石・落ち葉などの小物をまとめて作る</li><li>壊れる演出の下準備として、メッシュを破片に分ける</li><li>部屋の壁や柱の仮置きを、ドラッグで作ってから寸法を数値で合わせる</li><li>手描きの線から壁や柵のような形を起こす</li></ul></div></div>

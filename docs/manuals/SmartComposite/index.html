@@ -69,6 +69,17 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <link rel="alternate" hreflang="x-default" href="https://jelararagi.github.io/SmartTools/en/manuals/SmartComposite/">
 </head><body><nav class="stnav" aria-label="サイト内の移動"><div class="stnav-in"><a class="stnav-brand" href="../../">SmartTools</a><a href="../overview/">全体仕様書</a><a href="../../#addons">アドオン一覧</a><a href="../../install.html">入れ方</a><span class="stnav-sp"></span><a href="../SmartCamLight/" rel="prev" title="前の解説書">← SmartCamLight Suite</a><a href="../SmartRender/" rel="next" title="次の解説書">SmartRender Suite →</a><a href="SmartComposite_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a href="../../downloads/SmartCompositeSuite_1.0.0.zip" download>ZIP（2,607 KB）</a><a href="../../en/manuals/SmartComposite/" hreflang="en" lang="en">English</a></div></nav><main>
 <header class="cover"><p class="kicker">SmartTools アドオン解説書</p><h1>SmartComposite Suite（スマートコンポジット スイート） 解説書</h1><p class="sub">版 1.0.0 ／ 2026年11月18日 ／ Blender 5.1.2 用</p><p class="lead">SmartComposite Suite は、コンポジターで使う効果を「プリセット」（あらかじめ組んだノードのまとまり）として追加するアドオンです。追加されるのは Blender 標準のノードなので、追加した後は普通のノードとして自由に調整できます。サイドバーの「Smart Composite」タブには、見出しが 2 つあります。「常時機能切り替え」では、ファイルを開いた時などに自動で準備をしてくれる補助機能を選びます。「エフェクト／プリセット」では、効果を選んでノード画面に追加します。インストールの方法・日本語化・N パネルの開き方・「？」ヘルプの共通の使い方は、全体仕様書の該当章を見てください。</p></header>
+<!-- smarttools-catalog:start -->
+<section aria-labelledby="smarttools-example-preview">
+<h2 id="smarttools-example-preview">合成に必要なパスを、ビューレイヤー側でも準備する</h2>
+<p>合成ノードを足すだけで終わらず、「レンダーパス自動維持」でビューレイヤーのチェックが入るところまで確認できます。</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_scomp_pass_guard_0.jpg" alt="前：有効にする前のビューレイヤーのパス。"><figcaption>前：有効にする前のビューレイヤーのパス。</figcaption></figure>
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_scomp_pass_guard_1.jpg" alt="後：「レンダーパス自動維持」を「有効」にした後。合成用のパスにチェックが入りました。"><figcaption>後：「レンダーパス自動維持」を「有効」にした後。合成用のパスにチェックが入りました。</figcaption></figure>
+</div>
+<p><strong>試す前に</strong>　同じビューレイヤーでチェックを比較する。</p>
+</section>
+<!-- smarttools-catalog:end -->
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">ボタン1つで、コンポジター（レンダー後の画像を仕上げるノード画面）にグローやボケなどのノードのまとまりを追加するアドオンです。</p><ul><li>グロー、Z深度ボケ、カラーグレード、レンズフレア、ビネット、シャープの6つの効果を、ボタン1つでコンポジターに追加できます。</li><li>続けて押すと、前の効果の結果に次の効果が重なります。「グロー」の上に「ビネット」を足す、といった使い方ができます。</li><li>「追加プリセット」の一覧から、「エッジレイズ」「陽炎歪み」「高さから法線」など、さらに多くのプリセットを選んで追加できます。</li><li>追加したノードは「SCS」で始まる名前のフレーム（ノードを囲む枠）にまとまり、既存のノードの右側に置かれます。</li><li>コンポジターのノードツリーがまだ無いシーンでも、追加の時に自動で作られます。</li><li>追加したノードだけを「SCSノードを整理」でまとめて消せます。自分で置いたノードは残ります。</li><li>ファイルを開いた時などに、コンポジターの準備・レンダーパス（合成用の追加の画像情報）・高精度の出力設定・基本ノードを自動で整える補助機能を、1つずつ有効にできます。</li><li>Nパネルの設定を自動で保存し、次に Blender を起動した時に元に戻せます。</li></ul>
 <div class="box tip"><b>こんな時に</b><div><ul><li>レンダーした画像に光のにじみ（グロー）を足したい時に、「グロー」ボタンを押します。</li><li>奥行きに合わせたボケを足したい時に、カメラの撮影距離を合わせてから「Zボケ」ボタンを押します。</li><li>色味の調整用のノードを一式すぐに並べたい時に、「カラー」ボタンを押します。</li><li>効果を試した後で元の状態に戻したい時に、「SCSノードを整理」を押します。</li><li>チームで共有するテンプレートのファイルで、開くたびにコンポジターが準備されているようにしたい時に、「コンポジター自動維持」を有効にします。</li></ul></div></div>

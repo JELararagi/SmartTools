@@ -69,6 +69,17 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <link rel="alternate" hreflang="x-default" href="https://jelararagi.github.io/SmartTools/en/manuals/SmartModeling/">
 </head><body><nav class="stnav" aria-label="サイト内の移動"><div class="stnav-in"><a class="stnav-brand" href="../../">SmartTools</a><a href="../overview/">全体仕様書</a><a href="../../#addons">アドオン一覧</a><a href="../../install.html">入れ方</a><span class="stnav-sp"></span><a href="../SmartGeometry/" rel="prev" title="前の解説書">← SmartGeometry Suite</a><a href="../SmartModifier/" rel="next" title="次の解説書">SmartModifier Suite →</a><a href="SmartModeling_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a href="../../downloads/SmartModelingSuite_1.0.0.zip" download>ZIP（3,049 KB）</a><a href="../../en/manuals/SmartModeling/" hreflang="en" lang="en">English</a></div></nav><main>
 <header class="cover"><p class="kicker">SmartTools アドオン解説書</p><h1>SmartModeling Suite（スマートモデリング スイート） 解説書</h1><p class="sub">版 1.0.0 ／ 2026年11月18日 ／ Blender 5.1.2 用</p><p class="lead">SmartModeling Suite は、メッシュを作ったり直したりする作業を助けるツール集です。サイドバー（N パネル）の「Smart Modeling」タブに、全部のツールが作業の種類ごとに並びます。各ツールは、ボタンを押した時に初めて読み込まれます。そのため、使わないツールは Blender を重くしません。裏でずっと動く仕組みを持つ機能（常時機能）だけは、「常時機能切り替え」でオン・オフを選べます。ショートカットは自動では登録されません。必要なものだけ、各ツールの「手動キーマップ登録」を見て自分で登録します。</p></header>
+<!-- smarttools-catalog:start -->
+<section aria-labelledby="smarttools-example-preview">
+<h2 id="smarttools-example-preview">片方で直した耳を、もう片方のモデルにも</h2>
+<p>同じ形のモデルを2体直すとき、左で直した頂点の位置を右へ貼り付けます。作例では右の耳が左と同じ形になります。</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_sm_vcopy_0.jpg" alt="前：左は耳を大きくしたスザンヌ、右は元の形のスザンヌです。"><figcaption>前：左は耳を大きくしたスザンヌ、右は元の形のスザンヌです。</figcaption></figure>
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_sm_vcopy_1.jpg" alt="後：左で「コピー元」、右で「貼り付け」を押した後。右の耳も左と同じ形になりました。"><figcaption>後：左で「コピー元」、右で「貼り付け」を押した後。右の耳も左と同じ形になりました。</figcaption></figure>
+</div>
+<p><strong>試す前に</strong>　作例と同じ頂点対応のモデルを使う。</p>
+</section>
+<!-- smarttools-catalog:end -->
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">頂点の編集・整列・削除・リトポ・ハードサーフェス・生成など、モデリングの補助ツールを 1 つのサイドバーにまとめたアドオンです。</p><ul><li>選んだ頂点の位置を覚えて、別のメッシュの同じ番号の頂点へ貼り付ける（頂点コピー）</li><li>頂点を、つながった辺に沿ってだけ動かす（頂点スライド）</li><li>頂点・辺・面をまっすぐ・平らに揃える（メッシュ整列）</li><li>自動マージとスナップを 1 回の操作でまとめて切り替える（マージスナップ）</li><li>確認の画面を減らして、選択に合わせて素早く削除する（直接削除）</li><li>書き出し前に、選んだオブジェクトの名前・トランスフォーム・データをまとめて整える（モデル整理）</li><li>辺にクリース（細分化した時の角の立ち具合）をプリセットで付ける（クリースプリセット）</li><li>ハードサーフェスの陰影を整える重み付き法線を付ける（重み付き法線）</li><li>注釈の線を帯状の面に変換する（スケッチサーフェス）</li><li>面に沿って四角い面の帯を描き、リトポを進める（クアッドリトポ）</li><li>ブーリアン・ループ整理・散布・地形などのコマンドを大きなアイコンから使う（統合モデリングツール）</li><li>同梱の各種ツール（ループツール、エッジフロー、ボルト生成、樹木生成など）を同じサイドバーから使う</li></ul>
 <div class="box tip"><b>こんな時に</b><div><ul><li>片方のメッシュで直した形を、頂点の数とつながりが同じ別のメッシュへ写したい時</li><li>リトポで、頂点を面の流れに沿ってずらしたい時</li><li>書き出しの前に、スケール適用・名前・不要データの整理をまとめて済ませたい時</li><li>機械や小物のハードサーフェスで、角の立ち具合と陰影を整えたい時</li><li>背景用に、地形・木・ツタ・雪・建築パーツを手早く作りたい時</li></ul></div></div>

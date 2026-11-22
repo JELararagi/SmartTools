@@ -69,6 +69,17 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <link rel="alternate" hreflang="x-default" href="https://jelararagi.github.io/SmartTools/en/manuals/SmartAnimation/">
 </head><body><nav class="stnav" aria-label="サイト内の移動"><div class="stnav-in"><a class="stnav-brand" href="../../">SmartTools</a><a href="../overview/">全体仕様書</a><a href="../../#addons">アドオン一覧</a><a href="../../install.html">入れ方</a><span class="stnav-sp"></span><a href="../SmartUV/" rel="prev" title="前の解説書">← SmartUV Suite</a><a href="../SmartCloth/" rel="next" title="次の解説書">SmartCloth Suite →</a><a href="SmartAnimation_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a href="../../downloads/SmartAnimationSuite_1.0.0.zip" download>ZIP（1,080 KB）</a><a href="../../en/manuals/SmartAnimation/" hreflang="en" lang="en">English</a></div></nav><main>
 <header class="cover"><p class="kicker">SmartTools アドオン解説書</p><h1>SmartAnimation Suite（スマートアニメーション スイート） 解説書</h1><p class="sub">版 1.0.0 ／ 2026年11月18日 ／ Blender 5.1.2 用</p><p class="lead">SmartAnimation Suite は、アニメーション作業でよく使う道具を 1 か所に集めたアドオンです。タイムラインの操作、タイミングの調整、揺れなどの効果のベイク、キーの整理、ポーズの控え、アクションと NLA の管理ができます。別のリグへ動きを写すこと（リターゲット）もできます。画面の見出しはどれも折りたたみ式です。結果は、キーフレーム・NLA ストリップ・ドライバー・テキストデータ・補助オブジェクトといった Blender の普通のデータとして残ります。そのため、後から手で直せます。</p></header>
+<!-- smarttools-catalog:start -->
+<section aria-labelledby="smarttools-example-preview">
+<h2 id="smarttools-example-preview">おじぎを半分だけ混ぜて、元のポーズと比べる</h2>
+<p>保存したおじぎを0.5だけ混ぜ、完全に適用した姿勢と見比べます。別の強さを試しながら同じポーズを再利用できます。</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_sa_pose_snapshot_1.jpg" alt="ブレンド 0.5：「スナップショットブレンド」（ブレンド 0.5）。控えたポーズの半分だけ曲がります。"><figcaption>ブレンド 0.5：「スナップショットブレンド」（ブレンド 0.5）。控えたポーズの半分だけ曲がります。</figcaption></figure>
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_sa_pose_snapshot_2.jpg" alt="適用：「適用」の後。控えたポーズそのものになります。"><figcaption>適用：「適用」の後。控えたポーズそのものになります。</figcaption></figure>
+</div>
+<p><strong>試す前に</strong>　保存時と同じリグで、同じフレームを比較する。</p>
+</section>
+<!-- smarttools-catalog:end -->
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">キーフレームの作業を楽にする道具を、サイドバーの 1 つのタブにまとめたアドオンです。</p><ul><li>今のファイルの状態（アクション、キー数、問題の数など）を調べて表示する</li><li>キーの間の中割り（トゥイーン）や、ポーズの誇張（プッシュ / プル）を作る</li><li>キーの挿入、マーカー、プレビュー範囲、再生の設定をタスクの一覧から選んで実行する</li><li>キーの移動・拡縮・等間隔化、ステップのプレビュー、オーバーラップなどでタイミングを整える</li><li>スプリング（揺れ）、物理、カメラの揺れ、ループ、ノイズなどの効果をキーにベイクする</li><li>密なキーの簡略化、重複キーや動かないチャンネルの削除、オイラーフィルターでカーブを整理する</li><li>選択状態やポーズを保存して、後で呼び戻す（選択セット・ポーズスナップショット）</li><li>アクションを NLA へ送る、モーションライブラリに保存して並べる</li><li>ボーンの対応表を作り、別のリグへ動きを写してベイクする</li><li>同梱しているアニメーション用のツール（Sakura PoseLib、AnimAll、Storytools、Camera Shakify など）を必要な時だけ読み込んで使う</li></ul>
 <div class="box tip"><b>こんな時に</b><div><ul><li>ブロッキング（大まかなポーズ付け）の後に、中割りやタイミングを整える</li><li>モーションキャプチャーやベイクで密になったキーを、編集しやすい量に減らす</li><li>よく使うポーズを控えておき、別のフレームやショットで呼び戻す</li><li>別の骨組みのキャラクターへ、同じ動きを写す</li><li>歩きや走りのたたき台を自動で作り、手で仕上げる</li></ul></div></div>

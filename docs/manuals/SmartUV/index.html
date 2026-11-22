@@ -69,6 +69,17 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <link rel="alternate" hreflang="x-default" href="https://jelararagi.github.io/SmartTools/en/manuals/SmartUV/">
 </head><body><nav class="stnav" aria-label="サイト内の移動"><div class="stnav-in"><a class="stnav-brand" href="../../">SmartTools</a><a href="../overview/">全体仕様書</a><a href="../../#addons">アドオン一覧</a><a href="../../install.html">入れ方</a><span class="stnav-sp"></span><a href="../SmartShader/" rel="prev" title="前の解説書">← SmartShader Suite</a><a href="../SmartAnimation/" rel="next" title="次の解説書">SmartAnimation Suite →</a><a href="SmartUV_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a href="../../downloads/SmartUVSuite_1.0.0.zip" download>ZIP（4,162 KB）</a><a href="../../en/manuals/SmartUV/" hreflang="en" lang="en">English</a></div></nav><main>
 <header class="cover"><p class="kicker">SmartTools アドオン解説書</p><h1>SmartUV Suite（スマートUV スイート） 解説書</h1><p class="sub">版 1.0.0 ／ 2026年11月18日 ／ Blender 5.1.2 用</p><p class="lead">UV（ユーブイ）は、立体の表面を平らな紙のように開いて、画像を貼る位置を決めるための座標です。SmartUV Suite は、この UV を作る・整える・並べる作業に使うボタンと設定を、サイドバーの「Smart UV」タブにまとめています。パネルの中は「常時機能切り替え」「基本設定」「UV展開」「UV整列」「パッキング」「ベイク」「操作」「管理」「キーマップ情報」の順に並んでいます。どの見出しも、三角の印か見出しの文字を押すと開いたり閉じたりできます。見出しの右にある「？」を押すと、その場所の説明が出ます。ほとんどの操作は、UV エディターで選んでいる UV だけに働きます。</p></header>
+<!-- smarttools-catalog:start -->
+<section aria-labelledby="smarttools-example-preview">
+<h2 id="smarttools-example-preview">シームを切り直す前に、戻せる控えを取る</h2>
+<p>元の縫い目をシーンに保存し、いったん全消去してから同じ辺に戻します。別の切り方を試したいときの戻り道が見えます。</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_uv_seam_snapshot_1.jpg" alt="消した後：「シームをクリア」で全部消した。"><figcaption>消した後：「シームをクリア」で全部消した。</figcaption></figure>
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_uv_seam_snapshot_2.jpg" alt="戻した後：「シーン読込」で元の線が戻った。"><figcaption>戻した後：「シーン読込」で元の線が戻った。</figcaption></figure>
+</div>
+<p><strong>試す前に</strong>　同じメッシュで比較する。形状変更後の復元は別条件。</p>
+</section>
+<!-- smarttools-catalog:end -->
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">シームの位置を自動で決める「自動シーム」から、展開・記号のボタンでの整列・18 種類のプリセットで並べる自動パッキング・ベイクまでを、サイドバーの「Smart UV」タブ 1 つにまとめたアドオンです。</p><ul><li>選んだ部分の UV を、方式を選んで 1 つのボタン（「展開実行」）で展開する</li><li>シーム（UV を切り開く線）を手で付け外ししたり、自動で付けたり、クリース値から付けたりする</li><li>UV の頂点やアイランド（ひと続きの UV のかたまり）を、上下左右・中央にそろえる、均等に並べる、反転・回転する</li><li>UV を直線にする、円にする、リラックス（伸びをならす）する、縫い合わせる（スティッチ）</li><li>プリセットを選んで、UV を画像の中にすき間なく並べる（自動パッキング）</li><li>ベイク用の UV マップと画像を作り、マテリアルの色を画像に焼き付ける</li><li>チェッカー（白黒の格子）画像を作って、UV の伸びや大きさの差を目で確かめる</li><li>テクセル密度（UV の細かさ）を測る・そろえる</li><li>1 つのオブジェクトに複数ある UV マップ（UV の座標の組）を追加・名前変更・並べ替えする</li><li>重なり・裏返り・面積ゼロなど、UV の問題を数える・選ぶ・直す</li><li>UV エディターでのクリック選択からのドラッグ移動などを補助する機能を切り替える</li></ul>
 <div class="box tip"><b>こんな時に</b><div><ul><li>モデルの UV を初めて作るとき：シームを付けて「展開実行」で開く</li><li>展開した UV の向きや並びを整えるとき：「UV整列」の「方向整列」や「ライン・フロー」を使う</li><li>テクスチャ用に UV を 1 枚の画像へまとめるとき：「パッキング」の「自動パック実行」を使う</li><li>UV が伸びていないか確かめるとき：「プレビュー/チェッカー」でチェッカーを作る</li><li>マテリアルの色を 1 枚の画像にまとめるとき：「ベイク」＞「ベイク準備」のボタンを順に押す</li><li>複数のオブジェクトで使う UV マップの番号と名前をそろえるとき：「マップチャンネル」を使う</li></ul></div></div>

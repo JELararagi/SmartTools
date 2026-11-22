@@ -1,0 +1,995 @@
+{
+  "schema_version": 1,
+  "free_release": "https://github.com/JELararagi/SmartTools/releases/tag/v1.0.0",
+  "products": [
+    {
+      "product": "SmartModeling",
+      "edition": "1.0.0",
+      "example": "sm_vcopy",
+      "locales": {
+        "ja": {
+          "headline": "片方で直した耳を、もう片方のモデルにも",
+          "description": "同じ形のモデルを2体直すとき、左で直した頂点の位置を右へ貼り付けます。作例では右の耳が左と同じ形になります。",
+          "try_first": "作例と同じ頂点対応のモデルを使う。",
+          "manual": "docs/manuals/SmartModeling/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartModeling/images/ex_sm_vcopy_0.jpg",
+              "git_blob": "444243eb27481ca8cb74e18251495b298f8d41e6",
+              "caption": "前：左は耳を大きくしたスザンヌ、右は元の形のスザンヌです。"
+            },
+            {
+              "path": "docs/manuals/SmartModeling/images/ex_sm_vcopy_1.jpg",
+              "git_blob": "2ab05dbc972703b7987458e209c38a409bc8bf2f",
+              "caption": "後：左で「コピー元」、右で「貼り付け」を押した後。右の耳も左と同じ形になりました。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Copy the edited ears to a matching mesh",
+          "description": "Edit one model, then paste the vertex positions onto its matching partner. Watch the second pair of ears take the same shape.",
+          "try_first": "Use meshes with matching vertex correspondence as in the example.",
+          "manual": "docs/en/manuals/SmartModeling/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartModeling/images/ex_sm_vcopy_0.jpg",
+              "git_blob": "d76b7946a51cac7d715b4301125c4bb742f328f1",
+              "caption": "Front: On the left is a Suzanne with enlarged ears, and on the right is a Suzanne with the original shape."
+            },
+            {
+              "path": "docs/en/manuals/SmartModeling/images/ex_sm_vcopy_1.jpg",
+              "git_blob": "f047729f6db9a358dea2f399024dd8a35c28eb23",
+              "caption": "After: After clicking \"Copy Source\" on the left and \"Paste\" on the right. The ears on the right now have the same shape as those on the left."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartUV",
+      "edition": "1.0.0",
+      "example": "uv_seam_snapshot",
+      "locales": {
+        "ja": {
+          "headline": "シームを切り直す前に、戻せる控えを取る",
+          "description": "元の縫い目をシーンに保存し、いったん全消去してから同じ辺に戻します。別の切り方を試したいときの戻り道が見えます。",
+          "try_first": "同じメッシュで比較する。形状変更後の復元は別条件。",
+          "manual": "docs/manuals/SmartUV/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartUV/images/ex_uv_seam_snapshot_1.jpg",
+              "git_blob": "f98a5df24bee0dada87178c2ce43aca33fe79c5e",
+              "caption": "消した後：「シームをクリア」で全部消した。"
+            },
+            {
+              "path": "docs/manuals/SmartUV/images/ex_uv_seam_snapshot_2.jpg",
+              "git_blob": "0e96ea694029ed3581a5ee0fcab8fa8b9308069f",
+              "caption": "戻した後：「シーン読込」で元の線が戻った。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Keep a restorable seam layout",
+          "description": "Save the seam layout in the scene, clear every seam, then restore the marked edges. Try a different cut without losing the reference layout.",
+          "try_first": "Compare the same mesh before changing its topology.",
+          "manual": "docs/en/manuals/SmartUV/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartUV/images/ex_uv_seam_snapshot_1.jpg",
+              "git_blob": "d4be84fc5615d7cebfe00445c339cf0c81efe110",
+              "caption": "After clearing: All the seams were cleared with \"Clear Seam\"."
+            },
+            {
+              "path": "docs/en/manuals/SmartUV/images/ex_uv_seam_snapshot_2.jpg",
+              "git_blob": "63ff486c8dd13baca25f65183c5ad4c287a77315",
+              "caption": "After restoring: The original lines came back with \"Load Scene Seam Set\"."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartGeometry",
+      "edition": "1.0.0",
+      "example": "sg_gp_wall",
+      "locales": {
+        "ja": {
+          "headline": "描いた間取り線を、そのまま立体の壁へ",
+          "description": "Grease Pencilで描いた間取りを壁メッシュに変換。作例では線の始点と終点の間にも壁が立つので、変換前に閉じ方を確認できます。",
+          "try_first": "開口を残したい箇所はコピーで閉じ方を確認する。",
+          "manual": "docs/manuals/SmartGeometry/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartGeometry/images/ex_sg_gp_wall_0.jpg",
+              "git_blob": "06ef9bba7afff932f4bbd1aeada3e0fe8e8d21e6",
+              "caption": "前：グリースペンシルで描いた、間取りのような線です。"
+            },
+            {
+              "path": "docs/manuals/SmartGeometry/images/ex_sg_gp_wall_1.jpg",
+              "git_blob": "54e659ff60c7d9d47c79470fd24b125a52995b41",
+              "caption": "後：「壁メッシュ」で、線に沿って壁が立ちました。線の始まりと終わりの間も壁でつながります。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Turn a Grease Pencil floor plan into walls",
+          "description": "Convert a Grease Pencil floor plan to wall geometry. The example also closes the gap between the ends of the stroke.",
+          "try_first": "Test the stroke ends on a copy if you need an opening.",
+          "manual": "docs/en/manuals/SmartGeometry/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartGeometry/images/ex_sg_gp_wall_0.jpg",
+              "git_blob": "0afb19b3746adf9a477657e8f834fa2199fbb07b",
+              "caption": "Before: Lines like a floor plan, drawn with Grease Pencil."
+            },
+            {
+              "path": "docs/en/manuals/SmartGeometry/images/ex_sg_gp_wall_1.jpg",
+              "git_blob": "6e8bf18df5bf76f08d6c7b901916f75da81865c0",
+              "caption": "After: \"Wall Mesh\" has raised walls along the lines. A wall also connects the start and end of the line."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartModifier",
+      "edition": "1.0.0",
+      "example": "smod_mid_level",
+      "locales": {
+        "ja": {
+          "headline": "スタックの途中を選び、後段の効果を外して見る",
+          "description": "細分化の行を選ぶと後段のワイヤーフレームが一時停止。自動無効化を切れば格子が戻ります。どの段で見た目が変わったかを追えます。",
+          "try_first": "自動無効化の状態と選択した行を確認する。",
+          "manual": "docs/manuals/SmartModifier/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartModifier/images/ex_smod_mid_level_1.jpg",
+              "git_blob": "a3c167ede84ef33310b0e39699674e72187a049a",
+              "caption": "途中の段階：サブディビジョンサーフェスの行を選ぶと、後ろのワイヤーフレームが止まります。"
+            },
+            {
+              "path": "docs/manuals/SmartModifier/images/ex_smod_mid_level_2.jpg",
+              "git_blob": "86338b63090579b3757462bb2692f832f6786580",
+              "caption": "自動無効をオフ：「モディファイア自動無効」をオフにすると、ワイヤーフレームが戻ります。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Inspect an intermediate modifier stage",
+          "description": "Select the subdivision row to pause the downstream wireframe. Turn automatic disabling off to see the wireframe return.",
+          "try_first": "Check the selected row and automatic-disable setting.",
+          "manual": "docs/en/manuals/SmartModifier/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartModifier/images/ex_smod_mid_level_1.jpg",
+              "git_blob": "b0e52451c7c2640219affa15fd635fd8770aa668",
+              "caption": "Intermediate Stage: Selecting the Subdivision Surface row stops the Wireframe after it."
+            },
+            {
+              "path": "docs/en/manuals/SmartModifier/images/ex_smod_mid_level_2.jpg",
+              "git_blob": "89c2011f4d4e965cb8fb0bcec5c30d74da88596c",
+              "caption": "Auto Disable Off: Turning \"Modifier Auto Disable\" off brings the Wireframe back."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartSculpt",
+      "edition": "1.0.0",
+      "example": "ss_snapshot",
+      "locales": {
+        "ja": {
+          "headline": "リメッシュした後でも、保存した網目に戻る",
+          "description": "ボクセルリメッシュで変わった網目を、事前に保存したスナップショットから復元。形だけでは分からない差を、ワイヤーで確認できます。",
+          "try_first": "リメッシュ前にスナップショットを保存する。",
+          "manual": "docs/manuals/SmartSculpt/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartSculpt/images/ex_ss_snapshot_1.jpg",
+              "git_blob": "69e1ee7437610c6e43cc85c74546d07e724e3bfa",
+              "caption": "変更：「ボクセルリメッシュ」で、網目が作り直されました。"
+            },
+            {
+              "path": "docs/manuals/SmartSculpt/images/ex_ss_snapshot_2.jpg",
+              "git_blob": "970cd9a8db45d1f549d96f4a951e99b7828e8c27",
+              "caption": "復元：「スナップショット復元」で、保存した時の網目に戻りました。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Recover the saved mesh after a remesh",
+          "description": "Inspect the wireframe after a voxel remesh, then restore the saved topology from the snapshot.",
+          "try_first": "Save the snapshot before remeshing.",
+          "manual": "docs/en/manuals/SmartSculpt/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartSculpt/images/ex_ss_snapshot_1.jpg",
+              "git_blob": "8af868b0d62101bb7bbe446f730f8f27486dab94",
+              "caption": "Changed: \"Voxel Remesh\" rebuilt the mesh pattern."
+            },
+            {
+              "path": "docs/en/manuals/SmartSculpt/images/ex_ss_snapshot_2.jpg",
+              "git_blob": "c6594a0bddd006e599c3e74721bd3d78ccd6f2fd",
+              "caption": "Restore: \"Restore Snapshot\" returned the mesh pattern to what it was when saved."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartRig",
+      "edition": "1.0.0",
+      "example": "sr_cuff_share",
+      "locales": {
+        "ja": {
+          "headline": "同じ手首の曲げ方で、袖口の追従量を見比べる",
+          "description": "端の割合を片側1.0、もう片側0.4にして同じポーズを比較。手首が曲がったとき、左右の袖口がどれだけ追従するかを確認できます。",
+          "try_first": "衣装と骨の条件を本文で確認。Auto-Rig Pro連携を使う場合は別途導入する。",
+          "manual": "docs/manuals/SmartRig/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartRig/images/ex_sr_cuff_share_0.jpg",
+              "git_blob": "58446119f62114c04af6cfe701cc30d7220785bc",
+              "caption": "押す前：手首を曲げても、袖口はまっすぐのままです。"
+            },
+            {
+              "path": "docs/manuals/SmartRig/images/ex_sr_cuff_share_1.jpg",
+              "git_blob": "12754fee0255d3f34062db6d8191d0ee8fd3409f",
+              "caption": "押した後：画面の右（左袖口）は「端の割合」1.0、画面の左（右袖口）は 0.4。1.0 の袖口の方が大きくついて来ます。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Tune how strongly each cuff follows the wrist",
+          "description": "Set the cuff-end influence to 1.0 on one side and 0.4 on the other, then compare both cuffs in the same wrist pose.",
+          "try_first": "Check the clothing and rig setup. Auto-Rig Pro integrations require a separate installation.",
+          "manual": "docs/en/manuals/SmartRig/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartRig/images/ex_sr_cuff_share_0.jpg",
+              "git_blob": "b571080b193d785d2e54e9f3e803da7cec8df6c6",
+              "caption": "Before Clicking: Even when the wrist bends, the cuffs stay straight."
+            },
+            {
+              "path": "docs/en/manuals/SmartRig/images/ex_sr_cuff_share_1.jpg",
+              "git_blob": "3b35fa7003165c95fa4c68f1b7dbb290288a6237",
+              "caption": "After Clicking: The right of the screen (left cuff) has \"Share at the Edge\" 1.0, and the left of the screen (right cuff) has 0.4. The 1.0 cuff follows more."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartAnimation",
+      "edition": "1.0.0",
+      "example": "sa_pose_snapshot",
+      "locales": {
+        "ja": {
+          "headline": "おじぎを半分だけ混ぜて、元のポーズと比べる",
+          "description": "保存したおじぎを0.5だけ混ぜ、完全に適用した姿勢と見比べます。別の強さを試しながら同じポーズを再利用できます。",
+          "try_first": "保存時と同じリグで、同じフレームを比較する。",
+          "manual": "docs/manuals/SmartAnimation/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartAnimation/images/ex_sa_pose_snapshot_1.jpg",
+              "git_blob": "c221eab3e4e288c26fae684c5e965e189574b28e",
+              "caption": "ブレンド 0.5：「スナップショットブレンド」（ブレンド 0.5）。控えたポーズの半分だけ曲がります。"
+            },
+            {
+              "path": "docs/manuals/SmartAnimation/images/ex_sa_pose_snapshot_2.jpg",
+              "git_blob": "92daa114c1c3251c27511cb68e94cdb3da90ec03",
+              "caption": "適用：「適用」の後。控えたポーズそのものになります。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Blend halfway into a saved bow",
+          "description": "Compare a 0.5 blend with the fully applied saved bow. Reuse a pose at different strengths.",
+          "try_first": "Use the same rig and compare the same frame.",
+          "manual": "docs/en/manuals/SmartAnimation/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartAnimation/images/ex_sa_pose_snapshot_1.jpg",
+              "git_blob": "80d4df1b68d148f42963f6be1b18dc478fe50a03",
+              "caption": "Blend 0.5: \"Blend Snapshot\" (Blend 0.5). It bends only half as much as the stored pose."
+            },
+            {
+              "path": "docs/en/manuals/SmartAnimation/images/ex_sa_pose_snapshot_2.jpg",
+              "git_blob": "09cebae8c61fab140b2142878dfed522bd59f43a",
+              "caption": "Apply: After \"Apply\". It becomes the stored pose itself."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartShapekey",
+      "edition": "1.0.0",
+      "example": "sk_load_subdiv",
+      "locales": {
+        "ja": {
+          "headline": "細分化した顔に、作り直さず「笑顔」を戻す",
+          "description": "頂点が増えた顔に表情マップを読み込み、Basisを保ったまま笑顔を呼び出す実例です。本文にはUVを半分に縮めた別例で読み込みが止まる様子もあります。",
+          "try_first": "元と対応するUVを使う。任意の別顔への転写を保証する手順ではない。",
+          "manual": "docs/manuals/SmartShapekey/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartShapekey/images/ex_sk_load_subdiv_0.jpg",
+              "git_blob": "118f5b72a9bfb307ff6c2628e840eaaea3eeffa4",
+              "caption": "前：左は「笑顔」のマップを保存したスザンヌ。右は細分化して頂点を増やしたスザンヌで、まだ口の形はそのままです。"
+            },
+            {
+              "path": "docs/manuals/SmartShapekey/images/ex_sk_load_subdiv_2.jpg",
+              "git_blob": "d50f862ed1e134f4ff77e59516d54ee2d0a96eac",
+              "caption": "笑顔を押す：右のスザンヌの一覧で「笑顔」を押した後。頂点の並びが違っても、左と同じ口の形になりました。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Bring a saved smile onto a subdivided face",
+          "description": "Load an expression map onto the subdivided face, preserve the Basis, then recall the smile. A separate example shows the import stopping after the target UV is scaled by half.",
+          "try_first": "Use corresponding UVs. The example covers a subdivided version of the source face.",
+          "manual": "docs/en/manuals/SmartShapekey/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartShapekey/images/ex_sk_load_subdiv_0.jpg",
+              "git_blob": "118f5b72a9bfb307ff6c2628e840eaaea3eeffa4",
+              "caption": "Before: On the left is the Suzanne whose \"Smile\" Map was saved. On the right is a Suzanne subdivided to add vertices; its mouth shape is still unchanged."
+            },
+            {
+              "path": "docs/en/manuals/SmartShapekey/images/ex_sk_load_subdiv_2.jpg",
+              "git_blob": "d50f862ed1e134f4ff77e59516d54ee2d0a96eac",
+              "caption": "Click Smile: After clicking \"Smile\" in the right Suzanne's list. Even with a different vertex order, the mouth now has the same shape as on the left."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartSelector",
+      "edition": "1.0.0",
+      "example": "ss_bridge_shapekey",
+      "locales": {
+        "ja": {
+          "headline": "ブラウザーの操作盤から、表情の値まで変える",
+          "description": "作例では操作盤からsmileを0→1に変更し、Blenderのモデルの両耳が持ち上がります。選択だけでなく値の変化も確認できます。",
+          "try_first": "同じプロジェクトを開き、作例の接続とキー名を確認する。",
+          "manual": "docs/manuals/SmartSelector/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartSelector/images/ex_ss_bridge_shapekey_0.jpg",
+              "git_blob": "ffacc650e044cd4701e9b9298d4d1104386906ed",
+              "caption": "前：smile の値は 0 です。"
+            },
+            {
+              "path": "docs/manuals/SmartSelector/images/ex_ss_bridge_shapekey_1.jpg",
+              "git_blob": "184c73007353a3251751aeec6ee5c1ffae4ff80c",
+              "caption": "後：「シェイプキーを設定」の後。smile が 1 になり、両耳が持ち上がりました。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Drive a shape key from a browser control panel",
+          "description": "Set smile from 0 to 1 on the browser picker and watch both ears rise on the Blender model.",
+          "try_first": "Open the matching project and check the connection and shape-key name.",
+          "manual": "docs/en/manuals/SmartSelector/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartSelector/images/ex_ss_bridge_shapekey_0.jpg",
+              "git_blob": "138682e31d2cba954f49584853f9dc0ff8e5290b",
+              "caption": "Before: The value of smile is 0."
+            },
+            {
+              "path": "docs/en/manuals/SmartSelector/images/ex_ss_bridge_shapekey_1.jpg",
+              "git_blob": "d6fb47dfcba6be1814a01b849b5a151d8ae5b178",
+              "caption": "After: After \"Set Shape Key\". smile became 1, and both ears lifted."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartCloth",
+      "edition": "1.0.0",
+      "example": "sc_skirt_switch",
+      "locales": {
+        "ja": {
+          "headline": "同じ16フレーム目で、ボーンと布の裾を比べる",
+          "description": "ボーンではスカート全体が体についていき、クロスでは腰に続いて裾が遅れます。同じ衣装・同じ時刻で演出を選べます。",
+          "try_first": "キャッシュと再生開始フレームを本文の手順に合わせる。",
+          "manual": "docs/manuals/SmartCloth/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartCloth/images/ex_sc_skirt_switch_0.jpg",
+              "git_blob": "c9ebaa3cbb1fae38c1c3734237a861e820de33c2",
+              "caption": "ボーン：「ボーン」のフレーム 16。スカートは形を保ったまま、体と一緒に動きます。"
+            },
+            {
+              "path": "docs/manuals/SmartCloth/images/ex_sc_skirt_switch_1.jpg",
+              "git_blob": "4a6ff17e2cc8858f7343bb5df7200ca01c9b8e65",
+              "caption": "クロス：「クロス」のフレーム 16。腰の所だけが付いて行き、裾は左に遅れています。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Compare bone and cloth motion at frame 16",
+          "description": "Switch the same skirt between bone and cloth motion. At frame 16 the waistband follows the body while the simulated hem trails behind.",
+          "try_first": "Use the simulation cache and starting frame specified in the walkthrough.",
+          "manual": "docs/en/manuals/SmartCloth/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartCloth/images/ex_sc_skirt_switch_0.jpg",
+              "git_blob": "4e977a2eab1df77d1a952f7bfae165c23ecfce58",
+              "caption": "Bones: Frame 16 with \"Bones\". The Skirt keeps its shape and moves together with the Body."
+            },
+            {
+              "path": "docs/en/manuals/SmartCloth/images/ex_sc_skirt_switch_1.jpg",
+              "git_blob": "a85d0d42219a0bacbd39eb0e96b5d90d7c473d8a",
+              "caption": "Cloth: Frame 16 with \"Cloth\". Only the waist follows along, and the hem lags to the left."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartPaint",
+      "edition": "1.0.0",
+      "example": "pt_uvisland",
+      "locales": {
+        "ja": {
+          "headline": "1枚の面から、塗りたいUV島だけを選ぶ",
+          "description": "服の一部を塗る前に、選んだ1面から同じUV島の面へ選択を広げます。本文のレイヤー表示とPSD保存を続けて参照できます。",
+          "try_first": "UV境界のあるメッシュで試す。PSDの対応範囲は別の保存例で確認する。",
+          "manual": "docs/manuals/SmartPaint/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartPaint/images/ex_pt_uvisland_0.jpg",
+              "git_blob": "04267c53f68dddca1470a151f9b06ca1b3fee185",
+              "caption": "前：面を 1 つだけ選んでいます（濃い色の所）。"
+            },
+            {
+              "path": "docs/manuals/SmartPaint/images/ex_pt_uvisland_1.jpg",
+              "git_blob": "7f7a821cd1a7675c78c2bda1fced5c6deb41fe2f",
+              "caption": "後：「UV島へ拡張」の後。同じ UV 島の面まで選ばれました（濃い色）。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Start with one face and target its UV island",
+          "description": "Expand one selected face to its UV island before painting a garment panel. The guide also covers layer display and PSD saving.",
+          "try_first": "Use a mesh with UV island boundaries and check the separate PSD examples.",
+          "manual": "docs/en/manuals/SmartPaint/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartPaint/images/ex_pt_uvisland_0.jpg",
+              "git_blob": "c1ee678089c3f7f74a6e1cfe3556bba7f0fd9481",
+              "caption": "Prev: Only one face is selected (the dark area)."
+            },
+            {
+              "path": "docs/en/manuals/SmartPaint/images/ex_pt_uvisland_1.jpg",
+              "git_blob": "bea311d94a3fc5c619bd4570cee662c1a583c72c",
+              "caption": "After: After \"Expand to UV Island\". The faces in the same UV island are selected (dark)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartShader",
+      "edition": "1.0.0",
+      "example": "sh_toon_direction",
+      "locales": {
+        "ja": {
+          "headline": "矢印を動かして、トゥーンの影を左へ",
+          "description": "矢印のEmptyを左へ動かして方向を同期すると、同じ材質の陰側が変わります。モデルのどちら側に影を置くかを目で決められます。",
+          "try_first": "作例のトゥーン材質を使い、矢印を選んで方向を同期する。",
+          "manual": "docs/manuals/SmartShader/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartShader/images/ex_sh_toon_direction_0.jpg",
+              "git_blob": "0acdd3c33a3fdf2b6312a91e6b9f6e7959b77234",
+              "caption": "前：作った直後。光は既定の向き（上の方）から当たっている。"
+            },
+            {
+              "path": "docs/manuals/SmartShader/images/ex_sh_toon_direction_1.jpg",
+              "git_blob": "ed1483cf3faac810ac5be1f4b6e3f6c0e5c68b30",
+              "caption": "後：矢印の Empty を左へ動かして「選択から方向を同期」を押した後。光が左から当たり、陰の側が変わった。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Art-direct a toon shadow with an arrow",
+          "description": "Move the arrow Empty left and sync the direction. Compare the shadow on the same toon material before and after.",
+          "try_first": "Use the example toon material, select the arrow, then sync its direction.",
+          "manual": "docs/en/manuals/SmartShader/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartShader/images/ex_sh_toon_direction_0.jpg",
+              "git_blob": "1b1bcde39bbdfb7eebc4695292a16404aee7af31",
+              "caption": "Before: Right after creation. The light comes from the default direction (roughly from above)."
+            },
+            {
+              "path": "docs/en/manuals/SmartShader/images/ex_sh_toon_direction_1.jpg",
+              "git_blob": "3d129dc25dcdb7b39b1b198bf456cf6eb4fa4619",
+              "caption": "After: After moving the arrow Empty to the left and clicking \"Sync Direction From Selection\". The light comes from the left, and the shaded side has changed."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartNode",
+      "edition": "1.0.0",
+      "example": "nd_rename",
+      "locales": {
+        "ja": {
+          "headline": "選んだノードをMask_01、Mask_02へまとめて命名",
+          "description": "ノイズとボロノイの2ノードを選び、共通名と連番を指定。見出しがMask_01、Mask_02になり、他の人に渡すノード図を読みやすくします。",
+          "try_first": "確認するのはノードの表示見出し。内部の識別子とは区別する。",
+          "manual": "docs/manuals/SmartNode/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartNode/images/ex_nd_rename_0.jpg",
+              "git_blob": "0b83a697cc9dfa82196a30e271d43ba75b6cf2fa",
+              "caption": "前：「ノイズテクスチャ」と「ボロノイテクスチャ」を選んだところ。"
+            },
+            {
+              "path": "docs/manuals/SmartNode/images/ex_nd_rename_2.jpg",
+              "git_blob": "1a9634d61caf9ea67953dca723baddd494feaa58",
+              "caption": "後：OK を 2 回押した後。選んだ 2 つの見出しが「Mask_01」「Mask_02」に変わった。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Give selected nodes a numbered naming scheme",
+          "description": "Select the Noise and Voronoi nodes and apply a shared name with numbering. The two labels become Mask_01 and Mask_02 for handoff.",
+          "try_first": "Check the visible node labels; the example concerns labels.",
+          "manual": "docs/en/manuals/SmartNode/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartNode/images/ex_nd_rename_0.jpg",
+              "git_blob": "7ba350f679a62494dd93375f3666a04f5de159fb",
+              "caption": "Before: \"Noise Texture\" and \"Voronoi Texture\" selected."
+            },
+            {
+              "path": "docs/en/manuals/SmartNode/images/ex_nd_rename_2.jpg",
+              "git_blob": "8339c92c13d22c81828809cb02391bf0cd8e6289",
+              "caption": "After: After clicking OK twice. The headers of the 2 selected nodes have changed to \"Mask_01\" and \"Mask_02\"."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartCamLight",
+      "edition": "1.0.0",
+      "example": "scl_link_state",
+      "locales": {
+        "ja": {
+          "headline": "顔を照らしたまま、床だけを照明から外す",
+          "description": "同じライト・同じカメラで、一覧のFloorだけを除外。顔は照らしたまま床が暗くなり、チェックを戻せば両方が再び照らされます。",
+          "try_first": "対応するレンダー条件を本文で確認し、同じライトで比較する。",
+          "manual": "docs/manuals/SmartCamLight/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartCamLight/images/ex_scl_link_state_0.jpg",
+              "git_blob": "188e511fb3f6de3b21d1aa8dfdb051ac108f904a",
+              "caption": "含める：スザンヌと床を両方とも「含める」にした状態。両方が照らされています。"
+            },
+            {
+              "path": "docs/manuals/SmartCamLight/images/ex_scl_link_state_1.jpg",
+              "git_blob": "9081f8ed9bbaae41ca05331fd710f1f87da712c0",
+              "caption": "除外：「Floor」の行の空のチェックの印を押した後。床が暗くなり、スザンヌだけが照らされています。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Light the subject and leave the floor dark",
+          "description": "Exclude only Floor from the light. The subject stays lit; restoring the checkbox brings the floor light back in the same shot.",
+          "try_first": "Check the render setup in the walkthrough and use the same light.",
+          "manual": "docs/en/manuals/SmartCamLight/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartCamLight/images/ex_scl_link_state_0.jpg",
+              "git_blob": "188e511fb3f6de3b21d1aa8dfdb051ac108f904a",
+              "caption": "Include: Both Suzanne and the floor are set to \"Include\". Both are lit."
+            },
+            {
+              "path": "docs/en/manuals/SmartCamLight/images/ex_scl_link_state_1.jpg",
+              "git_blob": "9081f8ed9bbaae41ca05331fd710f1f87da712c0",
+              "caption": "Exclude: After clicking the empty checkbox icon on the \"Floor\" row. The floor has gone dark, and only Suzanne is lit."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartRender",
+      "edition": "1.0.0",
+      "example": "rd_elements_checks",
+      "locales": {
+        "ja": {
+          "headline": "合成に渡すパスを、6項目から2項目へ切り替える",
+          "description": "「ビューティーのみ」を読み込むと、ビューティーとアルファに絞られ、チェック一覧・選択数・想定エレメントが一緒に変わります。",
+          "try_first": "この図は出力前の設定。実際の書き出しは後続の手順で確認する。",
+          "manual": "docs/manuals/SmartRender/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartRender/images/ex_rd_elements_checks_0.jpg",
+              "git_blob": "bffdb94c595342b0ff02144a5346eb3354a42b4d",
+              "caption": "開いたところ：ビューティー・アルファ・Z深度・法線・ベロシティなど 6 個にチェックが入っている。"
+            },
+            {
+              "path": "docs/manuals/SmartRender/images/ex_rd_elements_checks_1.jpg",
+              "git_blob": "e80291a28e49ea47a6d8c1f9281eef9b1de80bcd",
+              "caption": "読み込んだ後：クイックセットの「ビューティーのみ」を読み込むと、ビューティーとアルファの 2 個になり、チェック・「選択エレメント数」・「想定エレメント」が一緒に減った。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Switch the delivery pass list from six to two",
+          "description": "Load the beauty preset. Beauty and alpha remain, and the checklist, selected count and expected elements update together.",
+          "try_first": "This example shows the delivery settings. Follow the output example to inspect files.",
+          "manual": "docs/en/manuals/SmartRender/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartRender/images/ex_rd_elements_checks_0.jpg",
+              "git_blob": "8a0028797c2a4050c00fb87cb6c18fb5e7e1f1fc",
+              "caption": "Just Opened: Beauty, Alpha, ZDepth, Normal, Velocity, and others, 6 in all, are checked."
+            },
+            {
+              "path": "docs/en/manuals/SmartRender/images/ex_rd_elements_checks_1.jpg",
+              "git_blob": "1bf6528e808a93c65fad7803006602b7002d8dc1",
+              "caption": "After Loading: Loading the \"Beauty Only\" Quick Set reduced them to 2, Beauty and Alpha, and the checks, \"Selected elements\", and \"Planned elements\" decreased together."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartComposite",
+      "edition": "1.0.0",
+      "example": "scomp_pass_guard",
+      "locales": {
+        "ja": {
+          "headline": "合成に必要なパスを、ビューレイヤー側でも準備する",
+          "description": "合成ノードを足すだけで終わらず、「レンダーパス自動維持」でビューレイヤーのチェックが入るところまで確認できます。",
+          "try_first": "同じビューレイヤーでチェックを比較する。",
+          "manual": "docs/manuals/SmartComposite/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartComposite/images/ex_scomp_pass_guard_0.jpg",
+              "git_blob": "e2da570f4d655518ed5354f978214b4294692a32",
+              "caption": "前：有効にする前のビューレイヤーのパス。"
+            },
+            {
+              "path": "docs/manuals/SmartComposite/images/ex_scomp_pass_guard_1.jpg",
+              "git_blob": "a5991bbf81c2014c076569a41e2e574725758d08",
+              "caption": "後：「レンダーパス自動維持」を「有効」にした後。合成用のパスにチェックが入りました。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Prepare view-layer passes for compositing",
+          "description": "Enable automatic render-pass maintenance and inspect the corresponding view-layer pass switches before rendering the composite.",
+          "try_first": "Inspect the same view layer in both states.",
+          "manual": "docs/en/manuals/SmartComposite/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartComposite/images/ex_scomp_pass_guard_0.jpg",
+              "git_blob": "61b329c6098ccc59d2425211ca5a8e6727b979cc",
+              "caption": "Before: The View Layer passes before enabling."
+            },
+            {
+              "path": "docs/en/manuals/SmartComposite/images/ex_scomp_pass_guard_1.jpg",
+              "git_blob": "74e0df2edb9ca3adb958bb14511608fac23f7579",
+              "caption": "After: After setting \"Render Pass Guard\" to \"On\". The passes for compositing are now checked."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartFile",
+      "edition": "1.0.0",
+      "example": "sf_restore_point",
+      "locales": {
+        "ja": {
+          "headline": "大きく削った形を、作業前の復元ポイントから戻す",
+          "description": "作業前に復元ポイントを作り、上半分を消したモデルを保存時の形に戻します。削除後と復元後を同じ視点で比較できます。",
+          "try_first": "新規シーンかコピーで試し、復元先を選んでから実行する。",
+          "manual": "docs/manuals/SmartFile/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartFile/images/ex_sf_restore_point_1.jpg",
+              "git_blob": "2e024b28077a06256d5211cae722cafed57bf4d7",
+              "caption": "変更後：上半分を消した形。この変更を取り消したいとします。"
+            },
+            {
+              "path": "docs/manuals/SmartFile/images/ex_sf_restore_point_2.jpg",
+              "git_blob": "ae02f600b56e308e270eeb7357e50fa88b78bac4",
+              "caption": "戻した後：「復元 選択済み」で戻した後。復元ポイントを作った時の形に戻りました。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Recover the mesh from a restore point",
+          "description": "Create a restore point before editing, remove the upper half of the mesh on a copy, then return to the saved shape.",
+          "try_first": "Work on a copy and check the selected restore point before restoring.",
+          "manual": "docs/en/manuals/SmartFile/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartFile/images/ex_sf_restore_point_1.jpg",
+              "git_blob": "892ed4db9107f5ca770cb11cbd0a0310158b1e32",
+              "caption": "After Change: The shape with the upper half deleted. Suppose we want to undo this change."
+            },
+            {
+              "path": "docs/en/manuals/SmartFile/images/ex_sf_restore_point_2.jpg",
+              "git_blob": "f6563f195816b79b8a1e2ef610106e57e239b31e",
+              "caption": "After Restore: After restoring with \"Restore Selected\". It returned to the shape from when the restore point was created."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartWorkspace",
+      "edition": "1.0.0",
+      "example": "sw_sync",
+      "locales": {
+        "ja": {
+          "headline": "別のワークスペースでも、同じ横顔を見続ける",
+          "description": "LayoutからScriptingへ切り替えた画面を同期の有無で比較。同期を有効にすると、切り替え先の3Dビューにも元の横向きが反映されます。",
+          "try_first": "両方のワークスペースに3Dビューを用意する。",
+          "manual": "docs/manuals/SmartWorkspace/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartWorkspace/images/ex_sw_sync_1.jpg",
+              "git_blob": "3cb1984b62b0fe24f1a1da45661d714f05786643",
+              "caption": "無効で切替：同期が「無効」のまま「Scripting」へ切り替えた後。左上の 3D ビューの向きは別のままです。"
+            },
+            {
+              "path": "docs/manuals/SmartWorkspace/images/ex_sw_sync_3.jpg",
+              "git_blob": "98f8b1cb8875485f385a21e7904562eb490f0671",
+              "caption": "有効で切替：同期を「有効」にして「Scripting」へ切り替えた後。左上の 3D ビューも横向きになりました。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Keep the same view when switching workspaces",
+          "description": "Compare the Scripting workspace with sync off and on. With sync on, its 3D view follows the side view from Layout.",
+          "try_first": "Keep a 3D view in each of the two workspaces.",
+          "manual": "docs/en/manuals/SmartWorkspace/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartWorkspace/images/ex_sw_sync_1.jpg",
+              "git_blob": "b47847abd3c20c6f3c23a6a46266f797f1e4e0e3",
+              "caption": "Switch While Disabled: After switching to \"Scripting\" with sync left \"Disabled\". The 3D Viewport in the upper left keeps its different direction."
+            },
+            {
+              "path": "docs/en/manuals/SmartWorkspace/images/ex_sw_sync_3.jpg",
+              "git_blob": "a08bb9ab3df494912082a7ec115f8a478839d1f9",
+              "caption": "Switch While Enabled: After setting sync to \"Enabled\" and switching to \"Scripting\". The 3D Viewport in the upper left now shows the side view too."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartTransform",
+      "edition": "1.0.0",
+      "example": "st_multi_edit_linked",
+      "locales": {
+        "ja": {
+          "headline": "編集対象を追加し、同じメッシュの複製は外す",
+          "description": "コレクション加算で別メッシュの物は編集対象になり、元とメッシュを共有する複製は加わりません。どの物が編集対象か、網目で確かめられます。",
+          "try_first": "リンク複製と単独メッシュの両方を用意し、本文の条件で試す。",
+          "manual": "docs/manuals/SmartTransform/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartTransform/images/ex_st_multi_edit_linked_0.jpg",
+              "git_blob": "fca9eba03ae1c0c6d6009682697a31de5f5d531f",
+              "caption": "前：真ん中のスザンヌだけを編集モードにしたところ。左は同じメッシュを共有しています。"
+            },
+            {
+              "path": "docs/manuals/SmartTransform/images/ex_st_multi_edit_linked_1.jpg",
+              "git_blob": "5b9f9df5f21d4f28f998e51713aa4ade94069e35",
+              "caption": "後：「コレクション加算」を押した後。右には網目が出ましたが、メッシュを共有する左には出ません。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Add edit targets while skipping shared mesh data",
+          "description": "Add the collection to the edit set. A separate mesh joins; the linked duplicate sharing the original mesh data stays outside the edit set in the example.",
+          "try_first": "Include both shared mesh data and an independent mesh in the fixture.",
+          "manual": "docs/en/manuals/SmartTransform/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartTransform/images/ex_st_multi_edit_linked_0.jpg",
+              "git_blob": "cd14c4fa9b75ba61c32a9248db34308efc318777",
+              "caption": "Before: Only the middle Suzanne is in Edit Mode. The left one shares the same mesh."
+            },
+            {
+              "path": "docs/en/manuals/SmartTransform/images/ex_st_multi_edit_linked_1.jpg",
+              "git_blob": "de8ee71601376e44f9936209c8e5d8a4abb71474",
+              "caption": "After: After clicking \"Add Collection\". The right one now shows its wireframe, but the left one, which shares the mesh, does not."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartOverlay",
+      "edition": "1.0.0",
+      "example": "so_occluded",
+      "locales": {
+        "ja": {
+          "headline": "手前の辺は実線のまま、裏の辺だけを破線に",
+          "description": "裏側を確認したいときに、隠れた辺だけを破線で重ねます。手前と奥の線を区別したまま形を追えます。",
+          "try_first": "編集モードで遮蔽表示を切り替え、同じ視点で確認する。",
+          "manual": "docs/manuals/SmartOverlay/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartOverlay/images/ex_so_occluded_0.jpg",
+              "git_blob": "7fbf37f84a8d9762b1ddce6deb406dd8044a861c",
+              "caption": "「なし」：隠れた部分を描きません。"
+            },
+            {
+              "path": "docs/manuals/SmartOverlay/images/ex_so_occluded_2.jpg",
+              "git_blob": "5ebbe1910ae917583f51a7dd2d425cf25dc9e49d",
+              "caption": "「破線」：裏の辺が、切れ切れの線で描かれます。手前の辺はふつうの線のままです。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Show occluded edges as dashes",
+          "description": "Draw the hidden edges as dashes while the visible edges stay solid. Follow the mesh silhouette without mixing up front and back.",
+          "try_first": "Switch the occlusion display in Edit Mode without moving the view.",
+          "manual": "docs/en/manuals/SmartOverlay/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartOverlay/images/ex_so_occluded_0.jpg",
+              "git_blob": "fbf08b914d130893109c95d91167669173e9eb9e",
+              "caption": "\"None\": Hidden parts are not drawn."
+            },
+            {
+              "path": "docs/en/manuals/SmartOverlay/images/ex_so_occluded_2.jpg",
+              "git_blob": "65b16dfc2d9129535e223d8b217e5f42cac9c4d4",
+              "caption": "\"Dashed\": The back edges are drawn as broken lines. The front edges stay as ordinary lines."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartID",
+      "edition": "1.0.0",
+      "example": "sid_library_scope",
+      "locales": {
+        "ja": {
+          "headline": "選択中のID件数と、ファイル全体の件数を見分ける",
+          "description": "選択を変えて件数を更新すると、同じ項目が1/1から0/1へ。担当物だけに絞った時も、他の物でそのIDが使われていることが分かります。",
+          "try_first": "選択変更後に「件数更新」を押す。",
+          "manual": "docs/manuals/SmartID/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartID/images/ex_sid_library_scope_1.jpg",
+              "git_blob": "f3a8b82bceaaecec8295c140a6d75366c411cb39",
+              "caption": "適用：「選択へ適用」の後。数が 1/1 になり、スザンヌが項目の表示色になりました。"
+            },
+            {
+              "path": "docs/manuals/SmartID/images/ex_sid_library_scope_3.jpg",
+              "git_blob": "709f89da7cd266d57cef2828f885b967ab4f7bb0",
+              "caption": "件数更新：「選択変更：件数更新」を押した後。真ん中のスザンヌが持つ ID やチャンネルの行が足されました。左のスザンヌの項目は、選んでいる行なので青いまま残り、数は 0/1 です。このまま「選択へ適用」を押すと、この項目が真ん中のスザンヌに付きます。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Check ID usage in the selection and across the file",
+          "description": "Refresh the counts after changing the selection. The same ID moves from 1/1 to 0/1, so usage outside the selection remains visible.",
+          "try_first": "Refresh the usage counts after changing the selection.",
+          "manual": "docs/en/manuals/SmartID/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartID/images/ex_sid_library_scope_1.jpg",
+              "git_blob": "3743fc4b62b340edc7bbd18d856bdf3b2c12ed8d",
+              "caption": "Apply: After \"Apply to Selection\". The count is now 1/1, and the Suzanne has taken on the entry's display color."
+            },
+            {
+              "path": "docs/en/manuals/SmartID/images/ex_sid_library_scope_3.jpg",
+              "git_blob": "c2259416c78e042deacecc939b1a66877773d984",
+              "caption": "Refresh Counts: After clicking \"Selection Changed: Refresh\". Rows for the IDs and channels that the middle Suzanne has were added. The left Suzanne's entry stays blue because it is the selected row, and its count is 0/1. If you click \"Apply to Selection\" now, this entry is assigned to the middle Suzanne."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "SmartToolsManager",
+      "edition": "1.0.0",
+      "example": "stm_cleanup_block",
+      "locales": {
+        "ja": {
+          "headline": "引き渡し前に、整理を止めるデータを名前で見つける",
+          "description": "スクリプトのテキストが残った例では「阻害1」と原因の名前が出ます。コピーを整理する前に、確認するデータを特定できます。",
+          "try_first": "引き渡し用コピーで確認し、表示された名前のデータを点検する。",
+          "manual": "docs/manuals/SmartToolsManager/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/SmartToolsManager/images/ex_stm_cleanup_block_0.jpg",
+              "git_blob": "6419385acf6fc22e23edaa7504851fdd236973e8",
+              "caption": "前：ファイルに入っているスクリプトのテキスト。"
+            },
+            {
+              "path": "docs/manuals/SmartToolsManager/images/ex_stm_cleanup_block_1.jpg",
+              "git_blob": "fe181c46ab8c3df315001115d37fbd7e50b6900a",
+              "caption": "後：「リリース整理」を開いたところ。いちばん下に「阻害 1」と、原因のテキストの名前が出ます。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "Find the data blocking a release cleanup",
+          "description": "In the example a script text remains. Release cleanup shows one blocker and its name, pointing to the item to inspect before cleaning a copy.",
+          "try_first": "Keep the original and inspect a copy. This example identifies a blocker.",
+          "manual": "docs/en/manuals/SmartToolsManager/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/SmartToolsManager/images/ex_stm_cleanup_block_0.jpg",
+              "git_blob": "c3a2d55e0ba16135a6fba96640c354a709f2c704",
+              "caption": "Before: The script text that is in the file."
+            },
+            {
+              "path": "docs/en/manuals/SmartToolsManager/images/ex_stm_cleanup_block_1.jpg",
+              "git_blob": "46ae6ff0b6552532c09a0a65f4c1a9d06bf9836f",
+              "caption": "After: \"Release Cleanup\" opened. At the very bottom, \"Blockers 1\" and the name of the text that caused it appear."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "KeymapManager",
+      "edition": "1.0.0",
+      "example": "km_shadow_f2",
+      "locales": {
+        "ja": {
+          "headline": "押しても効かないF2、優先されている2件までたどる",
+          "description": "優先元の2行を確認して対象を有効にすると、作例では優先元の2件が無効になります。変更される割り当てが見える状態で判断できます。",
+          "try_first": "先にキー設定を控え、無効化される2行を確認する。",
+          "manual": "docs/manuals/KeymapManager/index.html",
+          "figures": [
+            {
+              "path": "docs/manuals/KeymapManager/images/ex_km_shadow_f2_0.jpg",
+              "git_blob": "c910243e1941f18d41bac95628d1ccdaa59fcfbb",
+              "caption": "前：状況が「一部で上位優先」の項目を開いた状態。「上位優先元」が 2 行とボタンが出ています。"
+            },
+            {
+              "path": "docs/manuals/KeymapManager/images/ex_km_shadow_f2_1.jpg",
+              "git_blob": "bbef52226bf889214aef61b349b6b1f4e419dea6",
+              "caption": "後：ボタンを押した後。開いた項目は「有効」になり、上位優先元の 2 つは「無効」になりました。"
+            }
+          ]
+        },
+        "en": {
+          "headline": "See which two bindings take priority over F2",
+          "description": "Inspect the two higher-priority bindings. In the example, enabling the target disables those two entries, making the trade-off visible.",
+          "try_first": "Back up the keymap first and inspect both entries that will be disabled.",
+          "manual": "docs/en/manuals/KeymapManager/index.html",
+          "figures": [
+            {
+              "path": "docs/en/manuals/KeymapManager/images/ex_km_shadow_f2_0.jpg",
+              "git_blob": "01e0b386e79d51b6936b28eb7411e92b87672383",
+              "caption": "Before: The item whose status is \"Partly Shadowed\", opened. Two \"Higher-priority source\" rows and the button are shown."
+            },
+            {
+              "path": "docs/en/manuals/KeymapManager/images/ex_km_shadow_f2_1.jpg",
+              "git_blob": "7780bb8e0ea73895f0338bd856987b6958d0b983",
+              "caption": "After: After clicking the button. The opened item became \"Effective\", and the two higher-priority sources became \"Disabled\"."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

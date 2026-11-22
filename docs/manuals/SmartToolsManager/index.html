@@ -69,6 +69,17 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <link rel="alternate" hreflang="x-default" href="https://jelararagi.github.io/SmartTools/en/manuals/SmartToolsManager/">
 </head><body><nav class="stnav" aria-label="サイト内の移動"><div class="stnav-in"><a class="stnav-brand" href="../../">SmartTools</a><a href="../overview/">全体仕様書</a><a href="../../#addons">アドオン一覧</a><a href="../../install.html">入れ方</a><span class="stnav-sp"></span><a href="../overview/" rel="prev" title="前の解説書">← 全体仕様書</a><a href="../SmartGeometry/" rel="next" title="次の解説書">SmartGeometry Suite →</a><a href="SmartToolsManager_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a href="../../downloads/SmartToolsManager_1.0.0.zip" download>ZIP（82 KB）</a><a href="../../en/manuals/SmartToolsManager/" hreflang="en" lang="en">English</a></div></nav><main>
 <header class="cover"><p class="kicker">SmartTools アドオン解説書 ／ 全体の管理</p><h1>Smart Tools Manager（スマートツールマネージャー） 解説書</h1><p class="sub">版 1.0.0 ／ 2026年11月18日 ／ Blender 5.1.2 用</p><p class="lead">スマートツールマネージャーは、SmartTools 全体を管理するためのツールです。スマートツールのアドオンをたくさん入れると、サイドバー（N パネル）にタブが並びすぎて探しにくくなります。このツールでは、「ワークスペース」（作業ごとの画面の組み合わせ）と「エディター」（3D ビューポートや画像エディターなどの画面の種類）の組み合わせごとに、各スマートツールのパネルを出すか出さないかを決めます。アドオン本体を有効にしたり無効にしたりはしません。パネルの表示だけを切り替えます。ほかに、不要な作業データを除いた .blend のコピーを作る「リリース整理」も入っています。インストール、日本語化、「？」ヘルプの共通の使い方は、全体仕様書の該当の章を見てください。</p></header>
+<!-- smarttools-catalog:start -->
+<section aria-labelledby="smarttools-example-preview">
+<h2 id="smarttools-example-preview">引き渡し前に、整理を止めるデータを名前で見つける</h2>
+<p>スクリプトのテキストが残った例では「阻害1」と原因の名前が出ます。コピーを整理する前に、確認するデータを特定できます。</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_stm_cleanup_block_0.jpg" alt="前：ファイルに入っているスクリプトのテキスト。"><figcaption>前：ファイルに入っているスクリプトのテキスト。</figcaption></figure>
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_stm_cleanup_block_1.jpg" alt="後：「リリース整理」を開いたところ。いちばん下に「阻害 1」と、原因のテキストの名前が出ます。"><figcaption>後：「リリース整理」を開いたところ。いちばん下に「阻害 1」と、原因のテキストの名前が出ます。</figcaption></figure>
+</div>
+<p><strong>試す前に</strong>　引き渡し用コピーで確認し、表示された名前のデータを点検する。</p>
+</section>
+<!-- smarttools-catalog:end -->
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">SmartTools 全体を管理するためのツールです。ワークスペースとエディターの組み合わせごとに、どのスマートツールのパネルを出すかを、一つの画面でまとめて決めます。</p><ul><li>ワークスペースとエディターの組み合わせごとに、21 本のスマートツールのパネルを「有効」「無効」で切り替えます。最初はどのツールも「有効」です。「全部有効」「全部無効」で一覧をまとめて切り替えられます。</li><li>各スマートツールについて、ルールの ON／OFF と、アドオン本体が有効かどうかを並べて表示します。</li><li>設定を設定ファイルへ保存し、Blender を起動し直しても同じ設定に戻します。</li><li>画面のいちばん上の帯（トップバー）に「スマートツール」ボタンを出し、そこからマネージャーの画面を開けます。ボタンは最初は出ていないので、プリファレンスのアドオンの欄で「トップバーボタン」を ON にします。</li><li>設定ファイルを読み直して中身を確かめ、必要な時はバックアップから戻します（再読み込み）。</li><li>問題が起きた時の「実行メッセージ」を表示し、全文をコピーできます。</li><li>「リリース整理」で、自分で選んだ不要データだけを除いた新しい .blend のコピーを作ります。元のファイルは変えません。</li></ul>
 <div class="box tip"><b>こんな時に</b><div><ul><li>モデリング用のワークスペースではモデリング系のツールだけを出し、アニメーション用ではアニメーション系だけを出したい時。</li><li>画像エディターやノードエディターのサイドバーに、関係の無いスマートツールのタブが出ないようにしたい時。</li><li>納品や共有の前に、使い終わった作業用のデータを除いた .blend のコピーを作りたい時。</li></ul></div></div>

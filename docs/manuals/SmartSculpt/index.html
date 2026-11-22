@@ -69,6 +69,17 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <link rel="alternate" hreflang="x-default" href="https://jelararagi.github.io/SmartTools/en/manuals/SmartSculpt/">
 </head><body><nav class="stnav" aria-label="サイト内の移動"><div class="stnav-in"><a class="stnav-brand" href="../../">SmartTools</a><a href="../overview/">全体仕様書</a><a href="../../#addons">アドオン一覧</a><a href="../../install.html">入れ方</a><span class="stnav-sp"></span><a href="../SmartModifier/" rel="prev" title="前の解説書">← SmartModifier Suite</a><a href="../SmartTransform/" rel="next" title="次の解説書">SmartTransform Suite →</a><a href="SmartSculpt_%E8%A7%A3%E8%AA%AC%E6%9B%B8_v1_0.pdf">PDF</a><a href="../../downloads/SmartSculptSuite_1.0.0.zip" download>ZIP（10,772 KB）</a><a href="../../en/manuals/SmartSculpt/" hreflang="en" lang="en">English</a></div></nav><main>
 <header class="cover"><p class="kicker">SmartTools アドオン解説書</p><h1>SmartSculpt Suite（スマートスカルプト スイート） 解説書</h1><p class="sub">版 1.0.0 ／ 2026年11月18日 ／ Blender 5.1.2 用</p><p class="lead">SmartSculpt Suite は、スカルプトの準備、ブラシの切り替え、リメッシュ（面を作り直すこと）、マスク、フェイスセット、メッシュの点検と修正、スナップショット（途中の形の保存）を、3D ビューのサイドバーにまとめたアドオンです。メッシュ編集モードのままブラシのように形を動かせる「編集モード専用スカルプト」も入っています。見出しはどれも折りたたみ式です。必要な見出しだけを開いて使います。各見出しの「？」を押すと、その見出しの説明が出ます。</p></header>
+<!-- smarttools-catalog:start -->
+<section aria-labelledby="smarttools-example-preview">
+<h2 id="smarttools-example-preview">リメッシュした後でも、保存した網目に戻る</h2>
+<p>ボクセルリメッシュで変わった網目を、事前に保存したスナップショットから復元。形だけでは分からない差を、ワイヤーで確認できます。</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem">
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_ss_snapshot_1.jpg" alt="変更：「ボクセルリメッシュ」で、網目が作り直されました。"><figcaption>変更：「ボクセルリメッシュ」で、網目が作り直されました。</figcaption></figure>
+<figure style="margin:0"><img loading="lazy" style="width:100%;height:auto" src="images/ex_ss_snapshot_2.jpg" alt="復元：「スナップショット復元」で、保存した時の網目に戻りました。"><figcaption>復元：「スナップショット復元」で、保存した時の網目に戻りました。</figcaption></figure>
+</div>
+<p><strong>試す前に</strong>　リメッシュ前にスナップショットを保存する。</p>
+</section>
+<!-- smarttools-catalog:end -->
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">スカルプト（粘土をこねるように形を作る作業）の道具をサイドバーの「Smart Sculpt」タブにまとめ、メッシュ編集モードのままでもブラシやフィルターで形を整えられるアドオンです。</p><ul><li>スカルプトでよく使うブラシ（描画、クレイ、つかみ、スムーズなど）を、ボタン 1 つで切り替えます。</li><li>よく使うブラシを 3 つのスロットに保存し、あとで呼び出します。</li><li>3D ビューの見え方を「クレイ表示」「テクニカル表示」「フェイスセット表示」「ワイヤーフレーム表示」に切り替えます。シルエット（影絵のような表示）で輪郭も確かめられます。</li><li>ダイナミックトポロジー、ボクセルリメッシュ、クアッドリメッシュ、マルチレゾで、面の細かさや並びを整えます。</li><li>マスクの抽出やスライス、フェイスセットの操作で、メッシュの一部を切り分けます。</li><li>プリミティブ、ブーリアン、レールカッター、スフィアチェーン、カーブチューブ、散布などで、形の土台や部品を作ります。</li><li>メッシュを解析し、スケール適用、法線再計算、孤立ジオメトリ削除などをまとめて修正します。</li><li>スナップショットと回復バックアップで、大きな変更の前の形を残し、あとで戻します。</li><li>メッシュ編集モードのまま、ブラシのような変形、メッシュフィルター、マスク、フェイスセット、頂点カラーの操作を行います。</li><li>外部ツールとの受け渡し用に、メッシュを書き出し・読み込みします。</li></ul>
 <div class="box tip"><b>こんな時に</b><div><ul><li>スカルプトを始める前に、見え方とブラシをすばやく整える。</li><li>リメッシュやブーリアンの前に、スナップショットで控えを残す。</li><li>書き出しの前に、メッシュの問題をまとめて調べて直す。</li><li>メッシュ編集モードで、選んだ部分だけを軽くならす・盛る。</li></ul></div></div>
