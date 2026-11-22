@@ -1,23 +1,26 @@
-# SmartTools 製品ガイド / Product guides
+# SmartTools 製品ガイド / Illustrated product guides
 
-23製品の紹介文と図を日本語・英語で管理しています。各紹介は、無料公開した1.0.0の解説書にある一つの作例に対応します。宣伝用に撮り直した画像や架空の操作結果は使用していません。
+23製品それぞれの解説書は、Blenderで最初に開く画面から始まります。日本語版・英語版で実際の画面を使い、開く場所、モード、タブ、見出しを案内しています。代表作例には操作前後の写真と手順があり、同じ製品の作例をさらに2件たどれます。
 
-[日本語の解説書](../docs/manuals/) · [English manuals](../docs/en/manuals/) · [製品別の原稿と作例 / Product catalog](products.json) · [無料公開版 / Free release](https://github.com/JELararagi/SmartTools/releases/tag/v1.0.0)
+[日本語の入口](../docs/index.html) · [English guides](../docs/en/index.html) · [製品原稿・画像の出所](products.json) · [無料公開版](https://github.com/JELararagi/SmartTools/releases/tag/v1.0.0)
 
-販売先の商品欄や領収書からは、[日本語ヘルプ](https://jelararagi.github.io/SmartTools/#help) または [English Help](https://jelararagi.github.io/SmartTools/en/#help) を案内できます。導入・製品の操作はこのURLを継続して利用でき、各ストアの取引窓口は購入先で案内します。
+## 原稿と画像
 
-## 原稿の更新
+`products.json` には、各言語の案内文、入口画像の元見出しとキャプション、作例の画像パスとGit blobハッシュを収録しています。`sources` は、関連ツールの公式資料を参照するためのリンク集です。各解説書の本文・PDF・無料版ZIPは従来の場所から開けます。
 
-`products.json` に、商品名、版、実例ID、日英の見出しと説明、試す時の条件、画像のパス・説明・Gitハッシュを収録しています。変更後に `python catalog/guide.py --update-manuals` を実行すると、解説書の先頭にある紹介欄を更新できます。`--check` は原稿と46ページの一致を照合します。
+## 更新と移植
 
-## 別のサイトへ移す / Export
-
-リポジトリ全体を取得し、次を実行してください。Python 3.9以降で動作します。
+リポジトリ全体を取得し、Python 3.9以降で実行します。PNGを作り直すときはPillowと日本語フォントも必要です。フォントは `--font` と `--bold-font` で指定できます。
 
 ```text
+python catalog/render_diagrams.py
+python catalog/guide.py --update-manuals
+python catalog/guide.py --check
 python catalog/guide.py --export ../smarttools-product-pages
 ```
 
-指定した新規または空のフォルダーに、製品ごとの日本語・英語のMarkdownと対応する画像が出ます。画像のハッシュを確かめ、照合した原稿と画像を一緒に移せます。販売経路が決まったら、そのサービスで権利確認済みの商品に価格・決済・購入済みファイルの受け取り先を設定します。このリポジトリは解説書の配布に使用します。
+`--export` は新規または空のフォルダーに、各言語・各製品のMarkdownと画像をまとめます。PNGは、その製品の入口と操作前後の写真を1枚に配置したものです。
 
-Each entry has a stable product name, edition, example ID, bilingual copy, two source figures and a note about reproducing the result. Run the export command from a full checkout for self-contained product copy and images. The command uses only the Python standard library. The exported pages have no payment-provider dependency.
+Each manual opens with a screenshot of the actual Blender controls, the steps to open them, and a landmark to look for. The featured example follows with screenshots of the operation and its result. Two further worked examples link to their instructions in the manual. The commands above regenerate the guides and export self-contained product pages for another storefront.
+
+[日本語ヘルプ](https://jelararagi.github.io/SmartTools/#help) · [English Help](https://jelararagi.github.io/SmartTools/en/#help)

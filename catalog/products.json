@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "free_release": "https://github.com/JELararagi/SmartTools/releases/tag/v1.0.0",
   "products": [
     {
@@ -29,10 +29,19 @@
             "対応頂点を転送",
             "右の耳も一致"
           ],
-          "comparison": {
-            "name": "Mesh Data Transfer",
-            "url": "https://extensions.blender.org/add-ons/mesh-data-transfer/",
-            "note": "メッシュ間の転送を選ぶなら、対象の頂点対応を確認してください。ここでは左右に置いた2体で、片方の耳だけを直して同じ編集をもう一方に反映します。"
+          "panel": {
+            "image": "images/sm_overview.png",
+            "where": "3Dビューポートでメッシュを選び、Tabキーで編集モードにします。ポインターをその画面に置いてNキーを押し、サイドバーの「Smart Modeling」で「編集と転送」を開きます。",
+            "look": "入口全体の図では「編集と転送」の左にある三角を探してください。",
+            "heading": "4. 画面の場所",
+            "caption": "「Smart Modeling」タブ全体（見出しはすべて閉じた状態）。いちばん上の「常時機能切り替え」と、作業の種類ごとの 8 つの見出し。右の数字はツールの数です。",
+            "git_blob": "97bcb7b6f66864851d79d9ca0e98e1e4f4397b32"
+          },
+          "case_images": {
+            "images/ex_sm_sketch_curve_0.jpg": "70fc911e3a9587f4bdcfd4d16de2c2d0546b7e05",
+            "images/ex_sm_sketch_curve_1.jpg": "e329f4dde6f7c782a1563966520612c1e5159dec",
+            "images/ex_sm_crease_values_0.jpg": "d65b7ae388e52e51cdf05a8ffe7e866eabec5343",
+            "images/ex_sm_crease_values_2.jpg": "15f154d1238f302a1bd0dcf9512ba1cfe57ce483"
           }
         },
         "en": {
@@ -57,13 +66,36 @@
             "Transfer matching vertices",
             "Check right ear"
           ],
-          "comparison": {
-            "name": "Mesh Data Transfer",
-            "url": "https://extensions.blender.org/add-ons/mesh-data-transfer/",
-            "note": "When choosing a mesh transfer tool, check how it matches the meshes. Here you edit one ear on one model and see the same edit on its partner."
+          "panel": {
+            "image": "images/sm_overview.png",
+            "where": "Select a mesh in the 3D Viewport and press Tab to enter Edit Mode. With the pointer over the viewport, press N, select Smart Modeling and expand Edit and Transfer.",
+            "look": "The panel overview shows the triangle beside Edit and Transfer.",
+            "heading": "4. Where to Find It",
+            "caption": "The whole \"Smart Modeling\" tab (all section headers closed). \"Always-on Toggles\" at the very top, and eight section headers, one for each type of work. The number on the right is the number of tools.",
+            "git_blob": "12bde44e74f9bd3b8befe21baf60beb555ed0275"
+          },
+          "case_images": {
+            "images/ex_sm_sketch_curve_0.jpg": "c44aea9e847aa6b96163f1e37d8407940c788a27",
+            "images/ex_sm_sketch_curve_1.jpg": "121b36211cdbdf81132e6b022fca3da696d80c22",
+            "images/ex_sm_crease_values_0.jpg": "d5517ed7ff2dd1dc61eb932a88e9b3e6ab19c1e4",
+            "images/ex_sm_crease_values_2.jpg": "03006fc82525c35ebf35fc312867e98b2dc98d5c"
           }
         }
-      }
+      },
+      "cases": [
+        "sm_sketch_curve",
+        "sm_crease_values"
+      ],
+      "sources": [
+        {
+          "name": "Retopoflow · PolyStrips",
+          "url": "https://docs.retopoflow.com/v4/polystrips.html"
+        },
+        {
+          "name": "Mesh Data Transfer",
+          "url": "https://github.com/maumemoli/blender/blob/master/packages/MeshDataTransfer/documentation/README.md"
+        }
+      ]
     },
     {
       "product": "SmartUV",
@@ -92,10 +124,19 @@
             "全消去",
             "同じ辺に復元"
           ],
-          "comparison": {
-            "name": "Zen UV",
-            "url": "https://zenmastersteam.github.io/Zen-UV/latest/",
-            "note": "Zen UVにもシームを組にして扱う機能があります。切り直しをよく試す人は、全消去の後に同じ辺へ戻るところを見てください。"
+          "panel": {
+            "image": "images/shot_top.png",
+            "where": "メッシュを編集モードにし、UVが見えているUVエディターにポインターを置いてNキーを押します。「Smart UV」タブで「シーム/ピン」を開きます。",
+            "look": "入口全体の図では、開いた「常時機能切り替え」の下に機能別の見出しが並びます。",
+            "heading": "4. 画面の場所",
+            "caption": "「Smart UV」タブの全体。いちばん上の「常時機能切り替え」を開き、その下の見出しは閉じた状態",
+            "git_blob": "b02e4e381c985fa1d9991f185f9d804eb9970fda"
+          },
+          "case_images": {
+            "images/ex_uv_stack_turned_0.jpg": "0ea49bc4f99d58fc92cf1767c66c922a5eeaf0e5",
+            "images/ex_uv_stack_turned_1.jpg": "bcf036ff7495d36f8481252f4a2483b60e4f593b",
+            "images/ex_uv_bake_rebake_0.jpg": "61e8908cb3f7b0fa341436b2abce52ae40ba5f10",
+            "images/ex_uv_bake_rebake_1.jpg": "0abd92106e3fb5fb4f89e4f8cb94e4c53a65f073"
           }
         },
         "en": {
@@ -120,13 +161,36 @@
             "Clear seams",
             "Restore the same edges"
           ],
-          "comparison": {
-            "name": "Zen UV",
-            "url": "https://zenmastersteam.github.io/Zen-UV/latest/",
-            "note": "Zen UV also supports seam groups. If you try several cuts, look for the original edges returning after a complete clear."
+          "panel": {
+            "image": "images/shot_top.png",
+            "where": "With the mesh in Edit Mode and its UVs visible, put the pointer over the UV Editor and press N. Open Smart UV, then Seam/Pin.",
+            "look": "The overview shows the tool sections below the expanded Always-on Toggles.",
+            "heading": "4. Where to Find It",
+            "caption": "The whole \"Smart UV\" tab. \"Always-on Toggles\" at the very top is open, and the sections below it are closed",
+            "git_blob": "1014cf8c7c0939745a94922ce5d63e9bc11f681b"
+          },
+          "case_images": {
+            "images/ex_uv_stack_turned_0.jpg": "ae5693f80159e821dbcd4798e5641fd429bafd46",
+            "images/ex_uv_stack_turned_1.jpg": "40246c62959018fd58c76590427bebef0f3395fd",
+            "images/ex_uv_bake_rebake_0.jpg": "546b2d74f7eb0337cb62da61aa087810ab1880c0",
+            "images/ex_uv_bake_rebake_1.jpg": "580b7ee7506b52959598b9ce98f4747f30ce04a6"
           }
         }
-      }
+      },
+      "cases": [
+        "uv_stack_turned",
+        "uv_bake_rebake"
+      ],
+      "sources": [
+        {
+          "name": "Zen UV · Seam Groups",
+          "url": "https://zenmastersteam.github.io/Zen-UV/latest/seam_groups/"
+        },
+        {
+          "name": "UVPackmaster 3 · Texel Density",
+          "url": "https://uvpackmaster.com/doc3/blender/latest/20-packing-functionalities/58-texel-density/"
+        }
+      ]
     },
     {
       "product": "SmartGeometry",
@@ -155,10 +219,19 @@
             "壁に変換",
             "始点と終点の間を確認"
           ],
-          "comparison": {
-            "name": "Archipack",
-            "url": "https://blender-archipack.gitlab.io/user/add%20archipack.html",
-            "note": "曲線から壁を作る道具を比較する際は、普段使う下描きに注目してください。この例の入力はGrease Pencilの間取り線です。"
+          "panel": {
+            "image": "images/overview.png",
+            "where": "オブジェクトモードの3DビューポートでNキーを押し、「Smart Geometry」タブを開きます。地形を作るには「地形 / 環境生成」の三角を押します。",
+            "look": "入口全体の図では、上から2番目に「地形 / 環境生成」があります。",
+            "heading": "4. 画面の場所",
+            "caption": "サイドバーの「Smart Geometry」タブを開いたところ。9 つの見出しはすべて閉じていて、上から「常時機能切り替え」「地形 / 環境生成」「分布 / 散布生成」「構造 / 表面生成」「有機 / ストローク生成」「デブリ / 破砕生成」「プリミティブ生成」「属性 / 可視化生成」「設定」が並びます。見出しの右端には「？」があります。",
+            "git_blob": "5d292b8d2945da1772f0c9ebf0504e634b36df19"
+          },
+          "case_images": {
+            "images/ex_sg_building_floors_0.jpg": "384b9e21326394a91b8761d894475ef5811feb56",
+            "images/ex_sg_building_floors_1.jpg": "49a635e05fef8ca6a711411277db35b6b21d0f26",
+            "images/ex_sg_primitive_edit_0.jpg": "66f6a13fa42e48900416c1ad4f4a5127a94170a9",
+            "images/ex_sg_primitive_edit_1.jpg": "da9f74b04451303148d5edb6a74f1839baa455e7"
           }
         },
         "en": {
@@ -183,13 +256,36 @@
             "Generate walls",
             "Inspect the closing span"
           ],
-          "comparison": {
-            "name": "Archipack",
-            "url": "https://blender-archipack.gitlab.io/user/add%20archipack.html",
-            "note": "Wall tools differ in the drawing you start from. Here the floor plan is a Grease Pencil drawing; check where the last wall closes the outline."
+          "panel": {
+            "image": "images/overview.png",
+            "where": "In Object Mode, press N over the 3D Viewport and select Smart Geometry. Expand Terrain / Environment Generators to start a terrain.",
+            "look": "The full panel shows Terrain / Environment Generators as the second heading.",
+            "heading": "4. Where to Find It",
+            "caption": "The \"Smart Geometry\" tab of the Sidebar opened. All 9 section headers are closed, and from the top they are Always-on Toggles, Terrain / Environment Generators, Distribution / Scatter Generators, Structure / Surface Generators, Organic / Stroke Generators, Debris / Fragment Generators, Primitive Generators, Attribute / Visualization Generators, and Settings. There is a \"?\" at the right end of each section header.",
+            "git_blob": "b57e17d60cc8b4046cce96ce71130489aad4d3bd"
+          },
+          "case_images": {
+            "images/ex_sg_building_floors_0.jpg": "755d3a7930af61abffabaf434094e7db7c17a114",
+            "images/ex_sg_building_floors_1.jpg": "4c4c4e83f3761c0e4ea0ac9f9f90bf1abdd9993c",
+            "images/ex_sg_primitive_edit_0.jpg": "6aa5663a975999d5eff6a390700c1c34963ea0a7",
+            "images/ex_sg_primitive_edit_1.jpg": "cce3500aba62ebdf1c329a3b508e0561a9fdba4a"
           }
         }
-      }
+      },
+      "cases": [
+        "sg_building_floors",
+        "sg_primitive_edit"
+      ],
+      "sources": [
+        {
+          "name": "Archipack · Add Archipack",
+          "url": "https://blender-archipack.gitlab.io/user/add%20archipack.html"
+        },
+        {
+          "name": "Geo-Scatter · Biomes",
+          "url": "https://www.geoscatter.com/docs-scattering.html"
+        }
+      ]
     },
     {
       "product": "SmartModifier",
@@ -218,10 +314,19 @@
             "後段を一時停止",
             "格子を戻す"
           ],
-          "comparison": {
-            "name": "Modifiers Link",
-            "url": "https://superhivemarket.com/products/modifiers-link/docs",
-            "note": "モディファイアを同期したい場合と、どの段で形が変わったか調べたい場合で見るべき機能が変わります。後者なら、格子が消える段と再表示される段を見比べてください。"
+          "panel": {
+            "image": "images/sm_overview.png",
+            "where": "オブジェクトモードでメッシュを選び、3Dビューポートにポインターを置いてNキーを押します。「Smart Modifier」タブで「モディファイアスタック」を開きます。",
+            "look": "3Dビュー全体の写真では、右側のパネルに開いているスタックを見てください。",
+            "heading": "4. 画面の場所",
+            "caption": "Smart Modifier タブを開いたところ（3D ビュー全体）。右のサイドバーに「スマートモディファイア」パネルが出て、閉じた「常時機能切り替え」の下で「モディファイアスタック」が開いています。この図では最後の「サブディビジョンサーフェス」の行を選んでいるので、ベベルとサブディビジョンサーフェスの両方がかかった形が見えています。",
+            "git_blob": "9aa95c6c1f59c548a3b3dcd25f2f8b5cf769585b"
+          },
+          "case_images": {
+            "images/ex_smod_instance_value_link_0.jpg": "675d68fd852ddc979f6233c8e5ff65840ebb7868",
+            "images/ex_smod_instance_value_link_1.jpg": "f74783678daaa94349829ee036f96a369e7c02a2",
+            "images/ex_smod_instance_unlink_0.jpg": "675d68fd852ddc979f6233c8e5ff65840ebb7868",
+            "images/ex_smod_instance_unlink_1.jpg": "90330fc4f6b206a8eeffe0b918180443ec7abb5a"
           }
         },
         "en": {
@@ -246,13 +351,40 @@
             "Pause later modifiers",
             "Restore wireframe"
           ],
-          "comparison": {
-            "name": "Modifiers Link",
-            "url": "https://superhivemarket.com/products/modifiers-link/docs",
-            "note": "For stack diagnosis, watch the stage where the wireframe disappears and the stage where it returns. This answers a different editing question from synchronizing modifiers."
+          "panel": {
+            "image": "images/sm_overview.png",
+            "where": "In Object Mode, select a mesh and press N over the 3D Viewport. Open Smart Modifier and expand Modifier Stack.",
+            "look": "Look at the open stack on the right side of the full viewport screenshot.",
+            "heading": "4. Where to Find It",
+            "caption": "The Smart Modifier tab opened (whole 3D Viewport). The \"Smart Modifier\" panel appears in the Sidebar on the right, with \"Modifier Stack\" open below the closed \"Always-on Toggles\". In this figure the last \"Subdivision Surface\" row is selected, so you see the shape with both Bevel and Subdivision Surface applied.",
+            "git_blob": "e26708cc4adf2e9c8a7e86a949ea228edd5f594f"
+          },
+          "case_images": {
+            "images/ex_smod_instance_value_link_0.jpg": "25d5d853dab4110eb23dbdc20bb2ddb9f163f15a",
+            "images/ex_smod_instance_value_link_1.jpg": "e88251d4835dfcf1657faf1ba3766f21de193293",
+            "images/ex_smod_instance_unlink_0.jpg": "25d5d853dab4110eb23dbdc20bb2ddb9f163f15a",
+            "images/ex_smod_instance_unlink_1.jpg": "6cf29251e225461cd3d1ca406681b1898fa99029"
           }
         }
-      }
+      },
+      "cases": [
+        "smod_instance_value_link",
+        "smod_instance_unlink"
+      ],
+      "sources": [
+        {
+          "name": "Hard Ops · Boolean scrolling",
+          "url": "https://hardops-manual.readthedocs.io/en/latest/operations/"
+        },
+        {
+          "name": "Blender · Modifier Stack",
+          "url": "https://docs.blender.org/manual/en/5.1/modeling/modifiers/introduction.html"
+        },
+        {
+          "name": "Modifier List",
+          "url": "https://github.com/Symstract/modifier_list/blob/master/docs/README.md"
+        }
+      ]
     },
     {
       "product": "SmartSculpt",
@@ -281,10 +413,19 @@
             "リメッシュ",
             "元の網目を復元"
           ],
-          "comparison": {
-            "name": "SpeedSculpt",
-            "url": "https://superhivemarket.com/products/speedsculpt",
-            "note": "リメッシュ後の修正が多い人には、保存した接続を復元できるかが選ぶ基準です。輪郭に加えてワイヤーの並びを見てください。"
+          "panel": {
+            "image": "images/s01_overview.png",
+            "where": "3DビューポートでNキーを押し、「Smart Sculpt」タブの「スマートスカルプト」を開きます。「編集モード専用スカルプト」を試すときは、対象メッシュを編集モードにします。",
+            "look": "入口全体の図では、通常は開いている「編集モード専用スカルプト」を折りたたんでいます。",
+            "heading": "4. 画面の場所",
+            "caption": "サイドバーの「Smart Sculpt」タブで「スマートスカルプト」パネルを開いたところ。中の見出し（「常時機能切り替え」から「保存/入出力」まで）が並びます。「編集モード専用スカルプト」は最初は開いていますが、この図では閉じて撮っています。見出しの左の三角を押すと、その中身が開きます。",
+            "git_blob": "2ece01e0a27c671094806d98e71b621f4462fd86"
+          },
+          "case_images": {
+            "images/ex_ss_faceset_extract_0.jpg": "45a880d68efcc8fc947c1d0617f0374c2e2f8c50",
+            "images/ex_ss_faceset_extract_2.jpg": "011a79a86fdb63f00847ad77c32845af0b708ac9",
+            "images/ex_ss_rail_cutter_0.jpg": "30a28d6ec4fc54c5d34847bebaeaf0e45aecaff9",
+            "images/ex_ss_rail_cutter_1.jpg": "5f61ed52a8ff519ecae6f0db3c28c5fd662c2dfa"
           }
         },
         "en": {
@@ -309,13 +450,40 @@
             "Remesh",
             "Restore original wireframe"
           ],
-          "comparison": {
-            "name": "SpeedSculpt",
-            "url": "https://superhivemarket.com/products/speedsculpt",
-            "note": "If you revisit remeshed work, compare the wire pattern as well as the silhouette. The saved topology is what the example restores."
+          "panel": {
+            "image": "images/s01_overview.png",
+            "where": "Press N in the 3D Viewport, select the Smart Sculpt tab and expand the Smart Sculpt panel. To try Edit Mode Sculpt Only, put the mesh in Edit Mode.",
+            "look": "The overview shows Edit Mode Sculpt Only folded up, although that section normally opens expanded.",
+            "heading": "4. Where to Find It",
+            "caption": "The \"Smart Sculpt\" panel opened in the \"Smart Sculpt\" tab of the Sidebar. The section headers inside (from \"Always-on Toggle\" to \"Save / I/O\") are lined up. \"Edit Mode Sculpt Only\" is open at first, but it was closed for this figure. Click the triangle to the left of a section header to open its contents.",
+            "git_blob": "67ecb78f57033ca74526c951d62c937d760d1a6d"
+          },
+          "case_images": {
+            "images/ex_ss_faceset_extract_0.jpg": "0c78de39afe408b4542d4592c75bceaa73b9f20f",
+            "images/ex_ss_faceset_extract_2.jpg": "481735b1db883987cd48cd3cb69f3f2f7eb4f286",
+            "images/ex_ss_rail_cutter_0.jpg": "b8446568f2ba33e4732379b4a2551735b0db5e61",
+            "images/ex_ss_rail_cutter_1.jpg": "40fc9529b62098400bcfbb0590b9c9653d81e764"
           }
         }
-      }
+      },
+      "cases": [
+        "ss_faceset_extract",
+        "ss_rail_cutter"
+      ],
+      "sources": [
+        {
+          "name": "SpeedSculpt",
+          "url": "https://pitiwazou-1.gumroad.com/l/SpeedSculpt"
+        },
+        {
+          "name": "Blender · Voxel Remesh",
+          "url": "https://docs.blender.org/manual/en/5.1/sculpt_paint/sculpting/tool_settings/remesh.html"
+        },
+        {
+          "name": "Exoside Quad Remesher for Blender",
+          "url": "https://www.exoside.com/quadremesherdata/QuadRemesher_1.2_UserDoc.pdf"
+        }
+      ]
     },
     {
       "product": "SmartRig",
@@ -344,10 +512,19 @@
             "袖口の割合を1.0と0.4に",
             "追従を比較"
           ],
-          "comparison": {
-            "name": "Auto-Rig Pro",
-            "url": "https://www.lucky3d.fr/auto-rig-pro/doc/auto_rig.html",
-            "note": "スキニングの仕上げで袖に悩む場合は、同一ポーズで端の割合だけを変えた結果を比較できます。Auto-Rig Pro連携を使う機能には別途導入が必要です。"
+          "panel": {
+            "image": "images/overview.png",
+            "where": "オブジェクトモードの3DビューポートでNキーを押し、「Smart Rig」タブを選びます。「1. 準備とパーツ」を開いて作業を始めます。",
+            "look": "入口全体の図では、「常時機能切り替え」の下に番号付きの手順が並びます。",
+            "heading": "4. 画面の場所",
+            "caption": "Smart Rig パネル全体。「常時機能切り替え」、番号付きの 6 つの手順、番号の無い道具の見出しが並ぶ",
+            "git_blob": "49f8d9555c9a7610633af2c16b9f5d66b4158a18"
+          },
+          "case_images": {
+            "images/ex_sr_keep_outside_0.jpg": "41407c97bd7037e670a0d323881992ea57cdc656",
+            "images/ex_sr_keep_outside_1.jpg": "16f94fe178f2d98755601ddecae8496f4f5870c8",
+            "images/ex_sr_part_after_bake_0.jpg": "5916ce928f9f88070d16835fccc2622908e398f7",
+            "images/ex_sr_part_after_bake_2.jpg": "054ce566d6dac2151da2732428a48ef4b5f1f5bc"
           }
         },
         "en": {
@@ -372,13 +549,40 @@
             "Set cuff ratios to 1.0 and 0.4",
             "Compare motion"
           ],
-          "comparison": {
-            "name": "Auto-Rig Pro",
-            "url": "https://www.lucky3d.fr/auto-rig-pro/doc/auto_rig.html",
-            "note": "For cuff weighting, compare the same pose with only the edge ratio changed. Features that integrate with Auto-Rig Pro require a separate installation."
+          "panel": {
+            "image": "images/overview.png",
+            "where": "In Object Mode, press N over the 3D Viewport and select Smart Rig. Expand 1. Setup and Parts to begin.",
+            "look": "The panel overview lists the numbered stages under Always-on Toggles.",
+            "heading": "4. Where to Find It",
+            "caption": "The whole Smart Rig panel. \"Always-on Toggles\", the six numbered steps, and the unnumbered tool headers are lined up",
+            "git_blob": "5b01a8fb76750c316317b482a7064b61515ebb76"
+          },
+          "case_images": {
+            "images/ex_sr_keep_outside_0.jpg": "4713724f6bea7de756b00d1e8248315fea877e53",
+            "images/ex_sr_keep_outside_1.jpg": "7f3639a2279a457a66c7ae891a1fec2fcbeab6fa",
+            "images/ex_sr_part_after_bake_0.jpg": "4cd18509719fd5324bc49d124c3a09c18cea1a8f",
+            "images/ex_sr_part_after_bake_2.jpg": "bd4b8bdbeb3a72e672955259235f60cc7e9a6be3"
           }
         }
-      }
+      },
+      "cases": [
+        "sr_keep_outside",
+        "sr_part_after_bake"
+      ],
+      "sources": [
+        {
+          "name": "Auto-Rig Pro · Auto-Rig",
+          "url": "https://www.lucky3d.fr/auto-rig-pro/doc/auto_rig.html"
+        },
+        {
+          "name": "Rigify · Basic Usage",
+          "url": "https://docs.blender.org/manual/en/5.3/addons/rigify/basics.html"
+        },
+        {
+          "name": "Wiggle 2",
+          "url": "https://github.com/shteeve3d/blender-wiggle-2"
+        }
+      ]
     },
     {
       "product": "SmartAnimation",
@@ -407,10 +611,19 @@
             "0.5で混合",
             "全適用と比較"
           ],
-          "comparison": {
-            "name": "Animation Layers",
-            "url": "https://superhivemarket.com/products/animation-layers/docs",
-            "note": "動きのレイヤーが必要か、手元の保存ポーズを半分だけ足したいかで選び方が変わります。この例では同じおじぎの適用量を見比べられます。"
+          "panel": {
+            "image": "images/sas_panel_top.png",
+            "where": "オブジェクトモードの3DビューポートでNキーを押し、「Smart Animation」の「概要タスク」を開きます。ポーズを扱う場合は対象リグをポーズモードにします。",
+            "look": "入口全体の図は「タスク」を「全機能」にした状態なので、表示する作業を絞っているときより見出しが多くなります。",
+            "heading": "4. 画面の場所",
+            "caption": "「タスク」を「全機能」にした時の見出しの並び（見出しはどれも閉じた状態です。いちばん下が「移植済み同梱ツール」）",
+            "git_blob": "e14a8d9e7981557e33883905e44d6f5dcc4f0d5c"
+          },
+          "case_images": {
+            "images/ex_sa_retarget_0.jpg": "3652582b7555f2040638aa682b2cf7411703b187",
+            "images/ex_sa_retarget_2.jpg": "9b7e6778d46975e49019368da5912d89d5eb9e04",
+            "images/ex_sa_stop_motion_0.jpg": "d4e5d9908930817f51c4ae2d38ae913cc323b55a",
+            "images/ex_sa_stop_motion_1.jpg": "01c8f2375d41e619bf2faa0f9dc4c32c0fc4e3d6"
           }
         },
         "en": {
@@ -435,13 +648,40 @@
             "Blend at 0.5",
             "Compare with full pose"
           ],
-          "comparison": {
-            "name": "Animation Layers",
-            "url": "https://superhivemarket.com/products/animation-layers/docs",
-            "note": "If your task is reusing a pose at partial strength, compare the half bow with the full bow on the same rig."
+          "panel": {
+            "image": "images/sas_panel_top.png",
+            "where": "In Object Mode, press N over the 3D Viewport, select Smart Animation and expand Overview Task. Use Pose Mode on the rig for pose tools.",
+            "look": "The overview shows Task set to All Functions, so it includes headings that a task filter may hide.",
+            "heading": "4. Where to Find It",
+            "caption": "The order of section headers when \"Task\" is set to \"All Functions\" (all section headers are closed; the bottom one is \"Migrated Bundled Tools\")",
+            "git_blob": "f4b3f48c3bc7b6bcb7219b363e2da94d0a4b7c05"
+          },
+          "case_images": {
+            "images/ex_sa_retarget_0.jpg": "d4d6c6845f9ddf2df674892aeec9b77856ee4bd1",
+            "images/ex_sa_retarget_2.jpg": "4c8655523a46d9228475f787e68eaa494cc020b5",
+            "images/ex_sa_stop_motion_0.jpg": "dd4d21482c6423aa61503090dc63666032c1a00e",
+            "images/ex_sa_stop_motion_1.jpg": "eb76df3424441807bdffd2fd7b859a9c389726f3"
           }
         }
-      }
+      },
+      "cases": [
+        "sa_retarget",
+        "sa_stop_motion"
+      ],
+      "sources": [
+        {
+          "name": "Blender · Pose Library",
+          "url": "https://docs.blender.org/manual/en/5.1/animation/armatures/posing/editing/pose_library.html"
+        },
+        {
+          "name": "Animation Layers",
+          "url": "https://dancingshapes.gumroad.com/l/lfIuA"
+        },
+        {
+          "name": "AnimAide · CurveTools",
+          "url": "https://aresdevo.github.io/animaide/"
+        }
+      ]
     },
     {
       "product": "SmartShapekey",
@@ -470,10 +710,19 @@
             "細分化した顔へ読込",
             "Basisと笑顔を確認"
           ],
-          "comparison": {
-            "name": "Shape Key & Vertex Groups Utilities Enhanced",
-            "url": "https://extensions.blender.org/add-ons/shape-key-utilities-enhanced/versions/",
-            "note": "比較対象には頂点一致や最近接面による転送もあります。細分化で頂点数が変わる用途では、対応するUVで表情が戻る例と、UVを半分にした時に停止する例の両方を確認できます。"
+          "panel": {
+            "image": "images/sk_root_overview.png",
+            "where": "3Dビューポートでメッシュを1つ選び、オブジェクトモードまたは編集モードでNキーを押します。「Smart Shapekey」タブにある「Basis と新規マップ」を開きます。",
+            "look": "入口全体の図では、「常時機能切り替え」のすぐ下に「Basis と新規マップ」があります。",
+            "heading": "4. 画面の場所",
+            "caption": "「Smart Shapekey」パネルの全体です。見出しは全部閉じていて、上から「常時機能切り替え」「Basis と新規マップ」「マップ」「ミラーと反転ツール」「書き出し」「保存と読み込み」「ミラー設定」「モディファイア」「ドライバー」「制御・トラッキング」が並びます。各見出しの右の「？」で、その欄の説明が開きます。",
+            "git_blob": "f8fd36ef0a2e4dbe12e9d537d177ffd906850af7"
+          },
+          "case_images": {
+            "images/ex_sk_load_uv_differs_0.jpg": "118f5b72a9bfb307ff6c2628e840eaaea3eeffa4",
+            "images/ex_sk_load_uv_differs_2.jpg": "d50f862ed1e134f4ff77e59516d54ee2d0a96eac",
+            "images/ex_sk_load_part_0.jpg": "ea3340b2b9deea8799ba3a4412cc8b4cd2d50a75",
+            "images/ex_sk_load_part_2.jpg": "18008e2c6e68bb6b0d00208cd0b3e7b9bf8d6e95"
           }
         },
         "en": {
@@ -498,13 +747,36 @@
             "Load onto subdivided face",
             "Inspect Basis and smile"
           ],
-          "comparison": {
-            "name": "Shape Key & Vertex Groups Utilities Enhanced",
-            "url": "https://extensions.blender.org/add-ons/shape-key-utilities-enhanced/versions/",
-            "note": "Other transfer tools offer vertex matching or nearest-surface mapping. For subdivision, check both examples here: a smile restored with matching UVs, and a stopped import after scaling the UVs by half."
+          "panel": {
+            "image": "images/sk_root_overview.png",
+            "where": "Select one mesh in the 3D Viewport and press N in Object or Edit Mode. Select Smart Shapekey and expand Basis and New Map.",
+            "look": "In the overview, Basis and New Map sits directly under Always-on Toggle.",
+            "heading": "4. Where to Find It",
+            "caption": "The whole \"Smart Shapekey\" panel. All section headers are closed, and from the top they are Always-on Toggle, Basis and New Map, Maps, Mirror Tools, Export, Save/Load, Mirror Settings, Modifiers, Drivers, and Control / Tracking. The \"?\" at the right of each header opens the explanation for that section.",
+            "git_blob": "73b3738ddca0a1081ca37e38eda7e2624a155502"
+          },
+          "case_images": {
+            "images/ex_sk_load_uv_differs_0.jpg": "118f5b72a9bfb307ff6c2628e840eaaea3eeffa4",
+            "images/ex_sk_load_uv_differs_2.jpg": "d50f862ed1e134f4ff77e59516d54ee2d0a96eac",
+            "images/ex_sk_load_part_0.jpg": "ea3340b2b9deea8799ba3a4412cc8b4cd2d50a75",
+            "images/ex_sk_load_part_2.jpg": "18008e2c6e68bb6b0d00208cd0b3e7b9bf8d6e95"
           }
         }
-      }
+      },
+      "cases": [
+        "sk_load_uv_differs",
+        "sk_load_part"
+      ],
+      "sources": [
+        {
+          "name": "Mesh Data Transfer",
+          "url": "https://github.com/maumemoli/blender/blob/master/packages/MeshDataTransfer/documentation/README.md"
+        },
+        {
+          "name": "Faceit · Control Rig",
+          "url": "https://faceit-doc.readthedocs.io/en/latest/control_rig/"
+        }
+      ]
     },
     {
       "product": "SmartSelector",
@@ -513,7 +785,7 @@
       "locales": {
         "ja": {
           "headline": "ブラウザーの操作盤から、表情の値まで変える",
-          "description": "作例では操作盤からsmileを0→1に変更し、Blenderのモデルの両耳が持ち上がります。選択だけでなく値の変化も確認できます。",
+          "description": "ブラウザー操作盤が送る形式のデータで smile を 0 から 1 に変えると、モデルの両耳が上がります。図では Blender が受け取った値と表情の変化を確認できます。",
           "try_first": "同じプロジェクトを開き、作例の接続とキー名を確認する。",
           "manual": "docs/manuals/SmartSelector/index.html",
           "figures": [
@@ -529,19 +801,28 @@
             }
           ],
           "workflow": [
-            "ブラウザー操作盤",
+            "操作盤と同じ形式で送る",
             "smileを0から1に",
             "モデルの両耳が上がる"
           ],
-          "comparison": {
-            "name": "X-Pose Picker",
-            "url": "https://k44dev.com/docs/x-pose-picker/user-interface/picker/",
-            "note": "ポーズ選択の道具を比較するとき、選択後に表情値まで操作したい人向けです。操作盤の数値とBlender画面の変化を一緒に確認できます。"
+          "panel": {
+            "image": "images/ss_overview.png",
+            "where": "オブジェクトモードの3DビューポートでNキーを押し、「スマートセレクター」タブを選びます。オブジェクトの選択を保存するには「選択セット」を開きます。",
+            "look": "この入口全体の図はBlenderのサイドバーで、各グループは左の三角から開きます。",
+            "heading": "4. 画面の場所",
+            "caption": "パネル「スマートセレクター」の全体。グループはすべて閉じた状態です。",
+            "git_blob": "f5d5145a99f822a1aacb7e0cb79edbb61e1e4b3b"
+          },
+          "case_images": {
+            "images/ex_ss_bridge_custom_prop_0.jpg": "a8af861ea5a95295d9072f41603f37bda308f1c1",
+            "images/ex_ss_bridge_custom_prop_1.jpg": "73f8de52990ae530407208d212ede23460a0e6b4",
+            "images/ex_ss_set_add_subtract_0.jpg": "4c1d589f5f7f680564f2c0b8109243282e640bd9",
+            "images/ex_ss_set_add_subtract_2.jpg": "cb43149fda2e8c03d9af0eaa9b87f34b03c239e8"
           }
         },
         "en": {
           "headline": "Drive a shape key from a browser control panel",
-          "description": "Set smile from 0 to 1 on the browser picker and watch both ears rise on the Blender model.",
+          "description": "The example sends the same command as a picker slider. In Blender, the smile value changes from 0 to 1 and both ears rise.",
           "try_first": "Open the matching project and check the connection and shape-key name.",
           "manual": "docs/en/manuals/SmartSelector/index.html",
           "figures": [
@@ -557,17 +838,44 @@
             }
           ],
           "workflow": [
-            "Browser controls",
+            "Send the picker command",
             "Set smile from 0 to 1",
             "See both ears lift"
           ],
-          "comparison": {
-            "name": "X-Pose Picker",
-            "url": "https://k44dev.com/docs/x-pose-picker/user-interface/picker/",
-            "note": "When comparing rig pickers, look beyond selecting bones if you need expression controls. Match the browser value to the visible Blender result."
+          "panel": {
+            "image": "images/ss_overview.png",
+            "where": "In Object Mode, press N over the 3D Viewport and select Smart Selector. Expand Selection Set to save an object selection.",
+            "look": "The overview shows the Blender sidebar, where the triangle beside each group opens its controls.",
+            "heading": "4. Where to Find It",
+            "caption": "The whole \"Smart Selector\" panel, with all groups closed.",
+            "git_blob": "ef566c6cff83490d092acc018e964bf4c5a1de36"
+          },
+          "case_images": {
+            "images/ex_ss_bridge_custom_prop_0.jpg": "43fa998f8767c45a611496f24d1006b6a716e6fd",
+            "images/ex_ss_bridge_custom_prop_1.jpg": "f9791468fc7c1f488f0143ea17a4ce87cce70295",
+            "images/ex_ss_set_add_subtract_0.jpg": "35f05a74dd9d33fd71dafd03adf29562d813315b",
+            "images/ex_ss_set_add_subtract_2.jpg": "e65a3926212badb378916f45cba19a998e0f4990"
           }
         }
-      }
+      },
+      "cases": [
+        "ss_bridge_custom_prop",
+        "ss_set_add_subtract"
+      ],
+      "sources": [
+        {
+          "name": "X-Pose Picker",
+          "url": "https://k44dev.com/docs/x-pose-picker/user-interface/picker/"
+        },
+        {
+          "name": "Blender · Selection Sets",
+          "url": "https://docs.blender.org/manual/en/5.1/animation/armatures/properties/selection_sets.html"
+        },
+        {
+          "name": "FreePicker",
+          "url": "https://extensions.blender.org/add-ons/freepicker/"
+        }
+      ]
     },
     {
       "product": "SmartCloth",
@@ -596,10 +904,19 @@
             "16フレーム目で停止",
             "ボーンと布の裾を比較"
           ],
-          "comparison": {
-            "name": "Simply Cloth Pro",
-            "url": "https://simplydocs.org/simply-cloth-pro/",
-            "note": "衣装を用意した後にボーン追従と布の揺れのどちらを使うか、同じ衣装の同じフレームで選べます。"
+          "panel": {
+            "image": "images/overview.png",
+            "where": "オブジェクトモードの3DビューポートでNキーを押し、「Smart Cloth」タブを開きます。スカートの割り当てを設定するときは「再利用可能なスカート設定」を開きます。",
+            "look": "入口全体の図では機能別の見出しが閉じており、各見出しの左の三角で中を確認できます。",
+            "heading": "4. 画面の場所",
+            "caption": "Smart Cloth タブのパネル全体。見出しがすべて閉じた、最初の状態",
+            "git_blob": "0e8960b435af239f60ab6acf226200b4158bfa18"
+          },
+          "case_images": {
+            "images/ex_sc_safe_bake_0.jpg": "32a41f2ce755adba4419a241aca6439fbccaacd2",
+            "images/ex_sc_safe_bake_3.jpg": "dda3631dcf25b33daecec369e73c49ed1723e170",
+            "images/ex_sc_repair_topology_0.jpg": "7836b583fde9e8e7856f3c9e8e1e33beba4e4336",
+            "images/ex_sc_repair_topology_1.jpg": "8c3c13e6918b8520db15e5432b08756e80417008"
           }
         },
         "en": {
@@ -624,13 +941,40 @@
             "Stop at frame 16",
             "Compare bone and cloth hems"
           ],
-          "comparison": {
-            "name": "Simply Cloth Pro",
-            "url": "https://simplydocs.org/simply-cloth-pro/",
-            "note": "Once a garment is set up, compare bone-following and simulated motion at precisely the same frame."
+          "panel": {
+            "image": "images/overview.png",
+            "where": "In Object Mode, press N over the 3D Viewport and select Smart Cloth. Open Reusable Skirt Setup to configure the garment assignments.",
+            "look": "The overview shows the sections collapsed, with a triangle on the left to open each one.",
+            "heading": "4. Where to Find It",
+            "caption": "The whole Smart Cloth tab panel, in its initial state with all section headers closed",
+            "git_blob": "359f9b17e136741e855cce685392fb560565582c"
+          },
+          "case_images": {
+            "images/ex_sc_safe_bake_0.jpg": "25b1249171746c0d7f59fc6251ebed4aa81cd50e",
+            "images/ex_sc_safe_bake_3.jpg": "d1460129fe2c986da0ea00216ae76593122c1543",
+            "images/ex_sc_repair_topology_0.jpg": "6341cfa78f2c374932887c58358eab11d1ac89bc",
+            "images/ex_sc_repair_topology_1.jpg": "ff06588b37221846a7f412bf75c7a2b481db52de"
           }
         }
-      }
+      },
+      "cases": [
+        "sc_safe_bake",
+        "sc_repair_topology"
+      ],
+      "sources": [
+        {
+          "name": "Simply Cloth Pro",
+          "url": "https://simplydocs.org/simply-cloth-pro/"
+        },
+        {
+          "name": "Marvelous Designer · Segment Sewing",
+          "url": "https://www.marvelousdesigner.com/en-ca/manuals/articles/47358199517209"
+        },
+        {
+          "name": "Garment Tool",
+          "url": "https://joseconseco.github.io/GarmentToolDocs/quick_guide/"
+        }
+      ]
     },
     {
       "product": "SmartPaint",
@@ -659,10 +1003,19 @@
             "同じUV島へ拡張",
             "塗る範囲を確認"
           ],
-          "comparison": {
-            "name": "Layerify",
-            "url": "https://superhivemarket.com/products/layerify",
-            "note": "レイヤー数よりも塗る範囲で困る場合は、最初の1面からどの島まで選ばれたかを見てください。"
+          "panel": {
+            "image": "images/sp_overview.png",
+            "where": "オブジェクトモードでメッシュを選び、3DビューポートでNキーを押して「Smart Paint」を開きます。描き始めるときは「ペイント用マテリアルへ切替」でテクスチャペイントモードに入ります。",
+            "look": "入口全体の図では「ドキュメント」と「レイヤー」が開いており、画像をまだ選んでいないため「画像を開く」と表示されています。",
+            "heading": "4. 画面の場所",
+            "caption": "3D ビューの Smart Paint タブ。最初から開いている「ドキュメント」と「レイヤー」、その下に閉じた見出しが並びます。まだ画像を開いていないので、「画像を開く」と表示されています。",
+            "git_blob": "f2195cc074bc0001d6f60d6cbe48954e936b0d6a"
+          },
+          "case_images": {
+            "images/ex_pt_adjust_psd_0.jpg": "6c5467715fef5d7b32d5abfe9d2fceee6fb61763",
+            "images/ex_pt_adjust_psd_2.jpg": "24d262bba5ece9ad472066a40d734a0c71944097",
+            "images/ex_pt_edgepad_0.jpg": "2d8597a45a2734dbadc0dff239386b4799c869a9",
+            "images/ex_pt_edgepad_1.jpg": "0bfb811446c63fd69146cd86b781deb0f477a1f1"
           }
         },
         "en": {
@@ -687,13 +1040,40 @@
             "Expand to its UV island",
             "Inspect the paint area"
           ],
-          "comparison": {
-            "name": "Layerify",
-            "url": "https://superhivemarket.com/products/layerify",
-            "note": "If isolating part of a garment is your obstacle, inspect which island becomes selected from one face before painting."
+          "panel": {
+            "image": "images/sp_overview.png",
+            "where": "Select a mesh in Object Mode, press N in the 3D Viewport and open Smart Paint. When you are ready to paint, Switch to Paint Material enters Texture Paint mode.",
+            "look": "The overview shows Document and Layers open, with Open Image visible because no image has been opened.",
+            "heading": "4. Where to Find It",
+            "caption": "The Smart Paint tab in the 3D Viewport. \"Document\" and \"Layers\" are open from the start, with closed section headers below them. No image has been opened yet, so \"Open Image\" is shown.",
+            "git_blob": "8848d2d187b51a23ab047f7f5748b659a0bd29ca"
+          },
+          "case_images": {
+            "images/ex_pt_adjust_psd_0.jpg": "941bdbe0ebffa1eac9ab95d01412987443e30239",
+            "images/ex_pt_adjust_psd_2.jpg": "7ad20f2b0af88cac5c7ec0837e88f6b6b4e1e4b6",
+            "images/ex_pt_edgepad_0.jpg": "df9587af900a613a2993ef499508cf83abcd94ed",
+            "images/ex_pt_edgepad_1.jpg": "0b55021c6143e78cfe0d3b86fff6376dbe9d12e0"
           }
         }
-      }
+      },
+      "cases": [
+        "pt_adjust_psd",
+        "pt_edgepad"
+      ],
+      "sources": [
+        {
+          "name": "Ucupaint · Masks",
+          "url": "https://ucupumar.github.io/ucupaint-wiki/mask/"
+        },
+        {
+          "name": "Adobe Substance 3D Painter · Geometry Mask",
+          "url": "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/interface/layer-stack/geometry-mask"
+        },
+        {
+          "name": "HAS Paint Layers",
+          "url": "https://hirourk.github.io/HASPaintLayersWiki/02_0Layers.html"
+        }
+      ]
     },
     {
       "product": "SmartShader",
@@ -701,7 +1081,7 @@
       "example": "sh_toon_direction",
       "locales": {
         "ja": {
-          "headline": "矢印を動かして、トゥーンの影を左へ",
+          "headline": "照明を足さずに、矢印でトゥーンの陰を動かす",
           "description": "矢印のEmptyを左へ動かして方向を同期すると、同じ材質の陰側が変わります。モデルのどちら側に影を置くかを目で決められます。",
           "try_first": "作例のトゥーン材質を使い、矢印を選んで方向を同期する。",
           "manual": "docs/manuals/SmartShader/index.html",
@@ -722,10 +1102,19 @@
             "方向を同期",
             "同じ材質の陰側が変化"
           ],
-          "comparison": {
-            "name": "Cycles Tooner",
-            "url": "https://extensions.blender.org/add-ons/cycles-tooner/",
-            "note": "トゥーンの材質を作った後の影の演出に向きます。照明の見え方を選ぶとき、矢印の向きと陰側を同時に確認できます。"
+          "panel": {
+            "image": "images/root.png",
+            "where": "オブジェクトモードの3DビューポートでNキーを押し、「Smart Shader」タブを開きます。「スマートシェーダー」の中で「マテリアルエディター」を開きます。",
+            "look": "入口全体の図では、上部の「スマートシェーダー」の下に9つの見出しが折りたたまれています。",
+            "heading": "4. 画面の場所",
+            "caption": "「Smart Shader」タブを開いた所。いちばん上に「スマートシェーダー」のパネルがあり、9 つの見出しがすべて閉じています。",
+            "git_blob": "a12661d62478c30f19952f45ad18fef5ae07da16"
+          },
+          "case_images": {
+            "images/ex_sh_layer_two_objects_0.jpg": "78f54985d44405bf77ff2f6bc9876102f24b3897",
+            "images/ex_sh_layer_two_objects_1.jpg": "977c5bfd3ee4db8d6eb97870a19205e4982b47e9",
+            "images/ex_sh_doctor_repair_0.jpg": "dc2cc2ebe901ce7d44c05791959fdf38c5e2e55a",
+            "images/ex_sh_doctor_repair_1.jpg": "77a2b1b9476d1cf082e9b23f53bec8419e189e9c"
           }
         },
         "en": {
@@ -750,13 +1139,40 @@
             "Sync direction",
             "Inspect shadow on the same material"
           ],
-          "comparison": {
-            "name": "Cycles Tooner",
-            "url": "https://extensions.blender.org/add-ons/cycles-tooner/",
-            "note": "For art direction after setting up a toon material, watch the direction control and the shaded side together."
+          "panel": {
+            "image": "images/root.png",
+            "where": "In Object Mode, press N over the 3D Viewport and select Smart Shader. Expand Material Editor inside Shader Studio.",
+            "look": "The overview shows nine collapsed sections underneath Shader Studio.",
+            "heading": "4. Where to Find It",
+            "caption": "The \"Smart Shader\" tab opened. The \"Shader Studio\" panel is at the very top, and all 9 section headers are closed.",
+            "git_blob": "aff860e68eb804749c2e0cd11958b8d29de0a5b5"
+          },
+          "case_images": {
+            "images/ex_sh_layer_two_objects_0.jpg": "b9815c0c3f98e13730a171788581ddb7951deffd",
+            "images/ex_sh_layer_two_objects_1.jpg": "ffba104adb6189bc6e414cefa5b4e20134c1686f",
+            "images/ex_sh_doctor_repair_0.jpg": "52be8537dbb9706aa9eca4a418a05b1ee2be155a",
+            "images/ex_sh_doctor_repair_1.jpg": "b2ef137b1fbe505a432affbe221126cd83083212"
           }
         }
-      }
+      },
+      "cases": [
+        "sh_layer_two_objects",
+        "sh_doctor_repair"
+      ],
+      "sources": [
+        {
+          "name": "Toon Shader for Blender",
+          "url": "https://nico-hartl.itch.io/toon-shader-for-blender"
+        },
+        {
+          "name": "Sanctus Library",
+          "url": "https://sanctusnodes.com/documentation/main/en/topic/sanctus-library/"
+        },
+        {
+          "name": "Toonkit for Cycles · EasyToon",
+          "url": "https://cogumelosoftworks.com/docs/toonkit/nodes/easytoon.html"
+        }
+      ]
     },
     {
       "product": "SmartNode",
@@ -785,10 +1201,19 @@
             "共通名と連番を指定",
             "Mask_01・Mask_02"
           ],
-          "comparison": {
-            "name": "Node Arrange 0.2.2",
-            "url": "https://github.com/blender/blender-addons/blob/e8da6131fddab2ac16b8c7e5f26b4462be323911/node_arrange.py",
-            "note": "比較したNode Arrange 0.2.2の公開操作5件には、選択したノードの表示名に連番を付ける操作はありません。この作例では2つのノードをまとめて命名します。"
+          "panel": {
+            "image": "images/overview.png",
+            "where": "オブジェクトモードでシェーダーエディターを開き、マテリアルのノードを表示します。ポインターをノード画面に置いてNキーを押し、「Smart Node」の「概要」を開きます。",
+            "look": "入口の写真では「常時機能切り替え」と「概要」が開いており、各見出しの右端にヘルプの「？」があります。",
+            "heading": "4. 画面の場所",
+            "caption": "サイドバーの「Smart Node」タブ。「常時機能切り替え」と「概要」を開いたところ。見出しの右端に「？」があります。",
+            "git_blob": "9a7c5a03c32836bb3a598cab50c878125be78cab"
+          },
+          "case_images": {
+            "images/ex_nd_link_out_0.jpg": "3a4156b817adb14eea774ec31a2e39a4d01acc11",
+            "images/ex_nd_link_out_3.jpg": "7c4371d53dcb4c8de53985ff87e29fe0cd6d66c4",
+            "images/ex_nd_color_roles_0.jpg": "76f0256fb9017d0a00469b33f5f2150cf4f051cc",
+            "images/ex_nd_color_roles_2.jpg": "5d6df9e43135c51d601b3cada8766aaa09e53f4f"
           }
         },
         "en": {
@@ -813,13 +1238,36 @@
             "Set prefix and numbering",
             "Mask_01 and Mask_02"
           ],
-          "comparison": {
-            "name": "Node Arrange 0.2.2",
-            "url": "https://github.com/blender/blender-addons/blob/e8da6131fddab2ac16b8c7e5f26b4462be323911/node_arrange.py",
-            "note": "The five operators in Node Arrange 0.2.2 do not include sequential display labels for selected nodes. This example labels two nodes together."
+          "panel": {
+            "image": "images/overview.png",
+            "where": "In Object Mode, open the Shader Editor and display a material’s node tree. With the pointer over the nodes, press N, select Smart Node and expand Overview.",
+            "look": "The panel screenshot shows Always-on Toggles and Overview expanded, with a help button at the right of each heading.",
+            "heading": "4. Where to Find It",
+            "caption": "The \"Smart Node\" tab in the Sidebar, with \"Always-on Toggles\" and \"Overview\" open. There is a \"?\" at the right end of each section header.",
+            "git_blob": "3795c647c8a6155d671bf837a6948dd1b87cc395"
+          },
+          "case_images": {
+            "images/ex_nd_link_out_0.jpg": "10607091926b98bd4aef7b5a736b6aac02f85f95",
+            "images/ex_nd_link_out_3.jpg": "c452c589becc20a8a03296119247001be757f635",
+            "images/ex_nd_color_roles_0.jpg": "2cb0805e8f3f6dd1051fcd998e73404568924bc7",
+            "images/ex_nd_color_roles_2.jpg": "d6906ab21edc0f284da3a2f43708df6feb513568"
           }
         }
-      }
+      },
+      "cases": [
+        "nd_link_out",
+        "nd_color_roles"
+      ],
+      "sources": [
+        {
+          "name": "Node Wrangler · Modify Labels",
+          "url": "https://docs.blender.org/manual/en/latest/addons/node_wrangler.html"
+        },
+        {
+          "name": "Node Arrange 0.2.2",
+          "url": "https://github.com/blender/blender-addons/blob/e8da6131fddab2ac16b8c7e5f26b4462be323911/node_arrange.py"
+        }
+      ]
     },
     {
       "product": "SmartCamLight",
@@ -848,10 +1296,19 @@
             "ライトの一覧で床を除外",
             "顔を照らしたまま床が暗くなる"
           ],
-          "comparison": {
-            "name": "Photographer 5",
-            "url": "https://chafouin.gumroad.com/l/photographer5",
-            "note": "カメラやライトの管理に加え、誰に光を当てるかが決め手になるカット向けです。顔が明るいまま床だけが暗くなるかを、同じ構図で見比べられます。"
+          "panel": {
+            "image": "images/root_overview.png",
+            "where": "オブジェクトモードの3DビューポートでNキーを押し、「Smart CamLight」タブを選びます。照明の操作を始めるには「ライト」を開きます。",
+            "look": "入口全体の図では、「カメラ」と「ライト」が別々の見出しとして並びます。",
+            "heading": "4. 画面の場所",
+            "caption": "Smart CamLight タブ。「常時機能切り替え」「カメラ」「ライト」の 3 つの見出しを閉じた状態",
+            "git_blob": "a7689141f5fa2bf44a0d83caea0207121acd5c59"
+          },
+          "case_images": {
+            "images/ex_scl_studio_0.jpg": "9a6c6e1f0f893f57e41d71d6dd526edb21aa4d80",
+            "images/ex_scl_studio_1.jpg": "7a574a06987662eb708a3c2afaa0bcdfb81e1650",
+            "images/ex_scl_aspect_0.jpg": "6fd4d8f823858bca67f75e75696c0c3c5f018ee5",
+            "images/ex_scl_aspect_1.jpg": "836b2dc9bed4855e6c861122a68441cd79f297fd"
           }
         },
         "en": {
@@ -876,13 +1333,40 @@
             "Exclude Floor from the light",
             "Face stays lit"
           ],
-          "comparison": {
-            "name": "Photographer 5",
-            "url": "https://chafouin.gumroad.com/l/photographer5",
-            "note": "For shots where the light receiver matters, keep the camera fixed and compare the floor while checking that the face stays lit."
+          "panel": {
+            "image": "images/root_overview.png",
+            "where": "In Object Mode, press N over the 3D Viewport and select Smart CamLight. Expand Light to access the lighting controls.",
+            "look": "The full tab shows Camera and Light as separate headings.",
+            "heading": "4. Where to Find It",
+            "caption": "The Smart CamLight tab with the three section headers (Always-on Toggles, Camera, and Light) closed",
+            "git_blob": "c3121a6a26194cd055f858b4dc566067c1e65989"
+          },
+          "case_images": {
+            "images/ex_scl_studio_0.jpg": "9a6c6e1f0f893f57e41d71d6dd526edb21aa4d80",
+            "images/ex_scl_studio_1.jpg": "44ff99c62e5ae99f8b59106f47e6c5cff5e6e0b0",
+            "images/ex_scl_aspect_0.jpg": "ef2daff98c7d3f9ff140a061b0641a48806cb5c0",
+            "images/ex_scl_aspect_1.jpg": "4002313332bafccd67244a02f35c1b55eec43127"
           }
         }
-      }
+      },
+      "cases": [
+        "scl_studio",
+        "scl_aspect"
+      ],
+      "sources": [
+        {
+          "name": "Batch Render Cameras 2.3.1",
+          "url": "https://extensions.blender.org/add-ons/batch-camera-render/"
+        },
+        {
+          "name": "Photographer 5 · Light Mixer",
+          "url": "https://sites.google.com/view/photographer-5-documentation/lights/light-mixer"
+        },
+        {
+          "name": "Gaffer",
+          "url": "https://github.com/gregzaal/Gaffer"
+        }
+      ]
     },
     {
       "product": "SmartRender",
@@ -911,10 +1395,19 @@
             "ビューティーのみを読込",
             "ビューティーとアルファの2項目"
           ],
-          "comparison": {
-            "name": "Loom",
-            "url": "https://github.com/p2or/blender-loom",
-            "note": "レンダー連番の処理と、合成に渡すパスの準備は別の工程です。後者で渡し間違いを避けたい人は、一覧と選択数が一緒に変わるところを確認できます。"
+          "panel": {
+            "image": "images/overview.png",
+            "where": "3DビューポートでNキーを押し、「Smart Render」タブの「スマートレンダー」を開きます。どのモードでも、オブジェクトを選択せずに開けます。",
+            "look": "この写真は「スマートレンダー」を開いた操作画面で、状態欄と3つの主なボタンを確認できます。",
+            "heading": "5-2. スマートレンダー",
+            "caption": "「スマートレンダー」を開いたところ（状態の欄と、3 つの主なボタン）",
+            "git_blob": "51824e82bd74350d659007cbc639659ed86ef4f1"
+          },
+          "case_images": {
+            "images/ex_rd_queue_run_0.jpg": "72296309a0e28d2345b2f8ccd6ecd1a0f1d6351e",
+            "images/ex_rd_queue_run_1.jpg": "72296309a0e28d2345b2f8ccd6ecd1a0f1d6351e",
+            "images/ex_rd_variant_0.jpg": "aee41579ba45949011323c1d9355b43f5be81418",
+            "images/ex_rd_variant_1.jpg": "a939c4ba5580379fc68353489cfde6e09266bbe3"
           }
         },
         "en": {
@@ -939,13 +1432,36 @@
             "Load Beauty Only",
             "Inspect beauty and alpha"
           ],
-          "comparison": {
-            "name": "Loom",
-            "url": "https://github.com/p2or/blender-loom",
-            "note": "For compositing handoff, check both the pass list and its count when switching presets. That is a separate need from managing render sequences."
+          "panel": {
+            "image": "images/overview.png",
+            "where": "Press N over the 3D Viewport, select the Smart Render tab and expand Smart Render. It opens in any mode with no object selected.",
+            "look": "This is the expanded Smart Render section, showing the status area and three main buttons.",
+            "heading": "5-2. Smart Render",
+            "caption": "\"Smart Render\" opened (the status area and the three main buttons)",
+            "git_blob": "91b7fba6e3bbecb6583a641ba25abff8b6713d3f"
+          },
+          "case_images": {
+            "images/ex_rd_queue_run_0.jpg": "c0223829620f70aa44a6a336e62501714fdbf709",
+            "images/ex_rd_queue_run_1.jpg": "f66c3947059c6338ea8013872b5658ebae317296",
+            "images/ex_rd_variant_0.jpg": "147ddd20fbba33b3c5286522036784eeefe597b5",
+            "images/ex_rd_variant_1.jpg": "c6dbc919f1fa23fe2fc46d7d5d727eb0f543c2fd"
           }
         }
-      }
+      },
+      "cases": [
+        "rd_queue_run",
+        "rd_variant"
+      ],
+      "sources": [
+        {
+          "name": "Loom",
+          "url": "https://github.com/p2or/blender-loom"
+        },
+        {
+          "name": "Render Manager",
+          "url": "https://github.com/riouxr/Render-Manager"
+        }
+      ]
     },
     {
       "product": "SmartComposite",
@@ -974,10 +1490,19 @@
             "レンダーパスを自動維持",
             "ビューレイヤーの設定を確認"
           ],
-          "comparison": {
-            "name": "compositorFX（kunemann）",
-            "url": "https://superhivemarket.com/products/compositorfx/docs",
-            "note": "合成の見た目を選ぶだけでなく、入力パスを用意する担当向けです。ノード側の操作後にビューレイヤー側のチェックも確認できます。"
+          "panel": {
+            "image": "images/scomp_panel_closed.png",
+            "where": "オブジェクトモードでノードエディターの種類を「コンポジター」にし、ノード画面にポインターを置いてNキーを押します。「Smart Composite」タブで「エフェクト／プリセット」を開きます。",
+            "look": "入口全体の図では、「常時機能切り替え」の下に「エフェクト／プリセット」があります。",
+            "heading": "4. 画面の場所",
+            "caption": "サイドバーの「Smart Composite」タブ。「常時機能切り替え」と「エフェクト／プリセット」の2つの見出しが閉じた状態です。",
+            "git_blob": "db8d86468c843ce2eefc802868a41b633a5fcd8a"
+          },
+          "case_images": {
+            "images/ex_scomp_zblur_repress_0.jpg": "013500734d2a850832dbf3359bc7bf5d629c241f",
+            "images/ex_scomp_zblur_repress_2.jpg": "4e2665714721cee1527d976c19831b064cbeed7d",
+            "images/ex_scomp_node_guard_0.jpg": "e070a1efd945c65dd0f6cc6c987cbdf6b869f9b1",
+            "images/ex_scomp_node_guard_1.jpg": "1edba7dd5f11e27d0daaeceae04b966c83a30080"
           }
         },
         "en": {
@@ -1002,13 +1527,40 @@
             "Maintain render passes",
             "Inspect View Layer settings"
           ],
-          "comparison": {
-            "name": "compositorFX（kunemann）",
-            "url": "https://superhivemarket.com/products/compositorfx/docs",
-            "note": "If you prepare the inputs as well as the look, inspect the View Layer pass switches after setting up the compositing nodes."
+          "panel": {
+            "image": "images/scomp_panel_closed.png",
+            "where": "In Object Mode, set the node editor to Compositor and press N over the node area. Select Smart Composite and expand Effects / Presets.",
+            "look": "The tab overview shows Effects / Presets below Always-on Toggles.",
+            "heading": "4. Where to Find It",
+            "caption": "The \"Smart Composite\" tab in the Sidebar. The two section headers, \"Always-on Toggles\" and \"Effects / Presets\", are closed.",
+            "git_blob": "6ab61bbf954f191a1f164013616f8151bb5ab06f"
+          },
+          "case_images": {
+            "images/ex_scomp_zblur_repress_0.jpg": "6775999780694ffde09d1280f60ff2a62605463f",
+            "images/ex_scomp_zblur_repress_2.jpg": "0a05c9d9fe5908d782ef5e817e2d42cf425a0c37",
+            "images/ex_scomp_node_guard_0.jpg": "2cb56c3899278d330e3360b13e9c6f1557e487df",
+            "images/ex_scomp_node_guard_1.jpg": "9a15e1b3e8e28069725c6692e23a58f1d719ca15"
           }
         }
-      }
+      },
+      "cases": [
+        "scomp_zblur_repress",
+        "scomp_node_guard"
+      ],
+      "sources": [
+        {
+          "name": "mp_comp",
+          "url": "https://github.com/MomoPTFL/mp_comp"
+        },
+        {
+          "name": "compositorFX",
+          "url": "https://superhivemarket.com/products/compositorfx/docs"
+        },
+        {
+          "name": "Camera Post FX for Blender",
+          "url": "https://superhivemarket.com/products/camera-post-fx-for-blender"
+        }
+      ]
     },
     {
       "product": "SmartFile",
@@ -1037,10 +1589,19 @@
             "上半分を削除",
             "復元ポイントから戻す"
           ],
-          "comparison": {
-            "name": "MACHIN3tools Save Pie",
-            "url": "https://machin3.io/MACHIN3tools/docs/pie_save/",
-            "note": "増分保存を比較するなら、復元後に必要な形が戻るかまで見ると判断できます。同じ視点で削除した上半分と復元後を見比べます。"
+          "panel": {
+            "image": "images/sf_home.png",
+            "where": "3DビューポートでNキーを押し、「Smart File」タブを選びます。どのモードでも「現在のソース」を開いて作業対象を確認できます。",
+            "look": "入口全体の図は「現在のソース」だけが開いた状態で、下に「クイックソース」と各カテゴリが続きます。",
+            "heading": "4. 画面の場所",
+            "caption": "SmartFile Suite のパネルを開いたところ。「現在のソース」だけが開き、その下に「クイックソース」と 7 つのカテゴリの見出しが閉じたまま並びます。",
+            "git_blob": "79836e5c9f1251dbbf8a037089f28fb3af72ac64"
+          },
+          "case_images": {
+            "images/ex_sf_resolve_missing_0.jpg": "b531adf9fa0f834eb1bc7432265229ab39c72ac5",
+            "images/ex_sf_resolve_missing_1.jpg": "ecf0baa6075a37b1eb6d92484f57850823225c89",
+            "images/ex_sf_reporter_isolate_0.jpg": "ea89d268bf7213cb19dfe7d225e529b90f2cdb24",
+            "images/ex_sf_reporter_isolate_2.jpg": "6560ed590f090204e9b012e6b135bd52be47e361"
           }
         },
         "en": {
@@ -1065,13 +1626,40 @@
             "Delete upper half",
             "Restore the mesh"
           ],
-          "comparison": {
-            "name": "MACHIN3tools Save Pie",
-            "url": "https://machin3.io/MACHIN3tools/docs/pie_save/",
-            "note": "For recovery workflows, compare the actual shape before and after restoration. The example keeps the view fixed while the deleted upper half returns."
+          "panel": {
+            "image": "images/sf_home.png",
+            "where": "Press N over the 3D Viewport and select Smart File. In any mode, expand Current Source to check the source you are working with.",
+            "look": "The overview shows only Current Source expanded, with Quick Sources and the category headings below it.",
+            "heading": "4. Where to Find It",
+            "caption": "The SmartFile Suite panel opened. Only \"Current Source\" is open, and below it \"Quick Sources\" and the seven category section headers are lined up, still closed.",
+            "git_blob": "e086394f4d446e514547b1e86f3642f6aab7388b"
+          },
+          "case_images": {
+            "images/ex_sf_resolve_missing_0.jpg": "04fe5a9dc08ee01ae4ba66fc295a392179142f16",
+            "images/ex_sf_resolve_missing_1.jpg": "766348bfa406a63468ede4ca555671816270c7b5",
+            "images/ex_sf_reporter_isolate_0.jpg": "dd262f4979a252c713c4dfdc202cfca44db46356",
+            "images/ex_sf_reporter_isolate_2.jpg": "2c6f3c741b29598e587375d8b24fe316b43fbe5e"
           }
         }
-      }
+      },
+      "cases": [
+        "sf_resolve_missing",
+        "sf_reporter_isolate"
+      ],
+      "sources": [
+        {
+          "name": "MACHIN3tools · Save Pie",
+          "url": "https://machin3.io/MACHIN3tools/docs/pie_save/"
+        },
+        {
+          "name": "Blender Asset Tracer",
+          "url": "https://pypi.org/project/blender-asset-tracer/"
+        },
+        {
+          "name": "PowerSave",
+          "url": "https://superhivemarket.com/products/powersave/docs/new"
+        }
+      ]
     },
     {
       "product": "SmartWorkspace",
@@ -1100,10 +1688,19 @@
             "ワークスペースを切替",
             "同じ角度を引き継ぐ"
           ],
-          "comparison": {
-            "name": "Simple Tabs",
-            "url": "https://chippwalters.gumroad.com/l/simpletabs",
-            "note": "タブの整理と、移動後に同じ物を同じ方向から見たい作業を区別できます。LayoutからScriptingへ移っても横顔が保たれる例です。"
+          "panel": {
+            "image": "images/sw_overview.png",
+            "where": "3DビューポートでNキーを押し、「Smart Workspace」タブを選びます。「ワークスペース管理」を開く操作はオブジェクトモードから始められます。",
+            "look": "入口全体の図には、左の三角から開ける5つの見出しが並びます。",
+            "heading": "4. 画面の場所",
+            "caption": "サイドバーの「Smart Workspace」タブ。5 つの見出しが閉じた状態",
+            "git_blob": "5f88a5e8cfdc6a81bd16ae9453cec80e9eae7c0f"
+          },
+          "case_images": {
+            "images/ex_sw_workspace_save_0.jpg": "229bf00f7875c0f11ee9aecd4b5442c746f98bf8",
+            "images/ex_sw_workspace_save_3.jpg": "70a7d5618a4cd1384f609b5bc6b41b8b75f3d4da",
+            "images/ex_sw_launcher_eye_0.jpg": "ee3e4e80b82cde6fb8118984683a372fa32a902d",
+            "images/ex_sw_launcher_eye_1.jpg": "92ad6cb18255df015baed46a25ffb62b42c46c9a"
           }
         },
         "en": {
@@ -1128,13 +1725,36 @@
             "Switch workspace",
             "Keep the viewing angle"
           ],
-          "comparison": {
-            "name": "Simple Tabs",
-            "url": "https://chippwalters.gumroad.com/l/simpletabs",
-            "note": "If switching workspaces costs you your camera angle, watch the side view survive the move from Layout to Scripting."
+          "panel": {
+            "image": "images/sw_overview.png",
+            "where": "Press N over the 3D Viewport and select Smart Workspace. From Object Mode, open Workspace Manager.",
+            "look": "The tab overview shows five collapsed sections that open from their left-hand triangles.",
+            "heading": "4. Where to Find It",
+            "caption": "The Smart Workspace tab in the Sidebar, with the 5 section headers closed",
+            "git_blob": "5f4ea9e226daa225d38818b5e78a74b293816f03"
+          },
+          "case_images": {
+            "images/ex_sw_workspace_save_0.jpg": "aea3be4bb302ed3444179e0fb3f634b2c0553698",
+            "images/ex_sw_workspace_save_3.jpg": "313b04c29a47bdfc353f8e811eb9603c98c8ebad",
+            "images/ex_sw_launcher_eye_0.jpg": "c354bd0787e06b231129ca80bdc878e059ec7ca9",
+            "images/ex_sw_launcher_eye_1.jpg": "62e73f293504a5033cdd47add7f549470f3b733b"
           }
         }
-      }
+      },
+      "cases": [
+        "sw_workspace_save",
+        "sw_launcher_eye"
+      ],
+      "sources": [
+        {
+          "name": "Simple Tabs",
+          "url": "https://chippwalters.gumroad.com/l/simpletabs"
+        },
+        {
+          "name": "Simple N-Panel",
+          "url": "https://www.chippwalters.com/Simple-N-Panel/simple_n_panel.html"
+        }
+      ]
     },
     {
       "product": "SmartTransform",
@@ -1163,10 +1783,19 @@
             "コレクション加算",
             "共有メッシュの複製を除外"
           ],
-          "comparison": {
-            "name": "MultiEdit",
-            "url": "https://github.com/antoni4040/MultiEdit-Addon/blob/master/MultiEdit_1_1.py",
-            "note": "複数編集にリンク複製が混ざる場合に注目してください。追加で編集対象になった物と、同じメッシュを共有して外れた物を区別できます。"
+          "panel": {
+            "image": "images/st_always_on.png",
+            "where": "オブジェクトモードの3DビューポートでNキーを押し、「Smart Transform」タブを選びます。写真と同じ設定を見るには「常時機能切り替え」を開きます。",
+            "look": "この写真は「常時機能切り替え」の個別設定で、各行の右側のボタンが有効・無効を示します。",
+            "heading": "4. 画面の場所",
+            "caption": "「常時機能切り替え」を開いたところ。各行の右のボタンで有効と無効を切り替えます（図では「Nパネル状態保存」だけが有効）。",
+            "git_blob": "01fc2dda8bc9f1f255328a0550d0ba11184f5ac0"
+          },
+          "case_images": {
+            "images/ex_st_floor_0.jpg": "c560a2b43f5c0614ff0b58121dd45bf7adc81281",
+            "images/ex_st_floor_1.jpg": "f35be7ee761a1b1d840feedbc1c43e9d2bc84c05",
+            "images/ex_st_dim_reset_0.jpg": "dcdd3b5b3c99d8a9a16d8af18c2b40e68a3ce64f",
+            "images/ex_st_dim_reset_1.jpg": "f349328cb55dc12e9a33119a8f023e11275a9750"
           }
         },
         "en": {
@@ -1191,13 +1820,40 @@
             "Add collection",
             "Exclude linked duplicates"
           ],
-          "comparison": {
-            "name": "MultiEdit",
-            "url": "https://github.com/antoni4040/MultiEdit-Addon/blob/master/MultiEdit_1_1.py",
-            "note": "For multi-object editing with linked duplicates, check which objects join the edit and which shared meshes stay outside it."
+          "panel": {
+            "image": "images/st_always_on.png",
+            "where": "In Object Mode, press N over the 3D Viewport and select Smart Transform. Expand Always-on Toggle to open the settings pictured here.",
+            "look": "This detail shows Always-on Toggle, with an on/off button on the right of each row.",
+            "heading": "4. Where to Find It",
+            "caption": "\"Always-on Toggle\" opened. The button at the right of each row switches between On and Off (in the figure, only \"N-panel State Save\" is enabled).",
+            "git_blob": "a58adf220596fd05a7b06966271b30ebad6fd47c"
+          },
+          "case_images": {
+            "images/ex_st_floor_0.jpg": "0ff5b393dd303bfdd744b0e15618201844d4a5ef",
+            "images/ex_st_floor_1.jpg": "dc9fa3903582ec7a3c9dc556447ee19a51490141",
+            "images/ex_st_dim_reset_0.jpg": "6492137ce81fcf26a9aaa0ab6b0ab66ee5d8bbe3",
+            "images/ex_st_dim_reset_1.jpg": "1d38df2c2e56113e3741481fe35ee19342c03259"
           }
         }
-      }
+      },
+      "cases": [
+        "st_floor",
+        "st_dim_reset"
+      ],
+      "sources": [
+        {
+          "name": "MACHIN3tools · Align Pie",
+          "url": "https://machin3.io/MACHIN3tools/docs/pie_align/"
+        },
+        {
+          "name": "MultiEdit 1.1 · historical reference",
+          "url": "https://github.com/antoni4040/MultiEdit-Addon/blob/master/MultiEdit_1_1.py"
+        },
+        {
+          "name": "Multi Adjust",
+          "url": "https://extensions.blender.org/add-ons/multi-adjust/"
+        }
+      ]
     },
     {
       "product": "SmartOverlay",
@@ -1226,10 +1882,19 @@
             "隠れた辺を重ねる",
             "奥行きを破線で読む"
           ],
-          "comparison": {
-            "name": "Mesh Analysis Overlay",
-            "url": "https://extensions.blender.org/add-ons/mesh-analysis-overlay/",
-            "note": "数値による診断の前に裏側の線を読みたい場合、手前と奥の線種の違いを拡大して確認できます。"
+          "panel": {
+            "image": "images/so_overview.png",
+            "where": "3DビューポートでNキーを押し、「スマートオーバーレイ」タブを開きます。メッシュの線の表示を調整するには「メッシュ・カーブ表示」を開き、使う機能に合わせてモードを選びます。",
+            "look": "入口全体の図では、各見出しの左の三角が開閉、右の「？」が説明に対応します。",
+            "heading": "4. 画面の場所",
+            "caption": "「スマートオーバーレイ」パネルの 7 つの見出しを全部閉じたところ。見出しの左の三角で開閉し、右の「？」で説明を出します。",
+            "git_blob": "452e57fcdb1a74a36bf0bfd1c1caa995097e54e7"
+          },
+          "case_images": {
+            "images/ex_so_topology_0.jpg": "22d0df3bf826a8c082de6703192068b107a97172",
+            "images/ex_so_topology_2.jpg": "d06c760ee1ce495a2de5a2ed7ed34f144cb17c99",
+            "images/ex_so_angle_area_0.jpg": "51fc9725ae002fca5f1591c032be1977f814f191",
+            "images/ex_so_angle_area_2.jpg": "0b88a6de97fac08fccd93b4fb9259169824a2aa2"
           }
         },
         "en": {
@@ -1254,13 +1919,36 @@
             "Overlay hidden edges",
             "Read depth from dashes"
           ],
-          "comparison": {
-            "name": "Mesh Analysis Overlay",
-            "url": "https://extensions.blender.org/add-ons/mesh-analysis-overlay/",
-            "note": "To read the back of a mesh, zoom in on the solid front edges and dashed hidden edges."
+          "panel": {
+            "image": "images/so_overview.png",
+            "where": "Press N in the 3D Viewport and open Smart Overlay. Expand Mesh and Curve Display for mesh drawing controls, using the mode specified for the feature.",
+            "look": "The overview shows a triangle to expand each section and a question mark to open its help.",
+            "heading": "4. Where to Find It",
+            "caption": "The 7 section headers of the \"Smart Overlay\" panel, all closed. Open or close them with the triangle on the left of each section header, and show the explanation with the \"?\" on the right.",
+            "git_blob": "cb66b1ed7d163585bf1d53f3f42838c958257fb1"
+          },
+          "case_images": {
+            "images/ex_so_topology_0.jpg": "3871db40fc5590570c4fe8a3dcc0829b6847d9ac",
+            "images/ex_so_topology_2.jpg": "a5b62873811ed1ef1e8c5346013cca836ef6125c",
+            "images/ex_so_angle_area_0.jpg": "9ace966199e79497b91e8467acc7760a9f043a1d",
+            "images/ex_so_angle_area_2.jpg": "6bc8f872d8d25d4fd1d35b1c33d0b6290b686f58"
           }
         }
-      }
+      },
+      "cases": [
+        "so_topology",
+        "so_angle_area"
+      ],
+      "sources": [
+        {
+          "name": "Mesh Analysis Overlay",
+          "url": "https://extensions.blender.org/add-ons/mesh-analysis-overlay/"
+        },
+        {
+          "name": "MeasureIt",
+          "url": "https://extensions.blender.org/add-ons/measureit/"
+        }
+      ]
     },
     {
       "product": "SmartID",
@@ -1289,10 +1977,19 @@
             "選択を変更",
             "0/1で全体の使用数を確認"
           ],
-          "comparison": {
-            "name": "TexTools",
-            "url": "https://github.com/franMarz/TexTools-Blender",
-            "note": "IDを割り振った後に、選択範囲から外れただけか、ファイル全体で使われていないかを2つの件数で判別できます。"
+          "panel": {
+            "image": "images/sid_top.png",
+            "where": "オブジェクトモードの3DビューポートでNキーを押し、「Smart ID」タブを選びます。「ID / チャンネルライブラリ」を開きます。",
+            "look": "入口全体の図では、「常時機能切り替え」が開き、その下の各見出しは閉じています。",
+            "heading": "4. 画面の場所",
+            "caption": "Smart ID のタブ（常時機能切り替えを開き、ほかの見出しを閉じた所）",
+            "git_blob": "2e14fe961d7908f4553e2f474fec016705ee781f"
+          },
+          "case_images": {
+            "images/ex_sid_material_faces_0.jpg": "aee17f1c62cfd54d085e401b81c9bfb13af848ba",
+            "images/ex_sid_material_faces_1.jpg": "984975a992e23357287534a09adc8f92e0260501",
+            "images/ex_sid_overlay_scope_0.jpg": "bcf9ea41a5f6c7ac2808351f2595adc0ef6d881f",
+            "images/ex_sid_overlay_scope_3.jpg": "059a1f3722305f4b6adb36ea4851ef461091d2e9"
           }
         },
         "en": {
@@ -1317,13 +2014,36 @@
             "Change selection",
             "Read 0/1 across the file"
           ],
-          "comparison": {
-            "name": "TexTools",
-            "url": "https://github.com/franMarz/TexTools-Blender",
-            "note": "After assigning IDs, use the two counts to tell whether an ID is absent from the selection or unused across the file."
+          "panel": {
+            "image": "images/sid_top.png",
+            "where": "In Object Mode, press N over the 3D Viewport and select Smart ID. Expand ID / Channel Library.",
+            "look": "The tab overview shows Always-on Toggles expanded and the remaining sections collapsed.",
+            "heading": "4. Where to Find It",
+            "caption": "The Smart ID tab (with Always-on Toggles open and the other section headers closed)",
+            "git_blob": "fb2ad0a6ac574314983fd5a0d58e072dabc83475"
+          },
+          "case_images": {
+            "images/ex_sid_material_faces_0.jpg": "fb828f24a315f7c28342dd63c523bb46cb95d867",
+            "images/ex_sid_material_faces_1.jpg": "6ae845511f7149173dc9d9b2ab9227091b845a71",
+            "images/ex_sid_overlay_scope_0.jpg": "63ff8058fd80b5c39dbaac3e971591743e848364",
+            "images/ex_sid_overlay_scope_3.jpg": "100f9e3ebd5095ab738ba8f7eea196880a0d1775"
           }
         }
-      }
+      },
+      "cases": [
+        "sid_material_faces",
+        "sid_overlay_scope"
+      ],
+      "sources": [
+        {
+          "name": "TexTools",
+          "url": "https://github.com/franMarz/TexTools-Blender"
+        },
+        {
+          "name": "Amaranth · Object/Material Indices",
+          "url": "https://docs.blender.org/manual/en/3.3/addons/interface/amaranth.html"
+        }
+      ]
     },
     {
       "product": "SmartToolsManager",
@@ -1352,10 +2072,19 @@
             "阻害が1件",
             "該当するテキスト名を確認"
           ],
-          "comparison": {
-            "name": "Addon Hub",
-            "url": "https://blenderprocedural.github.io/addon-hub/docs.html",
-            "note": "画面の整理に加え、引き渡し用コピーの整理が進まない理由を探せます。「阻害1」の件数から原因のテキスト名までたどれます。"
+          "panel": {
+            "image": "images/prefs_resident.png",
+            "where": "「編集」→「プリファレンス」→「アドオン」で「Smart Tools Manager」の行を開きます。「常時機能切り替え」で「トップバーボタン」を有効にすると、画面上部の「スマートツール」から開けます。",
+            "look": "これはプリファレンスの入口画面で、「スマートツールマネージャーを開く」ボタンと「常時機能切り替え」が写っています。",
+            "heading": "4. 画面の場所",
+            "caption": "プリファレンスのアドオンの欄。「スマートツールマネージャーを開く」「リリース整理」と、開いた「常時機能切り替え」",
+            "git_blob": "9128bda7fb6aee569b2d9e75fc24dcd13a9b7a3f"
+          },
+          "case_images": {
+            "images/ex_stm_cleanup_rig_0.jpg": "fe655112571ad873497973c01c1fe8b8e470d718",
+            "images/ex_stm_cleanup_rig_2.jpg": "258d74ef1cead232c4598f9595a08800178c2a6e",
+            "images/ex_stm_only_modeling_0.jpg": "979cd62518fd3ec9f82a44d2e1cd3999dd0c6e60",
+            "images/ex_stm_only_modeling_2.jpg": "1df78a9e3b71f4aa1ae464268f19ce030ebdac53"
           }
         },
         "en": {
@@ -1380,13 +2109,36 @@
             "Find one blocker",
             "Identify the text by name"
           ],
-          "comparison": {
-            "name": "Addon Hub",
-            "url": "https://blenderprocedural.github.io/addon-hub/docs.html",
-            "note": "Beyond arranging panels, this example locates the text data that blocks cleanup of a handoff copy."
+          "panel": {
+            "image": "images/prefs_resident.png",
+            "where": "Choose Edit → Preferences → Add-ons and expand the Smart Tools Manager entry. Under Always-on Toggles, enable Top Bar Button to open the manager from Smart Tools in the top bar.",
+            "look": "This Preferences entry shows the Open Smart Tools Manager button and the expanded Always-on Toggles section.",
+            "heading": "4. Where to Find It",
+            "caption": "The add-on section of Preferences. \"Open Smart Tools Manager\", \"Release Cleanup\", and the opened \"Always-on Toggles\"",
+            "git_blob": "138a291ff7ca97f04628751e8b2473ea13c8229f"
+          },
+          "case_images": {
+            "images/ex_stm_cleanup_rig_0.jpg": "eae768b56cc17e46dfe1a3aa2943832d4d59bc35",
+            "images/ex_stm_cleanup_rig_2.jpg": "941cd7d86767d656681b173daa525a1727e26935",
+            "images/ex_stm_only_modeling_0.jpg": "a46e698fffa07587ff087ec59998eb1cbd7b58d6",
+            "images/ex_stm_only_modeling_2.jpg": "dd668880debde24e8327dd2bdbf0dc8a7f0d2aa9"
           }
         }
-      }
+      },
+      "cases": [
+        "stm_cleanup_rig",
+        "stm_only_modeling"
+      ],
+      "sources": [
+        {
+          "name": "Addon Hub",
+          "url": "https://blenderprocedural.github.io/addon-hub/docs.html"
+        },
+        {
+          "name": "Add-on Manager Pro",
+          "url": "https://superhivemarket.com/products/addon-manager-pro/docs/new"
+        }
+      ]
     },
     {
       "product": "KeymapManager",
@@ -1415,10 +2167,19 @@
             "優先元を2件確認",
             "有効状態の変化を確認"
           ],
-          "comparison": {
-            "name": "Keymap Visualizer",
-            "url": "https://extensions.blender.org/add-ons/keymap-visualizer/",
-            "note": "キー配置を見るだけでは原因が分からない場合に、対象より優先される2件と、変更後どれが無効になったかを追えます。"
+          "panel": {
+            "image": "images/kmm_overview.png",
+            "where": "「編集」→「プリファレンス」→「キーマップ」を選び、画面の一番下まで移動します。最初は閉じている「キーマップマネージャー」を開いてください。",
+            "look": "これは登録内容を調べる操作画面で、キーボード図のCtrlとSを選んだときの一致数と各行の状態が見えます。",
+            "heading": "4. 画面の場所",
+            "caption": "キーボードの絵で Ctrl と S を選んだところ。「キー: Ctrl + S + 押下」の部分と、見出しに「一致数: 4」と出た「登録済みキーマップ項目」が見えます。各行の右が状況です",
+            "git_blob": "d736b2cf1b78decfa29f9488de93dd28cc68717b"
+          },
+          "case_images": {
+            "images/ex_km_consolidate_0.jpg": "a1253f4760195a6869af17dff0ee35bd8abbdd8d",
+            "images/ex_km_consolidate_2.jpg": "549e78f285018ec96bc71b963e4d971126dee3e8",
+            "images/ex_km_transfer_0.jpg": "3c92ed85c2df5eeb2ceba66b2ffca7edb017374f",
+            "images/ex_km_transfer_2.jpg": "3c92ed85c2df5eeb2ceba66b2ffca7edb017374f"
           }
         },
         "en": {
@@ -1443,13 +2204,36 @@
             "Inspect two overriding entries",
             "Check enabled states"
           ],
-          "comparison": {
-            "name": "Keymap Visualizer",
-            "url": "https://extensions.blender.org/add-ons/keymap-visualizer/",
-            "note": "When a keyboard map alone cannot explain F2, inspect the two higher-priority entries and their enabled states after the change."
+          "panel": {
+            "image": "images/kmm_overview.png",
+            "where": "Choose Edit → Preferences → Keymap and scroll to the bottom. Expand the Keymap Manager heading, which is closed initially.",
+            "look": "This lookup view shows Ctrl and S selected on the keyboard, the number of matches and the status of each binding.",
+            "heading": "4. Where to Find It",
+            "caption": "Ctrl and S selected on the keyboard picture. You can see the \"Key: Ctrl + S + Press\" part and \"Registered Keymap Items\" with \"Match Count: 4\" in the header. The right side of each row is the status",
+            "git_blob": "bde001c6a2468ced6846551e52bcecf53bde8adb"
+          },
+          "case_images": {
+            "images/ex_km_consolidate_0.jpg": "86a13f6546eb53a52651be2122995d3221c00923",
+            "images/ex_km_consolidate_2.jpg": "d3688e0d37c53621412d79a8c45ced70968607dc",
+            "images/ex_km_transfer_0.jpg": "f656ccfbafd66f93869f6b804f9c181cde1dc910",
+            "images/ex_km_transfer_2.jpg": "f656ccfbafd66f93869f6b804f9c181cde1dc910"
           }
         }
-      }
+      },
+      "cases": [
+        "km_consolidate",
+        "km_transfer"
+      ],
+      "sources": [
+        {
+          "name": "Keymap Visualizer",
+          "url": "https://extensions.blender.org/add-ons/keymap-visualizer/"
+        },
+        {
+          "name": "Is Key Free",
+          "url": "https://extensions.blender.org/add-ons/is-key-free/"
+        }
+      ]
     }
   ]
 }
