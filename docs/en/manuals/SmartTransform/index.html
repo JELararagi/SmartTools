@@ -120,6 +120,30 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <details><summary>Official documentation for related tools</summary><ul><li><a href="https://machin3.io/MACHIN3tools/docs/pie_align/">MACHIN3tools · Align Pie</a></li><li><a href="https://github.com/antoni4040/MultiEdit-Addon/blob/master/MultiEdit_1_1.py">MultiEdit 1.1 · historical reference</a></li><li><a href="https://extensions.blender.org/add-ons/multi-adjust/">Multi Adjust</a></li></ul></details>
 </section>
 <!-- smarttools-catalog:end -->
+<!-- buyer-smarttransform:begin -->
+<section id="buyer-smarttransform"><h2>SmartTransform 1.0.0　Resize a display carton and align its base</h2>
+<p>Use the supplied scene to double the orange carton&#x27;s height from 1.2 m to 2.4 m. Then align its bottom with the blue carton.</p>
+<p><img loading="lazy" src="../../../diagrams/showcase/SmartTransform/size_before.png" alt="Starting display"></p>
+<p><img loading="lazy" src="../../../diagrams/showcase/SmartTransform/size_after.png" alt="Finished display"></p>
+<h3>Try the exercise</h3>
+<ol>
+<li>Extract this download, then enable its installable ZIP with Install from Disk in Blender. Open the starting scene (Display_Start.blend). The orange carton, Sample B, is selected.</li>
+<li>Press N in the 3D View. Expand Transform under Smart Transform. Choose Abs, then set Dimensions X to 1.4 m and Z to 2.4 m.</li>
+</ol>
+<p><img loading="lazy" src="../../../diagrams/showcase/SmartTransform/panel_en.png" alt="Absolute dimensions in the sidebar"></p>
+<ol>
+<li>Select Sample B, then Shift-select the blue Sample C last. Open Quick Align and enable only Z for Position. Set both Z reference points to Min, review the preview and click OK. Pressing Esc restores the placement.</li>
+</ol>
+<p><img loading="lazy" src="../../../diagrams/showcase/SmartTransform/align_en.png" alt="Alignment preview with two cartons"></p>
+<ol>
+<li>The orange carton measures 1.4 × 1.4 × 2.4 m and its bottom is at Z = 0 m. Compare it with the finished scene (Display_Finished.blend).</li>
+</ol>
+<h3>Explore another operation</h3>
+<p>Enable the smart gizmo in the sidebar to move along axes or planes. Press G, X, 2 and Enter to move 2 m along X. In Edit Mode, Quick Multi Edit lets you add another mesh to the current editing session.</p>
+<p><img loading="lazy" src="../../../diagrams/showcase/SmartTransform/gizmo_en.png" alt="Axis and plane handles"></p>
+<h3>Before you buy</h3>
+<p>Tested on Windows with Blender 5.1.2. This exercise runs with SmartTransform alone. SmartToolsManager integration requires that separate add-on. Pointer capture while entering a radius, every selection-guard mode and simultaneous preference writes across Blender instances have not been verified for migration parity. Use copies of existing projects and settings.</p></section>
+<!-- buyer-smarttransform:end -->
 <nav class="tocbox"><h2>Contents</h2><ol class='toc'><li><a href='#s1'>1. What This Add-on Does</a></li><li><a href='#hl'>2. Key Features</a></li><li><a href='#s2'>3. Getting Started</a></li><li><a href='#s3'>4. Where to Find It</a></li><li><a href='#s4'>5. Features</a></li><li><a href='#s5'>6. Common Tasks</a></li><li><a href='#s6'>7. Troubleshooting</a></li><li><a href='#s7'>8. Glossary</a></li><li><a href='#s8'>9. Appendix: Version, Checksum and Limitations</a></li></ol></nav>
 <h2 id="s1">1. What This Add-on Does</h2><p class="chapterlead">An add-on that bundles tools for setting an object's location, rotation, and size exactly with numbers, and for making click and drag operations easier to use.</p><ul><li>Enter an object's location, rotation, scale (the size multiplier), and dimensions (the actual lengths) directly as numbers, or add to the current value as a difference.</li><li>Copy and paste values (you choose whether to paste location, rotation, or scale), apply rotation and scale, and snap to the 3D cursor or the floor (Z=0), each with a single button.</li><li>Change behavior such as click selection while using tools like Move, Rotate, and Scale, starting a transform by dragging, and deselecting by clicking the background.</li><li>Adjust the display, colors, size, and grab range of the add-on's own 3D smart gizmo.</li><li>Set the on-screen display, snap steps, sensitivity, and axis lines for Smart G-R-S (a transform operation you can register to use in place of the G, R, and S keys).</li><li>Adjust the influence range of Proportional Editing (a feature that moves the surrounding area gradually along with it) by moving the cursor.</li><li>Use Precision Numeric Drag, which moves a number field in fixed steps with Shift + left drag.</li><li>Use 3D Cursor Lock, which fixes the 3D cursor at its current position.</li><li>Use Quick Align, which aligns selected objects to a reference object, and Quick Multi-Edit, which adds or removes objects to edit together while staying in Edit Mode.</li><li>Use Smart Select Guard, which makes it harder to select objects hidden behind other shapes by mistake.</li><li>Use Island Transform, which moves, rotates, and scales each connected part (island) of a mesh separately.</li><li>Use Vertex Normal Aligner, which aligns an object's origin orientation or a custom orientation to the direction (normal) of the selected vertices.</li></ul>
 <div class="box tip"><b>When to Use It</b><div><ul><li>To make a piece of furniture exactly 0.75 m tall, enter a number in the "Z" field under "Dim X".</li><li>To shift several objects by the same small amount, set the input to "Δ" and add the value.</li><li>To rest a placed object on the floor, click "To Floor (Z=0)".</li><li>Before exporting, to lock in the rotation and scale as they currently look, use "Apply All" or "Apply R/S".</li><li>To edit another mesh together with the current one in Edit Mode, click "Add" under "Quick Multi-Edit", then click the object to add in the 3D Viewport.</li><li>To rotate each connected part separately, such as a lock of hair, use "Island Transform".</li><li>To make only the size match another object, turn the paste toggles to "Scale" only and paste.</li></ul></div></div>

@@ -119,6 +119,30 @@ dl.faq dd,dl.gloss dd{margin:.2em 0 0 1.2em}
 <details><summary>関連ツールの公式資料</summary><ul><li><a href="https://github.com/franMarz/TexTools-Blender">TexTools</a></li><li><a href="https://docs.blender.org/manual/en/3.3/addons/interface/amaranth.html">Amaranth · Object/Material Indices</a></li></ul></details>
 </section>
 <!-- smarttools-catalog:end -->
+<!-- buyer-smartid:begin -->
+<section id="buyer-smartid"><h2>コントローラーの部品にIDを割り当てる</h2>
+<p>ダイヤル4個とパッド6個に番号を割り当て、シーン内のどの部品が同じIDを使うか確認します。</p>
+<p>開始シーン (Controller_Start.blend) 完成シーン (Controller_Finished.blend)</p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartID/controller_before.png" alt="開始時はダイヤルとパッドが灰色で、パスインデックスはすべて0です。"></p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartID/controller_after.png" alt="完成時はダイヤルがオレンジ、パッドが青緑です。筐体の色と形は保たれます。"></p>
+<h3>部品を登録する</h3>
+<ol>
+<li>ダウンロードを展開し、「編集 → プリファレンス」の「ディスクからインストール」で SmartID_1.0.0.zip を選びます。Smart ID Suite を有効にし、開始シーンを開きます。3DビューでNキーを押し、サイドバーの「Smart ID」を選びます。</li>
+<li>「ID・チャンネル一覧」で種類を「オブジェクトID」にして「追加」を押します。「選択した項目」で名前をDials、ID番号を17、色をオレンジにします。</li>
+<li>アウトライナーでDial 1からDial 4までを選択します。「割り当て設定」の対象を「選択」にし、「パスインデックスを使う」と「自動配色」を有効にして「選択と割り当て」の「項目を割り当て」を押します。</li>
+<li>同じ手順でPadsを登録し、ID番号を33、色を青緑にします。Key 1からKey 6までを選んで割り当てます。</li>
+</ol>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartID/library_ja.png" alt="一覧にはDials 17とPads 33が表示されます。画面表示の対象を「表示中の項目」にすると、10個の部品に色枠が付きます。"></p>
+<h3>割り当てを確認する</h3>
+<p>Key 1とKey 2だけを選び、一覧の「使用数を更新」を押します。Padsの「選択した項目」を開くと、オブジェクトの使用数は選択中2、シーン全体6です。Dial 1を選んで「選択物の調査」を更新するとID番号17が表示されます。</p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartID/inspector_ja.png" alt="Dial 1を調査した画面。ID、付加情報、UVと属性を同じ所有物の下で確認できます。"></p>
+<h3>一覧を受け渡す</h3>
+<p>「検証・入出力」からJSONを書き出すと、項目名、番号、色を別のシーンに読み込めます。表計算ソフト用の一覧は「検証・入出力」の「CSVを書き出す」から保存します。保存先と .csv で終わるファイル名を指定し、保存後に name と id_number の列で Dials が 17、Pads が 33 になっていることを確認します。別シーンでは、読み込んだ項目を対応する部品に割り当ててください。</p>
+<p>作例のJSON (Controller_IDs.json) 作例のCSV (Controller_IDs.csv)</p>
+<p><img loading="lazy" src="../../diagrams/showcase/SmartID/help_ja.png" alt="見出しの「?」で操作の説明を表示します。「解説書を開く」で、その機能の日本語ページへ移動できます。"></p>
+<p>Windows 版 Blender 5.1.2 で確認。Smart ID は単体で使えます。Smart Tools Manager から配置設定を管理する場合は、別途同アドオンを導入してください。</p>
+<p><a href="https://jelararagi.github.io/SmartTools/manuals/SmartID/">解説とヘルプ</a></p></section>
+<!-- buyer-smartid:end -->
 <section id="controller-ids"><h2>同じ役割の部品に番号を付け、割り当てを確かめる</h2><p>ゲームコントローラーのダイヤル4個とパッド6個を例にします。部品が一色でも、役割ごとに番号と表示色を決めれば、どれに何を割り当てたかを画面上で追えます。</p><div class="sg-pair"><figure><a href="../../diagrams/showcase/SmartID/controller_before.webp"><img loading="lazy" src="../../diagrams/showcase/SmartID/controller_before.webp" alt="開始時。10個の部品は灰色で、パスインデックスはすべて0。"></a><figcaption>開始時。10個の部品は灰色で、パスインデックスはすべて0。</figcaption></figure><figure><a href="../../diagrams/showcase/SmartID/controller_after.webp"><img loading="lazy" src="../../diagrams/showcase/SmartID/controller_after.webp" alt="完了時。ダイヤル4個はオレンジのID 17、パッド6個は青緑のID 33。筐体は元の色です。"></a><figcaption>完了時。ダイヤル4個はオレンジのID 17、パッド6個は青緑のID 33。筐体は元の色です。</figcaption></figure></div><details><summary>実際の画面で手順を見る</summary><ol><li>3Dビューで N を押し「Smart ID」を開きます。「ID・チャンネル一覧」の種類を「オブジェクトID」にして「追加」を押し、名前を Dials、番号を17、色をオレンジにします。</li><li>ダイヤル4個を選び、「割り当て設定」の対象を「選択」にします。「パスインデックスを使う」と「自動配色」をオンにし、「項目を割り当て」を押します。パッドは Pads、番号33、青緑で同じ操作を行います。</li><li>パッドを2個だけ選んで「使用数を更新」します。Pads の表示は選択中2個、シーン全体6個です。次に Dial 1 を選び、「選択物の調査」で番号17を確かめます。</li></ol><div class="sg-pair"><figure><a href="../../diagrams/showcase/SmartID/library_ja.webp"><img loading="lazy" src="../../diagrams/showcase/SmartID/library_ja.webp" alt="登録した2行と、部品に付いた色枠。画像を開くと操作欄を拡大できます。"></a><figcaption>登録した2行と、部品に付いた色枠。画像を開くと操作欄を拡大できます。</figcaption></figure><figure><a href="../../diagrams/showcase/SmartID/inspector_ja.webp"><img loading="lazy" src="../../diagrams/showcase/SmartID/inspector_ja.webp" alt="Dial 1 の調査結果。選んだ部品の番号や属性が並びます。"></a><figcaption>Dial 1 の調査結果。選んだ部品の番号や属性が並びます。</figcaption></figure></div></details><p>ほかのシーンへ渡すには、一覧をJSONで書き出し、移動先で読み込んで部品へ割り当てます。CSVでは同じ一覧を表計算ソフトで確認できます。</p></section>
 <nav class="tocbox"><h2>目次</h2><ol class='toc'><li><a href='#s1'>1. このアドオンでできること</a></li><li><a href='#hl'>2. 目玉の機能</a></li><li><a href='#s2'>3. 準備</a></li><li><a href='#s3'>4. 画面の場所</a></li><li><a href='#s4'>5. 機能の説明</a></li><li><a href='#s5'>6. よく使う手順</a></li><li><a href='#s6'>7. 困った時</a></li><li><a href='#s7'>8. 用語集</a></li><li><a href='#s8'>9. 付録：版と確認値・できないこと</a></li></ol></nav>
 <h2 id="s1">1. このアドオンでできること</h2><p class="chapterlead">制作で使う ID やチャンネル（UV マップ、属性、グループなど）を一覧で管理し、オブジェクトへまとめて付けたり調べたりできるアドオンです。</p><ul><li>オブジェクト ID・マテリアル ID・UV チャンネル・カラー属性など 12 種類の項目を、1 つの一覧で登録・管理する</li><li>登録した項目を、選択オブジェクトやシーン内のオブジェクトへまとめて付ける（適用）・外す（解除）</li><li>項目に一致するオブジェクトや、メッシュのエレメント（面・頂点）を選択する</li><li>シーンや選択オブジェクトにすでにある ID・チャンネルを読み取り、一覧へ足す（同期）</li><li>選択オブジェクトの中にある ID・マテリアルスロット・UV・属性・グループを一覧で調べ、名前や番号をその場で直す</li><li>UV マップ、カラー属性、ジオメトリ属性をメッシュに作る・有効にする・消す</li><li>ID ごとの色のマテリアル、選択コレクション、ビューレイヤー AOV を作る</li><li>3D ビューに色付きの枠や印を重ねて、どこに何が付いているかを確かめる（データは変えない）</li><li>一覧の重複や不足を検証し、結果をテキストに残す</li><li>一覧を JSON で書き出し・読み込み、CSV で書き出す</li></ul>
