@@ -482,8 +482,8 @@
         "Material"
       ],
       "archive_url": "./Smart_Shader_Suite_1.0.0.zip",
-      "archive_size": 11703035,
-      "archive_hash": "sha256:82e32dc86dc74fa31ba040e225fd9e9a84342fa9ab8df3066a4cf1f554a2eb3c"
+      "archive_size": 11703786,
+      "archive_hash": "sha256:7c5b98ce294e9dae56adf302dce581a8154c5602cb91d718db18b07eee83024f"
     },
     {
       "schema_version": "1.0.0",
@@ -510,8 +510,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Shapekey_Suite_1.0.0.zip",
-      "archive_size": 4254084,
-      "archive_hash": "sha256:37031449791d79c273693c936c246853d8cfabb816b0ad326f32d2241a1af9df"
+      "archive_size": 4254286,
+      "archive_hash": "sha256:3c02002bc275b5a08e3830e9a39bc49ea74d209feff432602702fe46a73ff57b"
     },
     {
       "schema_version": "1.0.0",
