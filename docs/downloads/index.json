@@ -6,7 +6,7 @@
       "schema_version": "1.0.0",
       "id": "keymap_manager",
       "name": "Keymap Manager",
-      "tagline": "Inspect and organize Blender shortcuts",
+      "tagline": "Keyboard layout keymap conflict editor",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
@@ -17,15 +17,16 @@
       "copyright": [
         "2026 JELararagi"
       ],
-      "permissions": {
-        "files": "Import and export shortcut configurations selected by the user"
-      },
       "tags": [
-        "User Interface"
+        "User Interface",
+        "System"
+      ],
+      "platforms": [
+        "windows-x64"
       ],
       "archive_url": "./Keymap_Manager_1.0.0.zip",
-      "archive_size": 98876,
-      "archive_hash": "sha256:a9123ef21b0f7c5344dcda099da7d4df994cf90fb5d2506c8e280104cfa09b1a"
+      "archive_size": 62532,
+      "archive_hash": "sha256:bb78b49946c8c325e5c1ee8a1141f9b819ea9c02a9d759deb97e9bf3336f2abe"
     },
     {
       "schema_version": "1.0.0",
@@ -49,41 +50,14 @@
         "Animation"
       ],
       "archive_url": "./Smart_Animation_Suite_1.0.0.zip",
-      "archive_size": 1007815,
-      "archive_hash": "sha256:f1c3c6195475541734502a68a83a5dfabe48f44f91edfb3dfb124f1cfc3aff15"
+      "archive_size": 1114254,
+      "archive_hash": "sha256:c1b836e9ef5683f9d7e3f5d9dd5867ae3d2b742e68281d58fcb4b7f8f30f3289"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_camlight_suite",
       "name": "Smart CamLight Suite",
-      "tagline": "Control camera framing, lighting rigs and outputs per camera",
-      "version": "1.0.0",
-      "type": "add-on",
-      "maintainer": "JELararagi",
-      "license": [
-        "SPDX:GPL-3.0-or-later"
-      ],
-      "blender_version_min": "5.1.2",
-      "copyright": [
-        "2026 JELararagi"
-      ],
-      "permissions": {
-        "files": "Render to the selected output path and keep UI preferences"
-      },
-      "tags": [
-        "Camera",
-        "Lighting",
-        "Render"
-      ],
-      "archive_url": "./Smart_CamLight_Suite_1.0.0.zip",
-      "archive_size": 56279,
-      "archive_hash": "sha256:3165ec8c625491e735753bab84a46b597233625c5d1a4ee8ab14126f3bb81ee0"
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "smart_cloth_suite",
-      "name": "Smart Cloth Suite",
-      "tagline": "Fit garments, simulate flexible bones and prepare rigid bodies",
+      "tagline": "Unified camera and light suite for Blender 5.1 workflows",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
@@ -91,12 +65,40 @@
         "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
-      "website": "https://jelararagi.github.io/SmartTools/manuals/SmartCloth/",
       "copyright": [
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Save cloth profiles, rigid-body presets and simulation reports"
+        "files": "Read and write Smart CamLight JSON settings and render paths"
+      },
+      "tags": [
+        "Camera",
+        "Lighting",
+        "3D View",
+        "Render",
+        "Pipeline"
+      ],
+      "archive_url": "./Smart_CamLight_Suite_1.0.0.zip",
+      "archive_size": 130463,
+      "archive_hash": "sha256:7dc40efdf4a1460ea709d52ebb8e220f3fef80206482572dc123558afd110508"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "smart_cloth_suite",
+      "name": "Smart Cloth Suite",
+      "tagline": "External cloth companion with batch setup and diagnostics",
+      "version": "1.0.0",
+      "type": "add-on",
+      "maintainer": "JELararagi",
+      "license": [
+        "SPDX:GPL-3.0-or-later"
+      ],
+      "blender_version_min": "5.1.0",
+      "copyright": [
+        "2026 JELararagi"
+      ],
+      "permissions": {
+        "files": "Store settings and reports in Blender config"
       },
       "tags": [
         "Physics",
@@ -105,8 +107,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Cloth_Suite_1.0.0.zip",
-      "archive_size": 79388,
-      "archive_hash": "sha256:ff45664f61f81ba5225d47565f794f3b337bb221e53bab8f773fa8fb9656b2c4"
+      "archive_size": 281502,
+      "archive_hash": "sha256:75f76ef2d065113614b95d673c45e22b341b3ec0362df585ab2c321e9bb7ddf8"
     },
     {
       "schema_version": "1.0.0",
@@ -132,8 +134,8 @@
         "Render"
       ],
       "archive_url": "./Smart_Composite_Suite_1.0.0.zip",
-      "archive_size": 3145610,
-      "archive_hash": "sha256:c2b9943f2fe1679eda6713b97aa2734c11866e87753bfbbba5511e0f0aea4c16"
+      "archive_size": 2677108,
+      "archive_hash": "sha256:9586b92148e8803f602b8022e235808b562bb80af2f1a1f71657329a659329ae"
     },
     {
       "schema_version": "1.0.0",
@@ -159,14 +161,14 @@
         "3D View"
       ],
       "archive_url": "./Smart_File_Suite_1.0.0.zip",
-      "archive_size": 1584754,
-      "archive_hash": "sha256:ed9bfd7e267aa8538e5dfb0061b470b0cd2603fd0d5ca61a938b6cbf8f8072e1"
+      "archive_size": 4886831,
+      "archive_hash": "sha256:e67667fb8e38abcfc099a81b51d9f06832aa9c835d6e31a51f56afa5a6347cb2"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_geometry_suite",
       "name": "Smart Geometry Suite",
-      "tagline": "Build editable primitives, terrain and surface distributions",
+      "tagline": "Genre-organized geometry and attribute generators",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
@@ -174,26 +176,30 @@
         "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
-      "website": "https://jelararagi.github.io/SmartTools/manuals/SmartGeometry/",
       "copyright": [
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Read point data and write user-selected geometry reports"
+        "files": "Save settings reports generated assets and manifests"
       },
       "tags": [
+        "Geometry Nodes",
         "Modeling",
-        "Geometry Nodes"
+        "3D View",
+        "Node",
+        "Pipeline",
+        "Grease Pencil",
+        "Add Mesh"
       ],
       "archive_url": "./Smart_Geometry_Suite_1.0.0.zip",
-      "archive_size": 320348,
-      "archive_hash": "sha256:5fe7ed1fceaa8090ebc61db9fa9bd09663edc0827af238474c748dd32202d3d8"
+      "archive_size": 702487,
+      "archive_hash": "sha256:d88716c678af31ec2c9278995a2614aefb5e7f7fd9cdc6fa8cc0fcfd3200e02b"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_id_suite",
       "name": "Smart ID Suite",
-      "tagline": "Assign and inspect IDs and mesh channels for production scenes",
+      "tagline": "List-managed IDs and channels for production assets",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
@@ -201,21 +207,19 @@
         "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
-      "website": "https://jelararagi.github.io/SmartTools/manuals/SmartID/",
       "copyright": [
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Import or export chosen ID registries and save sidebar settings"
+        "files": "Import and export Smart ID registry presets"
       },
-      "tags": [
-        "Object",
-        "Material",
-        "Mesh"
+      "platforms": [
+        "windows-x64",
+        "linux-x64"
       ],
       "archive_url": "./Smart_ID_Suite_1.0.0.zip",
-      "archive_size": 67272,
-      "archive_hash": "sha256:79a756e7e2190e5cb44ce6949452c1bb140dac4fb1074f0ac52ebfde9e01cddc"
+      "archive_size": 137809,
+      "archive_hash": "sha256:bf1ebae17e61dfee1e939cee18ae814e92b20e8b305a8866592aacad257e6d57"
     },
     {
       "schema_version": "1.0.0",
@@ -240,8 +244,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Modeling_Suite_1.0.0.zip",
-      "archive_size": 2791046,
-      "archive_hash": "sha256:be98db2dbf6de1c4b1391d2b6530f24f07f44ab0c32e0751e331fb87542c2119"
+      "archive_size": 3134500,
+      "archive_hash": "sha256:34f64a507e64004014abcc1a94284f14f2187aa5ae2ba6caced8493beefb4226"
     },
     {
       "schema_version": "1.0.0",
@@ -266,8 +270,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Modifier_Suite_1.0.0.zip",
-      "archive_size": 975038,
-      "archive_hash": "sha256:e20ca49429ab222b56bd3a853a3b6720a8465318e80dc0615d3701b6b86221cd"
+      "archive_size": 1628904,
+      "archive_hash": "sha256:afd33d580f3e86319d5bee310451a2d2c560fc09d4db8e8d4987f64a85974889"
     },
     {
       "schema_version": "1.0.0",
@@ -293,8 +297,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Node_Suite_1.0.0.zip",
-      "archive_size": 343081,
-      "archive_hash": "sha256:cf9de2e734abdaef79400af2d249b59f227ea570fa7abcccc386df8d3a3304fb"
+      "archive_size": 419401,
+      "archive_hash": "sha256:af4118016a37f45adcae04c34eee0ff6fab251a3a335c35286e1c70e5e52d3b3"
     },
     {
       "schema_version": "1.0.0",
@@ -346,8 +350,8 @@
         "Material"
       ],
       "archive_url": "./Smart_Paint_Suite_1.0.0.zip",
-      "archive_size": 975763,
-      "archive_hash": "sha256:3bdc4a8d1c0b3f7ef6b4774850dc6415acd179297babc798385fd7a88f59aabb"
+      "archive_size": 988536,
+      "archive_hash": "sha256:1d8b13314f41f71fd66ff03094b6da0d8de9bb75573930a2d8c79fcddc20ef1f"
     },
     {
       "schema_version": "1.0.0",
@@ -373,8 +377,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Render_Suite_1.0.0.zip",
-      "archive_size": 755629,
-      "archive_hash": "sha256:9e60e5ef3f7a07667ab7e6609a912ef025327c892c32bbe0f6cebc18cff63238"
+      "archive_size": 784525,
+      "archive_hash": "sha256:2b1e1c2e5d1e91c47993002f584ee69f070c3f4d7859871ceb235539aa95d974"
     },
     {
       "schema_version": "1.0.0",
@@ -400,8 +404,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Rig_Suite_1.0.0.zip",
-      "archive_size": 734551,
-      "archive_hash": "sha256:5433f8a5225efc20634b13bb81df5c6979b262d3d2a20d1aed33bf4630277a80"
+      "archive_size": 736072,
+      "archive_hash": "sha256:d3ef2e2cad44cd2fbaf7dbd4d7291136118b6724848d8a55103b070228d36181"
     },
     {
       "schema_version": "1.0.0",
@@ -426,8 +430,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Sculpt_Suite_1.0.0.zip",
-      "archive_size": 10520696,
-      "archive_hash": "sha256:a6a523d364bb259f25dddccf5a1cc98ad14a20521c9ea7469c7d8cb02ad6f5f8"
+      "archive_size": 11031373,
+      "archive_hash": "sha256:dbed39c86a67b547d1fc6a3eaf001e32d22d4949e62a3c0ac8b022e5ffd67dc0"
     },
     {
       "schema_version": "1.0.0",
@@ -452,8 +456,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Selector_Suite_1.0.0.zip",
-      "archive_size": 510548,
-      "archive_hash": "sha256:03ffe4db3bf3c0d7fef3b50a0e740735af6c035d1d9460b8d1ba4c6e92d7daf8"
+      "archive_size": 519072,
+      "archive_hash": "sha256:3ff88cd77df092a23c9b61862e183d1ce4880f7ac360501747b2318457fe2f8b"
     },
     {
       "schema_version": "1.0.0",
@@ -478,8 +482,8 @@
         "Material"
       ],
       "archive_url": "./Smart_Shader_Suite_1.0.0.zip",
-      "archive_size": 16260584,
-      "archive_hash": "sha256:cca03b340fcfc1a3f30572f200c7d46345f40db45afdbf94c0ef0e35ed093ea5"
+      "archive_size": 11703035,
+      "archive_hash": "sha256:82e32dc86dc74fa31ba040e225fd9e9a84342fa9ab8df3066a4cf1f554a2eb3c"
     },
     {
       "schema_version": "1.0.0",
@@ -506,14 +510,14 @@
         "3D View"
       ],
       "archive_url": "./Smart_Shapekey_Suite_1.0.0.zip",
-      "archive_size": 2069721,
-      "archive_hash": "sha256:9a8b3787e16b8e108a03e06494f377d9f73312d30858ee86bf352a2aeb82276a"
+      "archive_size": 4254084,
+      "archive_hash": "sha256:37031449791d79c273693c936c246853d8cfabb816b0ad326f32d2241a1af9df"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_tools_manager",
       "name": "Smart Tools Manager",
-      "tagline": "Choose where tools appear and prepare separate handoff copies",
+      "tagline": "Workspace and logical-editor placement manager for Smart Tools",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
@@ -525,7 +529,7 @@
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Store placement settings and create requested scene copies"
+        "files": "Read and write manager settings in user config directory"
       },
       "tags": [
         "User Interface",
@@ -533,8 +537,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Tools_Manager_1.0.0.zip",
-      "archive_size": 58822,
-      "archive_hash": "sha256:f8ba2845ac186871d659d869504ca6d8b9b883d0224ad93e4db5f14100bbfd1c"
+      "archive_size": 96279,
+      "archive_hash": "sha256:8303a7e79d0b9cd24f0c3393ea1827463f4aac2e3a5dc69cc5137756d9279f2b"
     },
     {
       "schema_version": "1.0.0",
@@ -611,8 +615,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Workspace_Suite_1.0.0.zip",
-      "archive_size": 840169,
-      "archive_hash": "sha256:ca2d02cfb3735d3d2fbe44a9716c1f741df1b918ae0ca34d7cc5e27c64def521"
+      "archive_size": 864555,
+      "archive_hash": "sha256:9aeda747a61aef55ead1e7147a65c0723e2c60b74bcdcaee1ae37d28dafc14c4"
     }
   ]
 }
