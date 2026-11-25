@@ -319,8 +319,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Overlay_Suite_1.0.0.zip",
-      "archive_size": 664834,
-      "archive_hash": "sha256:ef275bfc1d7299c89e5ce57ce6a3457c7f01d6e2c2dd0b51f394d8a83b416c92"
+      "archive_size": 673472,
+      "archive_hash": "sha256:a46ec817f45a5a548cf72b6bf4f9888e5a50717fcee5bc52569101bdd68bdcdf"
     },
     {
       "schema_version": "1.0.0",
@@ -540,27 +540,27 @@
       "schema_version": "1.0.0",
       "id": "smart_transform_suite",
       "name": "Smart Transform Suite",
-      "tagline": "Align, size, snap and transform selections in the 3D View",
+      "tagline": "Smart Transform tools for the 3D View N panel",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
         "SPDX:GPL-3.0-or-later"
       ],
-      "blender_version_min": "5.1.2",
+      "blender_version_min": "5.1.0",
       "copyright": [
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Keep transform and panel preferences in the Blender config"
+        "files": "Store Smart Transform settings in user config"
       },
       "tags": [
         "3D View",
         "Modeling"
       ],
       "archive_url": "./Smart_Transform_Suite_1.0.0.zip",
-      "archive_size": 74510,
-      "archive_hash": "sha256:9af54c82655584c21ebf49868c1688d27aa080b69f964968bf8d18de58e93d60"
+      "archive_size": 672413,
+      "archive_hash": "sha256:45ae5f0283b3351065ccf832288e4fc528766098971fe8942fb5094dd8b6e7ef"
     },
     {
       "schema_version": "1.0.0",
@@ -585,8 +585,8 @@
         "Modeling"
       ],
       "archive_url": "./Smart_UV_Suite_1.0.0.zip",
-      "archive_size": 4242675,
-      "archive_hash": "sha256:e20bd4d6270a6f245765d9c18d632bd72eb12408b537d695a1bbbdf5ae7ddbaa"
+      "archive_size": 4273842,
+      "archive_hash": "sha256:f10d5a22dc1b507508fa18b7895c9357b30a65561cfe7f6d53fb22d96e1073d5"
     },
     {
       "schema_version": "1.0.0",
