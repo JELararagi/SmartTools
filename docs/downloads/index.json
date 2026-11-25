@@ -6,7 +6,7 @@
       "schema_version": "1.0.0",
       "id": "keymap_manager",
       "name": "Keymap Manager",
-      "tagline": "Keyboard layout keymap conflict editor",
+      "tagline": "Inspect and organize Blender shortcuts",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
@@ -17,27 +17,26 @@
       "copyright": [
         "2026 JELararagi"
       ],
+      "permissions": {
+        "files": "Import and export shortcut configurations selected by the user"
+      },
       "tags": [
-        "User Interface",
-        "System"
-      ],
-      "platforms": [
-        "windows-x64"
+        "User Interface"
       ],
       "archive_url": "./Keymap_Manager_1.0.0.zip",
-      "archive_size": 50567,
-      "archive_hash": "sha256:307c265d76a8da5034ec4d6c8c06b6833c6d2f10bb15e6f001db1e79c731cc98"
+      "archive_size": 98876,
+      "archive_hash": "sha256:a9123ef21b0f7c5344dcda099da7d4df994cf90fb5d2506c8e280104cfa09b1a"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_animation_suite",
-      "name": "Smart Animation",
+      "name": "Smart Animation Suite",
       "tagline": "Smart Animation tools for Blender 5.1 N panel",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -50,14 +49,41 @@
         "Animation"
       ],
       "archive_url": "./Smart_Animation_Suite_1.0.0.zip",
-      "archive_size": 1105580,
-      "archive_hash": "sha256:61ef4ebf18be584d519717b8f43f2debc5d5b91e535598b6b7fa7efec139e6d6"
+      "archive_size": 1007815,
+      "archive_hash": "sha256:f1c3c6195475541734502a68a83a5dfabe48f44f91edfb3dfb124f1cfc3aff15"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_camlight_suite",
-      "name": "Smart CamLight",
-      "tagline": "Unified camera and light suite for Blender 5.1 workflows",
+      "name": "Smart CamLight Suite",
+      "tagline": "Control camera framing, lighting rigs and outputs per camera",
+      "version": "1.0.0",
+      "type": "add-on",
+      "maintainer": "JELararagi",
+      "license": [
+        "SPDX:GPL-3.0-or-later"
+      ],
+      "blender_version_min": "5.1.2",
+      "copyright": [
+        "2026 JELararagi"
+      ],
+      "permissions": {
+        "files": "Render to the selected output path and keep UI preferences"
+      },
+      "tags": [
+        "Camera",
+        "Lighting",
+        "Render"
+      ],
+      "archive_url": "./Smart_CamLight_Suite_1.0.0.zip",
+      "archive_size": 56279,
+      "archive_hash": "sha256:3165ec8c625491e735753bab84a46b597233625c5d1a4ee8ab14126f3bb81ee0"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "smart_cloth_suite",
+      "name": "Smart Cloth Suite",
+      "tagline": "Fit garments, simulate flexible bones and prepare rigid bodies",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
@@ -65,40 +91,12 @@
         "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
+      "website": "https://jelararagi.github.io/SmartTools/manuals/SmartCloth/",
       "copyright": [
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Read and write Smart CamLight JSON settings and render paths"
-      },
-      "tags": [
-        "Camera",
-        "Lighting",
-        "3D View",
-        "Render",
-        "Pipeline"
-      ],
-      "archive_url": "./Smart_CamLight_Suite_1.0.0.zip",
-      "archive_size": 118574,
-      "archive_hash": "sha256:199d0564ccb6b4fbe4aa150b7fb5f7f73c1ca9e7be6bf15d148a0487a0713981"
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "smart_cloth_suite",
-      "name": "Smart Cloth",
-      "tagline": "External cloth companion with batch setup and diagnostics",
-      "version": "1.0.0",
-      "type": "add-on",
-      "maintainer": "JELararagi",
-      "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
-      ],
-      "blender_version_min": "5.1.0",
-      "copyright": [
-        "2026 JELararagi"
-      ],
-      "permissions": {
-        "files": "Store settings and reports in Blender config"
+        "files": "Save cloth profiles, rigid-body presets and simulation reports"
       },
       "tags": [
         "Physics",
@@ -107,19 +105,19 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Cloth_Suite_1.0.0.zip",
-      "archive_size": 270524,
-      "archive_hash": "sha256:da7ceb56fa8e0afec8f038c9cd612246007ab7d0f22c034e618266d8ce555162"
+      "archive_size": 79388,
+      "archive_hash": "sha256:ff45664f61f81ba5225d47565f794f3b337bb221e53bab8f773fa8fb9656b2c4"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_composite_suite",
-      "name": "Smart Composite",
+      "name": "Smart Composite Suite",
       "tagline": "Compositor tools with persistent grouped N panel UI",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -134,13 +132,13 @@
         "Render"
       ],
       "archive_url": "./Smart_Composite_Suite_1.0.0.zip",
-      "archive_size": 2669262,
-      "archive_hash": "sha256:30eb694462b766d89c145ae11f39197aeb16fab851a2d41023d5bb1dbe49a69e"
+      "archive_size": 3145610,
+      "archive_hash": "sha256:c2b9943f2fe1679eda6713b97aa2734c11866e87753bfbbba5511e0f0aea4c16"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_file_suite",
-      "name": "Smart File",
+      "name": "Smart File Suite",
       "tagline": "File, asset, reference, and pipeline tools for Blender",
       "version": "1.0.0",
       "type": "add-on",
@@ -161,14 +159,14 @@
         "3D View"
       ],
       "archive_url": "./Smart_File_Suite_1.0.0.zip",
-      "archive_size": 4875654,
-      "archive_hash": "sha256:5cd3498af437d7431ec5f9c455eea9792fb4dedfa21e17e746974535f6826399"
+      "archive_size": 1584754,
+      "archive_hash": "sha256:ed9bfd7e267aa8538e5dfb0061b470b0cd2603fd0d5ca61a938b6cbf8f8072e1"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_geometry_suite",
-      "name": "Smart Geometry",
-      "tagline": "Genre-organized geometry and attribute generators",
+      "name": "Smart Geometry Suite",
+      "tagline": "Build editable primitives, terrain and surface distributions",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
@@ -176,30 +174,26 @@
         "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
+      "website": "https://jelararagi.github.io/SmartTools/manuals/SmartGeometry/",
       "copyright": [
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Save settings reports generated assets and manifests"
+        "files": "Read point data and write user-selected geometry reports"
       },
       "tags": [
-        "Geometry Nodes",
         "Modeling",
-        "3D View",
-        "Node",
-        "Pipeline",
-        "Grease Pencil",
-        "Add Mesh"
+        "Geometry Nodes"
       ],
       "archive_url": "./Smart_Geometry_Suite_1.0.0.zip",
-      "archive_size": 692084,
-      "archive_hash": "sha256:1508f6be220e9991c1b2da028cd0955aa4195782ef6cc58fd3c8d7b69a822ad4"
+      "archive_size": 320348,
+      "archive_hash": "sha256:5fe7ed1fceaa8090ebc61db9fa9bd09663edc0827af238474c748dd32202d3d8"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_id_suite",
-      "name": "Smart ID",
-      "tagline": "List-managed IDs and channels for production assets",
+      "name": "Smart ID Suite",
+      "tagline": "Assign and inspect IDs and mesh channels for production scenes",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
@@ -207,30 +201,32 @@
         "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
+      "website": "https://jelararagi.github.io/SmartTools/manuals/SmartID/",
       "copyright": [
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Import and export Smart ID registry presets"
+        "files": "Import or export chosen ID registries and save sidebar settings"
       },
-      "platforms": [
-        "windows-x64",
-        "linux-x64"
+      "tags": [
+        "Object",
+        "Material",
+        "Mesh"
       ],
       "archive_url": "./Smart_ID_Suite_1.0.0.zip",
-      "archive_size": 125780,
-      "archive_hash": "sha256:f337e241b35c625a8b8fc3206c005adde8ab78ca4aaebde2ee0fa58ee03cff80"
+      "archive_size": 67272,
+      "archive_hash": "sha256:79a756e7e2190e5cb44ce6949452c1bb140dac4fb1074f0ac52ebfde9e01cddc"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_modeling_suite",
-      "name": "Smart Modeling",
+      "name": "Smart Modeling Suite",
       "tagline": "Unified Smart Modeling tools for the Blender N-panel",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -244,19 +240,19 @@
         "3D View"
       ],
       "archive_url": "./Smart_Modeling_Suite_1.0.0.zip",
-      "archive_size": 3122923,
-      "archive_hash": "sha256:007ef7d6095124a7e6c4a67ca027c8ae2ce36cd33707aa48cc397c03ee8b807f"
+      "archive_size": 2791046,
+      "archive_hash": "sha256:be98db2dbf6de1c4b1391d2b6530f24f07f44ab0c32e0751e331fb87542c2119"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_modifier_suite",
-      "name": "Smart Modifier",
+      "name": "Smart Modifier Suite",
       "tagline": "Smart Modifier stack tools for Blender",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -270,19 +266,19 @@
         "3D View"
       ],
       "archive_url": "./Smart_Modifier_Suite_1.0.0.zip",
-      "archive_size": 1606224,
-      "archive_hash": "sha256:c03e751eb491a0a9a40a38b47248503a9de127067ef3a497b99a9bdf92d899fb"
+      "archive_size": 975038,
+      "archive_hash": "sha256:e20ca49429ab222b56bd3a853a3b6720a8465318e80dc0615d3701b6b86221cd"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_node_suite",
-      "name": "Smart Node",
+      "name": "Smart Node Suite",
       "tagline": "Node creation, wiring, layout, and management tools",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:GPL-2.0-or-later"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -297,19 +293,19 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Node_Suite_1.0.0.zip",
-      "archive_size": 407129,
-      "archive_hash": "sha256:03e397530ffe03b8868fb366ab944588f39b1a4a3d724975105074d8833e93d7"
+      "archive_size": 343081,
+      "archive_hash": "sha256:cf9de2e734abdaef79400af2d249b59f227ea570fa7abcccc386df8d3a3304fb"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_overlay_suite",
-      "name": "Smart Overlay",
+      "name": "Smart Overlay Suite",
       "tagline": "Smart Overlay tools for supported Blender editor N-panels",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -323,19 +319,19 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Overlay_Suite_1.0.0.zip",
-      "archive_size": 659985,
-      "archive_hash": "sha256:4e915f157b58909b622d08c854ac044cc788898069a8b9f8ef09717675ba1422"
+      "archive_size": 664834,
+      "archive_hash": "sha256:ef275bfc1d7299c89e5ce57ce6a3457c7f01d6e2c2dd0b51f394d8a83b416c92"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_paint_suite",
-      "name": "Smart Paint",
+      "name": "Smart Paint Suite",
       "tagline": "Paint layered PSD and flat images with Blender",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -350,19 +346,19 @@
         "Material"
       ],
       "archive_url": "./Smart_Paint_Suite_1.0.0.zip",
-      "archive_size": 976006,
-      "archive_hash": "sha256:2d2fc5d38cea71c2901f4b41ce4fb6e7c332579934ff5551c455697d3d2da521"
+      "archive_size": 975763,
+      "archive_hash": "sha256:3bdc4a8d1c0b3f7ef6b4774850dc6415acd179297babc798385fd7a88f59aabb"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_render_suite",
-      "name": "Smart Render",
+      "name": "Smart Render Suite",
       "tagline": "Smart Render tools for Blender N-panel workflows",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -377,19 +373,19 @@
         "3D View"
       ],
       "archive_url": "./Smart_Render_Suite_1.0.0.zip",
-      "archive_size": 774282,
-      "archive_hash": "sha256:f73a74d5fb2224a2e6e401cdca050561b120272f09f8a96408b6e471667e3d67"
+      "archive_size": 755629,
+      "archive_hash": "sha256:9e60e5ef3f7a07667ab7e6609a912ef025327c892c32bbe0f6cebc18cff63238"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_rig_suite",
-      "name": "Smart Rig",
+      "name": "Smart Rig Suite",
       "tagline": "Safe workflow companion for external rigging tools",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -404,19 +400,18 @@
         "3D View"
       ],
       "archive_url": "./Smart_Rig_Suite_1.0.0.zip",
-      "archive_size": 726421,
-      "archive_hash": "sha256:c0dfbf66ee5ea5c24cc1d0353fe05cbca92a7c42ce9eb35595b11f851e2b60bb"
+      "archive_size": 734551,
+      "archive_hash": "sha256:5433f8a5225efc20634b13bb81df5c6979b262d3d2a20d1aed33bf4630277a80"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_sculpt_suite",
-      "name": "Smart Sculpt",
+      "name": "Smart Sculpt Suite",
       "tagline": "Smart Sculpt Suite with integrated Edit Mode Sculpt",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary",
         "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
@@ -431,19 +426,19 @@
         "3D View"
       ],
       "archive_url": "./Smart_Sculpt_Suite_1.0.0.zip",
-      "archive_size": 11029927,
-      "archive_hash": "sha256:55c29a894ef7c89c5f7c5c2d7ddd8bcf5c937aa1e16cd90309e29260ca2cb42c"
+      "archive_size": 10520696,
+      "archive_hash": "sha256:a6a523d364bb259f25dddccf5a1cc98ad14a20521c9ea7469c7d8cb02ad6f5f8"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_selector_suite",
-      "name": "Smart Selector",
+      "name": "Smart Selector Suite",
       "tagline": "Smart Selector tools for Smart Tools Manager controlled N panels",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -457,19 +452,19 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Selector_Suite_1.0.0.zip",
-      "archive_size": 508857,
-      "archive_hash": "sha256:4fd5da58dd243783ccdb6a5a2dad2c89688840609e871d507fe448610ec1fe32"
+      "archive_size": 510548,
+      "archive_hash": "sha256:03ffe4db3bf3c0d7fef3b50a0e740735af6c035d1d9460b8d1ba4c6e92d7daf8"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_shader_suite",
-      "name": "Smart Shader",
+      "name": "Smart Shader Suite",
       "tagline": "Smart Shader tools for Blender N-panel material workflows",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -483,19 +478,19 @@
         "Material"
       ],
       "archive_url": "./Smart_Shader_Suite_1.0.0.zip",
-      "archive_size": 11698863,
-      "archive_hash": "sha256:b1ffa15b540a4a20380da291fbf09135291e2db297f9048fd6309de3b7ceb1e8"
+      "archive_size": 16260584,
+      "archive_hash": "sha256:cca03b340fcfc1a3f30572f200c7d46345f40db45afdbf94c0ef0e35ed093ea5"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_shapekey_suite",
-      "name": "Smart Shapekey",
+      "name": "Smart Shapekey Suite",
       "tagline": "Smart shape-key workflows and persistent tools for Blender",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
@@ -511,26 +506,26 @@
         "3D View"
       ],
       "archive_url": "./Smart_Shapekey_Suite_1.0.0.zip",
-      "archive_size": 4246621,
-      "archive_hash": "sha256:7d8e3a241b8fd5a21592a9dfe7fc229be2896ace2fde76f5bfb180e3f2f9eeae"
+      "archive_size": 2069721,
+      "archive_hash": "sha256:9a8b3787e16b8e108a03e06494f377d9f73312d30858ee86bf352a2aeb82276a"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_tools_manager",
       "name": "Smart Tools Manager",
-      "tagline": "Workspace and logical-editor placement manager for Smart Tools",
+      "tagline": "Choose where tools appear and prepare separate handoff copies",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
       "blender_version_min": "5.1.0",
       "copyright": [
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Read and write manager settings in user config directory"
+        "files": "Store placement settings and create requested scene copies"
       },
       "tags": [
         "User Interface",
@@ -538,39 +533,39 @@
         "3D View"
       ],
       "archive_url": "./Smart_Tools_Manager_1.0.0.zip",
-      "archive_size": 83644,
-      "archive_hash": "sha256:faf26738bdb1ceb19126c3eb6349cdfb5de3021a0036311543a6d5e0df9288a4"
+      "archive_size": 58822,
+      "archive_hash": "sha256:f8ba2845ac186871d659d869504ca6d8b9b883d0224ad93e4db5f14100bbfd1c"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_transform_suite",
-      "name": "Smart Transform",
-      "tagline": "Smart Transform tools for the 3D View N panel",
+      "name": "Smart Transform Suite",
+      "tagline": "Align, size, snap and transform selections in the 3D View",
       "version": "1.0.0",
       "type": "add-on",
       "maintainer": "JELararagi",
       "license": [
-        "SPDX:LicenseRef-JELararagi-Proprietary"
+        "SPDX:GPL-3.0-or-later"
       ],
-      "blender_version_min": "5.1.0",
+      "blender_version_min": "5.1.2",
       "copyright": [
         "2026 JELararagi"
       ],
       "permissions": {
-        "files": "Store Smart Transform settings in user config"
+        "files": "Keep transform and panel preferences in the Blender config"
       },
       "tags": [
         "3D View",
         "Modeling"
       ],
       "archive_url": "./Smart_Transform_Suite_1.0.0.zip",
-      "archive_size": 664769,
-      "archive_hash": "sha256:530cc66b9e26b677248526712c3ebf6486861273069b570a635906e6561df6d3"
+      "archive_size": 74510,
+      "archive_hash": "sha256:9af54c82655584c21ebf49868c1688d27aa080b69f964968bf8d18de58e93d60"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_uv_suite",
-      "name": "Smart UV",
+      "name": "Smart UV Suite",
       "tagline": "Smart UV tools for the Blender Smart UV sidebar",
       "version": "1.0.0",
       "type": "add-on",
@@ -590,13 +585,13 @@
         "Modeling"
       ],
       "archive_url": "./Smart_UV_Suite_1.0.0.zip",
-      "archive_size": 4261445,
-      "archive_hash": "sha256:74396b75ce8b952160701a1ae70fa530faf026decb7eb53c2f75b480837f3d56"
+      "archive_size": 4242675,
+      "archive_hash": "sha256:e20bd4d6270a6f245765d9c18d632bd72eb12408b537d695a1bbbdf5ae7ddbaa"
     },
     {
       "schema_version": "1.0.0",
       "id": "smart_workspace_suite",
-      "name": "Smart Workspace",
+      "name": "Smart Workspace Suite",
       "tagline": "Smart Workspace N-panel and viewport utility suite",
       "version": "1.0.0",
       "type": "add-on",
@@ -616,8 +611,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Workspace_Suite_1.0.0.zip",
-      "archive_size": 852311,
-      "archive_hash": "sha256:f11576dc71479377cdbf22cc73fbead5a106aebe9b8123d1c2b894339d136c55"
+      "archive_size": 840169,
+      "archive_hash": "sha256:ca2d02cfb3735d3d2fbe44a9716c1f741df1b918ae0ca34d7cc5e27c64def521"
     }
   ]
 }
