@@ -2000,7 +2000,7 @@
             "where": "3DビューポートでNキーを押し、「Smart File」タブを選びます。どのモードでも「現在のソース」を開いて作業対象を確認できます。",
             "look": "入口全体の図は「現在のソース」だけが開いた状態で、下に「クイックソース」と各カテゴリが続きます。",
             "heading": "4. 画面の場所",
-            "caption": "SmartFile Suite のパネルを開いたところ。「現在のソース」だけが開き、その下に「クイックソース」と 7 つのカテゴリの見出しが閉じたまま並びます。",
+            "caption": "Smart File Suite のパネルを開いたところ。「現在のソース」だけが開き、その下に「クイックソース」と 7 つのカテゴリの見出しが閉じたまま並びます。",
             "git_blob": "79836e5c9f1251dbbf8a037089f28fb3af72ac64",
             "route": {
               "editor": "3Dビューポート",
@@ -2042,7 +2042,7 @@
             "where": "Press N over the 3D Viewport and select Smart File. In any mode, expand Current Source to check the source you are working with.",
             "look": "The overview shows only Current Source expanded, with Quick Sources and the category headings below it.",
             "heading": "4. Where to Find It",
-            "caption": "The SmartFile Suite panel opened. Only \"Current Source\" is open, and below it \"Quick Sources\" and the seven category section headers are lined up, still closed.",
+            "caption": "The Smart File Suite panel opened. Only \"Current Source\" is open, and below it \"Quick Sources\" and the seven category section headers are lined up, still closed.",
             "git_blob": "e086394f4d446e514547b1e86f3642f6aab7388b",
             "route": {
               "editor": "3D Viewport",
