@@ -50,8 +50,8 @@
         "Animation"
       ],
       "archive_url": "./Smart_Animation_Suite_1.0.0.zip",
-      "archive_size": 1114254,
-      "archive_hash": "sha256:c1b836e9ef5683f9d7e3f5d9dd5867ae3d2b742e68281d58fcb4b7f8f30f3289"
+      "archive_size": 1114503,
+      "archive_hash": "sha256:bd821074a6d99f3eb063f3d973b1067ce827e7a58686d41a6d64087de9d4df43"
     },
     {
       "schema_version": "1.0.0",
@@ -192,8 +192,8 @@
         "Add Mesh"
       ],
       "archive_url": "./Smart_Geometry_Suite_1.0.0.zip",
-      "archive_size": 702487,
-      "archive_hash": "sha256:d88716c678af31ec2c9278995a2614aefb5e7f7fd9cdc6fa8cc0fcfd3200e02b"
+      "archive_size": 702686,
+      "archive_hash": "sha256:4818f77087e656e3268d6720e3ce0644059a7bd0870f319c899987923d63790a"
     },
     {
       "schema_version": "1.0.0",
@@ -218,8 +218,8 @@
         "linux-x64"
       ],
       "archive_url": "./Smart_ID_Suite_1.0.0.zip",
-      "archive_size": 137809,
-      "archive_hash": "sha256:bf1ebae17e61dfee1e939cee18ae814e92b20e8b305a8866592aacad257e6d57"
+      "archive_size": 138086,
+      "archive_hash": "sha256:b3fcc843d48671d44725c8852664851db8df98cfcb95a5dfab7b353251abfc06"
     },
     {
       "schema_version": "1.0.0",
@@ -297,8 +297,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Node_Suite_1.0.0.zip",
-      "archive_size": 419401,
-      "archive_hash": "sha256:af4118016a37f45adcae04c34eee0ff6fab251a3a335c35286e1c70e5e52d3b3"
+      "archive_size": 419701,
+      "archive_hash": "sha256:618404ff069aa882773c0e9a063bbe2dd0bab678ac93e66ca8466326d9ec7b63"
     },
     {
       "schema_version": "1.0.0",
