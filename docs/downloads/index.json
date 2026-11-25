@@ -134,8 +134,8 @@
         "Render"
       ],
       "archive_url": "./Smart_Composite_Suite_1.0.0.zip",
-      "archive_size": 2677108,
-      "archive_hash": "sha256:9586b92148e8803f602b8022e235808b562bb80af2f1a1f71657329a659329ae"
+      "archive_size": 4420927,
+      "archive_hash": "sha256:2ae6810467a5626067e3b2b15e05a945a36d454a325920683a9828abfdfb10b2"
     },
     {
       "schema_version": "1.0.0",
@@ -161,8 +161,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_File_Suite_1.0.0.zip",
-      "archive_size": 4886831,
-      "archive_hash": "sha256:e67667fb8e38abcfc099a81b51d9f06832aa9c835d6e31a51f56afa5a6347cb2"
+      "archive_size": 4886917,
+      "archive_hash": "sha256:a1ceba7c05ade637afa24e8eaa1c01ec07f6e35f37f3014470825fa4b12ef928"
     },
     {
       "schema_version": "1.0.0",
@@ -192,8 +192,8 @@
         "Add Mesh"
       ],
       "archive_url": "./Smart_Geometry_Suite_1.0.0.zip",
-      "archive_size": 702686,
-      "archive_hash": "sha256:4818f77087e656e3268d6720e3ce0644059a7bd0870f319c899987923d63790a"
+      "archive_size": 703244,
+      "archive_hash": "sha256:78bc54fb277e6adc88b542c8e0d7fde1c230734fdbea97f676cbe589df5b91a3"
     },
     {
       "schema_version": "1.0.0",
@@ -537,8 +537,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Tools_Manager_1.0.0.zip",
-      "archive_size": 96279,
-      "archive_hash": "sha256:8303a7e79d0b9cd24f0c3393ea1827463f4aac2e3a5dc69cc5137756d9279f2b"
+      "archive_size": 97562,
+      "archive_hash": "sha256:541e549d79e0fdfdd1ff832187228c7c9a5a98c3894c9c3886900d9fd5c01cc9"
     },
     {
       "schema_version": "1.0.0",
@@ -615,8 +615,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Workspace_Suite_1.0.0.zip",
-      "archive_size": 864555,
-      "archive_hash": "sha256:9aeda747a61aef55ead1e7147a65c0723e2c60b74bcdcaee1ae37d28dafc14c4"
+      "archive_size": 629373,
+      "archive_hash": "sha256:73742433701d5ada9c0c5885632a8d424b5ede51fdd62df52060584ef6db9627"
     }
   ]
 }
