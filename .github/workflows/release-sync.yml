@@ -47,7 +47,17 @@ jobs:
           done
           echo "載せる物 ${#up[@]} 件"
           if [ "${#up[@]}" -gt 0 ]; then
-            gh release upload "$TAG" "${up[@]}" --clobber
+            # GitHub の一時的な 5xx で 1 回だけ落ちて Release が古いまま残った（2026-11-25 f37465d）ので、間をおいてやり直す。
+            for i in 1 2 3 4 5; do
+              if gh release upload "$TAG" "${up[@]}" --clobber; then
+                break
+              fi
+              if [ "$i" -eq 5 ]; then
+                exit 1
+              fi
+              echo "載せられなかった（$i 回目）。30 秒後にやり直す"
+              sleep 30
+            done
           fi
       - name: main に無い ZIP を外す
         run: |
