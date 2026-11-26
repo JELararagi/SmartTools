@@ -50,8 +50,8 @@
         "Animation"
       ],
       "archive_url": "./Smart_Animation_Suite_1.0.0.zip",
-      "archive_size": 1114503,
-      "archive_hash": "sha256:bd821074a6d99f3eb063f3d973b1067ce827e7a58686d41a6d64087de9d4df43"
+      "archive_size": 1117295,
+      "archive_hash": "sha256:901d317b40dab67eee04092ed9d42a9033cecd1abf8f67e543232981a775f5dd"
     },
     {
       "schema_version": "1.0.0",
@@ -404,8 +404,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Rig_Suite_1.0.0.zip",
-      "archive_size": 765308,
-      "archive_hash": "sha256:86bbe7a3ad2c06de95e7ab5805bea46fe3d783264e7e27ddc16fc090e4e93185"
+      "archive_size": 769438,
+      "archive_hash": "sha256:4fdf7fdc26e7b4a40dbe101dd00fd142727facf344f91fcfa44c10f36fcc7ddc"
     },
     {
       "schema_version": "1.0.0",
