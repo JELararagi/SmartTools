@@ -107,8 +107,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Cloth_Suite_1.0.0.zip",
-      "archive_size": 281502,
-      "archive_hash": "sha256:75f76ef2d065113614b95d673c45e22b341b3ec0362df585ab2c321e9bb7ddf8"
+      "archive_size": 283346,
+      "archive_hash": "sha256:851faab5ac359684aa696d4dfd86b6cad77e7f08c5e72ae0ca61136324516cff"
     },
     {
       "schema_version": "1.0.0",
@@ -192,8 +192,8 @@
         "Add Mesh"
       ],
       "archive_url": "./Smart_Geometry_Suite_1.0.0.zip",
-      "archive_size": 703244,
-      "archive_hash": "sha256:78bc54fb277e6adc88b542c8e0d7fde1c230734fdbea97f676cbe589df5b91a3"
+      "archive_size": 704482,
+      "archive_hash": "sha256:97596064de18f7d19ef56abb5af65c1f557c8da0c74e3fc433beca3e837d4c0e"
     },
     {
       "schema_version": "1.0.0",
@@ -218,8 +218,8 @@
         "linux-x64"
       ],
       "archive_url": "./Smart_ID_Suite_1.0.0.zip",
-      "archive_size": 138086,
-      "archive_hash": "sha256:b3fcc843d48671d44725c8852664851db8df98cfcb95a5dfab7b353251abfc06"
+      "archive_size": 138085,
+      "archive_hash": "sha256:308edaafa2eb5ac1dbbb2bf2fcdb1ebdc53b3aea52d756e131c6f075d05ac66c"
     },
     {
       "schema_version": "1.0.0",
@@ -270,8 +270,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Modifier_Suite_1.0.0.zip",
-      "archive_size": 1671109,
-      "archive_hash": "sha256:97c61059f10349f4128f6174769619f384e80a55bdaeeb4c06c3e2d60ab6be3e"
+      "archive_size": 1673361,
+      "archive_hash": "sha256:4697f2ec837e869a3d133a49a5da01de154fb0d85d0b51736835af58ba8fcee1"
     },
     {
       "schema_version": "1.0.0",
@@ -456,8 +456,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Selector_Suite_1.0.0.zip",
-      "archive_size": 516625,
-      "archive_hash": "sha256:603f303b260706e9ab2e7ad57b09cd70eb13f0663fad1ea6b2c06bf5d406792c"
+      "archive_size": 521426,
+      "archive_hash": "sha256:d249e82dabd8ffffee9b211c2dbe6787bd8c4216fd82108af59ee4f3535a9d70"
     },
     {
       "schema_version": "1.0.0",
@@ -563,8 +563,8 @@
         "Modeling"
       ],
       "archive_url": "./Smart_Transform_Suite_1.0.0.zip",
-      "archive_size": 696666,
-      "archive_hash": "sha256:9f5e750767a098fc72376093af689366e10a80073967e8634959cfa68b9b2535"
+      "archive_size": 704426,
+      "archive_hash": "sha256:12911340fbfe622f4581163200120dcf3fd13ed9d92a262405403765f07d1d44"
     },
     {
       "schema_version": "1.0.0",
