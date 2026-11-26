@@ -350,8 +350,8 @@
         "Material"
       ],
       "archive_url": "./Smart_Paint_Suite_1.0.0.zip",
-      "archive_size": 985795,
-      "archive_hash": "sha256:e11feb3d9f741022e94bf8466986aac707048867c1a4e829006e2f1a70fd12ac"
+      "archive_size": 996920,
+      "archive_hash": "sha256:7a8eb5083e4aa47c1d135341e9176717c1577f93ca53d7bd7955c1be45a599dd"
     },
     {
       "schema_version": "1.0.0",
@@ -482,8 +482,8 @@
         "Material"
       ],
       "archive_url": "./Smart_Shader_Suite_1.0.0.zip",
-      "archive_size": 11703786,
-      "archive_hash": "sha256:7c5b98ce294e9dae56adf302dce581a8154c5602cb91d718db18b07eee83024f"
+      "archive_size": 11705549,
+      "archive_hash": "sha256:ebb3b1037e57c52db7b57db646c4c6edbb28f89b5e3004e5d005ae2396f1d49e"
     },
     {
       "schema_version": "1.0.0",
