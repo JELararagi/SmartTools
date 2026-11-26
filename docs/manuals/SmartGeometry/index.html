@@ -225,14 +225,14 @@ a.sc-main h3{font-size:1.35em}
 <ol>
 <li>ダウンロードを展開し、Blenderの「編集 → プリファレンス」で右上メニューの「ディスクからインストール」から内側のSmart Geometry SuiteのZIPを選び、有効にします。</li>
 <li>開始ファイル (Terrain_Survey_Start.blend)を開きます。アウトライナーで「Survey terrain」を選択。3Dビューにマウスを置き、Nキーでサイドバーを開いて「Smart Geometry」を選びます。</li>
-<li>「地形 / 環境生成」のシードを <strong>85</strong> にします。「表面に点を散布」で点の数を <strong>94</strong>、最小間隔を <strong>0.24</strong>、四角すいの半径を <strong>0.13</strong> にして、「表面に点を散布」を押します。点だけのメッシュが選択されます。</li>
-<li>その選択のまま「確認用の四角すいを作成」を押します。新しくできたマーカーは独立して選べます。完成見本 (Terrain_Survey_Finished.blend)ではこのオブジェクトをオレンジに着色しています。</li>
+<li>「分布 / 散布生成」を開き、「表面分布ポイント」で「ランダムシード」を <strong>85</strong>、「数量」を <strong>94</strong>、「最小間隔」を <strong>0.24</strong>、「半径 / サイズ」を <strong>0.13</strong> にして、「高精度分布ポイントを作成」を押します。点だけのメッシュが選択されます。</li>
+<li>その選択のまま、「緩和とプレビューインスタンス」の「分布プロキシインスタンスを作成」を押します。新しくできたマーカーは独立して選べます。完成見本 (Terrain_Survey_Finished.blend)ではこのオブジェクトをオレンジに着色しています。</li>
 </ol>
 <p><img loading="lazy" src="../../diagrams/showcase/SmartGeometry/distribution_ja.webp" alt="日本語の散布画面。点の数、最小間隔、マーカーの大きさを設定する欄"></p>
 <h4>結果を確かめる</h4>
 <p>完成見本で「Sampling locations」を選び、エディターを「スプレッドシート」にすると94個の頂点を数えられます。「Survey markers」は470頂点・470面です。作業画面で点が見つからない場合は、点メッシュを選んで四角すいを作ってください。必要な数を置けない狭い面では、最小間隔を小さくします。</p>
 <h4>別の地形で試す</h4>
-<p>「地形 / 環境生成」で格子解像度 <strong>48</strong>、地形の幅 <strong>10</strong>、高さ <strong>1.55</strong>、シード <strong>315</strong>、水滴数 <strong>512</strong>、流水の反復回数 <strong>6</strong> を指定し、「高精度地形を作成」を押します。作例では2,304頂点・2,209面になりました。散布のシード85と地形を作るシード315は別の操作で使う値です。</p>
+<p>「地形 / 環境生成」の「地形メッシュ」で「地形解像度」を <strong>48</strong>、「地形サイズ」を <strong>10</strong>、「地形高さ」を <strong>1.55</strong>、「ランダムシード」を <strong>315</strong>、「水理ドロップ数」を <strong>512</strong>、「侵食反復」を <strong>6</strong> にし、「高精度地形を作成」を押します。作例では2,304頂点・2,209面になりました。散布のシード85と地形を作るシード315は別の操作で使う値です。</p>
 <p><img loading="lazy" src="../../diagrams/showcase/SmartGeometry/terrain_ja.webp" alt="日本語の地形生成画面。格子の解像度と高さを指定する"></p>
 <p>Windows版Blender 5.1.2で確認。旧版で作ったブロブ、樹木、階段などを再生成すると、輪郭・寸法・頂点や面の構成が変わる場合があります。旧作品は複製を開いて試し、リグのウェイトや頂点番号で他のデータと対応づけたメッシュは元の形を保存してください。</p></section>
 <!-- terrain-survey:end --></div>
