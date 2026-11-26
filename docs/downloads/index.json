@@ -25,8 +25,8 @@
         "windows-x64"
       ],
       "archive_url": "./Keymap_Manager_1.0.0.zip",
-      "archive_size": 62524,
-      "archive_hash": "sha256:986c16e634657ab16b79a3d8f1e0c1bb5432b5e2fc25413c21e4f9baba10a4d0"
+      "archive_size": 62493,
+      "archive_hash": "sha256:9a968099158f2677d0599fb58c9fd1c56712f4bebde7db539deec8ab359a4495"
     },
     {
       "schema_version": "1.0.0",
@@ -297,8 +297,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Node_Suite_1.0.0.zip",
-      "archive_size": 419699,
-      "archive_hash": "sha256:8e8f3c7ad0b55ce7c9465c4fa74b2cd64eccbd44d1fe9a190d572cdc2a16e66f"
+      "archive_size": 420154,
+      "archive_hash": "sha256:8d1ba169e04ec4a29c99ed4982f89d20b045b30a31126abce6a055085a88f621"
     },
     {
       "schema_version": "1.0.0",
@@ -537,8 +537,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Tools_Manager_1.0.0.zip",
-      "archive_size": 97562,
-      "archive_hash": "sha256:541e549d79e0fdfdd1ff832187228c7c9a5a98c3894c9c3886900d9fd5c01cc9"
+      "archive_size": 97911,
+      "archive_hash": "sha256:7e76e08499f5d9f4c24d5f5e9c8f7c6e9c92358760c93663c9a91cfa6f1cd9a8"
     },
     {
       "schema_version": "1.0.0",
