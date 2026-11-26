@@ -79,8 +79,8 @@
         "Pipeline"
       ],
       "archive_url": "./Smart_CamLight_Suite_1.0.0.zip",
-      "archive_size": 130463,
-      "archive_hash": "sha256:7dc40efdf4a1460ea709d52ebb8e220f3fef80206482572dc123558afd110508"
+      "archive_size": 130827,
+      "archive_hash": "sha256:245212dc1a5c1b758eaa7762efb83f5651819534f240fea19929d4ecde89683f"
     },
     {
       "schema_version": "1.0.0",
@@ -134,8 +134,8 @@
         "Render"
       ],
       "archive_url": "./Smart_Composite_Suite_1.0.0.zip",
-      "archive_size": 4420927,
-      "archive_hash": "sha256:2ae6810467a5626067e3b2b15e05a945a36d454a325920683a9828abfdfb10b2"
+      "archive_size": 4419784,
+      "archive_hash": "sha256:2e549cc8ffa4023ae35c57c4e7b84b510f7fc7d6d5089d5aeaaf76542ddbfac3"
     },
     {
       "schema_version": "1.0.0",
@@ -377,8 +377,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Render_Suite_1.0.0.zip",
-      "archive_size": 784525,
-      "archive_hash": "sha256:2b1e1c2e5d1e91c47993002f584ee69f070c3f4d7859871ceb235539aa95d974"
+      "archive_size": 786570,
+      "archive_hash": "sha256:48b18740b6c3a7249cb489c9caa2ea0e575ce8c4c771e15d6fbf322deca261a7"
     },
     {
       "schema_version": "1.0.0",
@@ -430,8 +430,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Sculpt_Suite_1.0.0.zip",
-      "archive_size": 11031373,
-      "archive_hash": "sha256:dbed39c86a67b547d1fc6a3eaf001e32d22d4949e62a3c0ac8b022e5ffd67dc0"
+      "archive_size": 11032866,
+      "archive_hash": "sha256:a00187258394c5f9dc95e8d6fd95935e48f423fa3be7cbabc3cf955ffd5efc03"
     },
     {
       "schema_version": "1.0.0",
@@ -510,8 +510,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Shapekey_Suite_1.0.0.zip",
-      "archive_size": 4254286,
-      "archive_hash": "sha256:3c02002bc275b5a08e3830e9a39bc49ea74d209feff432602702fe46a73ff57b"
+      "archive_size": 4255221,
+      "archive_hash": "sha256:c791d9b140c6406d8539a867106672a03ea52cf727088bf557ba4a35a71785fc"
     },
     {
       "schema_version": "1.0.0",
@@ -589,8 +589,8 @@
         "Modeling"
       ],
       "archive_url": "./Smart_UV_Suite_1.0.0.zip",
-      "archive_size": 4275634,
-      "archive_hash": "sha256:8ab812c8d0d75a40288678bd49b0ceec7bc6d622a471c8033980eb7678cccd63"
+      "archive_size": 4280299,
+      "archive_hash": "sha256:2e3e3f0c74d5fa45e9319420637e1c7fcb7e2ee1e636bebb2fef3b7111a62faa"
     },
     {
       "schema_version": "1.0.0",
