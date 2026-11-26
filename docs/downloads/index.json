@@ -404,8 +404,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Rig_Suite_1.0.0.zip",
-      "archive_size": 736072,
-      "archive_hash": "sha256:d3ef2e2cad44cd2fbaf7dbd4d7291136118b6724848d8a55103b070228d36181"
+      "archive_size": 765308,
+      "archive_hash": "sha256:86bbe7a3ad2c06de95e7ab5805bea46fe3d783264e7e27ddc16fc090e4e93185"
     },
     {
       "schema_version": "1.0.0",
@@ -456,8 +456,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Selector_Suite_1.0.0.zip",
-      "archive_size": 519072,
-      "archive_hash": "sha256:3ff88cd77df092a23c9b61862e183d1ce4880f7ac360501747b2318457fe2f8b"
+      "archive_size": 516625,
+      "archive_hash": "sha256:603f303b260706e9ab2e7ad57b09cd70eb13f0663fad1ea6b2c06bf5d406792c"
     },
     {
       "schema_version": "1.0.0",
