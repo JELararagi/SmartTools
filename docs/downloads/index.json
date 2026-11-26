@@ -510,8 +510,8 @@
         "3D View"
       ],
       "archive_url": "./Smart_Shapekey_Suite_1.0.0.zip",
-      "archive_size": 4255221,
-      "archive_hash": "sha256:c791d9b140c6406d8539a867106672a03ea52cf727088bf557ba4a35a71785fc"
+      "archive_size": 4255229,
+      "archive_hash": "sha256:a65dc722962a73235aef446efef2128914f8a732f6a1fdebb8c06cce02c2f966"
     },
     {
       "schema_version": "1.0.0",
@@ -589,8 +589,8 @@
         "Modeling"
       ],
       "archive_url": "./Smart_UV_Suite_1.0.0.zip",
-      "archive_size": 4280299,
-      "archive_hash": "sha256:2e3e3f0c74d5fa45e9319420637e1c7fcb7e2ee1e636bebb2fef3b7111a62faa"
+      "archive_size": 4282616,
+      "archive_hash": "sha256:295582a6b2a1d5470b546cf0a9acb03f5d0bdb3aeb95aae415ab3315d7e4df33"
     },
     {
       "schema_version": "1.0.0",
