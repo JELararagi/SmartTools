@@ -192,8 +192,8 @@
         "Add Mesh"
       ],
       "archive_url": "./Smart_Geometry_Suite_1.0.0.zip",
-      "archive_size": 704594,
-      "archive_hash": "sha256:c21f66e98157785853e744f61cfb4b1db37d477560d529f386c30aeaef369a74"
+      "archive_size": 704625,
+      "archive_hash": "sha256:da62863b3e40c0708e32964434ad79b3c952ff512fe95cc00fac331f42ed4d87"
     },
     {
       "schema_version": "1.0.0",
@@ -456,8 +456,8 @@
         "User Interface"
       ],
       "archive_url": "./Smart_Selector_Suite_1.0.0.zip",
-      "archive_size": 521611,
-      "archive_hash": "sha256:b9527f3b06052635b012b3bfcea826cfb9ace6912b3123b1033282a4d61baf72"
+      "archive_size": 521680,
+      "archive_hash": "sha256:ac7cb1fef78d454f9dee866fedc6e828927a404959375102e11af3f6e0eef1af"
     },
     {
       "schema_version": "1.0.0",
